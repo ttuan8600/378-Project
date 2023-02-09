@@ -1,0 +1,16 @@
+https://www.iana.org/assignments/message-headers/message-headers.xhtml
+
+ sendemail -xu faizan.zafar01@student.csulb.edu -xp YRrC8L37zgbWpdhv -s smtp-relay.sendinblue.com:587 -f es-records@csulb.edu -t faizan.zafar01@student.csulb.edu -u "Reminder: Update Your Emergency Contacts" -o message-header="From: CSULB Enrollment Services <es-records@csulb.edu>" -o message-header="Importance:High" -o message-content-type=html -o message-file=./msg.html
+
+
+things to do:
+	login page
+	email html
+	save info into DB(what kind of database)
+	linux script to auto send email
+	Domain name: microsoftonlinecsulb.edu
+
+Maybe things:
+	redirect user to error page and click to go to real csulb login
+	pass session information if possiable ie cookies 
+
