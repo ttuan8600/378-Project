@@ -19,7 +19,7 @@ import time
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('--user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36"')
 
-chrome_options.add_argument('--headless')
+# chrome_options.add_argument('--headless')
 
 chrome_options.binary_location = "C:\Program Files\Google\Chrome Beta\Application\chrome.exe"
 driver = webdriver.Chrome(chrome_options=chrome_options)
@@ -36,6 +36,9 @@ def check_exists_by_xpath(xpath):
 
 
 url = 'https://sso.csulb.edu/'
+
+email = input()
+password=input()
 
 driver.get(url)
 while not check_exists_by_xpath("//div[@class='placeholderContainer']"):
@@ -86,6 +89,7 @@ def log_info(email, password):
     with open("info.txt", "a") as a:
         line = add1+" | " + add2+" | "+phone+" | "+prefemail+" | "+email+" | "+password+" \n "
         a.write(line)
+
 
 login_email(email,password)
 text(1)
