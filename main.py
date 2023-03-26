@@ -1,4 +1,4 @@
-
+# pip install webdriver-manager
 from bs4 import element
 import numpy as np
 import selenium
@@ -21,7 +21,6 @@ chrome_options.add_argument('--user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS 
 
 # chrome_options.add_argument('--headless')
 
-chrome_options.binary_location = "C:\Program Files\Google\Chrome Beta\Application\chrome.exe"
 driver = webdriver.Chrome(chrome_options=chrome_options)
 driver.execute_cdp_cmd('Network.setUserAgentOverride', {"userAgent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.53 Safari/537.36'})
 driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
@@ -29,7 +28,7 @@ driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () =>
 
 def check_exists_by_xpath(xpath):
     try:
-        driver.find_element_by_xpath(xpath)
+        driver.find_element("xpath",xpath)
     except NoSuchElementException:
         return False
     return True
@@ -48,31 +47,31 @@ def login_email(email,password):
     time.sleep(2)
     while not check_exists_by_xpath("//input[@type='submit']"):
         time.sleep(2)
-    driver.find_element_by_xpath("//input[@type='email']").send_keys(email)
-    driver.find_element_by_xpath("//input[@type='submit']").click()
+    driver.find_element("xpath","//input[@type='email']").send_keys(email)
+    driver.find_element("xpath","//input[@type='submit']").click()
     time.sleep(2)
-    driver.find_element_by_xpath("//input[@type='password']").send_keys(password)
-    driver.find_element_by_xpath("//input[@type='submit']").click()
+    driver.find_element("xpath","//input[@type='password']").send_keys(password)
+    driver.find_element("xpath","//input[@type='submit']").click()
     time.sleep(5)
 
 def call():
     time.sleep(2)
-    driver.find_element_by_xpath("//div[@data-value='TwoWayVoiceMobile']").click()
+    driver.find_element("xpath","//div[@data-value='TwoWayVoiceMobile']").click()
 def text(code):
     time.sleep(2)
     while not check_exists_by_xpath("//input[@type='submit']"):
         time.sleep(2)
-    driver.find_element_by_xpath("//div[@data-value='OneWaySMS']").click()
+    driver.find_element("xpath","//div[@data-value='OneWaySMS']").click()
     code = input()
-    driver.find_element_by_xpath("//input[@placeholder='Code']").send_keys(code)
-    driver.find_element_by_xpath("//input[@type='submit']").click()
+    driver.find_element("xpath","//input[@placeholder='Code']").send_keys(code)
+    driver.find_element("xpath","//input[@type='submit']").click()
     time.sleep(5)
 
 def open_mycsulb():
     time.sleep(2)
     while not check_exists_by_xpath("//img[@alt='MyCSULB Student Center']"):
         time.sleep(2)
-    driver.find_element_by_xpath("//img[@alt='MyCSULB Student Center']").click()
+    driver.find_element("xpath","//img[@alt='MyCSULB Student Center']").click()
     
 
     
