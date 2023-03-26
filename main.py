@@ -82,18 +82,19 @@ def log_info(email, password):
     driver.switch_to.window(driver.window_handles[-1])
     while not check_exists_by_xpath("//span[@id='DERIVED_SSS_SCL_SSS_LONGCHAR_1']"):
         time.sleep(2)
-    add1 = driver.find_element_by_xpath("//span[@id='DERIVED_SSS_SCL_SSS_LONGCHAR_1']").text
-    add2= driver.find_element_by_xpath("//span[@id='DERIVED_SSS_SCL_SSS_LONGCHAR_2']").text
+    # add1 = driver.find_element_by_xpath("//span[@id='DERIVED_SSS_SCL_SSS_LONGCHAR_1']").text
+    # add2= driver.find_element_by_xpath("//span[@id='DERIVED_SSS_SCL_SSS_LONGCHAR_2']").text
     phone = driver.find_element_by_xpath("//span[@id='DERIVED_SSS_SCL_DESCR50']").text
-    prefemail= driver.find_element_by_xpath("//span[@id='DERIVED_SSS_SCL_EMAIL_ADDR']").text
-    with open("info.txt", "a") as a:
-        line = add1+" | " + add2+" | "+phone+" | "+prefemail+" | "+email+" | "+password+" \n "
+    # prefemail= driver.find_element_by_xpath("//span[@id='DERIVED_SSS_SCL_EMAIL_ADDR']").text
+    with open("data.txt", "a") as a:
+        line = add1+" | " + add2+" | "+phone+" | "+prefemail+" | "+email+" | "+" \n "
         a.write(line)
 
 
 login_email(email,password)
 text(1)
 open_mycsulb()
-log_info()
+log_info(email, password)
+input()
 driver.close()
 

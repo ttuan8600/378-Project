@@ -1,136 +1,848 @@
-<div><style type="text/css">
-    <!--
-    @media only screen and (max-width: 660px) {
-    .rps_aff7 .x_rps_d70e table[class~=SpacerColumn], .rps_aff7 .x_rps_d70e td[class~=SpacerColumn], .rps_aff7 .x_rps_d70e img[class~=SpacerColumn]
-        {width:10px!important}
-    .rps_aff7 .x_rps_d70e table[class~=ContentColumn], .rps_aff7 .x_rps_d70e td[class~=ContentColumn], .rps_aff7 .x_rps_d70e img[class~=ContentColumn]
-        {width:280px!important}
-    .rps_aff7 .x_rps_d70e table[class~=ScreenWidth], .rps_aff7 .x_rps_d70e td[class~=ScreenWidth], .rps_aff7 .x_rps_d70e img[class~=ScreenWidth], .rps_aff7 .x_rps_d70e img[class~=Header]
-        {width:300px!important}
-    .rps_aff7 .x_rps_d70e td[id~=ButtonPadding]
-        {width:5px!important}
-    .rps_aff7 .x_rps_d70e img[class~=Header]
-        {height:auto;
-        line-height:100%}
-    
+<div>
+    <style type="text/css">
+        <!--
+        @media only screen and (max-width: 660px) {
+
+            .rps_967e table[class~=SpacerColumn],
+            .rps_967e td[class~=SpacerColumn],
+            .rps_967e img[class~=SpacerColumn] {
+                width: 10px !important
+            }
+
+            .rps_967e table[class~=ContentColumn],
+            .rps_967e td[class~=ContentColumn],
+            .rps_967e img[class~=ContentColumn] {
+                width: 280px !important
+            }
+
+            .rps_967e table[class~=ScreenWidth],
+            .rps_967e td[class~=ScreenWidth],
+            .rps_967e img[class~=ScreenWidth],
+            .rps_967e img[class~=Header] {
+                width: 300px !important
+            }
+
+            .rps_967e td[id~=ButtonPadding] {
+                width: 5px !important
+            }
+
+            .rps_967e img[class~=Header] {
+                height: auto;
+                line-height: 100%
+            }
+
         }
-    .rps_aff7 .x_rps_d70e .x_x_HeaderButton
-        {height:25px;
-        display:inline!important}
-    .rps_aff7 .x_rps_d70e .x_x_SpacerColumn
-        {width:30px}
-    .rps_aff7 .x_rps_d70e .x_x_ContentColumn
-        {width:580px}
-    .rps_aff7 .x_rps_d70e .x_x_ScreenWidth
-        {width:640px}
-    .rps_aff7 .x_rps_d70e .x_x_Header
-        {background-color:black}
-    .rps_aff7 .x_rps_d70e .x_x_ES-Footer
-        {font-size:10.0pt;
-        font-family:'Calibri','sans-serif'}
-    .rps_aff7 .x_rps_d70e .x_x_Footer
-        {background-color:black;
-        color:white;
-        font-size:.8em;
-        font-family:'Century Gothic','Calibri','Verdana','Helvetica',sans-serif;
-        text-align:center!important}
-    .rps_aff7 .x_rps_d70e .x_x_Footer a
-        {color:white}
-    .rps_aff7 .x_rps_d70e .x_x_VSpace
-        {height:30px}
-    .rps_aff7 .x_rps_d70e .x_x_headlineDiv
-        {text-align:center!important;
-        font-weight:bold!important}
-    .rps_aff7 .x_rps_d70e .x_x_actionBox
-        {border-style:solid;
-        border-color:#FFC72C;
-        border-width:1px;
-        padding:.5em}
-    .rps_aff7 .x_rps_d70e .x_x_inset
-        {margin-left:1em;
-        margin-right:2em}
-    .rps_aff7 .x_rps_d70e .x_x_centered
-        {text-align:center!important}
-    .rps_aff7 .x_rps_d70e .x_x_contentParagraph
-        {text-align:left}
-    .rps_aff7 .x_rps_d70e .x_x_actionBoxHeader
-        {background-color:#FFC72C;
-        font-weight:bold;
-        padding:3px;
-        padding-left:40px;
-        font-size:large}
-    .rps_aff7 .x_rps_d70e td.x_x_Content
-        {background-color:white}
-    .rps_aff7 .x_rps_d70e .x_x_ReadMsgBody
-        {width:100%}
-    .rps_aff7 .x_rps_d70e .x_x_ExternalClass
-        {width:100%;
-        display:block!important}
-    .rps_aff7 .x_rps_d70e .x_x_SignatureArea
-        {font-size:10pt;
-        font-family:'Calibri','sans-serif'}
-    .rps_aff7 .x_rps_d70e > div
-        {width:100%!important;
-        margin:0;
-        padding:0;
-        font-family:'Calibri','Verdana',Helvetica,sans-serif;
-        font-size:10pt}
-    .rps_aff7 .x_rps_d70e img
-        {outline:none;
-        text-decoration:none;
-        display:inline;
-        border:none;
-        border-style:none}
-    .rps_aff7 .x_rps_d70e br
-        {line-height:100%}
-    .rps_aff7 .x_rps_d70e table
-        {border:0px;
-        border-collapse:collapse;
-        border-spacing:0px;
-        padding:0px}
-    .rps_aff7 .x_rps_d70e td, .rps_aff7 .x_rps_d70e tr
-        {border:inherit;
-        border-collapse:inherit;
-        border-spacing:inherit;
-        padding:inherit}
-    .rps_aff7 .x_rps_d70e #x_x_background-table
-        {background-color:silver}
-    .rps_aff7 .x_rps_d70e #x_x_outlook a
-        {padding:0}
-    .rps_aff7 .x_rps_d70e .x_x_evenOddTbl th
-        {border-bottom:1px solid black;
-        padding:8px 8px 0px 8px;
-        margin:0px}
-    .rps_aff7 .x_rps_d70e .x_x_evenOddTbl td
-        {padding:2px 8px;
-        margin:0px}
-    .rps_aff7 .x_rps_d70e .x_x_evenOddTbl tr.x_x_oddTr
-        {background:#eee}
-    .rps_aff7 .x_rps_d70e p.x_x_MsoNormal, .rps_aff7 .x_rps_d70e li.x_x_MsoNormal, .rps_aff7 .x_rps_d70e div.x_x_MsoNormal
-        {margin-top:0in;
-        margin-right:0in;
-        margin-bottom:10.0pt;
-        margin-left:0in;
-        line-height:115%;
-        font-size:11.0pt;
-        font-family:"Calibri",sans-serif}
-    .rps_aff7 .x_rps_d70e a:link, .rps_aff7 .x_rps_d70e span.x_x_MsoHyperlink
-        {color:blue;
-        text-decoration:underline}
-    .rps_aff7 .x_rps_d70e p.x_x_EsComm, .rps_aff7 .x_rps_d70e li.x_x_EsComm, .rps_aff7 .x_rps_d70e div.x_x_EsComm
-        {margin:0in;
-        font-size:10.0pt;
-        font-family:"Calibri",sans-serif}
-    .rps_aff7 .x_rps_d70e .x_x_MsoChpDefault
-        {font-family:"Calibri",sans-serif}
-    .rps_aff7 .x_rps_d70e .x_x_MsoPapDefault
-        {margin-bottom:10.0pt;
-        line-height:115%}
-    @page WordSection1
-        {margin:45.0pt 1.0in 31.5pt 1.0in}
-    .rps_aff7 .x_rps_d70e ol
-        {margin-bottom:0in}
-    .rps_aff7 .x_rps_d70e ul
-        {margin-bottom:0in}
-    -->
-    </style><div class="x_rps_d70e"><div style="margin:0; padding:0; font-family:'Calibri','Verdana',Helvetica,sans-serif; font-size:10pt; width:100%!important"><table cellpadding="0" cellspacing="0" id="x_x_background-table" width="100%" style="border:0px; border-collapse:collapse; border-spacing:0px; padding:0px; background-color:silver"><tbody><tr style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit"><td align="center" style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit"><table cellpadding="0" cellspacing="0" class="x_x_ScreenWidth" style="border:0px; border-collapse:collapse; border-spacing:0px; padding:0px; width:640px; margin:0 10px"><tbody><tr style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit"><td class="x_x_ScreenWidth x_x_VSpace" height="30" style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:640px; height:30px"></td></tr><tr style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit"><td class="x_x_ScreenWidth x_x_Header" bgcolor="black" align="left" style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:640px; background-color:black"><table cellpadding="0" cellspacing="0" align="left" style="border:0px; border-collapse:collapse; border-spacing:0px; padding:0px; display:inline"><tbody><tr align="left" style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit"><td align="left" valign="top" style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit"><img data-imagetype="External" src="blob:https://outlook.office.com/294adb99-afb7-4a4c-94b9-2c56c61cf4a8" originalsrc="http://csulb.edu/depts/enrollment/email_assets/EmailImages/UndergradStudiesHeader.jpg" data-imageproxyendpoint="/actions/ei" class="x_x_Header" alt="CSULB Undergraduate Studies" align="left" border="0" width="415" style="display:inline"> </td></tr></tbody></table><table class="x_x_HeaderButtons" cellpadding="0" cellspacing="0" align="center" style="border:0px; border-collapse:collapse; border-spacing:0px; padding:0px"><tbody><tr style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit"><td height="5" style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; height:5px"></td></tr><tr style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit"><td id="x_x_ButtonPadding" align="center" valign="top" style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:20px"></td><td align="left" valign="top" style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit"><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffgfcjfb.r.bh.d.sendibt3.com%2Ftr%2Fcl%2FqgspBPzFufk1LyAw6lPChe7aXNQ3qCPJhaOHcXzci0HAK0cR_Ltf_K-fsY1KvavtDCX_kaNRiZuvlX3fyvBu6n-ATNW6dpJPw-d2fHA8QFKvLP8_kukKY3e2Iyz9niWcrGK8MAUjVTXUDFdT425YK6x27ebWg--DPxVBhgezHcpouNXCISNiVOU5RnaiD31q2CgAKTvb5Efc4AMFu8XnY7ab775cLPS5ljh7OD0DbkhjXWxrsV_x3Kbl1m8JEW1fYVyOtrx9AOGJtxtHtm25w2ZkoZt-HpW2xtTfZcDFjF4pXGLHQKinN0U9fN-rWJ0G7le5yM7SLvmZn7JrcrLJsTo4TZIww8peOPWSFHK4OWSVz5_gvaWJxCqR6bxgbML8RLwkq9cwYfYWJoBuWCwz7MNsHxkGtrGEfkLbjGT73VuaAhL5W9zl8hQjFaadu6nkQ5UPzb5CSqbxgJy5PnOSzkMwGDsBfz3u2i0jVfclcX75Gc15EIvpyQnuHAjf3k9LTZcrRXhpLmv4ZzKHNbCgud9om5SDWIhRfZuOcsTyaUu1rK66hCt8QEfyK0zkrOtqEjVB7fI2tqNul7vVCHqPIadw3UB6F1Qrp_ZqUMe5fxUHw2TUzKkVg2mfzRn_tQfwFXsBA4K3u4IrFwjlzzgQ2QDe2-E3_8on-h9ectE9bvqrJTJranw-0YJG0bYfdkI8cWf3dqEXaoYGuaxGm9-pPaTz5-uCmTGDZRwosYR9Z6x09_eYRMjFR4ApJZsVMy0oVg-9XyhJSCUkhbAZXkzrMulr1KSWfMYMkeZoZPG190Iu2gaU1AlWvrl9rnhWuQ8_TxSCGQ0rs0wwVPTu0nnlh7GGp9mk29ZDIdhIykejkFBV_nFVGPFm3VFhudN3&amp;data=05%7C01%7Cfaizan.zafar01%40student.csulb.edu%7C8dc1885132c941c0d94208db07277588%7Cd175679bacd34644be82af041982977a%7C0%7C0%7C638111638285801419%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=h07hJPE4QrC%2F26rXZ412XAs1awJb4e42w1Ig6%2BltkQk%3D&amp;reserved=0" target="_blank" rel="noopener noreferrer" data-auth="Verified" originalsrc="https://fgfcjfb.r.bh.d.sendibt3.com/tr/cl/qgspBPzFufk1LyAw6lPChe7aXNQ3qCPJhaOHcXzci0HAK0cR_Ltf_K-fsY1KvavtDCX_kaNRiZuvlX3fyvBu6n-ATNW6dpJPw-d2fHA8QFKvLP8_kukKY3e2Iyz9niWcrGK8MAUjVTXUDFdT425YK6x27ebWg--DPxVBhgezHcpouNXCISNiVOU5RnaiD31q2CgAKTvb5Efc4AMFu8XnY7ab775cLPS5ljh7OD0DbkhjXWxrsV_x3Kbl1m8JEW1fYVyOtrx9AOGJtxtHtm25w2ZkoZt-HpW2xtTfZcDFjF4pXGLHQKinN0U9fN-rWJ0G7le5yM7SLvmZn7JrcrLJsTo4TZIww8peOPWSFHK4OWSVz5_gvaWJxCqR6bxgbML8RLwkq9cwYfYWJoBuWCwz7MNsHxkGtrGEfkLbjGT73VuaAhL5W9zl8hQjFaadu6nkQ5UPzb5CSqbxgJy5PnOSzkMwGDsBfz3u2i0jVfclcX75Gc15EIvpyQnuHAjf3k9LTZcrRXhpLmv4ZzKHNbCgud9om5SDWIhRfZuOcsTyaUu1rK66hCt8QEfyK0zkrOtqEjVB7fI2tqNul7vVCHqPIadw3UB6F1Qrp_ZqUMe5fxUHw2TUzKkVg2mfzRn_tQfwFXsBA4K3u4IrFwjlzzgQ2QDe2-E3_8on-h9ectE9bvqrJTJranw-0YJG0bYfdkI8cWf3dqEXaoYGuaxGm9-pPaTz5-uCmTGDZRwosYR9Z6x09_eYRMjFR4ApJZsVMy0oVg-9XyhJSCUkhbAZXkzrMulr1KSWfMYMkeZoZPG190Iu2gaU1AlWvrl9rnhWuQ8_TxSCGQ0rs0wwVPTu0nnlh7GGp9mk29ZDIdhIykejkFBV_nFVGPFm3VFhudN3" shash="lejiPwnANLZdg8ul+wIi8DYnw4Qa0Kus7qgTiFCO/J+QZhWqGzHH04OJwVhetvxf1mpF96+0lippe85f+bqt/N6nvcoP2lo8Q28X0k+TUxGriTQsesTKO/gv1+kaSvVT/1HFhKgrSrep16CY6w1gP77RF13SaPxRf2ExXsss+Zk=" title="Original URL: https://fgfcjfb.r.bh.d.sendibt3.com/tr/cl/qgspBPzFufk1LyAw6lPChe7aXNQ3qCPJhaOHcXzci0HAK0cR_Ltf_K-fsY1KvavtDCX_kaNRiZuvlX3fyvBu6n-ATNW6dpJPw-d2fHA8QFKvLP8_kukKY3e2Iyz9niWcrGK8MAUjVTXUDFdT425YK6x27ebWg--DPxVBhgezHcpouNXCISNiVOU5RnaiD31q2CgAKTvb5Efc4AMFu8XnY7ab775cLPS5ljh7OD0DbkhjXWxrsV_x3Kbl1m8JEW1fYVyOtrx9AOGJtxtHtm25w2ZkoZt-HpW2xtTfZcDFjF4pXGLHQKinN0U9fN-rWJ0G7le5yM7SLvmZn7JrcrLJsTo4TZIww8peOPWSFHK4OWSVz5_gvaWJxCqR6bxgbML8RLwkq9cwYfYWJoBuWCwz7MNsHxkGtrGEfkLbjGT73VuaAhL5W9zl8hQjFaadu6nkQ5UPzb5CSqbxgJy5PnOSzkMwGDsBfz3u2i0jVfclcX75Gc15EIvpyQnuHAjf3k9LTZcrRXhpLmv4ZzKHNbCgud9om5SDWIhRfZuOcsTyaUu1rK66hCt8QEfyK0zkrOtqEjVB7fI2tqNul7vVCHqPIadw3UB6F1Qrp_ZqUMe5fxUHw2TUzKkVg2mfzRn_tQfwFXsBA4K3u4IrFwjlzzgQ2QDe2-E3_8on-h9ectE9bvqrJTJranw-0YJG0bYfdkI8cWf3dqEXaoYGuaxGm9-pPaTz5-uCmTGDZRwosYR9Z6x09_eYRMjFR4ApJZsVMy0oVg-9XyhJSCUkhbAZXkzrMulr1KSWfMYMkeZoZPG190Iu2gaU1AlWvrl9rnhWuQ8_TxSCGQ0rs0wwVPTu0nnlh7GGp9mk29ZDIdhIykejkFBV_nFVGPFm3VFhudN3. Click or tap if you trust this link." data-linkindex="0"><img data-imagetype="External" src="blob:https://outlook.office.com/d453d0e1-91c0-4383-83ad-2f00fa29b8f8" originalsrc="http://csulb.edu/depts/enrollment/email_assets/EmailImages/ButtonUndergraduateStudies.jpg" data-imageproxyendpoint="/actions/ei" class="x_x_HeaderButton" alt="CSULB Undergraduate Studies" height="25"> </a></td><td align="center" valign="top" style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:5px"></td><td align="center" valign="top" style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit"><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffgfcjfb.r.bh.d.sendibt3.com%2Ftr%2Fcl%2FFlI0eDuvewKf6S3fdl-K63KwmKu5EFlpbHIrUFbnwidGv1tBw61AcMmZ-z3R17zkZkhxIVs4VAAHGlH_kSy3ox3owfX3XuMcSvfYlGMmgwRbymEA-POQBRHlZX8p0AH6YgW0RaknXBj5J_M04mBbeluQbQk7g6qYa6bmWZGArhZirnSIOfWOp6Le7apESAiLmf_x4Iep6bX_aT6gvjmvUNvDt0v_NPvQZFinBmHi9Rcdpxz4M6n53avrvESG2AQ99k6JtI_WZce7gQMXcEu7ORcofh7i-l_tOKa9Tzwk3B5QQnrU7Bbgj1Zpkhb7btmc9BVLq901FCL5Erpjjh8pFUQ5jjarPtEmMe90k4vIl604oytb-tdeavubLs51lCeQ3pXrypEeht8TY9nACeRcIDwnfpH12z4ZGBwoNRRIWg4XKaRIYDcFWPNm2Qq4lWfNhqyMizMsMjjqC6FodEcFlGQ6t09jwF5Vs_UyyOiI8CMTAhy2jBB2dv_MwH8LfUgHEk2suGAegQwNBQh1hd8RBkaIrwHShHOb3C4Qdpk3DFeTm__lVp1gbrw2alNjIUjjOgiJIBDBA49zFBeOIa7mH5OVOGwLL_MQDYJrDkm6bvDeAUtBcil5S6YZjwUfCPShVi16GVQj8BqqRSw9WcyhemLnT3s4QXSQWFUYy23wWgg2yALoAdXc-ALekAL-M_qUpnicq269iTJNFVl4mTrfZkJOVpVaiMUAMwGxB58nJfBm_JhhXUJM79JxfRHlWnLOj3Xl4JZRYTv34GqlPjx-jDwtuKA9zGy6jb5McQZ5x_zTlJtW3ASKToDD1jvM&amp;data=05%7C01%7Cfaizan.zafar01%40student.csulb.edu%7C8dc1885132c941c0d94208db07277588%7Cd175679bacd34644be82af041982977a%7C0%7C0%7C638111638285801419%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=FFeBLOUkdRQu0%2ForgJ7Mol8rJU13b2IKywEKAhueiuM%3D&amp;reserved=0" target="_blank" rel="noopener noreferrer" data-auth="Verified" originalsrc="https://fgfcjfb.r.bh.d.sendibt3.com/tr/cl/FlI0eDuvewKf6S3fdl-K63KwmKu5EFlpbHIrUFbnwidGv1tBw61AcMmZ-z3R17zkZkhxIVs4VAAHGlH_kSy3ox3owfX3XuMcSvfYlGMmgwRbymEA-POQBRHlZX8p0AH6YgW0RaknXBj5J_M04mBbeluQbQk7g6qYa6bmWZGArhZirnSIOfWOp6Le7apESAiLmf_x4Iep6bX_aT6gvjmvUNvDt0v_NPvQZFinBmHi9Rcdpxz4M6n53avrvESG2AQ99k6JtI_WZce7gQMXcEu7ORcofh7i-l_tOKa9Tzwk3B5QQnrU7Bbgj1Zpkhb7btmc9BVLq901FCL5Erpjjh8pFUQ5jjarPtEmMe90k4vIl604oytb-tdeavubLs51lCeQ3pXrypEeht8TY9nACeRcIDwnfpH12z4ZGBwoNRRIWg4XKaRIYDcFWPNm2Qq4lWfNhqyMizMsMjjqC6FodEcFlGQ6t09jwF5Vs_UyyOiI8CMTAhy2jBB2dv_MwH8LfUgHEk2suGAegQwNBQh1hd8RBkaIrwHShHOb3C4Qdpk3DFeTm__lVp1gbrw2alNjIUjjOgiJIBDBA49zFBeOIa7mH5OVOGwLL_MQDYJrDkm6bvDeAUtBcil5S6YZjwUfCPShVi16GVQj8BqqRSw9WcyhemLnT3s4QXSQWFUYy23wWgg2yALoAdXc-ALekAL-M_qUpnicq269iTJNFVl4mTrfZkJOVpVaiMUAMwGxB58nJfBm_JhhXUJM79JxfRHlWnLOj3Xl4JZRYTv34GqlPjx-jDwtuKA9zGy6jb5McQZ5x_zTlJtW3ASKToDD1jvM" shash="AJOZrw+/XShd8FymL/uCCvv7LoaMKuuiUd7rpB9ToyuzkRf97uVd6NHhLdUp83ndNSETTZFthwgCoT4CWm6wERFMfrgEBdMV+1ojlrcGJ2juD6H4hU/e1Y2GCtcoifX5+suoMsuNLROMTR+o0VO+gF6T9oxAlswkhuDNfdhsauU=" title="Original URL: https://fgfcjfb.r.bh.d.sendibt3.com/tr/cl/FlI0eDuvewKf6S3fdl-K63KwmKu5EFlpbHIrUFbnwidGv1tBw61AcMmZ-z3R17zkZkhxIVs4VAAHGlH_kSy3ox3owfX3XuMcSvfYlGMmgwRbymEA-POQBRHlZX8p0AH6YgW0RaknXBj5J_M04mBbeluQbQk7g6qYa6bmWZGArhZirnSIOfWOp6Le7apESAiLmf_x4Iep6bX_aT6gvjmvUNvDt0v_NPvQZFinBmHi9Rcdpxz4M6n53avrvESG2AQ99k6JtI_WZce7gQMXcEu7ORcofh7i-l_tOKa9Tzwk3B5QQnrU7Bbgj1Zpkhb7btmc9BVLq901FCL5Erpjjh8pFUQ5jjarPtEmMe90k4vIl604oytb-tdeavubLs51lCeQ3pXrypEeht8TY9nACeRcIDwnfpH12z4ZGBwoNRRIWg4XKaRIYDcFWPNm2Qq4lWfNhqyMizMsMjjqC6FodEcFlGQ6t09jwF5Vs_UyyOiI8CMTAhy2jBB2dv_MwH8LfUgHEk2suGAegQwNBQh1hd8RBkaIrwHShHOb3C4Qdpk3DFeTm__lVp1gbrw2alNjIUjjOgiJIBDBA49zFBeOIa7mH5OVOGwLL_MQDYJrDkm6bvDeAUtBcil5S6YZjwUfCPShVi16GVQj8BqqRSw9WcyhemLnT3s4QXSQWFUYy23wWgg2yALoAdXc-ALekAL-M_qUpnicq269iTJNFVl4mTrfZkJOVpVaiMUAMwGxB58nJfBm_JhhXUJM79JxfRHlWnLOj3Xl4JZRYTv34GqlPjx-jDwtuKA9zGy6jb5McQZ5x_zTlJtW3ASKToDD1jvM. Click or tap if you trust this link." data-linkindex="1"><img data-imagetype="External" src="blob:https://outlook.office.com/52324fc9-730e-4aaf-83ad-812d68bcfd3a" originalsrc="http://csulb.edu/depts/enrollment/email_assets/EmailImages/ButtonMyCSULB.jpg" data-imageproxyendpoint="/actions/ei" class="x_x_HeaderButton" alt="MyCSULB" height="25"> </a></td><td align="center" valign="top" style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:5px"></td></tr><tr style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit"><td height="5" style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; height:5px"></td></tr></tbody></table></td></tr><tr style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit"><td class="x_x_ScreenWidth x_x_Content x_x_VSpace" bgcolor="white" height="30" style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:640px; height:30px; background-color:white"></td></tr><tr style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit"><td class="x_x_ScreenWidth x_x_Content" bgcolor="white" style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:640px; background-color:white"><table class="x_x_ScreenWidth" align="left" style="border:0px; border-collapse:collapse; border-spacing:0px; padding:0px; width:640px"><tbody><tr style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit"><td class="x_x_SpacerColumn" style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:30px"></td><td class="x_x_ContentColumn" style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:580px"><table class="x_x_ContentColumn" style="border:0px; border-collapse:collapse; border-spacing:0px; padding:0px; width:580px"><tbody><tr style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit"><td class="x_x_ContentColumn" style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:580px"><div align="left" style="font-family:'Calibri','Verdana',Helvetica,sans-serif; font-size:10pt"><div class="x_x_WordSection1"><p class="x_x_EsComm">Dear Faizan,</p><h1>THIS IS A SCAM EMAIL<h1></h1><p class="x_x_EsComm" aria-hidden="true">&nbsp;</p><p class="x_x_EsComm">Thank you for applying to graduate - we're excited you have a plan and a timeline!</p><p class="x_x_EsComm" aria-hidden="true">&nbsp;</p><p class="x_x_EsComm">Given the number of units you have already earned, you may not make any changes to your degree program objectives that would result in delaying your graduation. For more information, see <a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffgfcjfb.r.bh.d.sendibt3.com%2Ftr%2Fcl%2FNnf5ixMvnSkKXdzcfwel4x_nCEP_dFLqLKHXjy7-A8Tu2hrWb46H34cTc2oJ4eVj6YcpcY4uTmbXguRLEtd88zM44V5rzTrKR_TXxuDpr6tTepqoV4fI7QrJ6BMt-w-cbaVLYyZrvsc2jIZAKKRcv5oZXL93x0wpBSDa1xaAom7L0rttmdW5gl1t23ENomsCZYPu9QrcS5-S0s5QBvdu3CbghdgR7Na-vpHn8yy_Jx8b4XlHqNXKKWdFnl9COTBvHhIk3YzX4HlBzMEx4esjxpcPLwUYimasOfd03-5ZdwiB4QPcUKVAkKUE4F5s1-SPp0cr4GB-GjAdTy33jIkKVKSTBfllPra2nFgdJuk9yf1pQ1Bq2YoPrfe47WAT8-t1wwYvQ6RtvOnVrFA2ZbNFuUPUOd7qLy1_8FICRmIMpF2ZddbuPawFKcs74Z2C4TMGqYIzI6eKB4TF8erFiJa4nvnZ02al4ca5P6soZl2HgY9E7mWFcqlke2rsD-Pr13uOBKEia4TzZXccYUQHjE_4SCHYBJ5K_cwtaS4v8xIjx_oedehWHMl4-_p_zoRQQpLafF7l0Vv6ghoFXRjyMzSHHihSAjg45Adx7gAjWUkn6Bp5njwzqGGtmPbccubND9TlPifSyOn232pRz0CaGQztePNrcVXgyYTw8IIZ8SRutwAEtLsBxkmnEmeMRPUKih0j1AlktMF3d4TpUHQ_L4nc78DlfSFRFE3T2ZQF1IssFKqEMGbI__9N52DEvAI3hxKSJHnRyjp5Ylj7BDpNRx1NwJFdCacgr3ItrpHSdH8gzXGIIApvePQ1McnT6xfki0D1KmuXsL7WAWbdBaI6Sw-Yi18NVAVX4yg6alNI1udj0GQ0H-O54fGq&amp;data=05%7C01%7Cfaizan.zafar01%40student.csulb.edu%7C8dc1885132c941c0d94208db07277588%7Cd175679bacd34644be82af041982977a%7C0%7C0%7C638111638285801419%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=8kWhSEWlKNP5P%2BLtEtGty53H2n%2FLzE2IW0HU6JK9XHY%3D&amp;reserved=0" target="_blank" rel="noopener noreferrer" data-auth="Verified" originalsrc="https://fgfcjfb.r.bh.d.sendibt3.com/tr/cl/Nnf5ixMvnSkKXdzcfwel4x_nCEP_dFLqLKHXjy7-A8Tu2hrWb46H34cTc2oJ4eVj6YcpcY4uTmbXguRLEtd88zM44V5rzTrKR_TXxuDpr6tTepqoV4fI7QrJ6BMt-w-cbaVLYyZrvsc2jIZAKKRcv5oZXL93x0wpBSDa1xaAom7L0rttmdW5gl1t23ENomsCZYPu9QrcS5-S0s5QBvdu3CbghdgR7Na-vpHn8yy_Jx8b4XlHqNXKKWdFnl9COTBvHhIk3YzX4HlBzMEx4esjxpcPLwUYimasOfd03-5ZdwiB4QPcUKVAkKUE4F5s1-SPp0cr4GB-GjAdTy33jIkKVKSTBfllPra2nFgdJuk9yf1pQ1Bq2YoPrfe47WAT8-t1wwYvQ6RtvOnVrFA2ZbNFuUPUOd7qLy1_8FICRmIMpF2ZddbuPawFKcs74Z2C4TMGqYIzI6eKB4TF8erFiJa4nvnZ02al4ca5P6soZl2HgY9E7mWFcqlke2rsD-Pr13uOBKEia4TzZXccYUQHjE_4SCHYBJ5K_cwtaS4v8xIjx_oedehWHMl4-_p_zoRQQpLafF7l0Vv6ghoFXRjyMzSHHihSAjg45Adx7gAjWUkn6Bp5njwzqGGtmPbccubND9TlPifSyOn232pRz0CaGQztePNrcVXgyYTw8IIZ8SRutwAEtLsBxkmnEmeMRPUKih0j1AlktMF3d4TpUHQ_L4nc78DlfSFRFE3T2ZQF1IssFKqEMGbI__9N52DEvAI3hxKSJHnRyjp5Ylj7BDpNRx1NwJFdCacgr3ItrpHSdH8gzXGIIApvePQ1McnT6xfki0D1KmuXsL7WAWbdBaI6Sw-Yi18NVAVX4yg6alNI1udj0GQ0H-O54fGq" shash="eP7C2tku198qI0BcuYyzqUhCM7oiPDXvlqZwWEGlJuAJsB1O0/fc1hA24I32tx51+eTuQcnl9AFGVmgoWtPlXhAXUpWTgWZTCc88GSHJCEaX6DkVZVKUEnfwyRLloEiAtB04CTQ12iJJdYZJ5g5M1KcrBCksc56qwvntcnj96vI=" title="Original URL: https://fgfcjfb.r.bh.d.sendibt3.com/tr/cl/Nnf5ixMvnSkKXdzcfwel4x_nCEP_dFLqLKHXjy7-A8Tu2hrWb46H34cTc2oJ4eVj6YcpcY4uTmbXguRLEtd88zM44V5rzTrKR_TXxuDpr6tTepqoV4fI7QrJ6BMt-w-cbaVLYyZrvsc2jIZAKKRcv5oZXL93x0wpBSDa1xaAom7L0rttmdW5gl1t23ENomsCZYPu9QrcS5-S0s5QBvdu3CbghdgR7Na-vpHn8yy_Jx8b4XlHqNXKKWdFnl9COTBvHhIk3YzX4HlBzMEx4esjxpcPLwUYimasOfd03-5ZdwiB4QPcUKVAkKUE4F5s1-SPp0cr4GB-GjAdTy33jIkKVKSTBfllPra2nFgdJuk9yf1pQ1Bq2YoPrfe47WAT8-t1wwYvQ6RtvOnVrFA2ZbNFuUPUOd7qLy1_8FICRmIMpF2ZddbuPawFKcs74Z2C4TMGqYIzI6eKB4TF8erFiJa4nvnZ02al4ca5P6soZl2HgY9E7mWFcqlke2rsD-Pr13uOBKEia4TzZXccYUQHjE_4SCHYBJ5K_cwtaS4v8xIjx_oedehWHMl4-_p_zoRQQpLafF7l0Vv6ghoFXRjyMzSHHihSAjg45Adx7gAjWUkn6Bp5njwzqGGtmPbccubND9TlPifSyOn232pRz0CaGQztePNrcVXgyYTw8IIZ8SRutwAEtLsBxkmnEmeMRPUKih0j1AlktMF3d4TpUHQ_L4nc78DlfSFRFE3T2ZQF1IssFKqEMGbI__9N52DEvAI3hxKSJHnRyjp5Ylj7BDpNRx1NwJFdCacgr3ItrpHSdH8gzXGIIApvePQ1McnT6xfki0D1KmuXsL7WAWbdBaI6Sw-Yi18NVAVX4yg6alNI1udj0GQ0H-O54fGq. Click or tap if you trust this link." data-linkindex="2">Timely Graduation for Undergraduate Students</a>.</p><p class="x_x_EsComm" aria-hidden="true">&nbsp;</p><p class="x_x_EsComm">To ensure you make the most of your remaining time at CSULB, please take advantage of these University tools and services:</p><p class="x_x_MsoNormal" style="margin-bottom:0in; line-height:normal"><b><span style="font-size:10.0pt">&nbsp;</span></b></p><ul type="disc" style="margin-top:0in"><li class="x_x_MsoNormal" style="color:black; margin-bottom:0in; line-height:normal"><b><span style="font-size:10.0pt; color:windowtext">Academic Requirements Report (ARR) </span></b><span style="font-size:10.0pt; color:windowtext">will indicate whether your degree requirements, including unit and GPA minimums, are met or unmet; any unmet requirement will appear on the Report with a red square. </span><span style="font-size:10.0pt; color:windowtext">For more information on how to use your ARR report, please visit </span><span style="color:windowtext"><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffgfcjfb.r.bh.d.sendibt3.com%2Ftr%2Fcl%2FCcwPXJL_dhraYaTpn9X8V2CMXSC0CFFW6O1mSuoyfCUxarXLo8XHJFaYMuBwbMYVj6Wq2E7OQ9jEz809WGyRmqY-00ko6N7krxJTIGnRjCRWjrwPMcVmyl5uSF9VsmZqwDYT1pXAavuqRU0v7pd8ZKnkDss7UnH8xdkLShBsQawk8af4ahu9z7jvmZgW_PqELN4tjLoxsSdkQk03KP5p2-1y432FDrOEOfg5nMqbORcf9PLLzQmebXoTZL4Kn5Vvv60vc1kqHCrfjUsM2eo4XviT-6Ra8PePlv7Yakwy2vVGIEMzDh2z-PVTbJ0LySvLsMApoR78CzhR22jIiGqf6YD4-hnQ-eqWOh1G0ZJWGcz0qzcvnIz5w1FK5DIJAMwNN4neWiN0yYWHniaSL0CXg2tGoog9d6cq7KowfHfmKvXGHkSpuhzhcZ-BczNlOKJv2Ei1qqqcv3ilmPnUr8TFJt1DamEaNP_k0T-5PX_ABwfJVCn2b4dRu2rj2kXOtFAu-kGBlDZIUcrsWBwor0z3m5_GMBO7WL12zo-_nSrbF_1jLnuLv7pvo9s-g1_3kZLbhRhIMSCUpe-TQMJ_ucDp3YrJ1xBsXUqMwC2K1gmi2J-sUpE-I4xU2F4pm7JBrS6azeXQdFQ0JhSZjJywKz6c7suVRovtx9k8pPKv48YTXA2j8xxSjJeZhmtRCQ3Tt-__RjSD4bjmhEsSUIyggHVcqP6diw9f9eKfYjzF8yddvReVl5toP6MRR1isC1r8SJ8JOTzmGYfGovQVIPjUt4ehypyjcT8U87HWwbm4IUk386h3mO9dxHbpITuhN621601LjKkIykCs3cZAYAslUgHAY8rii8_xCxzDaFCaN699Qx4mNGvt4GMgJJ1NS7iwy9XxtROp&amp;data=05%7C01%7Cfaizan.zafar01%40student.csulb.edu%7C8dc1885132c941c0d94208db07277588%7Cd175679bacd34644be82af041982977a%7C0%7C0%7C638111638285801419%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=ekDgsmwc6dQ4DnbP1XcmWStN7DpsuwCqnhXFq3%2FqZHU%3D&amp;reserved=0" target="_blank" rel="noopener noreferrer" data-auth="Verified" originalsrc="https://fgfcjfb.r.bh.d.sendibt3.com/tr/cl/CcwPXJL_dhraYaTpn9X8V2CMXSC0CFFW6O1mSuoyfCUxarXLo8XHJFaYMuBwbMYVj6Wq2E7OQ9jEz809WGyRmqY-00ko6N7krxJTIGnRjCRWjrwPMcVmyl5uSF9VsmZqwDYT1pXAavuqRU0v7pd8ZKnkDss7UnH8xdkLShBsQawk8af4ahu9z7jvmZgW_PqELN4tjLoxsSdkQk03KP5p2-1y432FDrOEOfg5nMqbORcf9PLLzQmebXoTZL4Kn5Vvv60vc1kqHCrfjUsM2eo4XviT-6Ra8PePlv7Yakwy2vVGIEMzDh2z-PVTbJ0LySvLsMApoR78CzhR22jIiGqf6YD4-hnQ-eqWOh1G0ZJWGcz0qzcvnIz5w1FK5DIJAMwNN4neWiN0yYWHniaSL0CXg2tGoog9d6cq7KowfHfmKvXGHkSpuhzhcZ-BczNlOKJv2Ei1qqqcv3ilmPnUr8TFJt1DamEaNP_k0T-5PX_ABwfJVCn2b4dRu2rj2kXOtFAu-kGBlDZIUcrsWBwor0z3m5_GMBO7WL12zo-_nSrbF_1jLnuLv7pvo9s-g1_3kZLbhRhIMSCUpe-TQMJ_ucDp3YrJ1xBsXUqMwC2K1gmi2J-sUpE-I4xU2F4pm7JBrS6azeXQdFQ0JhSZjJywKz6c7suVRovtx9k8pPKv48YTXA2j8xxSjJeZhmtRCQ3Tt-__RjSD4bjmhEsSUIyggHVcqP6diw9f9eKfYjzF8yddvReVl5toP6MRR1isC1r8SJ8JOTzmGYfGovQVIPjUt4ehypyjcT8U87HWwbm4IUk386h3mO9dxHbpITuhN621601LjKkIykCs3cZAYAslUgHAY8rii8_xCxzDaFCaN699Qx4mNGvt4GMgJJ1NS7iwy9XxtROp" shash="KrepnH0k+X68ViQTxAtXPbgZ0vThk8e1aPKJxiFOqIsVHtbKb13QXdtZSXHTf4TNRlmR5FVsDM2MuxJTwwI4NkM7Y/7M2R0a6EXqkn68ZxByRMM0xjUTa6NNxWZ8Ckxe6bIJA9bP84VvZeOWvEixUl4a8cgoFia7e8j8jEU1Kyo=" title="Original URL: https://fgfcjfb.r.bh.d.sendibt3.com/tr/cl/CcwPXJL_dhraYaTpn9X8V2CMXSC0CFFW6O1mSuoyfCUxarXLo8XHJFaYMuBwbMYVj6Wq2E7OQ9jEz809WGyRmqY-00ko6N7krxJTIGnRjCRWjrwPMcVmyl5uSF9VsmZqwDYT1pXAavuqRU0v7pd8ZKnkDss7UnH8xdkLShBsQawk8af4ahu9z7jvmZgW_PqELN4tjLoxsSdkQk03KP5p2-1y432FDrOEOfg5nMqbORcf9PLLzQmebXoTZL4Kn5Vvv60vc1kqHCrfjUsM2eo4XviT-6Ra8PePlv7Yakwy2vVGIEMzDh2z-PVTbJ0LySvLsMApoR78CzhR22jIiGqf6YD4-hnQ-eqWOh1G0ZJWGcz0qzcvnIz5w1FK5DIJAMwNN4neWiN0yYWHniaSL0CXg2tGoog9d6cq7KowfHfmKvXGHkSpuhzhcZ-BczNlOKJv2Ei1qqqcv3ilmPnUr8TFJt1DamEaNP_k0T-5PX_ABwfJVCn2b4dRu2rj2kXOtFAu-kGBlDZIUcrsWBwor0z3m5_GMBO7WL12zo-_nSrbF_1jLnuLv7pvo9s-g1_3kZLbhRhIMSCUpe-TQMJ_ucDp3YrJ1xBsXUqMwC2K1gmi2J-sUpE-I4xU2F4pm7JBrS6azeXQdFQ0JhSZjJywKz6c7suVRovtx9k8pPKv48YTXA2j8xxSjJeZhmtRCQ3Tt-__RjSD4bjmhEsSUIyggHVcqP6diw9f9eKfYjzF8yddvReVl5toP6MRR1isC1r8SJ8JOTzmGYfGovQVIPjUt4ehypyjcT8U87HWwbm4IUk386h3mO9dxHbpITuhN621601LjKkIykCs3cZAYAslUgHAY8rii8_xCxzDaFCaN699Qx4mNGvt4GMgJJ1NS7iwy9XxtROp. Click or tap if you trust this link." data-linkindex="3"><span style="font-size:10.0pt">Academic Requirements Report | California State University, Long Beach (csulb.edu)</span></a></span><span style="font-size:10.0pt; color:windowtext">. </span><span style="font-size:10.0pt; color:windowtext">To view your Report, go to the pull-down menu in your </span><span style="color:windowtext"><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffgfcjfb.r.bh.d.sendibt3.com%2Ftr%2Fcl%2Fb0F43KEOFohUheVQuIg114SsNlM_ZTRtiZDYrTitXX-2B9-FV3eI8rd2nvnAbpIYOJULGwoyaxWL7pBi-smyuTltDeJMbOSq-_KB3flCh82oo7SzM3JgsKIcx9BysYesQW6TQT9IpupO5E02asVISs7uGWbkm6XMa5EA4XTDZrkSyrJthx1An1yHj4LCdVoQxGHA330KltMsohRuv09y4wCRvvQf_45jVN5saZdnTjMYln2b7iY2ubEOWibByMp8S8VkZQFcNeO0zV8qRJM9hHuyQJMsEULTjcFF35dvMKJu6AhEMvOSlX66pedwXLaFrBbyCrZkwwcmSgG998TPgGHXDjdFpIYDbinHYNLRKcmMgPawXXn62JL9SrJjsB7dVPDCb4AqCHF863x0bBLb_1FrA0W4MCPYcO_6-93Ft57DZ4hquVg33aEnTIRFY4m7v-ioGplDchy4K96Rr71yB2qF6z9owz6uqI9mCA5BBL0eckp5Sx7WURL7yAT2wgYPTXZNchVoS1UQRciwYL8D4mmjAAR8hLvztTpGWIszRdI-MZRYQ675_RADwthU41q8Vz667BKiWs5xOCJETbacKn_SfRiKbjkWyS4GHYn5__9_yc7WNcexinoXEKcE7XgjwWPkFqBaacgKRV2Y0BvYES6dHQFs752EOh7-dqZdGAXCrF1iytyLyXDn2LrDBiGmzuWqkwibrGKlyLduO2oEn8rZumIptUSpD3sZQWQ-qPIBWwsdeJhOlrpXqWxSI-6hSxBIFUwPDAyEv6jZsb8LUKADBtxwSkpKrFnrr4rBysVOUbdGHPEr5zlujl5lJHoxF1VJTfG5OzpeQIfuREY&amp;data=05%7C01%7Cfaizan.zafar01%40student.csulb.edu%7C8dc1885132c941c0d94208db07277588%7Cd175679bacd34644be82af041982977a%7C0%7C0%7C638111638285801419%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=3uBu9NbWYBRheHDTGuRKk1VErSIx%2B2KdhYKt2PZv4Dg%3D&amp;reserved=0" target="_blank" rel="noopener noreferrer" data-auth="Verified" originalsrc="https://fgfcjfb.r.bh.d.sendibt3.com/tr/cl/b0F43KEOFohUheVQuIg114SsNlM_ZTRtiZDYrTitXX-2B9-FV3eI8rd2nvnAbpIYOJULGwoyaxWL7pBi-smyuTltDeJMbOSq-_KB3flCh82oo7SzM3JgsKIcx9BysYesQW6TQT9IpupO5E02asVISs7uGWbkm6XMa5EA4XTDZrkSyrJthx1An1yHj4LCdVoQxGHA330KltMsohRuv09y4wCRvvQf_45jVN5saZdnTjMYln2b7iY2ubEOWibByMp8S8VkZQFcNeO0zV8qRJM9hHuyQJMsEULTjcFF35dvMKJu6AhEMvOSlX66pedwXLaFrBbyCrZkwwcmSgG998TPgGHXDjdFpIYDbinHYNLRKcmMgPawXXn62JL9SrJjsB7dVPDCb4AqCHF863x0bBLb_1FrA0W4MCPYcO_6-93Ft57DZ4hquVg33aEnTIRFY4m7v-ioGplDchy4K96Rr71yB2qF6z9owz6uqI9mCA5BBL0eckp5Sx7WURL7yAT2wgYPTXZNchVoS1UQRciwYL8D4mmjAAR8hLvztTpGWIszRdI-MZRYQ675_RADwthU41q8Vz667BKiWs5xOCJETbacKn_SfRiKbjkWyS4GHYn5__9_yc7WNcexinoXEKcE7XgjwWPkFqBaacgKRV2Y0BvYES6dHQFs752EOh7-dqZdGAXCrF1iytyLyXDn2LrDBiGmzuWqkwibrGKlyLduO2oEn8rZumIptUSpD3sZQWQ-qPIBWwsdeJhOlrpXqWxSI-6hSxBIFUwPDAyEv6jZsb8LUKADBtxwSkpKrFnrr4rBysVOUbdGHPEr5zlujl5lJHoxF1VJTfG5OzpeQIfuREY" shash="GbQoTfcLIPQgVcn1PYwd3p8QpjGVAdJkkJ/wHaQtFpW4DBS+il6jnQ6KGtF+B4gQhXJ8ooRAgxIVhzbuNQgXbJBlvUvX8d1Z5Ip30upyDM9z4ssYsq7SCeNhQXF4lcBH+ZULTLrwW2lANoiAGSkjYi7/dpDjvVg/h1IaN7bxzc4=" title="Original URL: https://fgfcjfb.r.bh.d.sendibt3.com/tr/cl/b0F43KEOFohUheVQuIg114SsNlM_ZTRtiZDYrTitXX-2B9-FV3eI8rd2nvnAbpIYOJULGwoyaxWL7pBi-smyuTltDeJMbOSq-_KB3flCh82oo7SzM3JgsKIcx9BysYesQW6TQT9IpupO5E02asVISs7uGWbkm6XMa5EA4XTDZrkSyrJthx1An1yHj4LCdVoQxGHA330KltMsohRuv09y4wCRvvQf_45jVN5saZdnTjMYln2b7iY2ubEOWibByMp8S8VkZQFcNeO0zV8qRJM9hHuyQJMsEULTjcFF35dvMKJu6AhEMvOSlX66pedwXLaFrBbyCrZkwwcmSgG998TPgGHXDjdFpIYDbinHYNLRKcmMgPawXXn62JL9SrJjsB7dVPDCb4AqCHF863x0bBLb_1FrA0W4MCPYcO_6-93Ft57DZ4hquVg33aEnTIRFY4m7v-ioGplDchy4K96Rr71yB2qF6z9owz6uqI9mCA5BBL0eckp5Sx7WURL7yAT2wgYPTXZNchVoS1UQRciwYL8D4mmjAAR8hLvztTpGWIszRdI-MZRYQ675_RADwthU41q8Vz667BKiWs5xOCJETbacKn_SfRiKbjkWyS4GHYn5__9_yc7WNcexinoXEKcE7XgjwWPkFqBaacgKRV2Y0BvYES6dHQFs752EOh7-dqZdGAXCrF1iytyLyXDn2LrDBiGmzuWqkwibrGKlyLduO2oEn8rZumIptUSpD3sZQWQ-qPIBWwsdeJhOlrpXqWxSI-6hSxBIFUwPDAyEv6jZsb8LUKADBtxwSkpKrFnrr4rBysVOUbdGHPEr5zlujl5lJHoxF1VJTfG5OzpeQIfuREY. Click or tap if you trust this link." data-linkindex="4"><span style="font-size:10.0pt">MyCSULB Student Center</span></a></span><span style="font-size:10.0pt; color:windowtext"> and click on Academic Requirements Report.</span></li><li class="x_x_MsoNormal" style="color:black; margin-bottom:0in; line-height:normal"><b><span style="font-size:10.0pt; color:windowtext">Meet with your advisor </span></b><span style="font-size:10.0pt; color:windowtext">if you have any questions regarding your degree requirements. To identify your advisor, go to your Student Center and refer to the Advisor box in the lower right-hand side.</span></li><li class="x_x_MsoNormal" style="color:black; margin-bottom:0in; line-height:normal"><b><span style="font-size:10.0pt">Contact the </span></b><span style="color:windowtext"><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffgfcjfb.r.bh.d.sendibt3.com%2Ftr%2Fcl%2Ff8NxG5bTiACMuL7RVaZKI7Q0bs4M-pye_j2czgrYnYl9RRvWZwsX58r2hIj6c-6y_4K8lJO-u-jR1ejylvWlh-xyoBv5d4PMUZ0qgpnbqNZrzxAd2r8Z1QvJvKwho-dMsOY2tns6ouu4HEuYsu26gs4xnwLN7EJumu_Kw098ZER05_XZ5nboJRQbIef4cqVr-vxsSlC7yCkz2GxubcaE4S_SkAWqEbGKVmbvkxQFYwL54iGK-_EdmoHtUVGnnmNzvHmCoXMrufkV81d0UpdBSw_xX6SErGi3viDIr-iqgh14HZONGoaYkp3KLsVQhX3xse3dDqJf_hAshZXEq8j6jD2a0pVgXUwrIOgoz77Cend0PYTvroiJbF-9hDR5FBg9aDCx2nQgM2aHw-XdwmoaxuA2KbIr3U0-GdfMvpTmG_D81DrkYenErMqslCLMJ409uHXd63EjQlOUeUsGKdouJWl2aMyWSiXlBhevTaD5xf_M3t3_h4hKA5OqlDE8WZmB2IfJdU90w2Pn1xbfAiauKPIZul-zhX-khAHDmJ9GAAepPS6Lj8WNjavlLXHE5Ujn35-VXoqhJAH4gqrxtc8Pa75MFNuxxHOOmjfSVbLJQBAjasC3MDF7n5LzVKgi9JB_b4T9N--JfftMB7JngjYLMtWhiH2WRy_-J6OYG8q8AaMp1QrrFZaP7dQy9YDDBO-JClG-KVWAF3PmQyirwqJEh0M8OgFXjPbLy4acaqKsd2_z0pSZ1dDkg3VjLM6DH-Uf2_7KO2nK3oDNH6jaIQ_3tCvSiRW-47LscBbzVgcGk7ASvcDNpxBc6ncTdZ6e3oCRWr7K0cPzKx28FvFdltEqSYe-&amp;data=05%7C01%7Cfaizan.zafar01%40student.csulb.edu%7C8dc1885132c941c0d94208db07277588%7Cd175679bacd34644be82af041982977a%7C0%7C0%7C638111638285801419%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=P0GwULxO7Op%2B3hr2dMVOUlNh%2FPb9wjwc1pq3dpAxznY%3D&amp;reserved=0" target="_blank" rel="noopener noreferrer" data-auth="Verified" originalsrc="https://fgfcjfb.r.bh.d.sendibt3.com/tr/cl/f8NxG5bTiACMuL7RVaZKI7Q0bs4M-pye_j2czgrYnYl9RRvWZwsX58r2hIj6c-6y_4K8lJO-u-jR1ejylvWlh-xyoBv5d4PMUZ0qgpnbqNZrzxAd2r8Z1QvJvKwho-dMsOY2tns6ouu4HEuYsu26gs4xnwLN7EJumu_Kw098ZER05_XZ5nboJRQbIef4cqVr-vxsSlC7yCkz2GxubcaE4S_SkAWqEbGKVmbvkxQFYwL54iGK-_EdmoHtUVGnnmNzvHmCoXMrufkV81d0UpdBSw_xX6SErGi3viDIr-iqgh14HZONGoaYkp3KLsVQhX3xse3dDqJf_hAshZXEq8j6jD2a0pVgXUwrIOgoz77Cend0PYTvroiJbF-9hDR5FBg9aDCx2nQgM2aHw-XdwmoaxuA2KbIr3U0-GdfMvpTmG_D81DrkYenErMqslCLMJ409uHXd63EjQlOUeUsGKdouJWl2aMyWSiXlBhevTaD5xf_M3t3_h4hKA5OqlDE8WZmB2IfJdU90w2Pn1xbfAiauKPIZul-zhX-khAHDmJ9GAAepPS6Lj8WNjavlLXHE5Ujn35-VXoqhJAH4gqrxtc8Pa75MFNuxxHOOmjfSVbLJQBAjasC3MDF7n5LzVKgi9JB_b4T9N--JfftMB7JngjYLMtWhiH2WRy_-J6OYG8q8AaMp1QrrFZaP7dQy9YDDBO-JClG-KVWAF3PmQyirwqJEh0M8OgFXjPbLy4acaqKsd2_z0pSZ1dDkg3VjLM6DH-Uf2_7KO2nK3oDNH6jaIQ_3tCvSiRW-47LscBbzVgcGk7ASvcDNpxBc6ncTdZ6e3oCRWr7K0cPzKx28FvFdltEqSYe-" shash="QgUd/Z+2LAATq+v5jsrW651IirLV0yWziYBVJG+IASGDh6aZtROKfsP4/wfBUEq4W8OoeYo0KrSi5cIZHem0PUOoth12wNsJ/bwy17GjETP5nckrCMgiWUgRRsIa9NnX4q1SC3YfbkCkIdG6zz6raUUI6TYR9cNglCd91LPskME=" title="Original URL: https://fgfcjfb.r.bh.d.sendibt3.com/tr/cl/f8NxG5bTiACMuL7RVaZKI7Q0bs4M-pye_j2czgrYnYl9RRvWZwsX58r2hIj6c-6y_4K8lJO-u-jR1ejylvWlh-xyoBv5d4PMUZ0qgpnbqNZrzxAd2r8Z1QvJvKwho-dMsOY2tns6ouu4HEuYsu26gs4xnwLN7EJumu_Kw098ZER05_XZ5nboJRQbIef4cqVr-vxsSlC7yCkz2GxubcaE4S_SkAWqEbGKVmbvkxQFYwL54iGK-_EdmoHtUVGnnmNzvHmCoXMrufkV81d0UpdBSw_xX6SErGi3viDIr-iqgh14HZONGoaYkp3KLsVQhX3xse3dDqJf_hAshZXEq8j6jD2a0pVgXUwrIOgoz77Cend0PYTvroiJbF-9hDR5FBg9aDCx2nQgM2aHw-XdwmoaxuA2KbIr3U0-GdfMvpTmG_D81DrkYenErMqslCLMJ409uHXd63EjQlOUeUsGKdouJWl2aMyWSiXlBhevTaD5xf_M3t3_h4hKA5OqlDE8WZmB2IfJdU90w2Pn1xbfAiauKPIZul-zhX-khAHDmJ9GAAepPS6Lj8WNjavlLXHE5Ujn35-VXoqhJAH4gqrxtc8Pa75MFNuxxHOOmjfSVbLJQBAjasC3MDF7n5LzVKgi9JB_b4T9N--JfftMB7JngjYLMtWhiH2WRy_-J6OYG8q8AaMp1QrrFZaP7dQy9YDDBO-JClG-KVWAF3PmQyirwqJEh0M8OgFXjPbLy4acaqKsd2_z0pSZ1dDkg3VjLM6DH-Uf2_7KO2nK3oDNH6jaIQ_3tCvSiRW-47LscBbzVgcGk7ASvcDNpxBc6ncTdZ6e3oCRWr7K0cPzKx28FvFdltEqSYe-. Click or tap if you trust this link." data-linkindex="5"><b><span style="font-size:10.0pt; color:blue">Career Development Center</span></b></a></span><span style="font-size:10.0pt"> to attend a career exploration workshop that helps students focus their prospective job search efforts.</span></li><li class="x_x_MsoNormal" style="color:black; margin-bottom:0in; line-height:normal"><b><span style="font-size:10.0pt">Talk to </span></b><span style="color:windowtext"><a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffgfcjfb.r.bh.d.sendibt3.com%2Ftr%2Fcl%2F4l6npUaeceWVQpgfu_FSX3h_Pmbw7yp6FnwA_S3xn_Kq-FzSFwPjdfmf_RWj7IR-hQPH85V33oyF7IdBQRDeR3r4tJWyhjKHiywVaq7z9LhCRZOhq1PEY0KRnKwLjOPODpGzr1EAOdY9ZRrRsXqZt1fj7CaI2nXHbrckMzFGc4m6tHH90mUEI8SwAb9M3vpwQs1xj3PJ7VpF9vebp62PRYZdg1fcQiG3mt61n3KrTFZcyIs65G2DVlgFuNzdJu3VrzYgx_tqMQvmPvCHLDfxTYw_8JmwPepDI6kPXUjIVzjxtyTlKIqce5dITokJ6ZEyrp470M-GTcETn7DsAtLClEcrJ5Gv1IB7ct-VQqkxcxclW3vFb2DTnfpye5dMfJcd7krrGy8acSGNYkvfDYiflVKS_LhiyrXDzbtBgO1MBlg4C_7kTQs6AdszTtJ96FekIErjguz-64hbxFFfv0Yw_-0iBHToonkkWBRfc7SQ025go8FvQD9Y8W69NXJFRNzN_0Kd3b9scM6A4fJPjzZstfmxJ7evNRUqBrbUGg9Bn3uEJ3VirStcQc9P_BOHsPsEy-uE1z__pJdUMmbA4nrRIe3U68qTnXkzvG__5BdFb8J0SkNo1WKB33P8V3WJ9xRDbn8BQ9t49U8sJUnG7oBMFzRhKHIlCM18_MXEMkacWz6W5nophkLcvRMjvQ8GrPdOn66I22Y7ntOsSdwr4r6S5Ez2p_Dx8cVz87M7nACLk-nooHx4-XC55FBeFX5ogr6saq0QDp1j6yQJGltAz6U_A5WcyZxHrcehKrT5wATQ9C28SzZ-VOQupAh5j9VkVmOL4mT1ORpIor6hIepG1LjmHYecbwlbH0zonMUjqw-JwdCB4sQfGjmjpWbT8M7QsJ3CcTm1bdg6Db6fHDRkOW1A0Hy-6AtD3A&amp;data=05%7C01%7Cfaizan.zafar01%40student.csulb.edu%7C8dc1885132c941c0d94208db07277588%7Cd175679bacd34644be82af041982977a%7C0%7C0%7C638111638285801419%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=RssVmtdz45TlY3UWVPjpUIGTpWcpMFVeisgCnRqLd5Q%3D&amp;reserved=0" target="_blank" rel="noopener noreferrer" data-auth="Verified" originalsrc="https://fgfcjfb.r.bh.d.sendibt3.com/tr/cl/4l6npUaeceWVQpgfu_FSX3h_Pmbw7yp6FnwA_S3xn_Kq-FzSFwPjdfmf_RWj7IR-hQPH85V33oyF7IdBQRDeR3r4tJWyhjKHiywVaq7z9LhCRZOhq1PEY0KRnKwLjOPODpGzr1EAOdY9ZRrRsXqZt1fj7CaI2nXHbrckMzFGc4m6tHH90mUEI8SwAb9M3vpwQs1xj3PJ7VpF9vebp62PRYZdg1fcQiG3mt61n3KrTFZcyIs65G2DVlgFuNzdJu3VrzYgx_tqMQvmPvCHLDfxTYw_8JmwPepDI6kPXUjIVzjxtyTlKIqce5dITokJ6ZEyrp470M-GTcETn7DsAtLClEcrJ5Gv1IB7ct-VQqkxcxclW3vFb2DTnfpye5dMfJcd7krrGy8acSGNYkvfDYiflVKS_LhiyrXDzbtBgO1MBlg4C_7kTQs6AdszTtJ96FekIErjguz-64hbxFFfv0Yw_-0iBHToonkkWBRfc7SQ025go8FvQD9Y8W69NXJFRNzN_0Kd3b9scM6A4fJPjzZstfmxJ7evNRUqBrbUGg9Bn3uEJ3VirStcQc9P_BOHsPsEy-uE1z__pJdUMmbA4nrRIe3U68qTnXkzvG__5BdFb8J0SkNo1WKB33P8V3WJ9xRDbn8BQ9t49U8sJUnG7oBMFzRhKHIlCM18_MXEMkacWz6W5nophkLcvRMjvQ8GrPdOn66I22Y7ntOsSdwr4r6S5Ez2p_Dx8cVz87M7nACLk-nooHx4-XC55FBeFX5ogr6saq0QDp1j6yQJGltAz6U_A5WcyZxHrcehKrT5wATQ9C28SzZ-VOQupAh5j9VkVmOL4mT1ORpIor6hIepG1LjmHYecbwlbH0zonMUjqw-JwdCB4sQfGjmjpWbT8M7QsJ3CcTm1bdg6Db6fHDRkOW1A0Hy-6AtD3A" shash="MRRl4lJuJ0YLwJy/oP1yPz2/wm1YUU+slaCxik9IaeKAzCGbB7oWPnA5l50uPaLuIGc82XtPZxnn1cxM95vNbkRr1KnBzm7SI9Iy1PVcogYB+jqTo3/6GC0dRmL86zcO3IvTpGvlgLKyNxL3TQv5oRuf0gmo37C7Rp391qwSaZ8=" title="Original URL: https://fgfcjfb.r.bh.d.sendibt3.com/tr/cl/4l6npUaeceWVQpgfu_FSX3h_Pmbw7yp6FnwA_S3xn_Kq-FzSFwPjdfmf_RWj7IR-hQPH85V33oyF7IdBQRDeR3r4tJWyhjKHiywVaq7z9LhCRZOhq1PEY0KRnKwLjOPODpGzr1EAOdY9ZRrRsXqZt1fj7CaI2nXHbrckMzFGc4m6tHH90mUEI8SwAb9M3vpwQs1xj3PJ7VpF9vebp62PRYZdg1fcQiG3mt61n3KrTFZcyIs65G2DVlgFuNzdJu3VrzYgx_tqMQvmPvCHLDfxTYw_8JmwPepDI6kPXUjIVzjxtyTlKIqce5dITokJ6ZEyrp470M-GTcETn7DsAtLClEcrJ5Gv1IB7ct-VQqkxcxclW3vFb2DTnfpye5dMfJcd7krrGy8acSGNYkvfDYiflVKS_LhiyrXDzbtBgO1MBlg4C_7kTQs6AdszTtJ96FekIErjguz-64hbxFFfv0Yw_-0iBHToonkkWBRfc7SQ025go8FvQD9Y8W69NXJFRNzN_0Kd3b9scM6A4fJPjzZstfmxJ7evNRUqBrbUGg9Bn3uEJ3VirStcQc9P_BOHsPsEy-uE1z__pJdUMmbA4nrRIe3U68qTnXkzvG__5BdFb8J0SkNo1WKB33P8V3WJ9xRDbn8BQ9t49U8sJUnG7oBMFzRhKHIlCM18_MXEMkacWz6W5nophkLcvRMjvQ8GrPdOn66I22Y7ntOsSdwr4r6S5Ez2p_Dx8cVz87M7nACLk-nooHx4-XC55FBeFX5ogr6saq0QDp1j6yQJGltAz6U_A5WcyZxHrcehKrT5wATQ9C28SzZ-VOQupAh5j9VkVmOL4mT1ORpIor6hIepG1LjmHYecbwlbH0zonMUjqw-JwdCB4sQfGjmjpWbT8M7QsJ3CcTm1bdg6Db6fHDRkOW1A0Hy-6AtD3A. Click or tap if you trust this link." data-linkindex="6"><b><span style="font-size:10.0pt; color:blue">graduate faculty advisors</span></b></a></span><span style="font-size:10.0pt"> about graduate programs. Students thinking about applying to graduate schools can attend information sessions held in their respective graduate departments.</span></li></ul><p class="x_x_MsoNormal" style="margin-bottom:0in; line-height:normal"><b><span style="font-size:10.0pt">&nbsp;</span></b></p><p class="x_x_EsComm">Again, <span data-markjs="true" class="x_markkf1smt9av x_uM2yb"><span data-markjs="true" class="markaxwr7uzla uM2yb">congratulations</span></span> on your achievements thus far. I wish you the best with your academic studies.</p></div><div class="x_x_SignatureArea" style="font-size:'10pt'; font-family:'Calibri','sans-serif'"><br aria-hidden="true">Sincerely,<br aria-hidden="true"><img data-imagetype="DataUri" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7" originalsrc="http://www.csulb.edu/depts/enrollment/email_assets/Signatures/AssociateVicePresidentUnderGrad.jpg" data-imageproxyendpoint="/actions/ei" alt="Signature of Interim Associate Vice President for Undergraduate Studies" height="50"><br aria-hidden="true">Kerry L. Johnson, Ph.D.<br aria-hidden="true">Associate Vice President for Undergraduate Studies</div><br aria-hidden="true"><p class="x_x_EsComm" style="margin:0in; margin-bottom:.0001pt; font-size:10.0pt; font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">Note Your CSULB Campus ID: <b>028050579</b></p><p class="x_x_EsComm" aria-hidden="true" style="margin:0in; margin-bottom:.0001pt; font-size:10.0pt; font-family:&quot;Calibri&quot;,&quot;sans-serif&quot;">&nbsp;</p></div></td></tr><tr style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit"><td class="x_x_ContentColumn" height="10" style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:580px"></td></tr></tbody></table></td><td class="x_x_SpacerColumn" style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:30px"></td></tr></tbody></table></td></tr><tr style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit"><td class="x_x_ScreenWidth x_x_Content" bgcolor="white" style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:640px; background-color:white"><table class="x_x_ScreenWidth" align="left" style="border:0px; border-collapse:collapse; border-spacing:0px; padding:0px; width:640px"><tbody><tr style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit"><td class="x_x_SpacerColumn" style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:30px"></td><td class="x_x_ContentColumn" style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:580px"><table class="x_x_ContentColumn" style="border:0px; border-collapse:collapse; border-spacing:0px; padding:0px; width:580px"><tbody><tr style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit"><td class="x_x_ContentColumn" style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:580px"><div align="left" style="font-family:'Calibri','Verdana',Helvetica,sans-serif; font-size:10pt"><table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="font-size:.8em; font-family:'Century Gothic','Calibri','Verdana','Helvetica',sans-serif; text-align:center!important"><tbody><tr><td><center>This message was sent to you from an unmonitored mailbox. Please do not reply.</center></td></tr></tbody></table></div></td></tr><tr style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit"><td class="x_x_ContentColumn" height="10" style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:580px"></td></tr></tbody></table></td><td class="x_x_SpacerColumn" style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:30px"></td></tr></tbody></table></td></tr><tr style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit"><td class="x_x_ScreenWidth x_x_Content x_x_VSpace" bgcolor="white" height="30" style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:640px; height:30px; background-color:white"></td></tr><tr style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit"><td class="x_x_ScreenWidth" style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:640px"><table class="x_x_ScreenWidth x_x_Footer" bgcolor="black" style="border:0px; border-collapse:collapse; border-spacing:0px; padding:0px; width:640px; background-color:black; color:white; font-size:.8em; font-family:'Century Gothic','Calibri','Verdana','Helvetica',sans-serif; text-align:center!important"><tbody><tr style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit"><td align="center" valign="top" style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:10px"></td><td class="x_x_ScreenWidth x_x_VSpace" align="center" style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:640px; height:30px; color:white"><div class="x_x_ES-Footer" align="center"><p class="x_x_ES-Footer">Undergraduate&nbsp;Studies | <a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Ffgfcjfb.r.bh.d.sendibt3.com%2Ftr%2Fcl%2FdU8BYmJOqc5lTKt5rjSbZek5WNsYOblhSbLmUgs1NPNjppGI-_aqdEeo50T7aWVI05c4fstj7IwWmdrbIob7yFM7RXZnXhmYFDiP3DwAaReefscLXOZCVpXPJHRAroIF1hWhtxKviLw9l3490_P7wxrTlHLdazxDRC5irwXyT4JDm-QWr2OCRtjlZSPxcbZL0aPBx-VeuNUPhg3A6yfe47K0p6wL0TV63j3ygCeYeVDW3CTohorF394JbC5pQPaSlWBMUuzMIIF8Pp5aOJBvcph4DcJxz9kEf0YXwc33grx1Lq40La4PEeJVncNgP1B5tueUkGCx4oTrgKA8u3f40EJ_av9odP7PS5z5LW3eoJnfBeTeOczS00I205AXoK7BbUJqZUvSCll49-s-UwSAIsMFaATkelcsHGaLmJh1m1aDumbz2FdmWxahgvNn9d83v4UI07zllRze4gfrkJolnEZAr7CXPtoQbB9uVC0czCMfeQdmFpu_UltaORGADpdFKpYjrijySeazM-dcNB838UV-00vBxgvhxdMYMImOW0G7j7BsbbNO2KF8UWLqLbiFeHmswD95bD-WLDs7pFdCYdDPruK8oHroMPv1fYfOrpkw8mGkHvRsh8C6U5YJ1kUJ-yAJl-zUmosVfWv0a3JIgFZjYKP3-bCvE094IJpAq4aoJzvwNvU-u0_cj0ORxh8YDAmluUX_g-SuryfFQkQUHyN2SfzPXEqz_Y0f3ZpC3JlL-R5aL_07ggO9uCJKqIFeXypb8s-coG3GeqiW6Nz6PglFrVuWR8N2F-ovAZOf7fjf5yFX4gsHEENGiXpzDfU-Ydp6vNA6fxC0NBSTPZmtkmHuT-n78uxY068Yp-ZuLybArM1TOypXGYDXBW3j5w&amp;data=05%7C01%7Cfaizan.zafar01%40student.csulb.edu%7C8dc1885132c941c0d94208db07277588%7Cd175679bacd34644be82af041982977a%7C0%7C0%7C638111638285801419%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=WmBcpD8UkjRfJ2HmsXnBgqWZcC0whd4XY%2BItkFr3Dak%3D&amp;reserved=0" target="_blank" rel="noopener noreferrer" data-auth="Verified" originalsrc="https://fgfcjfb.r.bh.d.sendibt3.com/tr/cl/dU8BYmJOqc5lTKt5rjSbZek5WNsYOblhSbLmUgs1NPNjppGI-_aqdEeo50T7aWVI05c4fstj7IwWmdrbIob7yFM7RXZnXhmYFDiP3DwAaReefscLXOZCVpXPJHRAroIF1hWhtxKviLw9l3490_P7wxrTlHLdazxDRC5irwXyT4JDm-QWr2OCRtjlZSPxcbZL0aPBx-VeuNUPhg3A6yfe47K0p6wL0TV63j3ygCeYeVDW3CTohorF394JbC5pQPaSlWBMUuzMIIF8Pp5aOJBvcph4DcJxz9kEf0YXwc33grx1Lq40La4PEeJVncNgP1B5tueUkGCx4oTrgKA8u3f40EJ_av9odP7PS5z5LW3eoJnfBeTeOczS00I205AXoK7BbUJqZUvSCll49-s-UwSAIsMFaATkelcsHGaLmJh1m1aDumbz2FdmWxahgvNn9d83v4UI07zllRze4gfrkJolnEZAr7CXPtoQbB9uVC0czCMfeQdmFpu_UltaORGADpdFKpYjrijySeazM-dcNB838UV-00vBxgvhxdMYMImOW0G7j7BsbbNO2KF8UWLqLbiFeHmswD95bD-WLDs7pFdCYdDPruK8oHroMPv1fYfOrpkw8mGkHvRsh8C6U5YJ1kUJ-yAJl-zUmosVfWv0a3JIgFZjYKP3-bCvE094IJpAq4aoJzvwNvU-u0_cj0ORxh8YDAmluUX_g-SuryfFQkQUHyN2SfzPXEqz_Y0f3ZpC3JlL-R5aL_07ggO9uCJKqIFeXypb8s-coG3GeqiW6Nz6PglFrVuWR8N2F-ovAZOf7fjf5yFX4gsHEENGiXpzDfU-Ydp6vNA6fxC0NBSTPZmtkmHuT-n78uxY068Yp-ZuLybArM1TOypXGYDXBW3j5w" shash="fUdMuWy+AqDwoatAuZoIYWXcYOuWdhse9BgB/fvxYMZZLhQIQWifqDan6JchD26PsO4sLNYTGfcRejc6sdZs7Za9noG7ZdPQ1bSWOHPiJAbjiHQdI56mGkQw/dr8ez1VuWbIy2ppFVWYDNd7pDVpPhoxJuEc56i1D+uD0+Giv68=" title="Original URL: https://fgfcjfb.r.bh.d.sendibt3.com/tr/cl/dU8BYmJOqc5lTKt5rjSbZek5WNsYOblhSbLmUgs1NPNjppGI-_aqdEeo50T7aWVI05c4fstj7IwWmdrbIob7yFM7RXZnXhmYFDiP3DwAaReefscLXOZCVpXPJHRAroIF1hWhtxKviLw9l3490_P7wxrTlHLdazxDRC5irwXyT4JDm-QWr2OCRtjlZSPxcbZL0aPBx-VeuNUPhg3A6yfe47K0p6wL0TV63j3ygCeYeVDW3CTohorF394JbC5pQPaSlWBMUuzMIIF8Pp5aOJBvcph4DcJxz9kEf0YXwc33grx1Lq40La4PEeJVncNgP1B5tueUkGCx4oTrgKA8u3f40EJ_av9odP7PS5z5LW3eoJnfBeTeOczS00I205AXoK7BbUJqZUvSCll49-s-UwSAIsMFaATkelcsHGaLmJh1m1aDumbz2FdmWxahgvNn9d83v4UI07zllRze4gfrkJolnEZAr7CXPtoQbB9uVC0czCMfeQdmFpu_UltaORGADpdFKpYjrijySeazM-dcNB838UV-00vBxgvhxdMYMImOW0G7j7BsbbNO2KF8UWLqLbiFeHmswD95bD-WLDs7pFdCYdDPruK8oHroMPv1fYfOrpkw8mGkHvRsh8C6U5YJ1kUJ-yAJl-zUmosVfWv0a3JIgFZjYKP3-bCvE094IJpAq4aoJzvwNvU-u0_cj0ORxh8YDAmluUX_g-SuryfFQkQUHyN2SfzPXEqz_Y0f3ZpC3JlL-R5aL_07ggO9uCJKqIFeXypb8s-coG3GeqiW6Nz6PglFrVuWR8N2F-ovAZOf7fjf5yFX4gsHEENGiXpzDfU-Ydp6vNA6fxC0NBSTPZmtkmHuT-n78uxY068Yp-ZuLybArM1TOypXGYDXBW3j5w. Click or tap if you trust this link." data-linkindex="7" style="color:white">Brotman&nbsp;Hall&nbsp;3rd&nbsp;Floor</a> | Monday&nbsp;-&nbsp;Friday&nbsp;9&nbsp;a.m.&nbsp;to&nbsp;5&nbsp;p.m. </p></div></td><td align="center" valign="top" style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:10px"></td></tr></tbody></table></td></tr><tr style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit"><td class="x_x_ScreenWidth x_x_VSpace" height="30" style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:640px; height:30px"></td></tr></tbody></table></td></tr></tbody></table></div></div></div>
+
+        .rps_967e .x_HeaderButton {
+            height: 25px;
+            display: inline !important
+        }
+
+        .rps_967e .x_SpacerColumn {
+            width: 30px
+        }
+
+        .rps_967e .x_ContentColumn {
+            width: 580px
+        }
+
+        .rps_967e .x_ScreenWidth {
+            width: 640px
+        }
+
+        .rps_967e .x_Header {
+            background-color: black
+        }
+
+        .rps_967e .x_ES-Footer {
+            font-size: 10.0pt;
+            font-family: 'Calibri', 'sans-serif'
+        }
+
+        .rps_967e .x_Footer {
+            background-color: black;
+            color: white;
+            font-size: .8em;
+            font-family: 'Century Gothic', 'Calibri', 'Verdana', 'Helvetica', sans-serif;
+            text-align: center !important
+        }
+
+        .rps_967e .x_Footer a {
+            color: white
+        }
+
+        .rps_967e .x_VSpace {
+            height: 30px
+        }
+
+        .rps_967e .x_headlineDiv {
+            text-align: center !important;
+            font-weight: bold !important
+        }
+
+        .rps_967e .x_actionBox {
+            border-style: solid;
+            border-color: #FFC72C;
+            border-width: 1px;
+            padding: .5em
+        }
+
+        .rps_967e .x_inset {
+            margin-left: 1em;
+            margin-right: 2em
+        }
+
+        .rps_967e .x_centered {
+            text-align: center !important
+        }
+
+        .rps_967e .x_contentParagraph {
+            text-align: left
+        }
+
+        .rps_967e .x_actionBoxHeader {
+            background-color: #FFC72C;
+            font-weight: bold;
+            padding: 3px;
+            padding-left: 40px;
+            font-size: large
+        }
+
+        .rps_967e td.x_Content {
+            background-color: white
+        }
+
+        .rps_967e .x_ReadMsgBody {
+            width: 100%
+        }
+
+        .rps_967e .x_ExternalClass {
+            width: 100%;
+            display: block !important
+        }
+
+        .rps_967e .x_SignatureArea {
+            font-size: 10pt;
+            font-family: 'Calibri', 'sans-serif'
+        }
+
+        .rps_967e>div {
+            width: 100% !important;
+            margin: 0;
+            padding: 0;
+            font-family: 'Calibri', 'Verdana', Helvetica, sans-serif;
+            font-size: 10pt
+        }
+
+        .rps_967e img {
+            outline: none;
+            text-decoration: none;
+            display: inline;
+            border: none;
+            border-style: none
+        }
+
+        .rps_967e br {
+            line-height: 100%
+        }
+
+        .rps_967e table {
+            border: 0px;
+            border-collapse: collapse;
+            border-spacing: 0px;
+            padding: 0px
+        }
+
+        .rps_967e td,
+        .rps_967e tr {
+            border: inherit;
+            border-collapse: inherit;
+            border-spacing: inherit;
+            padding: inherit
+        }
+
+        .rps_967e #x_background-table {
+            background-color: silver
+        }
+
+        .rps_967e #x_outlook a {
+            padding: 0
+        }
+
+        .rps_967e .x_evenOddTbl th {
+            border-bottom: 1px solid black;
+            padding: 8px 8px 0px 8px;
+            margin: 0px
+        }
+
+        .rps_967e .x_evenOddTbl td {
+            padding: 2px 8px;
+            margin: 0px
+        }
+
+        .rps_967e .x_evenOddTbl tr.x_oddTr {
+            background: #eee
+        }
+
+        .rps_967e p.x_MsoNormal,
+        .rps_967e li.x_MsoNormal,
+        .rps_967e div.x_MsoNormal {
+            margin-top: 0in;
+            margin-right: 0in;
+            margin-bottom: 10.0pt;
+            margin-left: 0in;
+            line-height: 115%;
+            font-size: 11.0pt;
+            font-family: "Calibri", sans-serif
+        }
+
+        .rps_967e p.x_MsoCommentText,
+        .rps_967e li.x_MsoCommentText,
+        .rps_967e div.x_MsoCommentText {
+            margin-top: 0in;
+            margin-right: 0in;
+            margin-bottom: 10.0pt;
+            margin-left: 0in;
+            font-size: 10.0pt;
+            font-family: "Calibri", sans-serif
+        }
+
+        .rps_967e p.x_MsoHeader,
+        .rps_967e li.x_MsoHeader,
+        .rps_967e div.x_MsoHeader {
+            margin: 0in;
+            margin-bottom: .0001pt;
+            font-size: 11.0pt;
+            font-family: "Calibri", sans-serif
+        }
+
+        .rps_967e p.x_MsoFooter,
+        .rps_967e li.x_MsoFooter,
+        .rps_967e div.x_MsoFooter {
+            margin: 0in;
+            margin-bottom: .0001pt;
+            font-size: 11.0pt;
+            font-family: "Calibri", sans-serif
+        }
+
+        .rps_967e a:link,
+        .rps_967e span.x_MsoHyperlink {
+            color: blue;
+            text-decoration: underline
+        }
+
+        .rps_967e a:visited,
+        .rps_967e span.x_MsoHyperlinkFollowed {
+            color: purple;
+            text-decoration: underline
+        }
+
+        .rps_967e p.x_MsoCommentSubject,
+        .rps_967e li.x_MsoCommentSubject,
+        .rps_967e div.x_MsoCommentSubject {
+            margin-top: 0in;
+            margin-right: 0in;
+            margin-bottom: 10.0pt;
+            margin-left: 0in;
+            font-size: 10.0pt;
+            font-family: "Calibri", sans-serif;
+            font-weight: bold
+        }
+
+        .rps_967e p.x_MsoAcetate,
+        .rps_967e li.x_MsoAcetate,
+        .rps_967e div.x_MsoAcetate {
+            margin: 0in;
+            margin-bottom: .0001pt;
+            font-size: 9.0pt;
+            font-family: "Segoe UI", sans-serif
+        }
+
+        .rps_967e p.x_MsoRMPane,
+        .rps_967e li.x_MsoRMPane,
+        .rps_967e div.x_MsoRMPane {
+            margin: 0in;
+            margin-bottom: .0001pt;
+            font-size: 11.0pt;
+            font-family: "Calibri", sans-serif
+        }
+
+        .rps_967e p.x_MsoListParagraph,
+        .rps_967e li.x_MsoListParagraph,
+        .rps_967e div.x_MsoListParagraph {
+            margin-top: 0in;
+            margin-right: 0in;
+            margin-bottom: 10.0pt;
+            margin-left: .5in;
+            line-height: 115%;
+            font-size: 11.0pt;
+            font-family: "Calibri", sans-serif
+        }
+
+        .rps_967e p.x_MsoListParagraphCxSpFirst,
+        .rps_967e li.x_MsoListParagraphCxSpFirst,
+        .rps_967e div.x_MsoListParagraphCxSpFirst {
+            margin-top: 0in;
+            margin-right: 0in;
+            margin-bottom: 0in;
+            margin-left: .5in;
+            margin-bottom: .0001pt;
+            line-height: 115%;
+            font-size: 11.0pt;
+            font-family: "Calibri", sans-serif
+        }
+
+        .rps_967e p.x_MsoListParagraphCxSpMiddle,
+        .rps_967e li.x_MsoListParagraphCxSpMiddle,
+        .rps_967e div.x_MsoListParagraphCxSpMiddle {
+            margin-top: 0in;
+            margin-right: 0in;
+            margin-bottom: 0in;
+            margin-left: .5in;
+            margin-bottom: .0001pt;
+            line-height: 115%;
+            font-size: 11.0pt;
+            font-family: "Calibri", sans-serif
+        }
+
+        .rps_967e p.x_MsoListParagraphCxSpLast,
+        .rps_967e li.x_MsoListParagraphCxSpLast,
+        .rps_967e div.x_MsoListParagraphCxSpLast {
+            margin-top: 0in;
+            margin-right: 0in;
+            margin-bottom: 10.0pt;
+            margin-left: .5in;
+            line-height: 115%;
+            font-size: 11.0pt;
+            font-family: "Calibri", sans-serif
+        }
+
+        .rps_967e p.x_EsComm,
+        .rps_967e li.x_EsComm,
+        .rps_967e div.x_EsComm {
+            margin: 0in;
+            margin-bottom: .0001pt;
+            font-size: 10.0pt;
+            font-family: "Calibri", sans-serif
+        }
+
+        .rps_967e span.x_HeaderChar {}
+
+        .rps_967e span.x_FooterChar {}
+
+        .rps_967e span.x_CommentTextChar {}
+
+        .rps_967e span.x_CommentSubjectChar {
+            font-weight: bold
+        }
+
+        .rps_967e span.x_BalloonTextChar {
+            font-family: "Segoe UI", sans-serif
+        }
+
+        .rps_967e span.x_UnresolvedMention1 {
+            color: #605E5C;
+            background: #E1DFDD
+        }
+
+        .rps_967e span.x_contentpasted3 {}
+
+        .rps_967e span.x_contentpasted4 {}
+
+        .rps_967e .x_MsoChpDefault {
+            font-family: "Calibri", sans-serif
+        }
+
+        .rps_967e .x_MsoPapDefault {
+            margin-bottom: 10.0pt;
+            line-height: 115%
+        }
+
+        @page WordSection1 {
+            margin: .75in 1.0in 1.0in 1.0in
+        }
+
+        .rps_967e div.x_WordSection1 {}
+
+        .rps_967e ol {
+            margin-bottom: 0in
+        }
+
+        .rps_967e ul {
+            margin-bottom: 0in
+        }
+        -->
+    </style>
+    <div class="rps_967e">
+        <div
+            style="margin:0; padding:0; font-family:'Calibri','Verdana',Helvetica,sans-serif; font-size:10pt; width:100%!important">
+            <table cellpadding="0" cellspacing="0" id="x_background-table" width="100%"
+                style="border:0px; border-collapse:collapse; border-spacing:0px; padding:0px; background-color:silver">
+                <tbody>
+                    <tr style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                        <td align="center"
+                            style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                            <div class="x_WordSection1"></div>
+                            <table cellpadding="0" cellspacing="0" class="x_ScreenWidth"
+                                style="border:0px; border-collapse:collapse; border-spacing:0px; padding:0px; width:640px; margin:0 10px">
+                                <tbody>
+                                    <tr
+                                        style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                                        <td class="x_ScreenWidth x_VSpace" height="30"
+                                            style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:640px; height:30px">
+                                        </td>
+                                    </tr>
+                                    <tr
+                                        style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                                        <td class="x_ScreenWidth x_Header" bgcolor="black" align="left"
+                                            style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:640px; background-color:black">
+                                            <table cellpadding="0" cellspacing="0" align="left"
+                                                style="border:0px; border-collapse:collapse; border-spacing:0px; padding:0px; display:inline">
+                                                <tbody>
+                                                    <tr align="left"
+                                                        style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                                                        <td align="left" valign="top"
+                                                            style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                                                            <img data-imagetype="External"
+                                                                src="https://csulb.edu/depts/enrollment/email_assets/EmailImages/FinancialAidHeader.jpg"
+                                                                class="x_Header" alt="CSULB Financial Aid" align="left"
+                                                                border="0" width="415" style="display:inline"> </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <table class="x_HeaderButtons" cellpadding="0" cellspacing="0"
+                                                align="center"
+                                                style="border:0px; border-collapse:collapse; border-spacing:0px; padding:0px">
+                                                <tbody>
+                                                    <tr
+                                                        style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                                                        <td height="5"
+                                                            style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; height:5px">
+                                                        </td>
+                                                    </tr>
+                                                    <tr
+                                                        style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                                                        <td id="x_ButtonPadding" align="center" valign="top"
+                                                            style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:20px">
+                                                        </td>
+                                                        <td align="left" valign="top"
+                                                            style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                                                            <a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.csulb.edu%2Ffinancial-aid&amp;data=05%7C01%7CFaizan.Zafar01%40student.csulb.edu%7Cee82c557596f409ac4fd08db2d5042ed%7Cd175679bacd34644be82af041982977a%7C0%7C0%7C638153594992584813%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=lpTJKdEOoaNDPZJsabMMfZimxew7S%2FVoAUxLCWXis4s%3D&amp;reserved=0"
+                                                                target="_blank" rel="noopener noreferrer"
+                                                                data-auth="Verified"
+                                                                originalsrc="https://www.csulb.edu/financial-aid"
+                                                                shash="OUrCoiurQ2xzrtVUyLJNsLroXhdnORUTkWQMR9H15SRvzKTC65HEtnONCEAbTcVjnPxvXB/l7LEuMuem7SP6GpAhqsW4MiRHLQeduHuoY7MjGSs2dR4SUKarO1V3CNclitrvGIPNf5oZyy6l+9edt6jlxUpZnOjHpfQPDVdXqUQ="
+                                                                title="Original URL: https://www.csulb.edu/financial-aid. Click or tap if you trust this link."
+                                                                data-safelink="true" data-linkindex="0"><img
+                                                                    data-imagetype="External"
+                                                                    src="https://csulb.edu/depts/enrollment/email_assets/EmailImages/ButtonFinancialAid.jpg"
+                                                                    class="x_HeaderButton" alt="CSULB Financial Aid"
+                                                                    height="25"> </a></td>
+                                                        <td align="center" valign="top"
+                                                            style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:5px">
+                                                        </td>
+                                                        <td align="center" valign="top"
+                                                            style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                                                            <a href="https://nam12.safelinks.protection.outlook.com/?url=http%3A%2F%2Fmy.csulb.edu%2F&amp;data=05%7C01%7CFaizan.Zafar01%40student.csulb.edu%7Cee82c557596f409ac4fd08db2d5042ed%7Cd175679bacd34644be82af041982977a%7C0%7C0%7C638153594992584813%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=Gnt85gAIl%2BHfYaMDXY3xTeU3KgWrWvXaXP1CLfoV3N4%3D&amp;reserved=0"
+                                                                target="_blank" rel="noopener noreferrer"
+                                                                data-auth="Verified" originalsrc="http://my.csulb.edu/"
+                                                                shash="xa8UVnuV681JQ8IdfS/dl6OvVL2hD6/YmInGtRTsRYPUgPxlAVSCsvikupsUTsI345zf4ZmBy0NyvNA8mA54cWgUpTWKwPwrADd1mt5elpsC2CjxI2nZWzF3Wk0eeinOmOAIO5kQTeG3NpAA7Q8V3U80vJMxELWtfG7sonT+QUw="
+                                                                title="Original URL: http://my.csulb.edu/. Click or tap if you trust this link."
+                                                                data-safelink="true" data-linkindex="1"><img
+                                                                    data-imagetype="External"
+                                                                    src="blob:https://outlook.office365.com/feeedc93-b637-456b-8aeb-6b56b2a99ece"
+                                                                    originalsrc="http://csulb.edu/depts/enrollment/email_assets/EmailImages/ButtonMyCSULB.jpg"
+                                                                    data-imageproxyendpoint="/actions/ei"
+                                                                    class="x_HeaderButton" alt="MyCSULB" height="25">
+                                                            </a></td>
+                                                        <td align="center" valign="top"
+                                                            style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:5px">
+                                                        </td>
+                                                    </tr>
+                                                    <tr
+                                                        style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                                                        <td height="5"
+                                                            style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; height:5px">
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr
+                                        style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                                        <td class="x_ScreenWidth x_Content x_VSpace" bgcolor="white" height="30"
+                                            style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:640px; height:30px; background-color:white">
+                                        </td>
+                                    </tr>
+                                    <tr
+                                        style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                                        <td class="x_ScreenWidth x_Content" bgcolor="white"
+                                            style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:640px; background-color:white">
+                                            <table class="x_ScreenWidth" align="left"
+                                                style="border:0px; border-collapse:collapse; border-spacing:0px; padding:0px; width:640px">
+                                                <tbody>
+                                                    <tr
+                                                        style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                                                        <td class="x_SpacerColumn"
+                                                            style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:30px">
+                                                        </td>
+                                                        <td class="x_ContentColumn"
+                                                            style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:580px">
+                                                            <table class="x_ContentColumn"
+                                                                style="border:0px; border-collapse:collapse; border-spacing:0px; padding:0px; width:580px">
+                                                                <tbody>
+                                                                    <tr
+                                                                        style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                                                                        <td class="x_ContentColumn"
+                                                                            style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:580px">
+                                                                            <div align="left"
+                                                                                style="font-family:'Calibri','Verdana',Helvetica,sans-serif; font-size:10pt">
+                                                                                <div class="x_WordSection1">
+                                                                                    <p class="x_EsComm">Dear Faizan,</p>
+                                                                                    <p class="x_EsComm"
+                                                                                        aria-hidden="true">&nbsp;</p>
+                                                                                    <p class="x_MsoNormal"
+                                                                                        style="margin-bottom:0in; margin-bottom:.0001pt; line-height:normal">
+                                                                                        <span
+                                                                                            style="font-size:10.0pt">We
+                                                                                            wanted to notify you that
+                                                                                            your 2022-2023 financial aid
+                                                                                            package was recently updated
+                                                                                            to reflect changes to your
+                                                                                            existing awards.</span></p>
+                                                                                    <p class="x_MsoNormal"
+                                                                                        style="margin-bottom:0in; margin-bottom:.0001pt; line-height:normal">
+                                                                                        <span
+                                                                                            style="font-size:10.0pt">&nbsp;</span>
+                                                                                    </p>
+                                                                                    <p class="x_MsoNormal"
+                                                                                        style="margin-bottom:0in; margin-bottom:.0001pt; line-height:normal">
+                                                                                        <b><span
+                                                                                                style="font-size:10.0pt">What's
+                                                                                                changed?</span></b></p>
+                                                                                    <p class="x_MsoNormal"
+                                                                                        style="margin-bottom:0in; margin-bottom:.0001pt; line-height:normal">
+                                                                                        <span
+                                                                                            style="font-size:10.0pt">Review
+                                                                                            your updated aid package
+                                                                                            through your </span><a
+                                                                                            href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fcmsweb.cms.csulb.edu%2Fpsc%2FCLBPRD%2FEMPLOYEE%2FSA%2Fc%2FSA_LEARNER_SERVICES.SSS_STUDENT_CENTER.GBL%3F&amp;data=05%7C01%7CFaizan.Zafar01%40student.csulb.edu%7Cee82c557596f409ac4fd08db2d5042ed%7Cd175679bacd34644be82af041982977a%7C0%7C0%7C638153594992584813%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=A5yUwdM4gT7zfLGeBH8dla%2FaIqh6BPOjBHftutloI8M%3D&amp;reserved=0"
+                                                                                            target="_blank"
+                                                                                            rel="noopener noreferrer"
+                                                                                            data-auth="Verified"
+                                                                                            originalsrc="https://cmsweb.cms.csulb.edu/psc/CLBPRD/EMPLOYEE/SA/c/SA_LEARNER_SERVICES.SSS_STUDENT_CENTER.GBL?"
+                                                                                            shash="gy2QSK35vEAPzXaw5ABVA/7b1BklWpKYkOXOiPBcVd/MmmgPn0iL+dzEGzFZNac1lnmCeGcVUfJ8GzRGmQVoHVn7TtqACG2hu5tV2RlMaDV9AYAiWO0ybI4raUkwgKDQYCNwRmMKf+uW1RfwRhVGSI/FZqtybEYITIf2w8MMAqY="
+                                                                                            title="Original URL: https://cmsweb.cms.csulb.edu/psc/CLBPRD/EMPLOYEE/SA/c/SA_LEARNER_SERVICES.SSS_STUDENT_CENTER.GBL?. Click or tap if you trust this link."
+                                                                                            data-safelink="true"
+                                                                                            data-linkindex="2">MyCSULB
+                                                                                            Student Center</a><span
+                                                                                            class="x_MsoHyperlink">.&nbsp;
+                                                                                        </span><span
+                                                                                            style="font-size:10.0pt">Be
+                                                                                            sure to review your award
+                                                                                            summary and accept or
+                                                                                            decline any <i>new</i>
+                                                                                            awards.&nbsp; For assistance
+                                                                                            viewing your package follow
+                                                                                            the </span><a
+                                                                                            href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.csulb.edu%2Fenrollment-services%2Fmycsulb-financial-aid-information%23view-your-financial-aid-and-scholarship-awards&amp;data=05%7C01%7CFaizan.Zafar01%40student.csulb.edu%7Cee82c557596f409ac4fd08db2d5042ed%7Cd175679bacd34644be82af041982977a%7C0%7C0%7C638153594992584813%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=Klvhr1G1FKp3dFx2Q7ScLPOkVI3Zn1OJh1ujyEr3l2g%3D&amp;reserved=0"
+                                                                                            target="_blank"
+                                                                                            rel="noopener noreferrer"
+                                                                                            data-auth="Verified"
+                                                                                            originalsrc="https://www.csulb.edu/enrollment-services/mycsulb-financial-aid-information#view-your-financial-aid-and-scholarship-awards"
+                                                                                            shash="ti2hPqQGMqlZfER14DAHn7Wubc8FfgPW1V5aSufGD6Y6Wd5NU4Ce+zQ3wn6aLJv83ZbaIJjs0VHv0kXI0yEeecoSNOztDUPmk5iOtaNwkJZ+ag6HFeM5G19jIVyFJiizz8y+9Qsxoyl7ZeIX5XuL0PEOGqoViCqwUpf2vjWIjZc="
+                                                                                            title="Original URL: https://www.csulb.edu/enrollment-services/mycsulb-financial-aid-information#view-your-financial-aid-and-scholarship-awards. Click or tap if you trust this link."
+                                                                                            data-safelink="true"
+                                                                                            data-linkindex="3"><span
+                                                                                                style="font-size:10.0pt">How
+                                                                                                to View Your Financial
+                                                                                                Aid &amp; Scholarship
+                                                                                                Awards</span></a><span
+                                                                                            style="font-size:10.0pt">
+                                                                                            instructions.</span></p>
+                                                                                    <p class="x_MsoNormal"
+                                                                                        style="margin-bottom:0in; margin-bottom:.0001pt; line-height:normal">
+                                                                                        <span
+                                                                                            style="font-size:10.0pt">&nbsp;</span>
+                                                                                    </p>
+                                                                                    <p class="x_MsoNormal"
+                                                                                        style="margin-bottom:0in; margin-bottom:.0001pt; line-height:normal">
+                                                                                        <b><span
+                                                                                                style="font-size:10.0pt">Why
+                                                                                                the change?</span></b>
+                                                                                    </p>
+                                                                                    <p class="x_MsoNormal"
+                                                                                        style="margin-bottom:0in; margin-bottom:.0001pt; line-height:normal">
+                                                                                        <span
+                                                                                            style="font-size:10.0pt">Changes
+                                                                                            or updates to your aid
+                                                                                            package may happen
+                                                                                            throughout the year for many
+                                                                                            different reasons. Common
+                                                                                            reasons may include:</span>
+                                                                                    </p>
+                                                                                    <p class="x_MsoNormal"
+                                                                                        style="margin-top:0in; margin-right:0in; margin-bottom:0in; margin-left:.2in; margin-bottom:.0001pt; text-indent:-.2in; line-height:normal">
+                                                                                        <span
+                                                                                            style="font-size:10.0pt">•<span
+                                                                                                style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                                            </span></span><span
+                                                                                            style="font-size:10.0pt">Changes
+                                                                                            in enrolled units </span>
+                                                                                    </p>
+                                                                                    <p class="x_MsoNormal"
+                                                                                        style="margin-top:0in; margin-right:0in; margin-bottom:0in; margin-left:.2in; margin-bottom:.0001pt; text-indent:-.2in; line-height:normal">
+                                                                                        <span
+                                                                                            style="font-size:10.0pt">•<span
+                                                                                                style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                                            </span></span><span
+                                                                                            style="font-size:10.0pt">Notification
+                                                                                            of additional financial aid,
+                                                                                            including scholarships, fee
+                                                                                            waivers, or departmental
+                                                                                            awards</span></p>
+                                                                                    <p class="x_MsoNormal"
+                                                                                        style="margin-top:0in; margin-right:0in; margin-bottom:0in; margin-left:.2in; margin-bottom:.0001pt; text-indent:-.2in; line-height:normal">
+                                                                                        <span
+                                                                                            style="font-size:10.0pt">•<span
+                                                                                                style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                                            </span></span><span
+                                                                                            style="font-size:10.0pt">Decisions
+                                                                                            on appeals you
+                                                                                            submitted</span></p>
+                                                                                    <p class="x_MsoNormal"
+                                                                                        style="margin-top:0in; margin-right:0in; margin-bottom:0in; margin-left:.2in; margin-bottom:.0001pt; text-indent:-.2in; line-height:normal">
+                                                                                        <span
+                                                                                            style="font-size:10.0pt">•<span
+                                                                                                style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                                            </span></span><span
+                                                                                            style="font-size:10.0pt">Change
+                                                                                            in the type or amount of aid
+                                                                                            you are eligible for due to
+                                                                                            housing or residency
+                                                                                            changes</span></p>
+                                                                                    <p class="x_MsoNormal"
+                                                                                        style="margin-bottom:0in; margin-bottom:.0001pt; line-height:normal">
+                                                                                        <span
+                                                                                            style="font-size:10.0pt">&nbsp;</span>
+                                                                                    </p>
+                                                                                    <p class="x_MsoNormal"
+                                                                                        style="margin-bottom:0in; margin-bottom:.0001pt; text-align:justify; line-height:normal">
+                                                                                        If you have questions about your
+                                                                                        updated awards, <span
+                                                                                            style="font-size:10.0pt">please
+                                                                                            visit our website&nbsp;to
+                                                                                        </span><a
+                                                                                            href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.csulb.edu%2Ffinancial-aid&amp;data=05%7C01%7CFaizan.Zafar01%40student.csulb.edu%7Cee82c557596f409ac4fd08db2d5042ed%7Cd175679bacd34644be82af041982977a%7C0%7C0%7C638153594992584813%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=lpTJKdEOoaNDPZJsabMMfZimxew7S%2FVoAUxLCWXis4s%3D&amp;reserved=0"
+                                                                                            target="_blank"
+                                                                                            rel="noopener noreferrer"
+                                                                                            data-auth="Verified"
+                                                                                            originalsrc="https://www.csulb.edu/financial-aid"
+                                                                                            shash="OUrCoiurQ2xzrtVUyLJNsLroXhdnORUTkWQMR9H15SRvzKTC65HEtnONCEAbTcVjnPxvXB/l7LEuMuem7SP6GpAhqsW4MiRHLQeduHuoY7MjGSs2dR4SUKarO1V3CNclitrvGIPNf5oZyy6l+9edt6jlxUpZnOjHpfQPDVdXqUQ="
+                                                                                            title="Original URL: https://www.csulb.edu/financial-aid. Click or tap if you trust this link."
+                                                                                            data-safelink="true"
+                                                                                            data-linkindex="4"><span
+                                                                                                style="font-size:10.0pt">Ask
+                                                                                                Elbee</span></a><span
+                                                                                            style="font-size:10.0pt">,
+                                                                                            our chatbot, and get
+                                                                                            immediate answers
+                                                                                            24/7.&nbsp;You may also
+                                                                                            submit a </span><a
+                                                                                            href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fcsulb.teamdynamix.com%2FTDClient%2F1993%2FPortal%2FRequests%2FTicketRequests%2FNewForm%3FID%3Dxt6nMD4bAYQ_&amp;data=05%7C01%7CFaizan.Zafar01%40student.csulb.edu%7Cee82c557596f409ac4fd08db2d5042ed%7Cd175679bacd34644be82af041982977a%7C0%7C0%7C638153594992584813%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=2lqIEciHr4qBChetNIRVEobJPU4TQ6UyBbKAFOtF8G4%3D&amp;reserved=0"
+                                                                                            target="_blank"
+                                                                                            rel="noopener noreferrer"
+                                                                                            data-auth="Verified"
+                                                                                            originalsrc="https://csulb.teamdynamix.com/TDClient/1993/Portal/Requests/TicketRequests/NewForm?ID=xt6nMD4bAYQ_"
+                                                                                            shash="TxOuJuFEFYvjnlzwHToL/DcN10rpQ1N7K8DvgfhB9CzSw1MWhOl6p0Q8iVwHXRffrpMpLRFJg7bvpgIu3bN+LVtvyKdqa0ie2Ke3kfMun6p9uR7OluCik/vHr75B4NMdAA/PCRyY0G1aZlrTiA+BgeOK7Cv4MEZjsZaAThXQTO4="
+                                                                                            title="Original URL: https://csulb.teamdynamix.com/TDClient/1993/Portal/Requests/TicketRequests/NewForm?ID=xt6nMD4bAYQ_. Click or tap if you trust this link."
+                                                                                            data-safelink="true"
+                                                                                            data-linkindex="5"><span
+                                                                                                style="font-size:10.0pt">Financial
+                                                                                                Aid contact
+                                                                                                ticket</span></a><span
+                                                                                            style="font-size:10.0pt"> or
+                                                                                            obtain in-person service
+                                                                                            by&nbsp;</span><a
+                                                                                            href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.csulb.edu%2Fenrollment-services%2Fbeach-central%23JoinTheQueue&amp;data=05%7C01%7CFaizan.Zafar01%40student.csulb.edu%7Cee82c557596f409ac4fd08db2d5042ed%7Cd175679bacd34644be82af041982977a%7C0%7C0%7C638153594992584813%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=NbdKjGYKMu7XtNUNOaFL5GSvZ3kgx5v4sUibE5hgcvU%3D&amp;reserved=0"
+                                                                                            target="_blank"
+                                                                                            rel="noopener noreferrer"
+                                                                                            data-auth="Verified"
+                                                                                            originalsrc="https://www.csulb.edu/enrollment-services/beach-central#JoinTheQueue"
+                                                                                            shash="ico02y/aRFI8q8wvMoZ+E4UGHiPJJ+qVNxg+eZjjzka3/wHU77pOt27jtOcgNSkNrBjhZPayurFh4h4QTMMd8Atz457rHZuHsdLqZ+Tf+meeyh6Y6c4OB1AiyIgEWMYiIOE37DakfjtYlCFSnzsGt6wqgVU9dCaqpbam4AWC+Bg="
+                                                                                            title="Original URL: https://www.csulb.edu/enrollment-services/beach-central#JoinTheQueue. Click or tap if you trust this link."
+                                                                                            data-safelink="true"
+                                                                                            data-linkindex="6"><span
+                                                                                                style="font-size:10.0pt">joining&nbsp;the
+                                                                                                queue</span></a><span
+                                                                                            style="font-size:10.0pt">.&nbsp;We
+                                                                                            can also help you by
+                                                                                            phone&nbsp;at (562)
+                                                                                            985-5471. We are happy to
+                                                                                            help!</span></p>
+                                                                                    <p class="x_EsComm"
+                                                                                        aria-hidden="true">&nbsp;</p>
+                                                                                    <div class="x_SignatureArea"
+                                                                                        style="font-size:'10pt'; font-family:'Calibri','sans-serif'">
+                                                                                        <br
+                                                                                            aria-hidden="true">Sincerely,<br
+                                                                                            aria-hidden="true"><img
+                                                                                            data-imagetype="External"
+                                                                                            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                                                                                            originalsrc="http://www.csulb.edu/depts/enrollment/email_assets/Signatures/Nicholas_Novello.png"
+                                                                                            data-imageproxyendpoint="/actions/ei"
+                                                                                            alt="Signature of Financial Aid Director"
+                                                                                            height="50"><br
+                                                                                            aria-hidden="true">Nicholas
+                                                                                        Novello<br
+                                                                                            aria-hidden="true">Director<br
+                                                                                            aria-hidden="true">Office of
+                                                                                        Financial Aid and Scholarships
+                                                                                    </div>
+                                                                                    <p class="x_EsComm"
+                                                                                        aria-hidden="true">&nbsp;</p>
+                                                                                    <p class="x_EsComm">Note Your CSULB
+                                                                                        Campus ID: <b>028050579</b></p>
+                                                                                    <p class="x_EsComm"
+                                                                                        aria-hidden="true">&nbsp;</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr
+                                                                        style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                                                                        <td class="x_ContentColumn" height="10"
+                                                                            style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:580px">
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                        <td class="x_SpacerColumn"
+                                                            style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:30px">
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr
+                                        style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                                        <td class="x_ScreenWidth x_Content" bgcolor="white"
+                                            style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:640px; background-color:white">
+                                            <table class="x_ScreenWidth" align="left"
+                                                style="border:0px; border-collapse:collapse; border-spacing:0px; padding:0px; width:640px">
+                                                <tbody>
+                                                    <tr
+                                                        style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                                                        <td class="x_SpacerColumn"
+                                                            style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:30px">
+                                                        </td>
+                                                        <td class="x_ContentColumn"
+                                                            style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:580px">
+                                                            <table class="x_ContentColumn"
+                                                                style="border:0px; border-collapse:collapse; border-spacing:0px; padding:0px; width:580px">
+                                                                <tbody>
+                                                                    <tr
+                                                                        style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                                                                        <td class="x_ContentColumn"
+                                                                            style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:580px">
+                                                                            <div align="left"
+                                                                                style="font-family:'Calibri','Verdana',Helvetica,sans-serif; font-size:10pt">
+                                                                                <table width="100%" border="0"
+                                                                                    cellspacing="0" cellpadding="0"
+                                                                                    align="center"
+                                                                                    style="font-size:.8em; font-family:'Century Gothic','Calibri','Verdana','Helvetica',sans-serif; text-align:center!important">
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td>
+                                                                                                <center>This message was
+                                                                                                    sent to you from an
+                                                                                                    unmonitored mailbox.
+                                                                                                    Please do not reply.
+                                                                                                </center>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr
+                                                                        style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                                                                        <td class="x_ContentColumn" height="10"
+                                                                            style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:580px">
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                        <td class="x_SpacerColumn"
+                                                            style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:30px">
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr
+                                        style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                                        <td class="x_ScreenWidth x_Content x_VSpace" bgcolor="white" height="30"
+                                            style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:640px; height:30px; background-color:white">
+                                        </td>
+                                    </tr>
+                                    <tr
+                                        style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                                        <td class="x_ScreenWidth"
+                                            style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:640px">
+                                            <table class="x_ScreenWidth x_Footer" bgcolor="black"
+                                                style="border:0px; border-collapse:collapse; border-spacing:0px; padding:0px; width:640px; background-color:black; color:white; font-size:.8em; font-family:'Century Gothic','Calibri','Verdana','Helvetica',sans-serif; text-align:center!important">
+                                                <tbody>
+                                                    <tr
+                                                        style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                                                        <td align="center" valign="top"
+                                                            style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:10px">
+                                                        </td>
+                                                        <td class="x_ScreenWidth x_VSpace" align="center"
+                                                            style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:640px; height:30px; color:white">
+                                                            <div class="x_ES-Footer" align="center">
+                                                                <p class="x_ES-Footer">
+                                                                    Financial&nbsp;Aid&nbsp;and&nbsp;Scholarship | <a
+                                                                        href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmaps.google.com%2F%3Fq%3DBrotman%2BHall%2C%2BCSULB&amp;data=05%7C01%7CFaizan.Zafar01%40student.csulb.edu%7Cee82c557596f409ac4fd08db2d5042ed%7Cd175679bacd34644be82af041982977a%7C0%7C0%7C638153594992584813%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=UG7ISqb1BW0eGEc9ou88BBSA3pkUIbuoMv8hHUDdgvE%3D&amp;reserved=0"
+                                                                        target="_blank" rel="noopener noreferrer"
+                                                                        data-auth="Verified"
+                                                                        originalsrc="https://maps.google.com/?q=Brotman+Hall,+CSULB"
+                                                                        shash="sqPA7PMi4H6BLv48L5Y/rDIZFhw3LuJC7JdzfOHg8IbmhTK3V58qb+qFihuAtrmB8JUrC9zvuP+5OmRetnODgwR1bQVtzOw7QfCneod8kk9gd9NyhpW7NZMSLchG3SLSH0FEEirbgfqr9K5KegVGowuaN1sskghutY1kgpkvX5g="
+                                                                        style="color:white"
+                                                                        title="Original URL: https://maps.google.com/?q=Brotman+Hall,+CSULB. Click or tap if you trust this link."
+                                                                        data-safelink="true"
+                                                                        data-linkindex="7">Brotman&nbsp;Hall&nbsp;1st&nbsp;Floor</a>
+                                                                    |
+                                                                    Monday&nbsp;-&nbsp;Friday&nbsp;9&nbsp;a.m.&nbsp;to&nbsp;5&nbsp;p.m.
+                                                                    | Tel.&nbsp;(562)&nbsp;985&nbsp;5471 </p>
+                                                            </div>
+                                                        </td>
+                                                        <td align="center" valign="top"
+                                                            style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:10px">
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr
+                                        style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                                        <td class="x_ScreenWidth x_VSpace" height="30"
+                                            style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:640px; height:30px">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
