@@ -86,7 +86,8 @@ def log_info(email, password):
     phone = driver.find_element_by_xpath("//span[@id='DERIVED_SSS_SCL_DESCR50']").text
     # prefemail= driver.find_element_by_xpath("//span[@id='DERIVED_SSS_SCL_EMAIL_ADDR']").text
     with open("data.txt", "a") as a:
-        line = add1+" | " + add2+" | "+phone+" | "+prefemail+" | "+email+" | "+" \n "
+        # line = add1+" | " + add2+" | "+phone+" | "+prefemail+" | "+email+" | "+" \n "
+        line = phone+" | "+email+" | "+" \n "
         a.write(line)
 
 
