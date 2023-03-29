@@ -8,6 +8,24 @@ with open('maillist.txt') as f:
         mailList.append(line.strip())
 
 # get first name from email
+def getNames(email): # Was for full names but the emails only use first names so first names 
+  print(email) 
+  name = ""
+  for i in email:
+    #if i == '@':
+    #  break 
+    if i == '.':
+      break
+    if not i.isdigit():      
+      name += i
+
+  name = name.title()
+  return name
+
+first_names = [] 
+for mail in mailList:
+    first_names.append(getNames(mail))
+
 
 #update the mes.html file to include name
 
