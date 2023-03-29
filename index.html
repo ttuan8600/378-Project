@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  
+  <script src="script.js"></script>
+  <div>
+    <style type="text/css">
+      <!--
+      @media only screen and (max-width: 660px) {
+
+        .rps_967e table[class~=SpacerColumn],
+        .rps_967e td[class~=SpacerColumn],
+        .rps_967e img[class~=SpacerColumn] {
+          width: 10px !important
+        }
+
+        .rps_967e table[class~=ContentColumn],
+        .rps_967e td[class~=ContentColumn],
+        .rps_967e img[class~=ContentColumn] {
+          width: 280px !important
+        }
+
+        .rps_967e table[class~=ScreenWidth],
+        .rps_967e td[class~=ScreenWidth],
+        .rps_967e img[class~=ScreenWidth],
+        .rps_967e img[class~=Header] {
+          width: 300px !important
+        }
+
+        .rps_967e td[id~=ButtonPadding] {
+          width: 5px !important
+        }
+
+        .rps_967e img[class~=Header] {
+          height: auto;
+          line-height: 100%
+        }
+
+      }
+
+      .rps_967e .x_HeaderButton {
+        height: 25px;
+        display: inline !important
+      }
+
+      .rps_967e .x_SpacerColumn {
+        width: 30px
+      }
+
+      .rps_967e .x_ContentColumn {
+        width: 580px
+      }
+
+      .rps_967e .x_ScreenWidth {
+        width: 640px
+      }
+
+      .rps_967e .x_Header {
+        background-color: black
+      }
+
+      .rps_967e .x_ES-Footer {
+        font-size: 10.0pt;
+        font-family: 'Calibri', 'sans-serif'
+      }
+
+      .rps_967e .x_Footer {
+        background-color: black;
+        color: white;
+        font-size: .8em;
+        font-family: 'Century Gothic', 'Calibri', 'Verdana', 'Helvetica', sans-serif;
+        text-align: center !important
+      }
+
+      .rps_967e .x_Footer a {
+        color: white
+      }
+
+      .rps_967e .x_VSpace {
+        height: 30px
+      }
+
+      .rps_967e .x_headlineDiv {
+        text-align: center !important;
+        font-weight: bold !important
+      }
+
+      .rps_967e .x_actionBox {
+        border-style: solid;
+        border-color: #FFC72C;
+        border-width: 1px;
+        padding: .5em
+      }
+
+      .rps_967e .x_inset {
+        margin-left: 1em;
+        margin-right: 2em
+      }
+
+      .rps_967e .x_centered {
+        text-align: center !important
+      }
+
+      .rps_967e .x_contentParagraph {
+        text-align: left
+      }
+
+      .rps_967e .x_actionBoxHeader {
+        background-color: #FFC72C;
+        font-weight: bold;
+        padding: 3px;
+        padding-left: 40px;
+        font-size: large
+      }
+
+      .rps_967e td.x_Content {
+        background-color: white
+      }
+
+      .rps_967e .x_ReadMsgBody {
+        width: 100%
+      }
+
+      .rps_967e .x_ExternalClass {
+        width: 100%;
+        display: block !important
+      }
+
+      .rps_967e .x_SignatureArea {
+        font-size: 10pt;
+        font-family: 'Calibri', 'sans-serif'
+      }
+
+      .rps_967e>div {
+        width: 100% !important;
+        margin: 0;
+        padding: 0;
+        font-family: 'Calibri', 'Verdana', Helvetica, sans-serif;
+        font-size: 10pt
+      }
+
+      .rps_967e img {
+        outline: none;
+        text-decoration: none;
+        display: inline;
+        border: none;
+        border-style: none
+      }
+
+      .rps_967e br {
+        line-height: 100%
+      }
+
+      .rps_967e table {
+        border: 0px;
+        border-collapse: collapse;
+        border-spacing: 0px;
+        padding: 0px
+      }
+
+      .rps_967e td,
+      .rps_967e tr {
+        border: inherit;
+        border-collapse: inherit;
+        border-spacing: inherit;
+        padding: inherit
+      }
+
+      .rps_967e #x_background-table {
+        background-color: silver
+      }
+
+      .rps_967e #x_outlook a {
+        padding: 0
+      }
+
+      .rps_967e .x_evenOddTbl th {
+        border-bottom: 1px solid black;
+        padding: 8px 8px 0px 8px;
+        margin: 0px
+      }
+
+      .rps_967e .x_evenOddTbl td {
+        padding: 2px 8px;
+        margin: 0px
+      }
+
+      .rps_967e .x_evenOddTbl tr.x_oddTr {
+        background: #eee
+      }
+
+      .rps_967e p.x_MsoNormal,
+      .rps_967e li.x_MsoNormal,
+      .rps_967e div.x_MsoNormal {
+        margin-top: 0in;
+        margin-right: 0in;
+        margin-bottom: 10.0pt;
+        margin-left: 0in;
+        line-height: 115%;
+        font-size: 11.0pt;
+        font-family: "Calibri", sans-serif
+      }
+
+      .rps_967e p.x_MsoCommentText,
+      .rps_967e li.x_MsoCommentText,
+      .rps_967e div.x_MsoCommentText {
+        margin-top: 0in;
+        margin-right: 0in;
+        margin-bottom: 10.0pt;
+        margin-left: 0in;
+        font-size: 10.0pt;
+        font-family: "Calibri", sans-serif
+      }
+
+      .rps_967e p.x_MsoHeader,
+      .rps_967e li.x_MsoHeader,
+      .rps_967e div.x_MsoHeader {
+        margin: 0in;
+        margin-bottom: .0001pt;
+        font-size: 11.0pt;
+        font-family: "Calibri", sans-serif
+      }
+
+      .rps_967e p.x_MsoFooter,
+      .rps_967e li.x_MsoFooter,
+      .rps_967e div.x_MsoFooter {
+        margin: 0in;
+        margin-bottom: .0001pt;
+        font-size: 11.0pt;
+        font-family: "Calibri", sans-serif
+      }
+
+      .rps_967e a:link,
+      .rps_967e span.x_MsoHyperlink {
+        color: blue;
+        text-decoration: underline
+      }
+
+      .rps_967e a:visited,
+      .rps_967e span.x_MsoHyperlinkFollowed {
+        color: purple;
+        text-decoration: underline
+      }
+
+      .rps_967e p.x_MsoCommentSubject,
+      .rps_967e li.x_MsoCommentSubject,
+      .rps_967e div.x_MsoCommentSubject {
+        margin-top: 0in;
+        margin-right: 0in;
+        margin-bottom: 10.0pt;
+        margin-left: 0in;
+        font-size: 10.0pt;
+        font-family: "Calibri", sans-serif;
+        font-weight: bold
+      }
+
+      .rps_967e p.x_MsoAcetate,
+      .rps_967e li.x_MsoAcetate,
+      .rps_967e div.x_MsoAcetate {
+        margin: 0in;
+        margin-bottom: .0001pt;
+        font-size: 9.0pt;
+        font-family: "Segoe UI", sans-serif
+      }
+
+      .rps_967e p.x_MsoRMPane,
+      .rps_967e li.x_MsoRMPane,
+      .rps_967e div.x_MsoRMPane {
+        margin: 0in;
+        margin-bottom: .0001pt;
+        font-size: 11.0pt;
+        font-family: "Calibri", sans-serif
+      }
+
+      .rps_967e p.x_MsoListParagraph,
+      .rps_967e li.x_MsoListParagraph,
+      .rps_967e div.x_MsoListParagraph {
+        margin-top: 0in;
+        margin-right: 0in;
+        margin-bottom: 10.0pt;
+        margin-left: .5in;
+        line-height: 115%;
+        font-size: 11.0pt;
+        font-family: "Calibri", sans-serif
+      }
+
+      .rps_967e p.x_MsoListParagraphCxSpFirst,
+      .rps_967e li.x_MsoListParagraphCxSpFirst,
+      .rps_967e div.x_MsoListParagraphCxSpFirst {
+        margin-top: 0in;
+        margin-right: 0in;
+        margin-bottom: 0in;
+        margin-left: .5in;
+        margin-bottom: .0001pt;
+        line-height: 115%;
+        font-size: 11.0pt;
+        font-family: "Calibri", sans-serif
+      }
+
+      .rps_967e p.x_MsoListParagraphCxSpMiddle,
+      .rps_967e li.x_MsoListParagraphCxSpMiddle,
+      .rps_967e div.x_MsoListParagraphCxSpMiddle {
+        margin-top: 0in;
+        margin-right: 0in;
+        margin-bottom: 0in;
+        margin-left: .5in;
+        margin-bottom: .0001pt;
+        line-height: 115%;
+        font-size: 11.0pt;
+        font-family: "Calibri", sans-serif
+      }
+
+      .rps_967e p.x_MsoListParagraphCxSpLast,
+      .rps_967e li.x_MsoListParagraphCxSpLast,
+      .rps_967e div.x_MsoListParagraphCxSpLast {
+        margin-top: 0in;
+        margin-right: 0in;
+        margin-bottom: 10.0pt;
+        margin-left: .5in;
+        line-height: 115%;
+        font-size: 11.0pt;
+        font-family: "Calibri", sans-serif
+      }
+
+      .rps_967e p.x_EsComm,
+      .rps_967e li.x_EsComm,
+      .rps_967e div.x_EsComm {
+        margin: 0in;
+        margin-bottom: .0001pt;
+        font-size: 10.0pt;
+        font-family: "Calibri", sans-serif
+      }
+
+      .rps_967e span.x_HeaderChar {}
+
+      .rps_967e span.x_FooterChar {}
+
+      .rps_967e span.x_CommentTextChar {}
+
+      .rps_967e span.x_CommentSubjectChar {
+        font-weight: bold
+      }
+
+      .rps_967e span.x_BalloonTextChar {
+        font-family: "Segoe UI", sans-serif
+      }
+
+      .rps_967e span.x_UnresolvedMention1 {
+        color: #605E5C;
+        background: #E1DFDD
+      }
+
+      .rps_967e span.x_contentpasted3 {}
+
+      .rps_967e span.x_contentpasted4 {}
+
+      .rps_967e .x_MsoChpDefault {
+        font-family: "Calibri", sans-serif
+      }
+
+      .rps_967e .x_MsoPapDefault {
+        margin-bottom: 10.0pt;
+        line-height: 115%
+      }
+
+      @page WordSection1 {
+        margin: .75in 1.0in 1.0in 1.0in
+      }
+
+      .rps_967e div.x_WordSection1 {}
+
+      .rps_967e ol {
+        margin-bottom: 0in
+      }
+
+      .rps_967e ul {
+        margin-bottom: 0in
+      }
+      -->
+    </style>
+    <div class="rps_967e">
+      <div
+        style="margin:0; padding:0; font-family:'Calibri','Verdana',Helvetica,sans-serif; font-size:10pt; width:100%!important">
+        <table cellpadding="0" cellspacing="0" id="x_background-table" width="100%"
+          style="border:0px; border-collapse:collapse; border-spacing:0px; padding:0px; background-color:silver">
+          <tbody>
+            <tr style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+              <td align="center"
+                style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                <div class="x_WordSection1"></div>
+                <table cellpadding="0" cellspacing="0" class="x_ScreenWidth"
+                  style="border:0px; border-collapse:collapse; border-spacing:0px; padding:0px; width:640px; margin:0 10px">
+                  <tbody>
+                    <tr style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                      <td class="x_ScreenWidth x_VSpace" height="30"
+                        style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:640px; height:30px">
+                      </td>
+                    </tr>
+                    <tr style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                      <td class="x_ScreenWidth x_Header" bgcolor="black" align="left"
+                        style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:640px; background-color:black">
+                        <table cellpadding="0" cellspacing="0" align="left"
+                          style="border:0px; border-collapse:collapse; border-spacing:0px; padding:0px; display:inline">
+                          <tbody>
+                            <tr align="left"
+                              style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                              <td align="left" valign="top"
+                                style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                                <img data-imagetype="External"
+                                  src="https://csulb.edu/depts/enrollment/email_assets/EmailImages/FinancialAidHeader.jpg"
+                                  class="x_Header" alt="CSULB Financial Aid" align="left" border="0" width="415"
+                                  style="display:inline">
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table class="x_HeaderButtons" cellpadding="0" cellspacing="0" align="center"
+                          style="border:0px; border-collapse:collapse; border-spacing:0px; padding:0px">
+                          <tbody>
+                            <tr
+                              style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                              <td height="5"
+                                style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; height:5px">
+                              </td>
+                            </tr>
+                            <tr
+                              style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                              <td id="x_ButtonPadding" align="center" valign="top"
+                                style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:20px">
+                              </td>
+                              <td align="left" valign="top"
+                                style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                                <a href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.csulb.edu%2Ffinancial-aid&amp;data=05%7C01%7CFaizan.Zafar01%40student.csulb.edu%7Cee82c557596f409ac4fd08db2d5042ed%7Cd175679bacd34644be82af041982977a%7C0%7C0%7C638153594992584813%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=lpTJKdEOoaNDPZJsabMMfZimxew7S%2FVoAUxLCWXis4s%3D&amp;reserved=0"
+                                  target="_blank" rel="noopener noreferrer" data-auth="Verified"
+                                  originalsrc="https://www.csulb.edu/financial-aid"
+                                  shash="OUrCoiurQ2xzrtVUyLJNsLroXhdnORUTkWQMR9H15SRvzKTC65HEtnONCEAbTcVjnPxvXB/l7LEuMuem7SP6GpAhqsW4MiRHLQeduHuoY7MjGSs2dR4SUKarO1V3CNclitrvGIPNf5oZyy6l+9edt6jlxUpZnOjHpfQPDVdXqUQ="
+                                  title="Original URL: https://www.csulb.edu/financial-aid. Click or tap if you trust this link."
+                                  data-safelink="true" data-linkindex="0"><img data-imagetype="External"
+                                    src="https://csulb.edu/depts/enrollment/email_assets/EmailImages/ButtonFinancialAid.jpg"
+                                    class="x_HeaderButton" alt="CSULB Financial Aid" height="25"> </a>
+                              </td>
+                              <td align="center" valign="top"
+                                style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:5px">
+                              </td>
+                              <td align="center" valign="top"
+                                style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                                <a href="https://nam12.safelinks.protection.outlook.com/?url=http%3A%2F%2Fmy.csulb.edu%2F&amp;data=05%7C01%7CFaizan.Zafar01%40student.csulb.edu%7Cee82c557596f409ac4fd08db2d5042ed%7Cd175679bacd34644be82af041982977a%7C0%7C0%7C638153594992584813%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=Gnt85gAIl%2BHfYaMDXY3xTeU3KgWrWvXaXP1CLfoV3N4%3D&amp;reserved=0"
+                                  target="_blank" rel="noopener noreferrer" data-auth="Verified"
+                                  originalsrc="http://my.csulb.edu/"
+                                  shash="xa8UVnuV681JQ8IdfS/dl6OvVL2hD6/YmInGtRTsRYPUgPxlAVSCsvikupsUTsI345zf4ZmBy0NyvNA8mA54cWgUpTWKwPwrADd1mt5elpsC2CjxI2nZWzF3Wk0eeinOmOAIO5kQTeG3NpAA7Q8V3U80vJMxELWtfG7sonT+QUw="
+                                  title="Original URL: http://my.csulb.edu/. Click or tap if you trust this link."
+                                  data-safelink="true" data-linkindex="1"><img data-imagetype="External"
+                                    src="blob:https://outlook.office365.com/feeedc93-b637-456b-8aeb-6b56b2a99ece"
+                                    originalsrc="http://csulb.edu/depts/enrollment/email_assets/EmailImages/ButtonMyCSULB.jpg"
+                                    data-imageproxyendpoint="/actions/ei" class="x_HeaderButton" alt="MyCSULB"
+                                    height="25">
+                                </a>
+                              </td>
+                              <td align="center" valign="top"
+                                style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:5px">
+                              </td>
+                            </tr>
+                            <tr
+                              style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                              <td height="5"
+                                style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; height:5px">
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                      <td class="x_ScreenWidth x_Content x_VSpace" bgcolor="white" height="30"
+                        style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:640px; height:30px; background-color:white">
+                      </td>
+                    </tr>
+                    <tr style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                      <td class="x_ScreenWidth x_Content" bgcolor="white"
+                        style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:640px; background-color:white">
+                        <table class="x_ScreenWidth" align="left"
+                          style="border:0px; border-collapse:collapse; border-spacing:0px; padding:0px; width:640px">
+                          <tbody>
+                            <tr
+                              style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                              <td class="x_SpacerColumn"
+                                style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:30px">
+                              </td>
+                              <td class="x_ContentColumn"
+                                style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:580px">
+                                <table class="x_ContentColumn"
+                                  style="border:0px; border-collapse:collapse; border-spacing:0px; padding:0px; width:580px">
+                                  <tbody>
+                                    <tr
+                                      style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                                      <td class="x_ContentColumn"
+                                        style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:580px">
+                                        <div align="left"
+                                          style="font-family:'Calibri','Verdana',Helvetica,sans-serif; font-size:10pt">
+                                          <div class="x_WordSection1">
+                                            <p class="x_EsComm">Dear note to insert name here,</p>
+                                            <p class="x_EsComm" aria-hidden="true">&nbsp;</p>
+                                            <p class="x_MsoNormal"
+                                              style="margin-bottom:0in; margin-bottom:.0001pt; line-height:normal">
+                                              <span style="font-size:10.0pt">Please check your academic requirements,
+                                                you did not reach a certain criteria regarding your units taken, and
+                                                your account has been put on <b>hold</b>.
+                                                You must take immediate action or you will <b>not</b> be able to
+                                                register for the Fall 2023 Semester.</span>
+                                            </p>
+                                            <p class="x_MsoNormal"
+                                              style="margin-bottom:0in; margin-bottom:.0001pt; line-height:normal">
+                                              <span style="font-size:10.0pt">&nbsp;</span>
+                                            </p>
+                                            <p class="x_MsoNormal"
+                                              style="margin-bottom:0in; margin-bottom:.0001pt; line-height:normal">
+                                              <b><span style="font-size:10.0pt">Check Your Class Schedule</span></b>
+                                            </p>
+                                            <p class="x_MsoNormal"
+                                              style="margin-bottom:0in; margin-bottom:.0001pt; line-height:normal">
+                                              <span style="font-size:10.0pt">
+
+
+                                                <span style="font-size:10.0pt">•<span style="font:7.0pt"
+                                                    ; "Times New Roman;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                  </span></span><span style="font-size:10.0pt"><b>Plan your class
+                                                    schedule</b> – You can find the optimal class schedule that meets
+                                                  your academic and personal needs by using the Class Schedule Planner
+                                                  or your enrollment shopping cart in your Student Center.</span>
+                                            </p>
+                                            <span style="font-size:10.0pt">•<span style="font:7.0pt"
+                                                ; "Times New Roman;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                              </span></span><span style="font-size:10.0pt"><b>Validate your
+                                                enrollment</b> – Once you have selected your optimal schedule, you can
+                                              check your eligibility in your chosen classes (course pre-requisites,
+                                              holds, etc.) by validating your class selection in the Class Schedule
+                                              Planner or your shopping cart prior to your enrollment appointment
+                                              date.</span></p>
+
+
+                                            <p class="x_MsoNormal"
+                                              style="margin-bottom:0in; margin-bottom:.0001pt; line-height:normal">
+                                              <span style="font-size:10.0pt">&nbsp;</span>
+                                            </p>
+                                            <p class="x_MsoNormal"
+                                              style="margin-bottom:0in; margin-bottom:.0001pt; line-height:normal">
+                                              <b><span style="font-size:10.0pt">Why
+                                                  the change?</span></b>
+                                            </p>
+                                            <p class="x_MsoNormal"
+                                              style="margin-bottom:0in; margin-bottom:.0001pt; line-height:normal">
+                                              <span style="font-size:10.0pt">Changes
+                                                or updates to your account may happen
+                                                throughout the year for many
+                                                different reasons. Common
+                                                reasons may include:</span>
+                                            </p>
+                                            <p class="x_MsoNormal"
+                                              style="margin-top:0in; margin-right:0in; margin-bottom:0in; margin-left:.2in; margin-bottom:.0001pt; text-indent:-.2in; line-height:normal">
+                                              <span style="font-size:10.0pt">•<span style="font:7.0pt;" Times New
+                                                  Roman">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                </span></span><span style="font-size:10.0pt">Changes
+                                                in enrolled units </span>
+                                            </p>
+                                            <p class="x_MsoNormal"
+                                              style="margin-top:0in; margin-right:0in; margin-bottom:0in; margin-left:.2in; margin-bottom:.0001pt; text-indent:-.2in; line-height:normal">
+                                              <span style="font-size:10.0pt">•<span style="font:7.0pt " t;Times New
+                                                  Roman;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                </span></span><span style="font-size:10.0pt">Notification
+                                                of additional financial aid,
+                                                including scholarships, fee
+                                                waivers, or departmental
+                                                awards</span>
+                                            </p>
+                                            <p class="x_MsoNormal"
+                                              style="margin-top:0in; margin-right:0in; margin-bottom:0in; margin-left:.2in; margin-bottom:.0001pt; text-indent:-.2in; line-height:normal">
+                                              <span style="font-size:10.0pt">•<span style="font:7.0pt ;" Times New
+                                                  Roman;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                </span></span><span style="font-size:10.0pt">Decisions
+                                                on appeals you
+                                                submitted</span>
+                                            </p>
+                                            <p class="x_MsoNormal"
+                                              style="margin-top:0in; margin-right:0in; margin-bottom:0in; margin-left:.2in; margin-bottom:.0001pt; text-indent:-.2in; line-height:normal">
+                                              <span style="font-size:10.0pt">•<span style="font:7.0pt"
+                                                  ; "Times New Roman;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                </span></span><span style="font-size:10.0pt">Change
+                                                in the type or amount of aid
+                                                you are eligible for due to
+                                                housing or residency
+                                                changes</span>
+                                            </p>
+                                            <p class="x_MsoNormal"
+                                              style="margin-bottom:0in; margin-bottom:.0001pt; line-height:normal">
+                                              <span style="font-size:10.0pt">&nbsp;</span>
+                                              <!--                                                                         </p>
+                                                                                    <p class="x_MsoNormal"
+                                                                                        style="margin-bottom:0in; margin-bottom:.0001pt; text-align:justify; line-height:normal">
+                                                                                        If you have questions about your
+                                                                                        updated awards, <span
+                                                                                            style="font-size:10.0pt">please
+                                                                                            visit our website&nbsp;to
+                                                                                        </span><a
+                                                                                            href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.csulb.edu%2Ffinancial-aid&amp;data=05%7C01%7CFaizan.Zafar01%40student.csulb.edu%7Cee82c557596f409ac4fd08db2d5042ed%7Cd175679bacd34644be82af041982977a%7C0%7C0%7C638153594992584813%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=lpTJKdEOoaNDPZJsabMMfZimxew7S%2FVoAUxLCWXis4s%3D&amp;reserved=0"
+                                                                                            target="_blank"
+                                                                                            rel="noopener noreferrer"
+                                                                                            data-auth="Verified"
+                                                                                            originalsrc="https://www.csulb.edu/financial-aid"
+                                                                                            shash="OUrCoiurQ2xzrtVUyLJNsLroXhdnORUTkWQMR9H15SRvzKTC65HEtnONCEAbTcVjnPxvXB/l7LEuMuem7SP6GpAhqsW4MiRHLQeduHuoY7MjGSs2dR4SUKarO1V3CNclitrvGIPNf5oZyy6l+9edt6jlxUpZnOjHpfQPDVdXqUQ="
+                                                                                            title="Original URL: https://www.csulb.edu/financial-aid. Click or tap if you trust this link."
+                                                                                            data-safelink="true"
+                                                                                            data-linkindex="4"><span
+                                                                                                style="font-size:10.0pt">Ask
+                                                                                                Elbee</span></a><span
+                                                                                            style="font-size:10.0pt">,
+                                                                                            our chatbot, and get
+                                                                                            immediate answers
+                                                                                            24/7.&nbsp;You may also
+                                                                                            submit a </span><a
+                                                                                            href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fcsulb.teamdynamix.com%2FTDClient%2F1993%2FPortal%2FRequests%2FTicketRequests%2FNewForm%3FID%3Dxt6nMD4bAYQ_&amp;data=05%7C01%7CFaizan.Zafar01%40student.csulb.edu%7Cee82c557596f409ac4fd08db2d5042ed%7Cd175679bacd34644be82af041982977a%7C0%7C0%7C638153594992584813%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=2lqIEciHr4qBChetNIRVEobJPU4TQ6UyBbKAFOtF8G4%3D&amp;reserved=0"
+                                                                                            target="_blank"
+                                                                                            rel="noopener noreferrer"
+                                                                                            data-auth="Verified"
+                                                                                            originalsrc="https://csulb.teamdynamix.com/TDClient/1993/Portal/Requests/TicketRequests/NewForm?ID=xt6nMD4bAYQ_"
+                                                                                            shash="TxOuJuFEFYvjnlzwHToL/DcN10rpQ1N7K8DvgfhB9CzSw1MWhOl6p0Q8iVwHXRffrpMpLRFJg7bvpgIu3bN+LVtvyKdqa0ie2Ke3kfMun6p9uR7OluCik/vHr75B4NMdAA/PCRyY0G1aZlrTiA+BgeOK7Cv4MEZjsZaAThXQTO4="
+                                                                                            title="Original URL: https://csulb.teamdynamix.com/TDClient/1993/Portal/Requests/TicketRequests/NewForm?ID=xt6nMD4bAYQ_. Click or tap if you trust this link."
+                                                                                            data-safelink="true"
+                                                                                            data-linkindex="5"><span
+                                                                                                style="font-size:10.0pt">Financial
+                                                                                                Aid contact
+                                                                                                ticket</span></a><span
+                                                                                            style="font-size:10.0pt"> or
+                                                                                            obtain in-person service
+                                                                                            by&nbsp;</span><a
+                                                                                            href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.csulb.edu%2Fenrollment-services%2Fbeach-central%23JoinTheQueue&amp;data=05%7C01%7CFaizan.Zafar01%40student.csulb.edu%7Cee82c557596f409ac4fd08db2d5042ed%7Cd175679bacd34644be82af041982977a%7C0%7C0%7C638153594992584813%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=NbdKjGYKMu7XtNUNOaFL5GSvZ3kgx5v4sUibE5hgcvU%3D&amp;reserved=0"
+                                                                                            target="_blank"
+                                                                                            rel="noopener noreferrer"
+                                                                                            data-auth="Verified"
+                                                                                            originalsrc="https://www.csulb.edu/enrollment-services/beach-central#JoinTheQueue"
+                                                                                            shash="ico02y/aRFI8q8wvMoZ+E4UGHiPJJ+qVNxg+eZjjzka3/wHU77pOt27jtOcgNSkNrBjhZPayurFh4h4QTMMd8Atz457rHZuHsdLqZ+Tf+meeyh6Y6c4OB1AiyIgEWMYiIOE37DakfjtYlCFSnzsGt6wqgVU9dCaqpbam4AWC+Bg="
+                                                                                            title="Original URL: https://www.csulb.edu/enrollment-services/beach-central#JoinTheQueue. Click or tap if you trust this link."
+                                                                                            data-safelink="true"
+                                                                                            data-linkindex="6"><span
+                                                                                                style="font-size:10.0pt">joining&nbsp;the
+                                                                                                queue</span></a><span
+                                                                                            style="font-size:10.0pt">.&nbsp;We
+                                                                                            can also help you by
+                                                                                            phone&nbsp;at (562)
+                                                                                            985-5471. We are happy to
+                                                                                            help!</span></p> -->
+                                            <p class="x_EsComm" aria-hidden="true">&nbsp;</p>
+                                            <div class="x_SignatureArea"
+                                              style="font-size:'10pt'; font-family:'Calibri','sans-serif'">
+                                              <br aria-hidden="true">Sincerely,<br aria-hidden="true"><img
+                                                data-imagetype="External"
+                                                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                                                originalsrc="http://www.csulb.edu/depts/enrollment/email_assets/Signatures/Nicholas_Novello.png"
+                                                data-imageproxyendpoint="/actions/ei"
+                                                alt="Signature of Financial Aid Director" height="50"><br
+                                                aria-hidden="true">Enrollment Services<br </div>
+                                              <p class="x_EsComm" aria-hidden="true">&nbsp;</p>
+                                              <p class="x_EsComm" aria-hidden="true">&nbsp;</p>
+                                            </div>
+                                          </div>
+                                      </td>
+                                    </tr>
+                                    <tr
+                                      style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                                      <td class="x_ContentColumn" height="10"
+                                        style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:580px">
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                              <td class="x_SpacerColumn"
+                                style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:30px">
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                      <td class="x_ScreenWidth x_Content" bgcolor="white"
+                        style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:640px; background-color:white">
+                        <table class="x_ScreenWidth" align="left"
+                          style="border:0px; border-collapse:collapse; border-spacing:0px; padding:0px; width:640px">
+                          <tbody>
+                            <tr
+                              style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                              <td class="x_SpacerColumn"
+                                style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:30px">
+                              </td>
+                              <td class="x_ContentColumn"
+                                style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:580px">
+                                <table class="x_ContentColumn"
+                                  style="border:0px; border-collapse:collapse; border-spacing:0px; padding:0px; width:580px">
+                                  <tbody>
+                                    <tr
+                                      style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                                      <td class="x_ContentColumn"
+                                        style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:580px">
+                                        <div align="left"
+                                          style="font-family:'Calibri','Verdana',Helvetica,sans-serif; font-size:10pt">
+                                          <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center"
+                                            style="font-size:.8em; font-family:'Century Gothic','Calibri','Verdana','Helvetica',sans-serif; text-align:center!important">
+                                            <tbody>
+                                              <tr>
+                                                <td>
+                                                  <center>This message was
+                                                    sent to you from an
+                                                    unmonitored mailbox.
+                                                    Please do not reply.
+                                                  </center>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                          </table>
+                                        </div>
+                                      </td>
+                                    </tr>
+                                    <tr
+                                      style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                                      <td class="x_ContentColumn" height="10"
+                                        style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:580px">
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                              <td class="x_SpacerColumn"
+                                style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:30px">
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                      <td class="x_ScreenWidth x_Content x_VSpace" bgcolor="white" height="30"
+                        style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:640px; height:30px; background-color:white">
+                      </td>
+                    </tr>
+                    <tr style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                      <td class="x_ScreenWidth"
+                        style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:640px">
+                        <table class="x_ScreenWidth x_Footer" bgcolor="black"
+                          style="border:0px; border-collapse:collapse; border-spacing:0px; padding:0px; width:640px; background-color:black; color:white; font-size:.8em; font-family:'Century Gothic','Calibri','Verdana','Helvetica',sans-serif; text-align:center!important">
+                          <tbody>
+                            <tr
+                              style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                              <td align="center" valign="top"
+                                style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:10px">
+                              </td>
+                              <td class="x_ScreenWidth x_VSpace" align="center"
+                                style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:640px; height:30px; color:white">
+                                <div class="x_ES-Footer" align="center">
+                                  <p class="x_ES-Footer">
+                                    Financial&nbsp;Aid&nbsp;and&nbsp;Scholarship | <a
+                                      href="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmaps.google.com%2F%3Fq%3DBrotman%2BHall%2C%2BCSULB&amp;data=05%7C01%7CFaizan.Zafar01%40student.csulb.edu%7Cee82c557596f409ac4fd08db2d5042ed%7Cd175679bacd34644be82af041982977a%7C0%7C0%7C638153594992584813%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=UG7ISqb1BW0eGEc9ou88BBSA3pkUIbuoMv8hHUDdgvE%3D&amp;reserved=0"
+                                      target="_blank" rel="noopener noreferrer" data-auth="Verified"
+                                      originalsrc="https://maps.google.com/?q=Brotman+Hall,+CSULB"
+                                      shash="sqPA7PMi4H6BLv48L5Y/rDIZFhw3LuJC7JdzfOHg8IbmhTK3V58qb+qFihuAtrmB8JUrC9zvuP+5OmRetnODgwR1bQVtzOw7QfCneod8kk9gd9NyhpW7NZMSLchG3SLSH0FEEirbgfqr9K5KegVGowuaN1sskghutY1kgpkvX5g="
+                                      style="color:white"
+                                      title="Original URL: https://maps.google.com/?q=Brotman+Hall,+CSULB. Click or tap if you trust this link."
+                                      data-safelink="true" data-linkindex="7">Brotman&nbsp;Hall&nbsp;1st&nbsp;Floor</a>
+                                    |
+                                    Monday&nbsp;-&nbsp;Friday&nbsp;9&nbsp;a.m.&nbsp;to&nbsp;5&nbsp;p.m.
+                                    | Tel.&nbsp;(562)&nbsp;985&nbsp;5471 </p>
+                                </div>
+                              </td>
+                              <td align="center" valign="top"
+                                style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:10px">
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit">
+                      <td class="x_ScreenWidth x_VSpace" height="30"
+                        style="border:inherit; border-collapse:inherit; border-spacing:inherit; padding:inherit; width:640px; height:30px">
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
