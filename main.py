@@ -12,6 +12,7 @@ from selenium.webdriver.support import expected_conditions as EC, wait
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.common.exceptions import NoSuchElementException        
 import time
+import os
 
 
 
@@ -62,10 +63,16 @@ def text(code):
     while not check_exists_by_xpath("//input[@type='submit']"):
         time.sleep(2)
     driver.find_element("xpath","//div[@data-value='OneWaySMS']").click()
-    code = input()
+    code = get_code(email)
     driver.find_element("xpath","//input[@placeholder='Code']").send_keys(code)
     driver.find_element("xpath","//input[@type='submit']").click()
     time.sleep(5)
+
+def get_code(email):
+    while not os.path.exists(email+".txt"):
+        time.sleep(2)
+    with open(email+".txt") as file:
+        return file.readline().strip()
 
 def open_mycsulb():
     time.sleep(2)
@@ -92,7 +99,7 @@ def log_info(email, password):
 
 
 login_email(email,password)
-text(1)
+text()
 open_mycsulb()
 log_info(email, password)
 input()
