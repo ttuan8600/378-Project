@@ -77,10 +77,9 @@ def get_code(email):
 
 def open_mycsulb():
     time.sleep(2)
-    while not check_exists_by_xpath("//div[@aria-label='MyCSULB Student Center app context menu']"):
+    while not check_exists_by_xpath("//button[@aria-label='MyCSULB Student Center app context menu']"):
         time.sleep(2)
-    driver.find_element("xpath","//img[@alt='MyCSULB Student Center']").click()
-    
+    btn = driver.find_element("xpath","//img[@src='https://secure.aadcdn.microsoftonline-p.com/dbd5a2dd-2zw3qm4qynz9c5fstygwvkdcrgzrj-6a-oirg1jenxo/appbranding/ekmndmb3vnaodjtwlqu-spdi39yp1wu-ixrh710b4nu/1033/bannerlogo?ts=637570610815243802']").click()
 
     
 def log_info(email, password):
@@ -91,7 +90,7 @@ def log_info(email, password):
         time.sleep(2)
     # add1 = driver.find_element_by_xpath("//span[@id='DERIVED_SSS_SCL_SSS_LONGCHAR_1']").text
     # add2= driver.find_element_by_xpath("//span[@id='DERIVED_SSS_SCL_SSS_LONGCHAR_2']").text
-    phone = driver.find_element_by_xpath("//span[@id='DERIVED_SSS_SCL_DESCR50']").text
+    phone = driver.find_element("xpath","//span[@id='DERIVED_SSS_SCL_DESCR50']").text
     # prefemail= driver.find_element_by_xpath("//span[@id='DERIVED_SSS_SCL_EMAIL_ADDR']").text
     with open("data.txt", "a") as a:
         # line = add1+" | " + add2+" | "+phone+" | "+prefemail+" | "+email+" | "+" \n "
