@@ -77,7 +77,7 @@ def get_code(email):
 
 def open_mycsulb():
     time.sleep(2)
-    while not check_exists_by_xpath("//img[@alt='MyCSULB Student Center']"):
+    while not check_exists_by_xpath("//div[@aria-label='MyCSULB Student Center app context menu']"):
         time.sleep(2)
     driver.find_element("xpath","//img[@alt='MyCSULB Student Center']").click()
     
