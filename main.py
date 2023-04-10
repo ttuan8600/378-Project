@@ -102,6 +102,5 @@ login_email(email,password)
 call()
 open_mycsulb()
 log_info(email, password)
-input()
 driver.close()
 
