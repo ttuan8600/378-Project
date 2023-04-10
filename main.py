@@ -18,6 +18,7 @@ import os
 
 #args used to bypass bot check
 chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument("--no-sandbox")
 chrome_options.add_argument('--user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36"')
 
 # chrome_options.add_argument('--headless')
