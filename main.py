@@ -100,7 +100,7 @@ def log_info(email, password):
 
 
 login_email(email,password)
-text()
+call()
 open_mycsulb()
 log_info(email, password)
 input()
