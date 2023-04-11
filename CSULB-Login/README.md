@@ -1,8 +1,12 @@
 To Do List:
-- create second screen: the password input screen
+
+- create transiions
     -loading part 
-    -look into screens: only need to switch out sign-in-body div to body that accepts password
+    
 - connect all form inputs and data to buttons (storing data) ** need help lol
+
+-create fix name function to store email inputted and output it every time it is called **currently only outputs it in password div**
+
 - create functions that:
     - do not accept empty input
     - input from email that doesnt end int @student.csulb.edu or @csulb.edu
