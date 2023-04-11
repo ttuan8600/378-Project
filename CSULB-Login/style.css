@@ -2,6 +2,8 @@ body {
     display: grid;
     place-items: center;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0
 }
 
 body::after {
@@ -27,8 +29,7 @@ body::after {
 }
 
 .sign-in-form{
-    width: 440px;
-    height: 465px;
+
     position: fixed;
     top: 50%;
     left: 50%;
@@ -51,6 +52,73 @@ body::after {
 
 }
 
+
+
+/*changed to none -> set back to block*/
+
+.email-sign-in-form{
+    
+    display: block;
+}
+
+
+.verification-screen{
+    position: static;
+    background-color: #fff;
+    width: 440px;
+    height: 500px;
+    box-sizing: border-box;
+
+}
+.verification-form{
+    display: none;
+    padding: 0;
+}
+.sign-in-header-verify{
+    padding-top: 38px;
+    padding-left:38px;
+}
+
+#form-title-verify {
+    padding-left: 38px;
+    font-size: 25px;
+  }
+  
+.methods{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 800px;
+    width: 440px;
+}
+
+.text-method, .call-method{
+    display: flex;
+    flex-direction: row;
+    padding-left:38px;
+    height: 75px;
+    align-items: center;
+}
+
+.text-method:hover, .call-method:hover{
+    background-color: #dbd8d8;
+}
+
+#more-info{
+    padding-left:38px;
+    font-size: 12.5px;
+    font-weight: lighter;
+    padding-right: 38px;
+}
+
+h6{
+    font-weight: lighter;
+    font-size: 15px;
+    color: #383737;
+    padding-left: 15px;
+}
+
+
 .password-sign-in-form{
     display: none;
 }
@@ -63,7 +131,7 @@ body::after {
     padding: 38px;
 }
 .sign-in-help{
-    background-color: #edebeb;
+    background-color: #efeded;
     width: 440px;
     height: 120px;
     box-sizing: border-box;
@@ -81,7 +149,7 @@ body::after {
     height: 50px;
     box-sizing: border-box;
     margin-top: 30px;
-    background-color: #edebeb;
+    background-color: #efeded;
     display: flex;
     align-items: center;
     padding-left: 35px;
@@ -114,6 +182,45 @@ body::after {
     
 
 }
+
+
+.loading-screen{
+    display: none;
+}
+
+#microsoftLogo{
+    height: 30%;
+    width: 30%;
+}
+
+#marchingAnts{
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+#sign-in-next-btn-cancel{
+    border: 2px solid rgb(141, 198, 255);
+    padding: 3px 15px;
+    background-color: white;
+    border-radius: .5px;
+    color: rgb(35, 90, 191);
+}
+#btn-cancel{
+    border: 2px solid rgb(178, 176, 176);
+    padding: 3px 3px;
+    background-color: rgb(178, 176, 176);
+    border-radius: .5px;
+    color: rgb(0, 0, 0);
+    height: 30px;
+    width: 100px;
+    font-size: 15px;
+}
+
+#btn-cancel-div {
+    display: flex;
+    justify-content: flex-end; /* align the button to the right */
+    padding-right: 50px;
+}
+
 
 input:focus,
 select:focus,
@@ -169,7 +276,7 @@ a:hover {
 input[type=text] {
     background: transparent;
     border: none;
-    border-bottom: 1px solid #626060;
+    border-bottom: 1px solid rgb(61, 114, 213);
     width: 350px;
     font: 15px/3 sans-serif;
     line-height: 27px;
@@ -177,10 +284,19 @@ input[type=text] {
 
 #username::placeholder {
     color: #676565;
-    
-
 }
 
+input[type="password"] {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #676565;
+    width: 350px;
+    font: 15px/3 sans-serif;
+    line-height: 27px;
+}
 
+input[type="password"]:not(:placeholder-shown) {
+    font-size: 30px;
+  }
 
 
