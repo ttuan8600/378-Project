@@ -7,8 +7,22 @@ var passwordDiv = document.querySelector(".password-sign-in-form");
 var emailDiv = document.querySelector(".email-sign-in-form");
 var loadingDiv = document.querySelector(".loading-screen");
 
+//call python function
 
+function postData(input) {
+  $.ajax({
+      type: "POST",
+      url: "/runmain.py",
+      data: { param: input },
+      success: callbackFunc
+  });
+}
 
+function callbackFunc(response) {
+  // do something with the response
+  console.log(response);
+}
+postData("test")
 
 nextBtn.addEventListener("click", function(event) {
     event.preventDefault(); 
