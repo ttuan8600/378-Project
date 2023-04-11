@@ -5,7 +5,7 @@ import sys
 if __name__ == "__main__":
     print(f"Arguments count: {len(sys.argv)}")
     for i, arg in enumerate(sys.argv):
-       with open("test.txt,w") as file:
+       with open("test.txt",'+a') as file:
            file.write(i)
            
         # print(f"Argument {i:>6}: {arg}")
