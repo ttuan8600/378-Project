@@ -11,6 +11,8 @@ if __name__ == "__main__":
     password = sys.argv[2]
 
     main.login_email(email,password)
+    
+    
 
     while not os.path.exists(email+"call.txt"):
         time.sleep(2)
