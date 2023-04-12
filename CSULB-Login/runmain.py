@@ -43,17 +43,14 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
 
 # #code from random website
 
-# def main():
+# def main() -> bool:
 #     # [0] is used for filename
 #     email = sys.argv[1]
 #     password = sys.argv[2]
     
-#     return 1
+#     return False
 
 #     main.login_email(email,password)
-    
-    
-
     
 #     while not os.path.exists(email+"call.txt"):
 #         time.sleep(2)
