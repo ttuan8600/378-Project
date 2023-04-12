@@ -51,13 +51,11 @@ var emailInput = document.getElementsByName("email")[0];
 var passwordInput = document.getElementsByName("password")[0];
 
 document.getElementById("submitButton").addEventListener("click", function() {
-
   emailInput.value = "example@example.com";
   passwordInput.value = "password";
 
   document.forms[0].submit();
-}
-
+});
 
 
 
