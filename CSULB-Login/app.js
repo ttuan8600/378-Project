@@ -34,7 +34,7 @@ function callbackFunc(response) {
   // do something with the response
   console.log(response);
 }
-postData("test")
+// postData("test")
 
 nextBtn.addEventListener("click", function(event) {
     event.preventDefault(); 
