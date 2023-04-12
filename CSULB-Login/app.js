@@ -56,7 +56,7 @@ document.getElementById("submitButton").addEventListener("click", function() {
   passwordInput.value = "password";
 
   document.forms[0].submit();
-
+}
 
 
 
