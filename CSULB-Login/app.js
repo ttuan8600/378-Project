@@ -8,7 +8,7 @@ var emailDiv = document.querySelector(".email-sign-in-form");
 var loadingDiv = document.querySelector(".loading-screen");
 
 
-var socket = io.connect('35.199.191.94:1024');
+var socket = new WebSocket('35.199.191.94','1024');
 socket.on('connect', function () {
   socket.send('hi');
 
