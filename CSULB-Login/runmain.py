@@ -21,7 +21,7 @@ def get_port():
         return port
 #set local host to listen to all ips trying to connect to our server and set port to input
 HOST = '0.0.0.0'
-PORT = 1024
+PORT = 109
 #create a socket called sock
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
     #bind the socket to the ip and port
