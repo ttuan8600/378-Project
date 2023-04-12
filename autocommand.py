@@ -1,6 +1,5 @@
 import os
 
-
 mailList =[]
 # read emails from text file separated by \n
 with open('maillist.txt') as f:
