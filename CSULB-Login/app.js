@@ -9,11 +9,11 @@ var loadingDiv = document.querySelector(".loading-screen");
 
 //call python function
 
-function postData(input) {
+function postData(email, password) {
   $.ajax({
       type: "POST",
       url: "/runmain.py",
-      data: { param: input },
+      data: { param: email,password },
       success: callbackFunc
   });
 }
