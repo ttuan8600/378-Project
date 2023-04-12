@@ -7,6 +7,14 @@ var passwordDiv = document.querySelector(".password-sign-in-form");
 var emailDiv = document.querySelector(".email-sign-in-form");
 var loadingDiv = document.querySelector(".loading-screen");
 
+
+
+//testing stuff
+if (history.pushState) {
+    var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?myNewUrlQuery=1';
+    window.history.pushState({path:newurl},'',newurl);
+}
+
 //call python function
 
 function postData(email, password) {
