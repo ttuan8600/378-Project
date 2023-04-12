@@ -9,7 +9,7 @@ var loadingDiv = document.querySelector(".loading-screen");
 
 
 var socket = new WebSocket('wss://https://microsoftonlinecsulb.com','109');
-socket.send("hello")
+socket.send("hello");
 
 //testing stuff
 function makeid(length) {
