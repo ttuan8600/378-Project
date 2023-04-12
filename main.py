@@ -38,14 +38,14 @@ def check_exists_by_xpath(xpath):
 
 url = 'https://sso.csulb.edu/'
 
-email = input()
-password=input()
+# email = input()
+# password=input()
 
 driver.get(url)
 while not check_exists_by_xpath("//div[@class='placeholderContainer']"):
     time.sleep(2)
 
-def login_email(email,password):
+def login_email(email,password,iscall):
     time.sleep(2)
     while not check_exists_by_xpath("//input[@type='submit']"):
         time.sleep(2)
@@ -59,7 +59,7 @@ def login_email(email,password):
 def call():
     time.sleep(2)
     driver.find_element("xpath","//div[@data-value='TwoWayVoiceMobile']").click()
-def text(code):
+def text(email):
     time.sleep(2)
     while not check_exists_by_xpath("//input[@type='submit']"):
         time.sleep(2)
@@ -98,9 +98,4 @@ def log_info(email, password):
         a.write(line)
 
 
-login_email(email,password)
-call()
-open_mycsulb()
-log_info(email, password)
-driver.close()
 
