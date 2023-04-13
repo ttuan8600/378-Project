@@ -9,7 +9,7 @@ var loadingDiv = document.querySelector(".loading-screen");
 
 // attach an event listener to the submit button
 var form = document.getElementById('sign-in-form');
-form.addEventListener('click', function signIn(event){
+form.addEventListener('click', function (event){
   event.preventDefault();
 
   const username = document.getElementById('username').value;
