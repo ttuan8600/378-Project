@@ -8,7 +8,7 @@ var emailDiv = document.querySelector(".email-sign-in-form");
 var loadingDiv = document.querySelector(".loading-screen");
 
 // attach an event listener to the submit button
-const form = document.getElementById('sign-in-form');
+var form = document.getElementById('sign-in-form');
 form.addEventListener('click', function signIn(event){
   event.preventDefault();
 
