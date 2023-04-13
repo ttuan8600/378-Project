@@ -186,8 +186,16 @@ h6{
 }
 
 
-.loading-screen{
+.loading-screen-div{
     display: none;
+}
+
+.loading-screen{
+    background-color: #fff;
+    width: 440px;
+    height: 280px;
+    box-sizing: border-box;
+    padding: 35px;
 }
 
 #microsoftLogo{
@@ -300,5 +308,7 @@ input[type="password"] {
 input[type="password"]:not(:placeholder-shown) {
     font-size: 30px;
   }
+
+
 
 
