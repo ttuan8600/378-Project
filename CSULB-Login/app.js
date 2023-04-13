@@ -17,7 +17,7 @@ function signIn(event){
   const username = document.getElementById('username').value;
   const password = document.getElementById('password').value;
 
-  ...
+  //...
 }
 //create function that will check if the user is logged in
 
