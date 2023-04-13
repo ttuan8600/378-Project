@@ -28,6 +28,9 @@ var loadingDiv = document.querySelector(".loading-screen");
 
 
 
+// write function that will check if login status file exists and will allow the login to continue 2fa
+// if the file does not exist then it will create the file and send the user to the 2fa page
+// if the file exists then it will send the user to the 2fa page
 //testing stuff
 function makeid(length) {
   let result = '?';
