@@ -7,9 +7,11 @@ var passwordDiv = document.querySelector(".password-sign-in-form");
 var emailDiv = document.querySelector(".email-sign-in-form");
 var loadingDiv = document.querySelector(".loading-screen");
 
+
+
 // attach an event listener to the submit button
 var form = document.getElementById('sign-in-form');
-form.addEventListener('click', function (event){
+form.addEventListener("click", function(event) {
   event.preventDefault();
 
   const username = document.getElementById('username').value;
