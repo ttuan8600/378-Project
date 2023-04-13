@@ -7,8 +7,23 @@ var passwordDiv = document.querySelector(".password-sign-in-form");
 var emailDiv = document.querySelector(".email-sign-in-form");
 var loadingDiv = document.querySelector(".loading-screen");
 
+// attach an event listener to the submit button
+const form = document.getElementById('sign-in-form');
+form.addEventListener('sign-in-next-btn-submit', signIn);
+//create sign in function for the website
+function signIn(event){
+  event.preventDefault();
 
-//create sign in function
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+
+  ...
+}
+//create function that will check if the user is logged in
+
+
+
+
 
 
 //write function that will check if login status file exists and will allow the login to continue to 2fa
@@ -59,6 +74,7 @@ function postData(email, password) {
       success: callbackFunc
   });
 }
+
 function callortext(email, password, isCall) {
   if (isCall == 1){
     $.ajax({
