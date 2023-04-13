@@ -51,6 +51,8 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
 #     return False
 
 #     main.login_email(email,password)
+
+    # write 
     
 #     while not os.path.exists(email+"call.txt"):
 #         time.sleep(2)
