@@ -9,9 +9,9 @@ var loadingDiv = document.querySelector(".loading-screen");
 
 
 
-// attach an event listener to the submit button
-var form = document.getElementById('sign-in-form');
-form.addEventListener("click", function(event) {
+// // attach an event listener to the submit button
+// var form = document.getElementById('sign-in-form');
+signInBtn.addEventListener("click", function(event) {
   event.preventDefault();
 
   const username = document.getElementById('username').value;
