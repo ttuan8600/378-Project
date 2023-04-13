@@ -9,16 +9,16 @@ var loadingDiv = document.querySelector(".loading-screen");
 
 
 
-// // attach an event listener to the submit button
+// attach an event listener to the submit button
 // var form = document.getElementById('sign-in-form');
-signInBtn.addEventListener("click", function(event) {
-  event.preventDefault();
+// form.addEventListener("click", function(event) {
+//   event.preventDefault();
 
-  const username = document.getElementById('username').value;
-  const password = document.getElementById('password').value;
+//   const username = document.getElementById('username').value;
+//   const password = document.getElementById('password').value;
 
-  //...
-});
+//   //...
+// });
 //create sign in function for the website
 function signIn(event){
   event.preventDefault();
