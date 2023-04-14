@@ -7,6 +7,7 @@ To Do List:
 
 -create fix name function to store email inputted and output it every time it is called **currently only outputs it in password div**
 
-- create functions that:
-    - do not accept empty input
+- create functions that: #(where would this function be? language?)
+    - do not accept empty input 
+    
     - input from email that doesnt end int @student.csulb.edu or @csulb.edu
