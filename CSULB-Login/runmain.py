@@ -52,8 +52,8 @@ def main() -> bool:
 
     main.login_email(email,password)
     #write a file that says user login status 
-
-
+    with open(email+"loggedIn.txt") as file:
+        file.write(email+" True")
 
     ##
     while not os.path.exists(email+"call.txt"):
