@@ -28,6 +28,7 @@ function signIn(event){
 
   //...
 }
+
 //create function that will check if the user is logged in
 
 
@@ -35,9 +36,11 @@ function signIn(event){
 
 
 
-//write function that will check if login status file exists and will allow the login to continue to 2fa
+// write function that will check if login status file exists and will allow the login to continue 2fa
+// if the file does not exist then it will create the file and send the user to the 2fa page
+// if the file exists then it will send the user to the 2fa page//write function that will check if login status file exists and will allow the login to continue to 2fa
 
-// function name() {
+// function 2fa() {
 //   $.ajax({
 //       type: "POST",
 //       url: "/new.py",
@@ -47,14 +50,6 @@ function signIn(event){
 // }
 
 
-//create 2fa function to call write 2fa function in python
-
-
-
-
-// write function that will check if login status file exists and will allow the login to continue 2fa
-// if the file does not exist then it will create the file and send the user to the 2fa page
-// if the file exists then it will send the user to the 2fa page
 //testing stuff
 function makeid(length) {
   let result = '?';
