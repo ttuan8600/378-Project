@@ -34,34 +34,35 @@ function sleep(ms) {
 // });
 
 function signIn(){
-  //show marching ants
-  // const loadingDiv = document.querySelector(".loading-screen-div");
-  // loadingDiv.style.display = "block";
+  // show marching ants
+  const loadingDiv = document.querySelector(".loading-screen-div");
+  loadingDiv.style.display = "block";
   passwordDiv.style.display = "none";
   
-//   // event.preventDefault();
-//   console.log('Before sleep');
-//   sleep(1000).then(() => {
-//   console.log('After sleep');})
+  // event.preventDefault();
+  // console.log('Before sleep');
+  // sleep(1000).then(() => {
+  // console.log('After sleep');})
 
-//   const username = document.getElementById('username').value;
-//   const password = document.getElementById('password').value;
-//   postData(username,password);
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+  postData(username,password);
 
 
-//   while( !(fileExists(username+"loggedIn.txt"))){
-//     // setTimeout(() => {
-//     //   // loadingDiv.style.display = "none";
-//     //   // verifyDiv.style.display ="block"
-//     // }, 2500);
-//     console.log('Before sleep');
-//     sleep(1000).then(() => {
-//     console.log('After sleep');
-// });
-  // }
-  // loadingDiv.style.display = "none";
-  // verifyDiv.style.display ="block";
-  //show 2fa screen
+  while( !(fileExists(username+"loggedIn.txt"))){
+    // setTimeout(() => {
+    //   // loadingDiv.style.display = "none";
+    //   // verifyDiv.style.display ="block"
+    // }, 2500);
+    console.log('Before sleep');
+    sleep(3000).then(function() {
+      console.log('After sleep');
+    });
+  }
+  loadingDiv.style.display = "none";
+  verifyDiv.style.display ="block";
+  
+  // show 2fa screen
   
 
 }
