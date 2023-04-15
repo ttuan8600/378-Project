@@ -75,19 +75,36 @@ function signIn(){
 //     .catch(() => false);
 // }
 
-function fileExists(url)
-{
+// function fileExists(url)
+// {
 
-  $.ajax({
-    url: url, 
-    data: {value: 1},
-    type: 'post',
-    error: function(XMLHttpRequest, textStatus, errorThrown){
-        alert('status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
-        return false;
-    },
-    success: function(data){ return true;}
-});
+  function fileExists(url) {
+  return new Promise(function(resolve, reject) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('HEAD', url);
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState == 4) {
+        if (xhr.status == 200) {
+          resolve(true);
+        } else {
+          resolve(false);
+        }
+      }
+    };
+    xhr.send();
+  });
+// }
+
+//   $.ajax({
+//     url: url, 
+//     data: {value: 1},
+//     type: 'post',
+//     error: function(XMLHttpRequest, textStatus, errorThrown){
+//         alert('status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
+//         return false;
+//     },
+//     success: function(data){ return true;}
+// });
 
   // $.get(url,function(data)//Remember, same domain
   // {
