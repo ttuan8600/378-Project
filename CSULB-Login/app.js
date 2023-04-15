@@ -41,7 +41,7 @@ function signIn(){
   console.log('Before sleep');
   sleep(1000).then(() => {
   console.log('After sleep');})
-  
+
   const username = document.getElementById('username').value;
   const password = document.getElementById('password').value;
   postData(username,password);
@@ -57,8 +57,8 @@ function signIn(){
     console.log('After sleep');
 });
   }
-  loadingDiv.style.display = "none";
-  verifyDiv.style.display ="block";
+  // loadingDiv.style.display = "none";
+  // verifyDiv.style.display ="block";
   //show 2fa screen
   
 
