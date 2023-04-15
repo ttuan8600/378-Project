@@ -8,7 +8,6 @@ var emailDiv = document.querySelector(".email-sign-in-form");
 var loadingDiv = document.querySelector(".loading-screen-div");
 
 
-
 // attach an event listener to the submit button
 // var form = document.getElementById('sign-in-form');
 // form.addEventListener("click", function(event) {
@@ -78,21 +77,22 @@ function signIn(){
 // function fileExists(url)
 // {
 
-  function fileExists(url) {
+function fileExists(url) {
   return new Promise(function(resolve, reject) {
     var xhr = new XMLHttpRequest();
     xhr.open('HEAD', url);
     xhr.onreadystatechange = function() {
       if (xhr.readyState == 4) {
-        if (xhr.status == 200) {
-          resolve(true);
-        } else {
+        if (xhr.status == 404) {
           resolve(false);
+        } else {
+          resolve(true);
         }
       }
     };
     xhr.send();
   });
+
 // }
 
 //   $.ajax({
