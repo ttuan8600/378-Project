@@ -89,7 +89,7 @@ function fileExists(url)
     })(jQuery);
 } catch(err) {  
     alert("err");
-
+}
 // try {
 //   $.get(url,function(data)//Remember, same domain
 //   {
