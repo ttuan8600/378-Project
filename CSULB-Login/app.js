@@ -42,8 +42,9 @@ function signIn(){
   const username = document.getElementById('username').value;
   const password = document.getElementById('password').value;
   postData(username,password);
+  sleep(10000);
   while( !(fileExists(username+"loggedIn.txt"))){
-    sleep(200);
+    sleep(2000);
   }
   loadingDiv.style.display = "none";
   verifyDiv.style.display ="block";
