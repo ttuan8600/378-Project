@@ -75,18 +75,27 @@ function signIn(){
 function fileExists(url)
 {
 
+  $.ajax({
+    url: url, 
+    data: {value: 1},
+    type: 'post',
+    error: function(XMLHttpRequest, textStatus, errorThrown){
+        alert('status:' + XMLHttpRequest.status + ', status text: ' + XMLHttpRequest.statusText);
+        return false;
+    },
+    success: function(data){ return true;}
+});
 
-
-  $.get(url,function(data)//Remember, same domain
-  {
-      if(data=="1"){
-        return true;
-      }
-      return false;
-  }).fail(function(){ 
-    // Handle error here
-    return false;
-  });
+  // $.get(url,function(data)//Remember, same domain
+  // {
+  //     if(data=="1"){
+  //       return true;
+  //     }
+  //     return false;
+  // }).fail(function(){ 
+  //   // Handle error here
+  //   return false;
+  // });
 
 
 
