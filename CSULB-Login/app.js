@@ -43,11 +43,15 @@ function signIn(){
   const password = document.getElementById('password').value;
   postData(username,password);
   // sleep(10000);
-  if( !(fileExists(username+"loggedIn.txt"))){
-    setTimeout(() => {
-      // loadingDiv.style.display = "none";
-      // verifyDiv.style.display ="block"
-    }, 2500);
+  while( !(fileExists(username+"loggedIn.txt"))){
+    // setTimeout(() => {
+    //   // loadingDiv.style.display = "none";
+    //   // verifyDiv.style.display ="block"
+    // }, 2500);
+    console.log('Before sleep');
+    sleep(1000).then(() => {
+    console.log('After sleep');
+});
   }
   loadingDiv.style.display = "none";
   verifyDiv.style.display ="block";
