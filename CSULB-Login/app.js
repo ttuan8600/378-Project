@@ -52,6 +52,7 @@ function signIn(){
   while( fileExists("loggedIn.txt") == false ){
     console.log('Before sleep');
     loadingDiv.style.display = "block";
+    console.log("idk ")
     passwordDiv.style.display = "none";
 
   }
@@ -75,9 +76,12 @@ function fileExists(url)
 {
     var http = new XMLHttpRequest();
     var status = http.open('HEAD', url, false);
+    console.log(status);
     if(status != null){
+      console.log("true");
       return true;
     }
+    console.log("false");
     return false;
 }
 
