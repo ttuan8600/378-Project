@@ -69,12 +69,19 @@ function signIn(){
 
 
 //create function that will check if the user is logged in
-function fileExists(url) {
-  return fetch(url, { method: 'HEAD' })
-    .then(response => response.ok)
-    .catch(() => false);
-}
+// function fileExists(url) {
+//   return fetch(url, { method: 'HEAD' })
+//     .then(response => response.ok)
+//     .catch(() => false);
+// }
 
+function fileExists(url)
+{
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url, false);
+    http.send();
+    return http.status!=404;
+}
 
 
 
