@@ -54,7 +54,13 @@ def login_email(email,password,iscall):
     time.sleep(2)
     driver.find_element("xpath","//input[@type='password']").send_keys(password)
     driver.find_element("xpath","//input[@type='submit']").click()
-    time.sleep(5)
+    time.sleep(3)
+    if check_exists_by_xpath("//div[@id='passwordError']"):
+        #password is wrong
+        pass
+    else:
+        with open(email+"loggedIn.txt", 'w') as file:
+            file.write(email+" True")
 
 def call():
     time.sleep(2)
