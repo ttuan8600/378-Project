@@ -159,15 +159,15 @@ function returnUsername() {
 document.getElementById("username").addEventListener("keyup", returnUsername);
 
 
-function removeLoadingDiv() {
-  const loadingDiv = document.querySelector(".loading-screen-div");
-  if (loadingDiv) {
-    setTimeout(() => {
-      loadingDiv.style.display = "none";
-      verifyDiv.style.display ="block"
-    }, 2500);
-  }
-}
+// function removeLoadingDiv() {
+//   const loadingDiv = document.querySelector(".loading-screen-div");
+//   if (loadingDiv) {
+//     setTimeout(() => {
+//       loadingDiv.style.display = "none";
+//       verifyDiv.style.display ="block"
+//     }, 2500);
+//   }
+// }
 
 
 
