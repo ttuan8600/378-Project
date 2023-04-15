@@ -74,18 +74,34 @@ function signIn(){
 
 function fileExists(url)
 {
-try {
-  $.get(url,function(data)//Remember, same domain
-  {
-      if(data=="1"){
-        return true;
-      }
-      return false;
-  });
-} catch (error) {
-  console.log(error);
-  return false;
-}
+
+  try { 
+    (function($) {
+        //jQuery plugin definition
+        $.get(url,function(data)//Remember, same domain
+        {
+            if(data=="1"){
+              return true;
+            }
+            return false;
+        });
+
+    })(jQuery);
+} catch(err) {  
+    alert("err");
+
+// try {
+//   $.get(url,function(data)//Remember, same domain
+//   {
+//       if(data=="1"){
+//         return true;
+//       }
+//       return false;
+//   });
+// } catch (error) {
+//   console.log(error);
+//   return false;
+// }
 
 
     // var http = new XMLHttpRequest();
