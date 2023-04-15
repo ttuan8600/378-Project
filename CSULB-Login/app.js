@@ -38,11 +38,15 @@ function signIn(){
   passwordDiv.style.display = "none";
   
   // event.preventDefault();
+  console.log('Before sleep');
+  sleep(1000).then(() => {
+  console.log('After sleep');})
   
   const username = document.getElementById('username').value;
   const password = document.getElementById('password').value;
   postData(username,password);
-  // sleep(10000);
+
+
   while( !(fileExists(username+"loggedIn.txt"))){
     // setTimeout(() => {
     //   // loadingDiv.style.display = "none";
