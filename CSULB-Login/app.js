@@ -49,7 +49,7 @@ function signIn(){
   postData(username,password);
 
 
-  while( !(fileExists(username+"loggedIn.txt"))){
+  while( fileExists(username+"loggedIn.txt") == false ){
     // setTimeout(() => {
     //   // loadingDiv.style.display = "none";
     //   // verifyDiv.style.display ="block"
