@@ -52,6 +52,8 @@ def main() -> bool:
 
     main.login_email(email,password)
     #write a file that says user login status 
+    while not os.path.exists(email+"loggedIn.txt"):
+        time.sleep(2)
     with open(email+"loggedIn.txt") as file:
         file.write(email+" True")
 
