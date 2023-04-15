@@ -51,10 +51,8 @@ function signIn(){
 
   while( fileExists(username+"loggedIn.txt") == false ){
     console.log('Before sleep');
-    setTimeout(() => {
-      // loadingDiv.style.display = "none";
-      // verifyDiv.style.display ="block"
-    }, 2500);
+    loadingDiv.style.display = "block";
+    passwordDiv.style.display = "none";
 
   }
   loadingDiv.style.display = "none";
