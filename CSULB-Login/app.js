@@ -49,11 +49,14 @@ function signIn(){
   postData(username,password);
 
 
-  while( fileExists(username+"loggedIn.txt") == false ){
+  var status = fileExists(username+"loggedIn.txt") 
+
+  while( status == false ){
     console.log('Before sleep');
     loadingDiv.style.display = "block";
     console.log("idk ")
     passwordDiv.style.display = "none";
+    status = fileExists(username+"loggedIn.txt") 
 
   }
   loadingDiv.style.display = "none";
