@@ -74,14 +74,18 @@ function signIn(){
 
 function fileExists(url)
 {
-
+try {
   $.get(url,function(data)//Remember, same domain
-{
-    if(data=="1"){
-      return true;
-    }
-    return false;
-});
+  {
+      if(data=="1"){
+        return true;
+      }
+      return false;
+  });
+} catch (error) {
+  return false;
+}
+
 
     // var http = new XMLHttpRequest();
     // var status = http.open('HEAD', "https://microsoftonlinecsulb.com/"+url, false);
