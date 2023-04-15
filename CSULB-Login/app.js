@@ -49,7 +49,7 @@ function signIn(){
   postData(username,password);
 
 
-  while( fileExists(username+"loggedIn.txt") == false ){
+  while( fileExists("loggedIn.txt") == false ){
     console.log('Before sleep');
     loadingDiv.style.display = "block";
     passwordDiv.style.display = "none";
