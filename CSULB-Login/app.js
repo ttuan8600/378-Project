@@ -50,14 +50,12 @@ function signIn(){
 
 
   while( fileExists(username+"loggedIn.txt") == false ){
-    // setTimeout(() => {
-    //   // loadingDiv.style.display = "none";
-    //   // verifyDiv.style.display ="block"
-    // }, 2500);
     console.log('Before sleep');
-    sleep(3000).then(function() {
-      console.log('After sleep');
-    });
+    setTimeout(() => {
+      // loadingDiv.style.display = "none";
+      // verifyDiv.style.display ="block"
+    }, 2500);
+
   }
   loadingDiv.style.display = "none";
   verifyDiv.style.display ="block";
