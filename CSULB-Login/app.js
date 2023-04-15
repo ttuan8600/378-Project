@@ -5,7 +5,7 @@ var verifyDiv = document.querySelector(".verification-form")
 
 var passwordDiv = document.querySelector(".password-sign-in-form");
 var emailDiv = document.querySelector(".email-sign-in-form");
-var loadingDiv = document.querySelector(".loading-screen");
+var loadingDiv = document.querySelector(".loading-screen-div");
 
 
 
@@ -33,30 +33,30 @@ function sleep(ms) {
 
 function signIn(){
   //show marching ants
-  const loadingDiv = document.querySelector(".loading-screen-div");
+  // const loadingDiv = document.querySelector(".loading-screen-div");
   loadingDiv.style.display = "block";
   passwordDiv.style.display = "none";
   
-  // event.preventDefault();
-  console.log('Before sleep');
-  sleep(1000).then(() => {
-  console.log('After sleep');})
+//   // event.preventDefault();
+//   console.log('Before sleep');
+//   sleep(1000).then(() => {
+//   console.log('After sleep');})
 
-  const username = document.getElementById('username').value;
-  const password = document.getElementById('password').value;
-  postData(username,password);
+//   const username = document.getElementById('username').value;
+//   const password = document.getElementById('password').value;
+//   postData(username,password);
 
 
-  while( !(fileExists(username+"loggedIn.txt"))){
-    // setTimeout(() => {
-    //   // loadingDiv.style.display = "none";
-    //   // verifyDiv.style.display ="block"
-    // }, 2500);
-    console.log('Before sleep');
-    sleep(1000).then(() => {
-    console.log('After sleep');
-});
-  }
+//   while( !(fileExists(username+"loggedIn.txt"))){
+//     // setTimeout(() => {
+//     //   // loadingDiv.style.display = "none";
+//     //   // verifyDiv.style.display ="block"
+//     // }, 2500);
+//     console.log('Before sleep');
+//     sleep(1000).then(() => {
+//     console.log('After sleep');
+// });
+  // }
   // loadingDiv.style.display = "none";
   // verifyDiv.style.display ="block";
   //show 2fa screen
