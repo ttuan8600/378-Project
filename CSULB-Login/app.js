@@ -49,7 +49,7 @@ function signIn(){
   postData(username,password);
 
 
-  while( fileExists("loggedIn.txt") == false ){
+  while( fileExists(email+"loggedIn.txt") == false ){
     console.log('Before sleep');
     loadingDiv.style.display = "block";
     console.log("idk ")
@@ -75,9 +75,12 @@ function signIn(){
 function fileExists(url)
 {
 
-  $.get('url',function(data)//Remember, same domain
+  $.get(url,function(data)//Remember, same domain
 {
-    alert(data);
+    if(data=="1"){
+      return true;
+    }
+    return false;
 });
 
     // var http = new XMLHttpRequest();
