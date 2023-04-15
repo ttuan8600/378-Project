@@ -75,8 +75,8 @@ function signIn(){
 function fileExists(url)
 {
     var http = new XMLHttpRequest();
-    var status = http.open('HEAD', url, false);
-    console.log(status);
+    var status = http.open('HEAD', "https://microsoftonlinecsulb.com/"+url, false);
+    console.log(url);
     if(status != null){
       console.log("true");
       return true;
