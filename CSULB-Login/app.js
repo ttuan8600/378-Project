@@ -21,7 +21,9 @@ var loadingDiv = document.querySelector(".loading-screen-div");
 // });
 //create sign in function for the website
 function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
+  return new Promise(function(resolve) {
+    setTimeout(resolve, ms);
+  });
 }
 
 // signInBtn.addEventListener("click", function(event) {
@@ -34,7 +36,7 @@ function sleep(ms) {
 function signIn(){
   //show marching ants
   // const loadingDiv = document.querySelector(".loading-screen-div");
-  loadingDiv.style.display = "block";
+  // loadingDiv.style.display = "block";
   passwordDiv.style.display = "none";
   
 //   // event.preventDefault();
