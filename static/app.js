@@ -15,7 +15,7 @@ $(document).on('submit','#login-form',function(e)
       e.preventDefault();
       $.ajax({
         type:'POST',
-        url:'/',
+        url:'/login',
         data:{
           username:$("#username").val(),
           password:$("#password").val()
