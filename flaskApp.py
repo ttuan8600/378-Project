@@ -38,14 +38,13 @@ def login():
     var = chrome.login_email(email,password)
     if var == True:
         #stop loading
+        
+        print("its true")
+        check1="<div id='check' />"
+        with open(email+'.txt') as file:
+            file.write(1)
 
-        return app.send_static_file("2fa.html")
-        # print("its true")
-        # check1="<div id='check' />"
-        # with open(email+'.txt') as file:
-        #     file.write(1)
-
-        # return render_template('index.html',check=check1)
+        return render_template('index.html',check=check1)
         
 
     
