@@ -41,7 +41,7 @@ def login():
         
         print("its true")
         check1="<div id='check' />"
-        with open(email+'.txt') as file:
+        with open(email+'.txt','w') as file:
             file.write(1)
 
         return render_template('index.html',check=check1)
