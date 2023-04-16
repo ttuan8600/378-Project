@@ -17,15 +17,7 @@ import os
 
 class startChrome:
 #args used to bypass bot check
-    chrome_options = webdriver.ChromeOptions()
-    chrome_options.add_argument("--no-sandbox")
-    chrome_options.add_argument('--user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36"')
-
-    chrome_options.add_argument('--headless')
-
-    driver = webdriver.Chrome(chrome_options=chrome_options, executable_path='/snap/bin/chromium.chromedriver')
-    driver.execute_cdp_cmd('Network.setUserAgentOverride', {"userAgent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.53 Safari/537.36'})
-    driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+    
     # #open the page
 
     def check_exists_by_xpath(self, xpath):
@@ -36,14 +28,23 @@ class startChrome:
         return True
 
 
-    url = 'https://sso.csulb.edu/'
     def __init__(self):
+        # self.url = 'https://sso.csulb.edu/'
         self.email = None
         self.password = None
+        self.chrome_options = webdriver.ChromeOptions()
+        self.chrome_options.add_argument("--no-sandbox")
+        self.chrome_options.add_argument('--user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36"')
+
+        self.chrome_options.add_argument('--headless')
+
+        self.driver = webdriver.Chrome(chrome_options=chrome_options, executable_path='/snap/bin/chromium.chromedriver')
+        self.driver.execute_cdp_cmd('Network.setUserAgentOverride', {"userAgent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.53 Safari/537.36'})
+        self.driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
     # email = input()
     # password=input()
 
-    driver.get(url)
+        self.driver.get('https://sso.csulb.edu/')
     # time.sleep(6)
 
     def login_email(self, email,password):
