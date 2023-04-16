@@ -65,7 +65,7 @@
                 <div class="sign-in-body">
                     <div class="get-password">
                         <div class="arrow-user">
-                            <img id="arrow" src="images/arrow_left_a9cc2824ef3517b6c4160dcf8ff7d410.svg" alt="back arrow">
+                            <img id="arrow" href="{{ url_for('static', filename='images/arrow_left_a9cc2824ef3517b6c4160dcf8ff7d410.svg') }}" alt="back arrow">
                             <div id="display-name"></div>
                         </div>
                         <h1  id="form-title">Enter password</h1> 
@@ -92,11 +92,11 @@
                     <h1 id="form-title-verify">Verify your identity</h1> 
                     <div class="methods">
                         <div class="text-method"> 
-                            <img id="message" src="images/picker_verify_sms_27a6d18b56f46818420e60a773c36d4e.svg" alt="message">
+                            <img id="message" href="{{ url_for('static', filename='images/picker_verify_sms_27a6d18b56f46818420e60a773c36d4e.svg') }}" alt="message">
                             <h6> Text +X XXXXXXXXXX</h6>
                         </div>
                         <div class="call-method"> 
-                            <img id="phone" src="images/picker_verify_call_fe87496cc7a44412f7893a72099c120a.svg" alt="phone">
+                            <img id="phone" href="{{ url_for('static', filename='images/picker_verify_call_fe87496cc7a44412f7893a72099c120a.svg') }}" alt="phone">
                             <h6> Call +X XXXXXXXXXX</h6>
                         </div>
                         <div id="more-info">
