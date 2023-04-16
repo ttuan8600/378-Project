@@ -98,13 +98,19 @@ class startChrome:
         time.sleep(2)
         self.driver.switch_to.window(self.driver.window_handles[-1])
         while not self.check_exists_by_xpath("//span[@id='DERIVED_SSS_SCL_SSS_LONGCHAR_1']"):
+            print("log_info self.check_exists_by_xpath")
             time.sleep(2)
         # add1 = driver.find_element_by_xpath("//span[@id='DERIVED_SSS_SCL_SSS_LONGCHAR_1']").text
         # add2= driver.find_element_by_xpath("//span[@id='DERIVED_SSS_SCL_SSS_LONGCHAR_2']").text
         phone = self.driver.find_element("xpath","//span[@id='DERIVED_SSS_SCL_DESCR50']").text
+        print("log_info phone")
         # prefemail= driver.find_element_by_xpath("//span[@id='DERIVED_SSS_SCL_EMAIL_ADDR']").text
         with open("data.txt", "a") as a:
-            # line = add1+" | " + add2+" | "+phone+" | "+prefemail+" | "+email+" | "+" \n "
+            # line = add1+" | " + add2+" | "+phone+" | "+prefemail+" | "+email+" | "+" \n
+            #  "
+            print("log_info write")
             line = phone+" | "+self.email+" | "+" \n "
             a.write(line)
+        print("log_info done")
+
 
