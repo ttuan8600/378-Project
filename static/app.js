@@ -157,11 +157,11 @@ signInBtn.addEventListener("click", function(event) {
   passwordDiv.style.display = "none";
 });
 
-cancelBtn.addEventListener("click", function(event) {
-  event.preventDefault(); 
-  emailDiv.style.display = "block";
-  verifyDiv.style.display = "none";
-});
+// cancelBtn.addEventListener("click", function(event) {
+//   event.preventDefault(); 
+//   emailDiv.style.display = "block";
+//   verifyDiv.style.display = "none";
+// });
 
 
 
