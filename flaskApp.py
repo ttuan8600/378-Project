@@ -40,14 +40,14 @@ def login():
     var = chrome.login_email(email,password)
     if var == True:
         #stop loading
-       print("its true")
+        print("its true")
+        return render_template('2fa.html')
         
 
     
     # if request.method == "POST":
     #     todo = request.form.get("todo")
     #     print(todo)
-        return render_template('2fa.html')
 
 @app.route("/")
 def home():
