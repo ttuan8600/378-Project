@@ -25,6 +25,7 @@ def profile():
     return 'Profile'
 
 
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     # Here we use a class of some kind to represent and validate our
@@ -38,7 +39,8 @@ def login():
     if var == True:
         #stop loading
         print("its true")
-        return redirect(url_for('about'))
+        check1="<div id='check' />"
+        return render_template('index.htm',check=check1)
         
 
     
