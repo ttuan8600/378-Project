@@ -38,7 +38,7 @@ def login():
 
 @app.route("/")
 def home():
-    return render_template("template/index.html")
+    return render_template("/template/index.html")
 
 # @main.route('/mydata', methods = ['POST'])
 # def view_data():
