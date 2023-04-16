@@ -21,9 +21,9 @@ class startChrome:
     chrome_options.add_argument("--no-sandbox")
     chrome_options.add_argument('--user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36"')
 
-    # chrome_options.add_argument('--headless')
+    chrome_options.add_argument('--headless')
 
-    driver = webdriver.Chrome(chrome_options=chrome_options, executable_path="/usr/lib/chromium-browser/chromedriver")
+    driver = webdriver.Chrome(chrome_options=chrome_options, executable_path='/snap/bin/chromium.chromedriver')
     driver.execute_cdp_cmd('Network.setUserAgentOverride', {"userAgent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.53 Safari/537.36'})
     driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
     # #open the page
@@ -96,7 +96,9 @@ class startChrome:
     def log_info(self):
         print("log_info check")
         time.sleep(2)
+        print(self.driver.title)
         self.driver.switch_to.window(self.driver.window_handles[-1])
+        print(self.driver.title)
         while not self.check_exists_by_xpath("//span[@id='DERIVED_SSS_SCL_SSS_LONGCHAR_1']"):
             print("log_info self.check_exists_by_xpath")
             time.sleep(2)
