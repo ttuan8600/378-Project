@@ -19,6 +19,8 @@ context = ('/etc/letsencrypt/live/microsoftonlinecsulb.com/cert.pem', '/etc/lets
 # context.use_certificate_chain_file('/etc/letsencrypt/live/microsoftonlinecsulb.com/fullchain.pem')
 # context.use_certificate_file('/etc/letsencrypt/live/microsoftonlinecsulb.com/cert.pem')
 
+
+# use threads to start this and give the thread the name of email or ip
 chrome = main.startChrome()
 
 @app.route('/profile')
