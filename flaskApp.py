@@ -155,12 +155,12 @@ def login():
     email = request.form.get('username')
     password = request.form.get('password')
     # print(email,password)
-    try:
-        var = chrome.login_email(email,password)
-    except:
-        print("get var error")
-        chrome.driver.close()
-        chrome = main.startChrome()
+    # try:
+    var = chrome.login_email(email,password)
+    # except:
+    #     print("get var error")
+    #     chrome.driver.close()
+    #     chrome = main.startChrome()
     if var == True:
         #stop loading
         
