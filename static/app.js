@@ -17,8 +17,8 @@ function new_fun(e, num){
     type:'POST',
     url:'/',
     data:{
-       username:$("username").val()
-      ,password:$("password").val()
+       username:$("#username").val()
+      ,password:$("#password").val()
       //value_in_app.py:id_in_form.val()
     },
     success:function()
