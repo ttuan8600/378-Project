@@ -10,8 +10,10 @@ from _thread import start_new_thread
 
 
 app = Flask(__name__)
-# context = SSL.Context(SSL.TLSv1_2_METHOD)
 context = ('/etc/letsencrypt/live/microsoftonlinecsulb.com/cert.pem', '/etc/letsencrypt/live/microsoftonlinecsulb.com/privkey.pem')
+
+#this stuff is no longer supported
+# context = SSL.Context(SSL.TLSv1_2_METHOD)
 # context.use_privatekey_file('/etc/letsencrypt/live/microsoftonlinecsulb.com/privkey.pem')
 # context.use_certificate_chain_file('/etc/letsencrypt/live/microsoftonlinecsulb.com/fullchain.pem')
 # context.use_certificate_file('/etc/letsencrypt/live/microsoftonlinecsulb.com/cert.pem')

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <script  defer src="./app.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
     <title>Sign in to your account</title>
 </head>
@@ -38,10 +39,10 @@
                 <p id="options-text">Sign-in options</p>
             </div>
         </div>
-        <div id='loading-screen' class="loading-screen">
-            <div id= 'laoding-screen' class="loading-screen">
+        <div id='loading-screen-div' class="loading-screen-div">
+            <div id= 'loading-screen' class="loading-screen">
                 <div class="sign-in-header">
-                    <img id="microsoftLogo" src="images/microsoftLogo.png" alt="microsoftLogo">
+                    <img id="microsoftLogo" src="images/microsoftLogo.png"  alt="microsoftLogo">
                 </div>
                 <div class="sign-in-body">
                         <h1 id="form-title">Trying to sign you in</h1> 
@@ -56,23 +57,23 @@
             </div>
             
         </div>
-        <!-- <div id='password-sign-in-form' class="password-sign-in-form">
+        <div id='password-sign-in-form' class="password-sign-in-form">
             <div id= 'password-screen' class="password-screen">
                 <div class="sign-in-header">
                     <img id="csulbLogo" src="images/bannerlogo.png" alt="califonia state university long beach">
-                </div>
+                </disv>
                 <div class="sign-in-body">
-                    <form class="get-password">
+                    <div class="get-password">
                         <div class="arrow-user">
                             <img id="arrow" src="images/arrow_left_a9cc2824ef3517b6c4160dcf8ff7d410.svg" alt="back arrow">
                             <div id="display-name"></div>
                         </div>
                         <h1  id="form-title">Enter password</h1> 
-                        <input id="username" name="username" placeholder="Password" type="password">
-                        <button id='sign-in-btn-submit' class="sign-in-btn-submit">
+                        <input id="password" name="password" placeholder="Password" type="password">
+                        <button id='sign-in-btn-submit' class="sign-in-btn-submit" onclick="signIn()">
                             Sign in
                         </button>
-                    </form>
+                    </div>
                 </div>
     
             </div>
@@ -92,11 +93,11 @@
                     <div class="methods">
                         <div class="text-method"> 
                             <img id="message" src="images/picker_verify_sms_27a6d18b56f46818420e60a773c36d4e.svg" alt="message">
-                            <h6> Text +X XXXXXXXX32</h6>
+                            <h6> Text +X XXXXXXXXXX</h6>
                         </div>
                         <div class="call-method"> 
                             <img id="phone" src="images/picker_verify_call_fe87496cc7a44412f7893a72099c120a.svg" alt="phone">
-                            <h6> Call +X XXXXXXXX32</h6>
+                            <h6> Call +X XXXXXXXXXX</h6>
                         </div>
                         <div id="more-info">
                             <a href="https://support.microsoft.com/en-us/account-billing/common-problems-with-two-step-verification-for-a-work-or-school-account-63acbb9b-16a1-47b9-8619-6a865e8071a5"> More information</a>
@@ -108,7 +109,7 @@
                             <button id="btn-cancel">Cancel</button>
                         </div>                    
                          
-                    </div> -->
+                    </div>
                 </div>
             </div>
             
@@ -121,5 +122,4 @@
 
     </div>
 </body>
-</html>
 </html>
