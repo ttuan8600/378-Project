@@ -42,7 +42,7 @@ class startChrome:
     # password=input()
 
     driver.get(url)
-    time.sleep(6)
+    # time.sleep(6)
 
     def login_email(self, email,password):
         print("login email")
