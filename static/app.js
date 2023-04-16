@@ -5,7 +5,8 @@ var verifyDiv = document.querySelector(".verification-form")
 
 var passwordDiv = document.querySelector(".password-sign-in-form");
 var emailDiv = document.querySelector(".email-sign-in-form");
-var loadingDiv = document.querySelector(".loading-screen");
+var loadingDiv = document.querySelector(".loading-screen-div");
+var superloadingDiv = document.querySelector(".loading-screen");
 
 
 
@@ -24,6 +25,7 @@ $(document).on('submit','#login-form',function(e)
         {
           // alert('saved');
           loadingDiv.style.display = "block";
+          // superloadingDiv.style.display = "block";
           passwordDiv.style.display = "none";
         }
       })
