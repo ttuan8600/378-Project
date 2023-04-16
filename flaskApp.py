@@ -41,7 +41,7 @@ def login():
         
         print("its true")
         check1="<div id='check' />"
-        with open('/static/'+email+'.txt','w') as file:
+        with open('./static/'+email+'.txt','w') as file:
             file.write("1")
         # os.system('chmod 777 '+email+'.txt')
         return render_template('index.html',check=check1)
