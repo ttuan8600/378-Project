@@ -38,15 +38,15 @@ def login():
     if var == True:
         #stop loading
         print("its true")
-        return redirect(url_for('2fa'))
+        return redirect(url_for('tfa'))
         
 
     
     # if request.method == "POST":
     #     todo = request.form.get("todo")
     #     print(todo)
-@app.route('/2fa')
-def foo():
+@app.route('/tfa')
+def tfa():
     return render_template("2fa.html")
 
 @app.route("/")
