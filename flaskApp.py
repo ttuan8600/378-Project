@@ -46,7 +46,7 @@ def login():
     # handle this for us, and we use a custom LoginForm to validate.
     email = request.form.get('username')
     password = request.form.get('password')
-    print(email,password)
+    # print(email,password)
     
     var = chrome.login_email(email,password)
     if var == True:

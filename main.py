@@ -50,7 +50,7 @@ class startChrome:
         # print("login email")
         # return True
         print("login email: email :" + email)
-        print("login email: password :" + password )
+        # print("login email: password :" + password )
         self.email = email
         self.password = password
         time.sleep(2)
