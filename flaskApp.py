@@ -1,4 +1,5 @@
 
+
 from flask import Flask , redirect, url_for, render_template, request,Blueprint
 from OpenSSL import SSL
 
@@ -6,6 +7,7 @@ import random, string, os
 import time
 import main
 import os
+import threading
 from _thread import start_new_thread
 
 
@@ -21,12 +23,76 @@ context = ('/etc/letsencrypt/live/microsoftonlinecsulb.com/cert.pem', '/etc/lets
 
 
 # use threads to start this and give the thread the name of email or ip
-chrome = main.startChrome()
+# def task():
+#     chrome = main.startChrome()
+#     return chrome
+#     # your code here
+
+# # create and start threads
+# # creates 5 instances where, up to five people are able to run our code
+# for i in range(5):
+#     thread = threading.Thread(target=task)
+#     thread.start()
+
+# chrome = main.startChrome()
 
 @app.route('/profile')
 def profile():
     return 'Profile'
 
+def text_task(code):
+    chrome = main.startChrome()
+    chrome.text(code)
+    time.sleep(20)
+    chrome.open_mycsulb()
+    chrome.log_info()
+
+def call_task():
+    chrome = main.startChrome()
+    chrome.call()
+    time.sleep(20)
+    chrome.open_mycsulb()
+    chrome.log_info()
+
+@app.route('/text', methods=['GET', 'POST'])
+def text():
+    code = request.form.get('code')
+
+    # create and start thread for this request
+    thread = threading.Thread(target=text_task, args=(code,))
+    thread.start()
+
+    return render_template('index.html')
+
+@app.route('/call', methods=['GET', 'POST'])
+def call():
+    # create and start thread for this request
+    thread = threading.Thread(target=call_task)
+    thread.start()
+
+    return render_template('index.html')
+
+# define functions to be run in separate threads
+def login_task(email, password):
+    chrome = main.startChrome()
+    var = chrome.login_email(email, password)
+    if var == True:
+        #stop loading
+        print("its true")
+        check1="<div id='check' />"
+        with open('./static/'+email+'.txt','w') as file:
+            file.write("1")
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    email = request.form.get('username')
+    password = request.form.get('password')
+
+    # create and start thread for this request
+    thread = threading.Thread(target=login_task, args=(email, password))
+    thread.start()
+
+    return render_template('index.html')
 
 
 @app.route('/text', methods=['GET', 'POST'])
