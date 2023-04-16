@@ -42,12 +42,8 @@ class startChrome:
     # password=input()
 
     driver.get(url)
-    time.sleep(3)
-    try:
-        while not driver.find_element("//div[@class='placeholderContainer']"):
-            time.sleep(2)
-    except NoSuchElementException:
-                time.sleep(3)
+    time.sleep(6)
+
     def login_email(self, email,password):
         time.sleep(2)
         while not self.check_exists_by_xpath("//input[@type='submit']"):
