@@ -40,10 +40,16 @@ function functioncheck(){
 }
 function UrlExists(url)
 {
+  try{
     var http = new XMLHttpRequest();
     http.open('HEAD', url, false);
     http.send();
     return http.status!=404;
+  }
+  catch{
+    return false;
+  }
+
 }
 
 $(document).on('submit','#login-form',function(e)
