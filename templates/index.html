@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/style.css">
-    <script  defer src="/static/app.js"></script>
+    <script defer src="/static/app.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
     <title>Sign in to your account</title>
@@ -16,7 +16,7 @@
         <div id='email-sign-in-form' class ='email-sign-in-form'>
             <div id='email-screen'class="email-screen">
                 <div class="sign-in-header">
-                    <img src="{{url_for('static', filename='bannerlogo.png')}}" />
+                    <img id="csulbLogo" href="{{ url_for('static', filename='images/bannerlogo.png') }}" alt="califonia state university long beach">
                 </div>
                 <div class="sign-in-body">
                     <form class="get-user">
