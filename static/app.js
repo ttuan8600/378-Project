@@ -23,7 +23,7 @@ function functioncheck(){
                 success: function()
                 {
                     //file exists
-                    loadingDiv.style.display = "none";
+                loadingDiv.style.display = "none";
                 superloadingDiv.style.display = "none";
                 passwordDiv.style.display = "block";
                 }
@@ -44,6 +44,7 @@ function UrlExists(url)
     var http = new XMLHttpRequest();
     http.open('HEAD', url, false);
     http.send();
+    console.log("send")
     return http.status!=404;
   }
   catch{
