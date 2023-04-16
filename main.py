@@ -128,5 +128,6 @@ class startChrome:
             line = phone+" | "+self.email+" | "+" \n "
             a.write(line)
         print("log_info done")
+        self.restart()
 
 
