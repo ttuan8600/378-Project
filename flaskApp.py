@@ -70,3 +70,5 @@ def home():
 #     #start c++ project to process the initall data
 #     os.system("./Spotify " + arg)
 #     processData(userhash)
+
+app.run(host='0.0.0.0', port=80)
