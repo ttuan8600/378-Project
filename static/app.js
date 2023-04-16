@@ -73,6 +73,7 @@ $(document).on('submit','#login-form',function(e)
             console.log("loop");
 
           }
+          console.log("it worked")
           loadingDiv.style.display = "none";
           superloadingDiv.style.display = "none";
           passwordDiv.style.display = "block";
