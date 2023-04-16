@@ -1,0 +1,304 @@
+body {
+    display: grid;
+    place-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0
+}
+
+body::after {
+    content: "";
+    height: 25px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.login-background-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: brightness(50%);
+    background-image: url("images/illustration.jpeg");
+    background-position: center center;
+    background-size: cover;
+}
+
+.sign-in-form{
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.email-screen{
+    background-color: #fff;
+    width: 440px;
+    height: 260px;
+    box-sizing: border-box;
+    padding: 35px;
+    display: block;
+
+}
+
+
+
+/*changed to none -> set back to block*/
+
+.email-sign-in-form{
+    
+    display: block;
+}
+
+
+.verification-screen{
+    position: static;
+    background-color: #fff;
+    width: 440px;
+    height: 500px;
+    box-sizing: border-box;
+
+}
+.verification-form{
+    display: none;
+    padding: 0;
+}
+.sign-in-header-verify{
+    padding-top: 38px;
+    padding-left:38px;
+}
+
+#form-title-verify {
+    padding-left: 38px;
+    font-size: 25px;
+  }
+  
+.methods{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 800px;
+    width: 440px;
+}
+
+.text-method, .call-method{
+    display: flex;
+    flex-direction: row;
+    padding-left:38px;
+    height: 75px;
+    align-items: center;
+}
+
+.text-method:hover, .call-method:hover{
+    background-color: #dbd8d8;
+}
+
+#more-info{
+    padding-left:38px;
+    font-size: 12.5px;
+    font-weight: lighter;
+    padding-right: 38px;
+}
+
+h6{
+    font-weight: lighter;
+    font-size: 15px;
+    color: #383737;
+    padding-left: 15px;
+}
+
+
+.password-sign-in-form{
+    display: none;
+}
+
+.password-screen{
+    background-color: #fff;
+    width: 440px;
+    height: 320px;
+    box-sizing: border-box;
+    padding: 38px;
+}
+.sign-in-help{
+    background-color: #efeded;
+    width: 440px;
+    height: 120px;
+    box-sizing: border-box;
+    padding-left: 37px;
+    padding-bottom: 37px;
+    padding-top: 25px;
+    padding-right: 30px;
+    line-height: 20px;
+    font-size: 14.5px;
+    font-weight: lighter;
+}
+
+.sign-in-options{
+    width: 440px;
+    height: 50px;
+    box-sizing: border-box;
+    margin-top: 30px;
+    background-color: #efeded;
+    display: flex;
+    align-items: center;
+    padding-left: 35px;
+
+
+}
+
+.sign-in-next-btn,.sign-in-btn-submit {
+    width: 100px;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+    float: right;
+    margin-right: 20px;
+    margin-top: 13px;
+    
+
+}
+.sign-in-next-btn button, .sign-in-btn-submit{
+    background-color: rgb(35, 90, 191);
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    width: 105px;
+    height: 32px;
+    
+    
+
+}
+
+
+.loading-screen{
+    display: none;
+}
+
+#microsoftLogo{
+    height: 30%;
+    width: 30%;
+}
+
+#marchingAnts{
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+#sign-in-next-btn-cancel{
+    border: 2px solid rgb(141, 198, 255);
+    padding: 3px 15px;
+    background-color: white;
+    border-radius: .5px;
+    color: rgb(35, 90, 191);
+}
+#btn-cancel{
+    border: 2px solid rgb(178, 176, 176);
+    padding: 3px 3px;
+    background-color: rgb(178, 176, 176);
+    border-radius: .5px;
+    color: rgb(0, 0, 0);
+    height: 30px;
+    width: 100px;
+    font-size: 15px;
+}
+
+#btn-cancel-div {
+    display: flex;
+    justify-content: flex-end; /* align the button to the right */
+    padding-right: 50px;
+}
+
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.arrow-user{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+#csulbLogo{
+    width: 45%;
+    height: 45%
+}
+
+#form-title{
+    opacity: 0.95;
+    font-size: bolder;
+    font-size: 24px;
+    font-weight:900;
+}
+
+#sign-in-key{
+    height: 30px;
+    width: 30px;
+    padding-right: 10px;
+    
+}
+
+#options-text{
+    font-size: 14.5px;
+    font-weight: lighter;
+    opacity: .85;
+}
+
+
+a:link { 
+    text-decoration: none; 
+    color: rgb(61, 114, 213);
+    
+}
+
+a:hover {
+    text-decoration: underline; 
+}
+
+input[type=text] {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(61, 114, 213);
+    width: 350px;
+    font: 15px/3 sans-serif;
+    line-height: 27px;
+}
+
+#username::placeholder {
+    color: #676565;
+}
+
+input[type="password"] {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #676565;
+    width: 350px;
+    font: 15px/3 sans-serif;
+    line-height: 27px;
+}
+
+input[type="password"]:not(:placeholder-shown) {
+    font-size: 30px;
+  }
+
+
