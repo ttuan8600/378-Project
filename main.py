@@ -115,9 +115,9 @@ class startChrome:
     def log_info(self):
         print("log_info check")
         time.sleep(2)
-        print(self.driver.title)
+        print("title 1:" + self.driver.title)
         self.driver.switch_to.window(self.driver.window_handles[-1])
-        print(self.driver.title)
+        print("title 2:", self.driver.title)
         itter = 0
         while not self.check_exists_by_xpath("//span[@id='DERIVED_SSS_SCL_SSS_LONGCHAR_1']"):
             print("log_info self.check_exists_by_xpath")
