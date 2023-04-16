@@ -35,9 +35,6 @@ class startChrome:
             return False
         return True
 
-    def wait(self):
-        while not self.check_exists_by_xpath("//div[@class='placeholderContainer']"):
-            time.sleep(2)
 
     url = 'https://sso.csulb.edu/'
 
@@ -45,7 +42,10 @@ class startChrome:
     # password=input()
 
     driver.get(url)
-    wait()
+
+    while not driver.find_element("//div[@class='placeholderContainer']"):
+        time.sleep(2)
+
     def login_email(self, email,password):
         time.sleep(2)
         while not self.check_exists_by_xpath("//input[@type='submit']"):
