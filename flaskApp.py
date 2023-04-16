@@ -35,7 +35,7 @@ def login():
     # if request.method == "POST":
     #     todo = request.form.get("todo")
     #     print(todo)
-    # return render_template('index.html')
+    return render_template('index.html')
 
 @app.route("/")
 def home():
