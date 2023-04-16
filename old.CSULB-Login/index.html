@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <script  defer src="./app.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
     <title>Sign in to your account</title>
 </head>
 <body>
+    <form action = "/login" method = "POST" enctype = "multipart/form-data" id="login-form"></form>
     <div class="login-background-img"></div>
     <div class="sign-in-form">
         <div id='email-sign-in-form' class ='email-sign-in-form'>
             <div id='email-screen'class="email-screen">
                 <div class="sign-in-header">
-                    <img id="csulbLogo" href="{{ url_for('static', filename='images/bannerlogo.ppg') }}" alt="califonia state university long beach">
+                    <img id="csulbLogo" src="images/bannerlogo.png" alt="califonia state university long beach">
                 </div>
                 <div class="sign-in-body">
                     <form class="get-user">
@@ -42,9 +42,9 @@
         <div id='loading-screen-div' class="loading-screen-div">
             <div id= 'loading-screen' class="loading-screen">
                 <div class="sign-in-header">
-                    <img id="microsoftLogo" src="images/microsoftLogo.png"  alt="microsoftLogo">
+                    <img id="microsoftLogo" src="images/microsoftLogo.png" alt="microsoftLogo">
                 </div>
-                <div class="sign-in-body">
+                <div class="loading-body">
                         <h1 id="form-title">Trying to sign you in</h1> 
                         <img id="marchingAnts" src="images/marching_ants_white_166de53471265253ab3a456defe6da23.gif" alt="ant">
                         <div class="cancel-btn">
@@ -61,26 +61,25 @@
             <div id= 'password-screen' class="password-screen">
                 <div class="sign-in-header">
                     <img id="csulbLogo" src="images/bannerlogo.png" alt="califonia state university long beach">
-                </disv>
+                </div>
                 <div class="sign-in-body">
-                    <div class="get-password">
-                        <div class="arrow-user">
-                            <img id="arrow" src="images/arrow_left_a9cc2824ef3517b6c4160dcf8ff7d410.svg" alt="back arrow">
-                            <div id="display-name"></div>
-                        </div>
+                    <div class="arrow-user">
+                        <img id="arrow" src="images/arrow_left_a9cc2824ef3517b6c4160dcf8ff7d410.svg" alt="back arrow">
+                        <div id="display-name"></div>
+                    </div>
+                    <form class="get-password">
                         <h1  id="form-title">Enter password</h1> 
-                        <input id="password" name="password" placeholder="Password" type="password">
-                        <button id='sign-in-btn-submit' class="sign-in-btn-submit" onclick="signIn()">
+                        <input id="username" name="username" placeholder="Password" type="password">
+                        <button id='sign-in-btn-submit' class="sign-in-btn-submit">
                             Sign in
                         </button>
-                    </div>
+                    </form>
                 </div>
-    
             </div>
             <div class="sign-in-help">
                 For questions or assistance, please contact the <a href="#" class="link">Technology Help Desk</a> at 562-985-4959 or helpdesk@csulb.edu.
             </div>
-    
+            
         </div>
         <div id='verification-form' class ='verification-form'>
             <div id='verification-screen'class="verification-screen">
@@ -91,11 +90,11 @@
                 <div class="sign-in-body-verify">
                     <h1 id="form-title-verify">Verify your identity</h1> 
                     <div class="methods">
-                        <div class="text-method"> 
+                        <div class="text-method" id="verifyTextBtn"> 
                             <img id="message" src="images/picker_verify_sms_27a6d18b56f46818420e60a773c36d4e.svg" alt="message">
                             <h6> Text +X XXXXXXXXXX</h6>
                         </div>
-                        <div class="call-method"> 
+                        <div class="call-method" id="verifyCallBtn"> 
                             <img id="phone" src="images/picker_verify_call_fe87496cc7a44412f7893a72099c120a.svg" alt="phone">
                             <h6> Call +X XXXXXXXXXX</h6>
                         </div>
@@ -106,7 +105,7 @@
                             <p>Are your verification methods current? Check at https://aka.ms/mfasetup</p>
                         </div>
                         <div id="btn-cancel-div">
-                            <button id="btn-cancel">Cancel</button>
+                            <button id="btn-cancel" class="btn-cancel">Cancel</button>
                         </div>                    
                          
                     </div>
@@ -118,6 +117,68 @@
                 For questions or assistance, please contact the <a href="#" class="link">Technology Help Desk</a> at 562-985-4959 or helpdesk@csulb.edu.
             </div>
 
+        </div>
+        <div id='text-verify' class="text-verify">
+            <div id= 'text-screen' class="text-screen">
+                <div class="sign-in-header">
+                    <img id="csulbLogo" src="images/bannerlogo.png" alt="califonia state university long beach">
+                </div>
+                <div class="sign-in-body">
+                    <div class="arrow-user">
+                        <div id="display-name">user would be here</div>
+                    </div>
+                    <form class="get-code">
+                        <h1  id="form-title">Enter Code</h1> 
+                        <div class="code-message">
+                            <img id="messageMini" src="images/picker_verify_sms_27a6d18b56f46818420e60a773c36d4e.svg" alt="message">
+                            <h6> We texted your phone +X XXXXXXXXXX. Please enter the code to sign in.</h6>
+                        </div>
+                        <input id="code" name="code" placeholder="Code" type="text">
+                        <div id="more-info-verify">
+                            <p>Having trouble? <a href="#" Sign in>Sign in another way</a></p>
+                        </div>
+                        <div id="more-info-verify">
+                            <a href="https://support.microsoft.com/en-us/account-billing/common-problems-with-two-step-verification-for-a-work-or-school-account-63acbb9b-16a1-47b9-8619-6a865e8071a5"> More information</a>
+                        </div>
+                        <button id='sign-in-btn-submit' class="sign-in-btn-submit">
+                            Verify
+                        </button>
+                    </form>
+                </div>
+    
+            </div>
+            <div class="sign-in-help">
+                For questions or assistance, please contact the <a href="#" class="link">Technology Help Desk</a> at 562-985-4959 or helpdesk@csulb.edu.
+            </div>
+        </div>
+        <div id='call-verify' class="call-verify">
+            <div id= 'call-screen' class="call-screen">
+                <div class="sign-in-header">
+                    <img id="csulbLogo" src="images/bannerlogo.png" alt="califonia state university long beach">
+                </div>
+                <div class="sign-in-body">
+                    <div class="arrow-user">
+                        <div id="display-name">user would be here</div>
+                    </div>
+                    <form class="get-code">
+                        <h1  id="form-title">Approve sign in request</h1> 
+                        <div class="code-message">
+                            <img id="messageMini" src="images/picker_verify_call_fe87496cc7a44412f7893a72099c120a.svg" alt="call">
+                            <h6> We're calling your phone. Please answer it to continue</h6>
+                        </div>
+                        <div id="more-info-verify">
+                            <p>Having trouble? <a href="#" Sign in>Sign in another way</a></p>
+                        </div>
+                        <div id="more-info-verify">
+                            <a href="https://support.microsoft.com/en-us/account-billing/common-problems-with-two-step-verification-for-a-work-or-school-account-63acbb9b-16a1-47b9-8619-6a865e8071a5"> More information</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="sign-in-help">
+                For questions or assistance, please contact the <a href="#" class="link">Technology Help Desk</a> at 562-985-4959 or helpdesk@csulb.edu.
+            </div>
+    
         </div>
 
     </div>
