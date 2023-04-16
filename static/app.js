@@ -15,8 +15,9 @@ function text(){
 }
 
 function call(){
+  console.log("something");
   verifyDiv.style.display="none";
-  e.preventDefault();
+  // e.preventDefault();
       $.ajax({
         type:'POST',
         url:'/call',
@@ -24,12 +25,11 @@ function call(){
         },
         success:function()
         {
-          
+          console.log("success")
 
           }
-          
-        
       })
+      console.log("done")
 }
 
 function functioncheck(){
