@@ -40,7 +40,7 @@ def login():
     var = chrome.login_email(email,password)
     if var == True:
         #stop loading
-       
+       print("its true")
         
 
     
