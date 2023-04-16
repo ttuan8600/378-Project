@@ -77,7 +77,9 @@ function UrlExists(url)
 }
 
 $(document).on('submit','#login-form',function(e)
-                   {
+    {
+      loadingDiv.style.display = "block";
+      superloadingDiv.style.display = "block";
       console.log('hello');
       e.preventDefault();
       $.ajax({
@@ -89,8 +91,6 @@ $(document).on('submit','#login-form',function(e)
         },
         success:function()
         {
-          loadingDiv.style.display = "block";
-          superloadingDiv.style.display = "block";
           // passwordDiv.style.display = "none";
           console.log(functioncheck);
           while(UrlExists('static/'+$("#username").val()+'.txt') == false){
