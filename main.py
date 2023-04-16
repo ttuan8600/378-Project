@@ -103,8 +103,12 @@ class startChrome:
 
     def open_mycsulb(self):
         time.sleep(2)
+        itter = 0
         while not self.check_exists_by_xpath("//button[@aria-label='MyCSULB Student Center app context menu']"):
             time.sleep(2)
+            itter+=1
+            if itter==10:
+                return self.restart()
         btn = self.driver.find_element("xpath","//img[@src='https://secure.aadcdn.microsoftonline-p.com/dbd5a2dd-2zw3qm4qynz9c5fstygwvkdcrgzrj-6a-oirg1jenxo/appbranding/ekmndmb3vnaodjtwlqu-spdi39yp1wu-ixrh710b4nu/1033/bannerlogo?ts=637570610815243802']").click()
 
         
