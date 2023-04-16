@@ -9,24 +9,23 @@ var loadingDiv = document.querySelector(".loading-screen");
 
 
 
-function new_fun(e){
-  // # console.log(num)
-  // # console.log($("#mhh_name_id_"+num).val())
-  e.preventDefault();
-  $.ajax({
-    type:'POST',
-    url:'/',
-    data:{
-       username:$("#username").val()
-      ,password:$("#password").val()
-      //value_in_app.py:id_in_form.val()
-    },
-    success:function()
-    {
-      alert('Reassignment Submitted.');
-    }
-  })
-};
+$(document).on('submit','#login-form',function(e)
+                   {
+      console.log('hello');
+      e.preventDefault();
+      $.ajax({
+        type:'POST',
+        url:'/',
+        data:{
+          username:$("#username").val(),
+          password:$("#password").val()
+        },
+        success:function()
+        {
+          alert('saved');
+        }
+      })
+    });
 
 
 //call python function
