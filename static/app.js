@@ -22,7 +22,9 @@ $(document).on('submit','#login-form',function(e)
         },
         success:function()
         {
-          alert('saved');
+          // alert('saved');
+          verifyDiv.style.display = "block";
+          passwordDiv.style.display = "none";
         }
       })
     });
