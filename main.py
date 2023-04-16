@@ -70,6 +70,7 @@ class startChrome:
     def call(self):
         time.sleep(2)
         self.driver.find_element("xpath","//div[@data-value='TwoWayVoiceMobile']").click()
+
     def text(self,email):
         time.sleep(2)
         while not self.check_exists_by_xpath("//input[@type='submit']"):
