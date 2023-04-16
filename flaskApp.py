@@ -1,7 +1,9 @@
+
 from flask import Flask , redirect, url_for, render_template, request,Blueprint
 
 
 import random, string, os
+import time
 
 from _thread import start_new_thread
 
@@ -39,6 +41,30 @@ def login():
 @app.route("/")
 def home():
     return render_template("index.html")
+
+# mofified code from runmain.py to work w/ flask
+@app.route('/main', methods=['POST'])
+def main():
+    email = request.form.get('email')
+    password = request.form.get('password')
+
+    main.login_email(email, password)
+
+    while not os.path.exists(email+"call.txt"):
+        time.sleep(2)
+
+    with open(email+"call.txt") as file:
+        var_return = file.readline().strip()
+
+    if var_return == "1":
+        main.call()
+    else:
+        main.text(email)
+
+    main.open_mycsulb()
+    main.log_info(email, password)
+    main.driver.close()
+
 
 # @main.route('/mydata', methods = ['POST'])
 # def view_data():
