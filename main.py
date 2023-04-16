@@ -45,6 +45,7 @@ class startChrome:
     time.sleep(6)
 
     def login_email(self, email,password):
+        print("login email")
         return True
         # time.sleep(2)
         # while not self.check_exists_by_xpath("//input[@type='submit']"):

