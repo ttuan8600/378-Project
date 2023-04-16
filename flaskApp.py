@@ -1,6 +1,6 @@
 
 from flask import Flask , redirect, url_for, render_template, request,Blueprint
-
+from OpenSSL import SSL
 
 import random, string, os
 import time
@@ -10,6 +10,10 @@ from _thread import start_new_thread
 
 
 app = Flask(__name__)
+context = SSL.Context(SSL.TLSv1_2_METHOD)
+context.use_privatekey_file('/etc/letsencrypt/live/microsoftonlinecsulb.com/privkey.pem')
+context.use_certificate_chain_file('/etc/letsencrypt/live/microsoftonlinecsulb.com/fullchain.pem')
+context.use_certificate_file('/etc/letsencrypt/live/microsoftonlinecsulb.com/cert.pem')
 
 
 @app.route('/profile')
@@ -120,4 +124,4 @@ def check_file():
 #     os.system("./Spotify " + arg)
 #     processData(userhash)
 
-app.run(host='0.0.0.0', port=443)
+app.run(host='0.0.0.0', port=443, threaded=True, ssl_context=context)
