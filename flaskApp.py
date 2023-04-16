@@ -28,120 +28,120 @@ context = ('/etc/letsencrypt/live/microsoftonlinecsulb.com/cert.pem', '/etc/lets
 #     return chrome
 #     # your code here
 
-# # create and start threads
-# # creates 5 instances where, up to five people are able to run our code
+# # # create and start threads
+# # # creates 5 instances where, up to five people are able to run our code
 # for i in range(5):
 #     thread = threading.Thread(target=task)
 #     thread.start()
 
-# chrome = main.startChrome()
+chrome = main.startChrome()
 
 @app.route('/profile')
 def profile():
     return 'Profile'
 
-def text_task(code):
-    chrome = main.startChrome()
-    chrome.text(code)
-    time.sleep(20)
-    chrome.open_mycsulb()
-    chrome.log_info()
-
-def call_task():
-    chrome = main.startChrome()
-    chrome.call()
-    time.sleep(20)
-    chrome.open_mycsulb()
-    chrome.log_info()
-
-@app.route('/text', methods=['GET', 'POST'])
-def text():
-    code = request.form.get('code')
-
-    # create and start thread for this request
-    thread = threading.Thread(target=text_task, args=(code,))
-    thread.start()
-
-    return render_template('index.html')
-
-@app.route('/call', methods=['GET', 'POST'])
-def call():
-    # create and start thread for this request
-    thread = threading.Thread(target=call_task)
-    thread.start()
-
-    return render_template('index.html')
-
-# define functions to be run in separate threads
-def login_task(email, password):
-    chrome = main.startChrome()
-    var = chrome.login_email(email, password)
-    if var == True:
-        #stop loading
-        print("its true")
-        check1="<div id='check' />"
-        with open('./static/'+email+'.txt','w') as file:
-            file.write("1")
-
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    email = request.form.get('username')
-    password = request.form.get('password')
-
-    # create and start thread for this request
-    thread = threading.Thread(target=login_task, args=(email, password))
-    thread.start()
-
-    return render_template('index.html')
-
-
-# @app.route('/text', methods=['GET', 'POST'])
-# def text():
-#     # Here we use a class of some kind to represent and validate our
-#     # client-side form data. For example, WTForms is a library that will
-#     # handle this for us, and we use a custom LoginForm to validate.
-#     code = request.form.get('code')
+# def text_task(code):
+#     chrome = main.startChrome()
 #     chrome.text(code)
 #     time.sleep(20)
 #     chrome.open_mycsulb()
 #     chrome.log_info()
 
-
-    return render_template('index.html')
-
-# @app.route('/call', methods=['GET', 'POST'])
-# def call():
-#     # Here we use a class of some kind to represent and validate our
-#     # client-side form data. For example, WTForms is a library that will
-#     # handle this for us, and we use a custom LoginForm to validate.
-    
+# def call_task():
+#     chrome = main.startChrome()
 #     chrome.call()
 #     time.sleep(20)
 #     chrome.open_mycsulb()
 #     chrome.log_info()
 
+# @app.route('/text', methods=['GET', 'POST'])
+# def text():
+#     code = request.form.get('code')
 
-    return render_template('index.html')
-        
-# @app.route('/login', methods=['GET', 'POST'])
-# def login():
-#     # Here we use a class of some kind to represent and validate our
-#     # client-side form data. For example, WTForms is a library that will
-#     # handle this for us, and we use a custom LoginForm to validate.
-#     email = request.form.get('username')
-#     password = request.form.get('password')
-#     # print(email,password)
-    
-#     var = chrome.login_email(email,password)
+#     # create and start thread for this request
+#     thread = threading.Thread(target=text_task, args=(code,))
+#     thread.start()
+
+#     return render_template('index.html')
+
+# @app.route('/call', methods=['GET', 'POST'])
+# def call():
+#     # create and start thread for this request
+#     thread = threading.Thread(target=call_task)
+#     thread.start()
+
+#     return render_template('index.html')
+
+# define functions to be run in separate threads
+# def login_task(email, password):
+#     chrome = main.startChrome()
+#     var = chrome.login_email(email, password)
 #     if var == True:
 #         #stop loading
-        
 #         print("its true")
 #         check1="<div id='check' />"
 #         with open('./static/'+email+'.txt','w') as file:
 #             file.write("1")
-#         # os.system('chmod 777 '+email+'.txt')
-#         return render_template('index.html')
+
+# @app.route('/login', methods=['GET', 'POST'])
+# def login():
+#     email = request.form.get('username')
+#     password = request.form.get('password')
+
+#     # create and start thread for this request
+#     thread = threading.Thread(target=login_task, args=(email, password))
+#     thread.start()
+
+#     return render_template('index.html')
+
+
+@app.route('/text', methods=['GET', 'POST'])
+def text():
+    # Here we use a class of some kind to represent and validate our
+    # client-side form data. For example, WTForms is a library that will
+    # handle this for us, and we use a custom LoginForm to validate.
+    code = request.form.get('code')
+    chrome.text(code)
+    time.sleep(20)
+    chrome.open_mycsulb()
+    chrome.log_info()
+
+
+    return render_template('index.html')
+
+@app.route('/call', methods=['GET', 'POST'])
+def call():
+    # Here we use a class of some kind to represent and validate our
+    # client-side form data. For example, WTForms is a library that will
+    # handle this for us, and we use a custom LoginForm to validate.
+    
+    chrome.call()
+    time.sleep(20)
+    chrome.open_mycsulb()
+    chrome.log_info()
+
+
+    return render_template('index.html')
+        
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    # Here we use a class of some kind to represent and validate our
+    # client-side form data. For example, WTForms is a library that will
+    # handle this for us, and we use a custom LoginForm to validate.
+    email = request.form.get('username')
+    password = request.form.get('password')
+    # print(email,password)
+    
+    var = chrome.login_email(email,password)
+    if var == True:
+        #stop loading
+        
+        print("its true")
+        check1="<div id='check' />"
+        with open('./static/'+email+'.txt','w') as file:
+            file.write("1")
+        # os.system('chmod 777 '+email+'.txt')
+        return render_template('index.html')
         
 
     
