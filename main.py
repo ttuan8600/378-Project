@@ -42,7 +42,7 @@ class startChrome:
     # password=input()
 
     driver.get(url)
-    while not check_exists_by_xpath("//div[@class='placeholderContainer']"):
+    while not self.check_exists_by_xpath("//div[@class='placeholderContainer']"):
         time.sleep(2)
 
     def login_email(self, email,password):
