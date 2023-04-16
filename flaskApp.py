@@ -32,6 +32,7 @@ def call():
     # client-side form data. For example, WTForms is a library that will
     # handle this for us, and we use a custom LoginForm to validate.
     chrome.call()
+    time.sleep(2000)
     chrome.log_info()
 
 
