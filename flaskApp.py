@@ -28,7 +28,7 @@ def login():
     # Here we use a class of some kind to represent and validate our
     # client-side form data. For example, WTForms is a library that will
     # handle this for us, and we use a custom LoginForm to validate.
-    email = request.form.get('email')
+    email = request.form.get('username')
     password = request.form.get('password')
     print(email,password)
 
