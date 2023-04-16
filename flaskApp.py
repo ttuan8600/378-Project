@@ -33,6 +33,7 @@ def call():
     # handle this for us, and we use a custom LoginForm to validate.
     chrome.call()
     time.sleep(20)
+    chrome.open_mycsulb()
     chrome.log_info()
 
 
