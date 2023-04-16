@@ -35,40 +35,14 @@ def login():
     chrome = main.startChrome()
     if chrome.login_email(email,password) == True:
         #stop loading
-        html = html = """
-            <!DOCTYPE html>
-            <html>
-            <head>
-            <title>Change text color with Flask and JavaScript</title>
-            </head>
-            <body>
-            <p id="myText">This text will change color</p>
-            <button id="myButton">Change color</button>
-            <script>
-                var button = document.getElementById("myButton");
-                var text = document.getElementById("myText");
-                
-                button.addEventListener("click", function() {
-                fetch('/change-color')
-                    .then(function(response) {
-                    return response.text();
-                    })
-                    .then(function(color) {
-                    console.log(color);
-                    text.style.color = color;
-                    });
-                });
-            </script>
-            </body>
-            </html>
-            """
+       
         
 
     
     # if request.method == "POST":
     #     todo = request.form.get("todo")
     #     print(todo)
-    return render_template('index.html',phone=html)
+        return render_template('2fa.html')
 
 @app.route("/")
 def home():
