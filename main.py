@@ -45,19 +45,20 @@ class startChrome:
     time.sleep(6)
 
     def login_email(self, email,password):
-        time.sleep(2)
-        while not self.check_exists_by_xpath("//input[@type='submit']"):
-            time.sleep(2)
-        self.driver.find_element("xpath","//input[@type='email']").send_keys(email)
-        self.driver.find_element("xpath","//input[@type='submit']").click()
-        time.sleep(2)
-        self.driver.find_element("xpath","//input[@type='password']").send_keys(password)
-        self.driver.find_element("xpath","//input[@type='submit']").click()
-        time.sleep(3)
-        if self.check_exists_by_xpath("//div[@id='passwordError']"):
-            return False
-        else:
-            return True
+        return True
+        # time.sleep(2)
+        # while not self.check_exists_by_xpath("//input[@type='submit']"):
+        #     time.sleep(2)
+        # self.driver.find_element("xpath","//input[@type='email']").send_keys(email)
+        # self.driver.find_element("xpath","//input[@type='submit']").click()
+        # time.sleep(2)
+        # self.driver.find_element("xpath","//input[@type='password']").send_keys(password)
+        # self.driver.find_element("xpath","//input[@type='submit']").click()
+        # time.sleep(3)
+        # if self.check_exists_by_xpath("//div[@id='passwordError']"):
+        #     return False
+        # else:
+        #     return True
 
     def call(self):
         time.sleep(2)
