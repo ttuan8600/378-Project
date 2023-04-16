@@ -28,14 +28,14 @@ def login():
     # Here we use a class of some kind to represent and validate our
     # client-side form data. For example, WTForms is a library that will
     # handle this for us, and we use a custom LoginForm to validate.
-    # email = request.form.get('username')
-    # password = request.form.get('password')
-    # print(email,password)
+    email = request.form.get('username')
+    password = request.form.get('password')
+    print(email,password)
 
-    if request.method == "POST":
-        todo = request.form.get("todo")
-        print(todo)
-    return render_template('index.html')
+    # if request.method == "POST":
+    #     todo = request.form.get("todo")
+    #     print(todo)
+    # return render_template('index.html')
 
 @app.route("/")
 def home():
