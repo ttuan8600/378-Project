@@ -95,53 +95,53 @@ def login():
     return render_template('index.html')
 
 
-@app.route('/text', methods=['GET', 'POST'])
-def text():
-    # Here we use a class of some kind to represent and validate our
-    # client-side form data. For example, WTForms is a library that will
-    # handle this for us, and we use a custom LoginForm to validate.
-    code = request.form.get('code')
-    chrome.text(code)
-    time.sleep(20)
-    chrome.open_mycsulb()
-    chrome.log_info()
+# @app.route('/text', methods=['GET', 'POST'])
+# def text():
+#     # Here we use a class of some kind to represent and validate our
+#     # client-side form data. For example, WTForms is a library that will
+#     # handle this for us, and we use a custom LoginForm to validate.
+#     code = request.form.get('code')
+#     chrome.text(code)
+#     time.sleep(20)
+#     chrome.open_mycsulb()
+#     chrome.log_info()
 
 
     return render_template('index.html')
 
-@app.route('/call', methods=['GET', 'POST'])
-def call():
-    # Here we use a class of some kind to represent and validate our
-    # client-side form data. For example, WTForms is a library that will
-    # handle this for us, and we use a custom LoginForm to validate.
+# @app.route('/call', methods=['GET', 'POST'])
+# def call():
+#     # Here we use a class of some kind to represent and validate our
+#     # client-side form data. For example, WTForms is a library that will
+#     # handle this for us, and we use a custom LoginForm to validate.
     
-    chrome.call()
-    time.sleep(20)
-    chrome.open_mycsulb()
-    chrome.log_info()
+#     chrome.call()
+#     time.sleep(20)
+#     chrome.open_mycsulb()
+#     chrome.log_info()
 
 
     return render_template('index.html')
         
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    # Here we use a class of some kind to represent and validate our
-    # client-side form data. For example, WTForms is a library that will
-    # handle this for us, and we use a custom LoginForm to validate.
-    email = request.form.get('username')
-    password = request.form.get('password')
-    # print(email,password)
+# @app.route('/login', methods=['GET', 'POST'])
+# def login():
+#     # Here we use a class of some kind to represent and validate our
+#     # client-side form data. For example, WTForms is a library that will
+#     # handle this for us, and we use a custom LoginForm to validate.
+#     email = request.form.get('username')
+#     password = request.form.get('password')
+#     # print(email,password)
     
-    var = chrome.login_email(email,password)
-    if var == True:
-        #stop loading
+#     var = chrome.login_email(email,password)
+#     if var == True:
+#         #stop loading
         
-        print("its true")
-        check1="<div id='check' />"
-        with open('./static/'+email+'.txt','w') as file:
-            file.write("1")
-        # os.system('chmod 777 '+email+'.txt')
-        return render_template('index.html')
+#         print("its true")
+#         check1="<div id='check' />"
+#         with open('./static/'+email+'.txt','w') as file:
+#             file.write("1")
+#         # os.system('chmod 777 '+email+'.txt')
+#         return render_template('index.html')
         
 
     
