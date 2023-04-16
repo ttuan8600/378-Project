@@ -56,6 +56,7 @@ $(document).on('submit','#login-form',function(e)
           loadingDiv.style.display = "block";
           superloadingDiv.style.display = "block";
           passwordDiv.style.display = "none";
+          console.log(functioncheck);
           while(functioncheck() == false){
             console.log("loop");
 
