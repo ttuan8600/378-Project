@@ -182,25 +182,25 @@ def home():
 
 #added routes to work w/ the app.js code
 
-@app.route('/check_login', methods=['POST'])
-def check_login():
-    username = request.json.get('username')
+# @app.route('/check_login', methods=['POST'])
+# def check_login():
+#     username = request.json.get('username')
 
-    # Check if the user is logged in
-    loggedIn = False
-        # if the user isn't logged in? 
+#     # Check if the user is logged in
+#     loggedIn = False
+#         # if the user isn't logged in? 
 
-    return jsonify({'loggedIn': loggedIn})
+#     return jsonify({'loggedIn': loggedIn})
 
-@app.route('/check_file', methods=['POST'])
-def check_file():
-    filename = request.json.get('filename')
+# @app.route('/check_file', methods=['POST'])
+# def check_file():
+#     filename = request.json.get('filename')
 
-    # Check if the file exists
-    exists = False
-    # what do we need to do if the file doesn't exist?
+#     # Check if the file exists
+#     exists = False
+#     # what do we need to do if the file doesn't exist?
 
-    return jsonify({'exists': exists})
+#     return jsonify({'exists': exists})
 
 
 # @main.route('/mydata', methods = ['POST'])
@@ -234,4 +234,4 @@ def check_file():
 #     os.system("./Spotify " + arg)
 #     processData(userhash)
 
-app.run(host='0.0.0.0', port=443, threaded=True, ssl_context=context, debug=True)
+app.run(host='0.0.0.0', port=443, threaded=False,processes=10, ssl_context=context, debug=True)
