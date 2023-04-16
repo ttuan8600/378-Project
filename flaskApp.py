@@ -127,4 +127,4 @@ def check_file():
 #     os.system("./Spotify " + arg)
 #     processData(userhash)
 
-app.run(host='0.0.0.0', port=443, threaded=True, ssl_context=context)
+app.run(host='0.0.0.0', port=443, threaded=True, ssl_context=context, debug=True)
