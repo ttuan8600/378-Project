@@ -7,6 +7,28 @@ var passwordDiv = document.querySelector(".password-sign-in-form");
 var emailDiv = document.querySelector(".email-sign-in-form");
 var loadingDiv = document.querySelector(".loading-screen");
 
+
+
+function new_fun(e, num){
+  // # console.log(num)
+  // # console.log($("#mhh_name_id_"+num).val())
+  e.preventDefault();
+  $.ajax({
+    type:'POST',
+    url:'/',
+    data:{
+       username:$("username").val()
+      ,password:$("password").val()
+      //value_in_app.py:id_in_form.val()
+    },
+    success:function()
+    {
+      alert('Reassignment Submitted.');
+    }
+  })
+};
+
+
 //call python function
 
 function postData(email, password) {
