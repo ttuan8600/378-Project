@@ -40,7 +40,7 @@ def login():
         #stop loading
         print("its true")
         check1="<div id='check' />"
-        return render_template('index.htm',check=check1)
+        return render_template('index.html',check=check1)
         
 
     
