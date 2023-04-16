@@ -94,7 +94,7 @@ class startChrome:
 
         
     def log_info(self):
-        
+        print("log_info check")
         time.sleep(2)
         self.driver.switch_to.window(self.driver.window_handles[-1])
         while not self.check_exists_by_xpath("//span[@id='DERIVED_SSS_SCL_SSS_LONGCHAR_1']"):
