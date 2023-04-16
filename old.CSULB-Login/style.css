@@ -55,11 +55,9 @@ body::after {
 }
 
 
-
 /*changed to none -> set back to block*/
 
 .email-sign-in-form{
-    
     display: block;
 }
 
