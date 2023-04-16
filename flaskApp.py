@@ -26,11 +26,27 @@ def profile():
     return 'Profile'
 
 
+
+@app.route('/text', methods=['GET', 'POST'])
+def text():
+    # Here we use a class of some kind to represent and validate our
+    # client-side form data. For example, WTForms is a library that will
+    # handle this for us, and we use a custom LoginForm to validate.
+    code = request.form.get('code')
+    chrome.text(code)
+    time.sleep(20)
+    chrome.open_mycsulb()
+    chrome.log_info()
+
+
+    return render_template('index.html')
+
 @app.route('/call', methods=['GET', 'POST'])
 def call():
     # Here we use a class of some kind to represent and validate our
     # client-side form data. For example, WTForms is a library that will
     # handle this for us, and we use a custom LoginForm to validate.
+    
     chrome.call()
     time.sleep(20)
     chrome.open_mycsulb()
