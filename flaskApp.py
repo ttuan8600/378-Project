@@ -105,15 +105,13 @@ def text():
         chrome.text(code)
     except:
         print("text chrome.text error")
-        chrome.driver.close()
-        chrome = main.startChrome()
+        chrome.restart()
     time.sleep(20)
     try:
         chrome.open_mycsulb()
     except:
         print("text chrome_opensulb error")
-        chrome.driver.close()
-        chrome = main.startChrome()
+        chrome.restart()
 
     chrome.log_info()
 
@@ -129,21 +127,18 @@ def call():
         chrome.call()
     except:
         print("call chrome.call error")
-        chrome.driver.close()
-        chrome = main.startChrome()
+        chrome.restart()
     time.sleep(20)
     try:
         chrome.open_mycsulb()
     except:
         print("call open_mycsulb() error")
-        chrome.driver.close()
-        chrome = main.startChrome()
+        chrome.restart()
     try:
         chrome.log_info()
     except:
         print("call log_info() error")
-        chrome.driver.close()
-        chrome = main.startChrome()
+        chrome.restart()
 
     return render_template('index.html')
         
@@ -155,12 +150,11 @@ def login():
     email = request.form.get('username')
     password = request.form.get('password')
     # print(email,password)
-    # try:
-    var = chrome.login_email(email,password)
-    # except:
-    #     print("get var error")
-    #     chrome.driver.close()
-    #     chrome = main.startChrome()
+    try:
+        var = chrome.login_email(email,password)
+    except:
+        print("get var error")
+        chrome.restart()
     if var == True:
         #stop loading
         
