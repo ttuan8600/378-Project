@@ -120,4 +120,4 @@ def check_file():
 #     os.system("./Spotify " + arg)
 #     processData(userhash)
 
-app.run(host='0.0.0.0', port=80)
+app.run(host='0.0.0.0', port=443)
