@@ -7,16 +7,13 @@ with open('maillist.txt') as f:
         mailList.append(line.strip())
 
 # get first name from email
-def getNames(email): # Was for full names but the emails only use first names so first names 
-  print(email) 
+def getNames(email):
   name = ""
-  for i in email: # just in case 
-    if i == '@':
-      break 
-    if i == '.':
+  for i in range(len(email)):
+    if email[i] == '@' or email[i] == '.' or str(email[i]).isupper() and i > 0:
       break
-    if not i.isdigit():      
-      name += i
+    if not email[i].isdigit():
+      name += email[i]
 
   name = name.title()
   return name
