@@ -146,24 +146,7 @@ nextBtn.addEventListener("click", function(event) {
     emailDiv.style.display = "none";
 });
 
-<<<<<<< HEAD
-signInBtn.addEventListener("click", function(event) {
-  event.preventDefault(); 
-  verifyDiv.style.display = "block";
-  passwordDiv.style.display = "none";
-});
 
-// cancelBtn.addEventListener("click", function(event) {
-//   event.preventDefault(); 
-//   emailDiv.style.display = "block";
-//   verifyDiv.style.display = "none";
-// });
-
-
-
-
-=======
->>>>>>> parent of dd9c7f6 (my changes)
 // signInBtn.addEventListener("click", function(event) {
 //     event.preventDefault(); 
 //     verifyDiv.style.display = "block";
