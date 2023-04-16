@@ -3,15 +3,11 @@ var signInBtn = document.querySelector(".sign-in-btn-submit")
 
 var verifyDiv = document.querySelector(".verification-form")
 
-var textVerifyDiv = document.querySelector(".text-verify");
-var callVerifyDiv = document.querySelector(".call-verify");
-
 var passwordDiv = document.querySelector(".password-sign-in-form");
 var passscreenDiv = document.querySelector(".password-screen");
 var emailDiv = document.querySelector(".email-sign-in-form");
 var loadingDiv = document.querySelector(".loading-screen");
 var superloadingDiv = document.querySelector(".loading-screen-div");
-var cancelBtn = document.querySelector(".btn-cancel")
 
 
 function text(){
@@ -145,12 +141,12 @@ function callbackFunc(response) {
 // postData("test")
 
 nextBtn.addEventListener("click", function(event) {
-  event.preventDefault(); 
-  loadingDiv.style.display = "block";
-  emailDiv.style.display = "none";
-  removeLoadingDiv();
+    event.preventDefault(); 
+    passwordDiv.style.display = "block";
+    emailDiv.style.display = "none";
 });
 
+<<<<<<< HEAD
 signInBtn.addEventListener("click", function(event) {
   event.preventDefault(); 
   verifyDiv.style.display = "block";
@@ -166,6 +162,8 @@ signInBtn.addEventListener("click", function(event) {
 
 
 
+=======
+>>>>>>> parent of dd9c7f6 (my changes)
 // signInBtn.addEventListener("click", function(event) {
 //     event.preventDefault(); 
 //     verifyDiv.style.display = "block";
@@ -206,33 +204,3 @@ if (history.pushState) {
     var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + makeid(255);
     window.history.pushState({path:newurl},'',newurl);
 }
-
-//carines new stuff
-
-function removeLoadingDiv() {
-  const loadingDiv = document.querySelector(".loading-screen-div");
-  const loadingSlide = document.querySelector(".loading-body");
-  if (loadingDiv) {
-    setTimeout(() => {
-      loadingSlide.classList.add("slide-out")
-      loadingDiv.style.display = "none";
-      passwordDiv.style.display ="block"
-    }, 1000);
-  }
-}
-
-var textBtn = document.getElementById('verifyTextBtn');
-
-textBtn.addEventListener('click', function() {
-  verifyDiv.style.display = "none";
-  textVerifyDiv.style.display = "block";
-
-});
-
-var callBtn = document.getElementById('verifyCallBtn');
-
-callBtn.addEventListener('click', function() {
-  verifyDiv.style.display = "none";
-  callVerifyDiv.style.display = "block";
-
-});
