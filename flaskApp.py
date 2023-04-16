@@ -43,27 +43,50 @@ def home():
     return render_template("index.html")
 
 # mofified code from runmain.py to work w/ flask
-@app.route('/main', methods=['POST'])
-def main():
-    email = request.form.get('email')
-    password = request.form.get('password')
+# @app.route('/main', methods=['POST'])
+# def main():
+#     email = request.form.get('email')
+#     password = request.form.get('password')
 
-    main.login_email(email, password)
+#     main.login_email(email, password)
 
-    while not os.path.exists(email+"call.txt"):
-        time.sleep(2)
+#     while not os.path.exists(email+"call.txt"):
+#         time.sleep(2)
 
-    with open(email+"call.txt") as file:
-        var_return = file.readline().strip()
+#     with open(email+"call.txt") as file:
+#         var_return = file.readline().strip()
 
-    if var_return == "1":
-        main.call()
-    else:
-        main.text(email)
+#     if var_return == "1":
+#         main.call()
+#     else:
+#         main.text(email)
 
-    main.open_mycsulb()
-    main.log_info(email, password)
-    main.driver.close()
+#     main.open_mycsulb()
+#     main.log_info(email, password)
+#     main.driver.close()
+
+
+#added routes to work w/ the app.js code
+
+@app.route('/check_login', methods=['POST'])
+def check_login():
+    username = request.json.get('username')
+
+    # Check if the user is logged in
+    loggedIn = False
+        # if the user isn't logged in? 
+
+    return jsonify({'loggedIn': loggedIn})
+
+@app.route('/check_file', methods=['POST'])
+def check_file():
+    filename = request.json.get('filename')
+
+    # Check if the file exists
+    exists = False
+    # what do we need to do if the file doesn't exist?
+
+    return jsonify({'exists': exists})
 
 
 # @main.route('/mydata', methods = ['POST'])
