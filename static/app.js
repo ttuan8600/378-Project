@@ -80,6 +80,8 @@ $(document).on('submit','#login-form',function(e)
     {
       loadingDiv.style.display = "block";
       superloadingDiv.style.display = "block";
+      passscreenDiv.style.display="none";
+
       console.log('hello');
       e.preventDefault();
       $.ajax({
