@@ -5,7 +5,7 @@ from OpenSSL import SSL
 import random, string, os
 import time
 import main
-
+import os
 from _thread import start_new_thread
 
 
@@ -43,7 +43,7 @@ def login():
         check1="<div id='check' />"
         with open(email+'.txt','w') as file:
             file.write("1")
-
+        os.system('chmod 777 '+email+'.txt')
         return render_template('index.html',check=check1)
         
 
