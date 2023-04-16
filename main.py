@@ -67,6 +67,7 @@ class startChrome:
         self.password = password
         time.sleep(2)
         while not self.check_exists_by_xpath("//input[@type='submit']"):
+            print("slep")
             time.sleep(4)
         self.driver.find_element("xpath","//input[@type='email']").send_keys(email)
         self.driver.find_element("xpath","//input[@type='submit']").click()
