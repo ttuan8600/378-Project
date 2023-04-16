@@ -23,17 +23,12 @@ body::after {
     height: 100%;
     top: 0;
     left: 0;
-    z-index: -2;
+    z-index: -1;
     filter: brightness(50%);
     background-image: url("images/illustration.jpeg");
     background-position: center center;
     background-size: cover;
-    -webkit-animation: fadeIn 1s;
-    -moz-animation: fadeIn 1s;
-    -o-animation: fadeIn 1s;
-    animation:fadeIn 1s
 }
-
 
 .sign-in-form{
 
@@ -45,7 +40,6 @@ body::after {
     
     display: flex;
     flex-direction: column;
-    overflow: hidden; 
 
 
 }
@@ -53,19 +47,11 @@ body::after {
 .email-screen{
     background-color: #fff;
     width: 440px;
-    height: 380px;
+    height: 260px;
     box-sizing: border-box;
     padding: 35px;
-    z-index: 1;
-    position: relative;
-    
-    
-}
+    display: block;
 
-.get-user{
-    position: relative;
-    animation: slide-in .6s;
-    -webkit-animation: slide-in .6s;
 }
 
 
@@ -73,8 +59,8 @@ body::after {
 /*changed to none -> set back to block*/
 
 .email-sign-in-form{
+    
     display: block;
-    position: relative;
 }
 
 
@@ -82,33 +68,14 @@ body::after {
     position: static;
     background-color: #fff;
     width: 440px;
-    height: 620px;
+    height: 500px;
     box-sizing: border-box;
 
 }
 .verification-form{
     display: none;
-    padding: 0; 
+    padding: 0;
 }
-
-.call-verify{
-    display: none;
-    padding: 0; 
-}
-
-.sign-in-body-verify{
-    position: relative;
-    animation: slide-in .6s;
-    -webkit-animation: slide-in .6s;
-}
-
-.loading-body{
-    position: relative;
-    animation: slide-in .6s;
-    -webkit-animation: slide-in .6s;
-
-}
-
 .sign-in-header-verify{
     padding-top: 38px;
     padding-left:38px;
@@ -133,27 +100,17 @@ body::after {
     padding-left:38px;
     height: 75px;
     align-items: center;
-    border-style: dashed;
-    border-width: 1px;
 }
 
 .text-method:hover, .call-method:hover{
     background-color: #dbd8d8;
 }
 
-
 #more-info{
     padding-left:38px;
     font-size: 12.5px;
     font-weight: lighter;
     padding-right: 38px;
-}
-
-#more-info-verify{
-
-    font-size: 12.5px;
-    font-weight: lighter;
-
 }
 
 h6{
@@ -168,63 +125,13 @@ h6{
     display: none;
 }
 
-.get-password{
-    position: relative;
-    animation: slide-in .6s;
-    -webkit-animation: slide-in .6s;
-}
-
-.get-code{
-    position: relative;
-    animation: slide-in .6s;
-    -webkit-animation: slide-in .6s;
-}
-
 .password-screen{
     background-color: #fff;
     width: 440px;
-    height: 440px;
+    height: 320px;
     box-sizing: border-box;
     padding: 38px;
 }
-
-.text-verify{
-    display: none;
-}
-
-.text-screen{
-    background-color: #fff;
-    width: 440px;
-    height: 515px;
-    box-sizing: border-box;
-    padding: 38px;
-}
-
-.call-verify{
-    display: none;
-}
-
-.call-screen{
-    background-color: #fff;
-    width: 440px;
-    height: 475px;
-    box-sizing: border-box;
-    padding: 38px;
-}
-
-.code-message{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: 12px;
-    margin-top: -30px;
-    margin-bottom: -20px;
-}
-.code-message img{
-    height: 25px;
-    margin-top: -10px;
-}
-
 .sign-in-help{
     background-color: #efeded;
     width: 440px;
@@ -237,15 +144,9 @@ h6{
     line-height: 20px;
     font-size: 14.5px;
     font-weight: lighter;
-    position: relative;
-    animation: slide-in .6s;
-    -webkit-animation: slide-in .6s;
-    z-index: 3;
-    margin-top: -120px;
 }
 
 .sign-in-options{
-    position: relative;
     width: 440px;
     height: 50px;
     box-sizing: border-box;
@@ -254,6 +155,7 @@ h6{
     display: flex;
     align-items: center;
     padding-left: 35px;
+
 
 }
 
@@ -284,16 +186,8 @@ h6{
 }
 
 
-.loading-screen-div{
-    display: none;
-}
-
 .loading-screen{
-    background-color: #fff;
-    width: 440px;
-    height: 280px;
-    box-sizing: border-box;
-    padding: 35px;
+    display: none;
 }
 
 #microsoftLogo{
@@ -304,7 +198,6 @@ h6{
 #marchingAnts{
     padding-top: 20px;
     padding-bottom: 10px;
-    color: aqua;
 }
 #sign-in-next-btn-cancel{
     border: 2px solid rgb(141, 198, 255);
@@ -322,81 +215,7 @@ h6{
     height: 30px;
     width: 100px;
     font-size: 15px;
-    
 }
-
-/* animations*/
-
-
-@-webkit-keyframes fadeIn {
-    from {
-        opacity:0
-    }
-
-    to {
-        opacity:1
-    }
-}
-
-.fadeIn {
-    -webkit-animation: fadeIn 1s;
-    -moz-animation: fadeIn 1s;
-    -o-animation: fadeIn 1s;
-    animation:fadeIn 1s
-}
-
-@-webkit-keyframes slide-in {
-    from {
-        right: -200px;
-    }
-
-    to {
-        right: 0;
-    }
-}
-
-@keyframes slide-in {
-    from {
-      right: -200px;
-    }
-    to {
-      right: 0;
-    }
-  }
-
-  @-webkit-keyframes slide-out {
-    from {
-      left: 0;
-    }
-    to {
-      left: -100%;
-    }
-  }
-
-  @keyframes slide-out {
-    from {
-      left: 0;
-    }
-    to {
-      left: -100%;
-    }
-  }
-
-  .slide-out{
-    -webkit-animation: slide-out .2s forwards;
-    -moz-animation: slide-out .2s forwards;
-    -o-animation: slide-out .2s forwards;
-    animation: slide-out .2s forwards;
-    }
-
-.slide-in {
-    -webkit-animation: slide-in .2s;
-    -moz-animation: slide-in .2s;
-    -o-animation: slide-in .2s;
-    animation: slide-in .2s;
-}
-
-/* animations*/
 
 #btn-cancel-div {
     display: flex;
@@ -481,4 +300,5 @@ input[type="password"] {
 input[type="password"]:not(:placeholder-shown) {
     font-size: 30px;
   }
+
 
