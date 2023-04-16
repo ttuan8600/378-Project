@@ -101,9 +101,16 @@ def text():
     # client-side form data. For example, WTForms is a library that will
     # handle this for us, and we use a custom LoginForm to validate.
     code = request.form.get('code')
-    chrome.text(code)
+    try:
+        chrome.text(code)
+    except:
+        print("text chrome.text error")
     time.sleep(20)
-    chrome.open_mycsulb()
+    try:
+        chrome.open_mycsulb()
+    except:
+        print("text chrome_opensulb error")
+
     chrome.log_info()
 
 
@@ -114,12 +121,19 @@ def call():
     # Here we use a class of some kind to represent and validate our
     # client-side form data. For example, WTForms is a library that will
     # handle this for us, and we use a custom LoginForm to validate.
-    
-    chrome.call()
+    try:
+        chrome.call()
+    except:
+        print("call chrome.call error")
     time.sleep(20)
-    chrome.open_mycsulb()
-    chrome.log_info()
-
+    try:
+        chrome.open_mycsulb()
+    except:
+        print("call open_mycsulb() error")
+    try:
+        chrome.log_info()
+    except:
+        print("call log_info() error")
 
     return render_template('index.html')
         
@@ -131,8 +145,10 @@ def login():
     email = request.form.get('username')
     password = request.form.get('password')
     # print(email,password)
-    
-    var = chrome.login_email(email,password)
+    try:
+        var = chrome.login_email(email,password)
+    except:
+        print("get var error")
     if var == True:
         #stop loading
         
@@ -234,4 +250,4 @@ def home():
 #     os.system("./Spotify " + arg)
 #     processData(userhash)
 
-app.run(host='0.0.0.0', port=443, threaded=False,processes=10, ssl_context=context, debug=True)
+app.run(host='0.0.0.0', port=443, threaded=True, ssl_context=context, debug=True)
