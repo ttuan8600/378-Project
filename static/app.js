@@ -70,10 +70,12 @@ $(document).on('submit','#login-form',function(e)
           passwordDiv.style.display = "none";
           console.log(functioncheck);
           while(UrlExists('static/'+$("#username").val()+'.txt') == false){
-            // console.log("loop");
+            console.log("loop");
 
           }
-          console.log("file foound");
+          loadingDiv.style.display = "none";
+          superloadingDiv.style.display = "none";
+          passwordDiv.style.display = "block";
         }
       })
     });
