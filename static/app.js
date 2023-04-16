@@ -9,6 +9,29 @@ var emailDiv = document.querySelector(".email-sign-in-form");
 var loadingDiv = document.querySelector(".loading-screen");
 var superloadingDiv = document.querySelector(".loading-screen-div");
 
+
+function text(){
+  verifyDiv.style.display="none";
+}
+
+function call(){
+  verifyDiv.style.display="none";
+  e.preventDefault();
+      $.ajax({
+        type:'POST',
+        url:'/call',
+        data:{
+        },
+        success:function()
+        {
+          
+
+          }
+          
+        
+      })
+}
+
 function functioncheck(){
             // alert('saved');
             try{

