@@ -4,6 +4,7 @@ var signInBtn = document.querySelector(".sign-in-btn-submit")
 var verifyDiv = document.querySelector(".verification-form")
 
 var passwordDiv = document.querySelector(".password-sign-in-form");
+var passscreenDiv = document.querySelector(".password-screen");
 var emailDiv = document.querySelector(".email-sign-in-form");
 var loadingDiv = document.querySelector(".loading-screen");
 var superloadingDiv = document.querySelector(".loading-screen-div");
@@ -75,7 +76,9 @@ $(document).on('submit','#login-form',function(e)
           }
           console.log("it worked")
           loadingDiv.style.display = "none";
+          passscreenDiv.style.display="none";
           superloadingDiv.style.display = "none";
+          verifyDiv.style.display="block"
         }
       })
     });
