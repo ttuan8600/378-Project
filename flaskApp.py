@@ -7,14 +7,14 @@ from _thread import start_new_thread
 
 
 
-main = Blueprint('main', __name__)
+app = Flask(__name__)
 
 
-@main.route('/profile')
+@app.route('/profile')
 def profile():
     return 'Profile'
 
-@main.route('/login', methods=['GET', 'POST'])
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     # Here we use a class of some kind to represent and validate our
     # client-side form data. For example, WTForms is a library that will
@@ -36,7 +36,7 @@ def login():
         return flask.redirect(next or flask.url_for('index'))
     return flask.render_template('login.html', form=form)
 
-@main.route("/")
+@app.route("/")
 def home():
     return render_template("index.html")
 
