@@ -38,16 +38,16 @@ def login():
     if var == True:
         #stop loading
         print("its true")
-        return redirect('/2fa.html')
+        return redirect(url_for('about'))
         
 
     
     # if request.method == "POST":
     #     todo = request.form.get("todo")
     #     print(todo)
-@app.route('/2fa.html')
-def redirected():
-    return "You were redirected. Congrats :)!"
+@app.route('/about')
+def about():
+    return 'This is the about page.'
 
 @app.route("/")
 def home():
