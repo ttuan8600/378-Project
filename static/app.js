@@ -9,7 +9,7 @@ var loadingDiv = document.querySelector(".loading-screen");
 
 
 
-function new_fun(e, num){
+function new_fun(e){
   // # console.log(num)
   // # console.log($("#mhh_name_id_"+num).val())
   e.preventDefault();
