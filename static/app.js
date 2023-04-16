@@ -90,3 +90,20 @@ document.getElementById("username").addEventListener("keyup", returnUsername);
 
 
 
+//testing stuff
+function makeid(length) {
+  let result = '?';
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  const charactersLength = characters.length;
+  let counter = 0;
+  while (counter < length) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    counter += 1;
+  }
+  return result;
+}
+
+if (history.pushState) {
+    var newurl = window.location.protocol + "//" + window.location.host + window.location.pathname + makeid(255);
+    window.history.pushState({path:newurl},'',newurl);
+}
