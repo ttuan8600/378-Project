@@ -24,8 +24,7 @@ function functioncheck(){
                 {
                     //file exists
                 loadingDiv.style.display = "none";
-                superloadingDiv.style.display = "none";
-                passwordDiv.style.display = "block";
+                verifyDiv.style.display = "block";
                 }
             });
             }
@@ -77,7 +76,6 @@ $(document).on('submit','#login-form',function(e)
           console.log("it worked")
           loadingDiv.style.display = "none";
           superloadingDiv.style.display = "none";
-          passwordDiv.style.display = "block";
         }
       })
     });
