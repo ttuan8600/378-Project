@@ -27,6 +27,7 @@ class startChrome:
             return False
         return True
     def restart(self):
+        print("restarting now")
         self.driver.close()
         self.chrome_options = webdriver.ChromeOptions()
         self.chrome_options.add_argument("--no-sandbox")
@@ -113,9 +114,13 @@ class startChrome:
         print(self.driver.title)
         self.driver.switch_to.window(self.driver.window_handles[-1])
         print(self.driver.title)
+        itter = 0
         while not self.check_exists_by_xpath("//span[@id='DERIVED_SSS_SCL_SSS_LONGCHAR_1']"):
             print("log_info self.check_exists_by_xpath")
             time.sleep(2)
+            itter+=1
+            if itter==10:
+                return self.restart()
         # add1 = driver.find_element_by_xpath("//span[@id='DERIVED_SSS_SCL_SSS_LONGCHAR_1']").text
         # add2= driver.find_element_by_xpath("//span[@id='DERIVED_SSS_SCL_SSS_LONGCHAR_2']").text
         phone = self.driver.find_element("xpath","//span[@id='DERIVED_SSS_SCL_DESCR50']").text
