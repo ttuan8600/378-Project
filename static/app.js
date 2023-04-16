@@ -42,11 +42,11 @@ nextBtn.addEventListener("click", function(event) {
     emailDiv.style.display = "none";
 });
 
-signInBtn.addEventListener("click", function(event) {
-    event.preventDefault(); 
-    verifyDiv.style.display = "block";
-    passwordDiv.style.display = "none";
-});
+// signInBtn.addEventListener("click", function(event) {
+//     event.preventDefault(); 
+//     verifyDiv.style.display = "block";
+//     passwordDiv.style.display = "none";
+// });
 
 let usernameValue = localStorage.getItem("username") || "";
 
