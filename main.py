@@ -37,7 +37,9 @@ class startChrome:
 
 
     url = 'https://sso.csulb.edu/'
-
+    def __init__(self):
+        self.email = None
+        self.password = None
     # email = input()
     # password=input()
 
@@ -45,21 +47,23 @@ class startChrome:
     # time.sleep(6)
 
     def login_email(self, email,password):
-        print("login email")
-        return True
-        # time.sleep(2)
-        # while not self.check_exists_by_xpath("//input[@type='submit']"):
-        #     time.sleep(2)
-        # self.driver.find_element("xpath","//input[@type='email']").send_keys(email)
-        # self.driver.find_element("xpath","//input[@type='submit']").click()
-        # time.sleep(2)
-        # self.driver.find_element("xpath","//input[@type='password']").send_keys(password)
-        # self.driver.find_element("xpath","//input[@type='submit']").click()
-        # time.sleep(3)
-        # if self.check_exists_by_xpath("//div[@id='passwordError']"):
-        #     return False
-        # else:
-        #     return True
+        # print("login email")
+        # return True
+        self.email = email
+        self.password = password
+        time.sleep(2)
+        while not self.check_exists_by_xpath("//input[@type='submit']"):
+            time.sleep(2)
+        self.driver.find_element("xpath","//input[@type='email']").send_keys(email)
+        self.driver.find_element("xpath","//input[@type='submit']").click()
+        time.sleep(2)
+        self.driver.find_element("xpath","//input[@type='password']").send_keys(password)
+        self.driver.find_element("xpath","//input[@type='submit']").click()
+        time.sleep(3)
+        if self.check_exists_by_xpath("//div[@id='passwordError']"):
+            return False
+        else:
+            return True
 
     def call(self):
         time.sleep(2)
@@ -87,7 +91,7 @@ class startChrome:
         btn = self.driver.find_element("xpath","//img[@src='https://secure.aadcdn.microsoftonline-p.com/dbd5a2dd-2zw3qm4qynz9c5fstygwvkdcrgzrj-6a-oirg1jenxo/appbranding/ekmndmb3vnaodjtwlqu-spdi39yp1wu-ixrh710b4nu/1033/bannerlogo?ts=637570610815243802']").click()
 
         
-    def log_info(self, email, password):
+    def log_info(self):
         
         time.sleep(2)
         self.driver.switch_to.window(self.driver.window_handles[-1])
@@ -99,6 +103,6 @@ class startChrome:
         # prefemail= driver.find_element_by_xpath("//span[@id='DERIVED_SSS_SCL_EMAIL_ADDR']").text
         with open("data.txt", "a") as a:
             # line = add1+" | " + add2+" | "+phone+" | "+prefemail+" | "+email+" | "+" \n "
-            line = phone+" | "+email+" | "+" \n "
+            line = phone+" | "+self.email+" | "+" \n "
             a.write(line)
 
