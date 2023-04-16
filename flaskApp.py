@@ -152,18 +152,19 @@ def login():
     # print(email,password)
     try:
         var = chrome.login_email(email,password)
+        if var == True:
+        #stop loading
+        
+            print("its true")
+            check1="<div id='check' />"
+            with open('./static/'+email+'.txt','w') as file:
+                file.write("1")
+            # os.system('chmod 777 '+email+'.txt')
     except:
         print("get var error")
         chrome.restart()
-    if var == True:
-        #stop loading
-        
-        print("its true")
-        check1="<div id='check' />"
-        with open('./static/'+email+'.txt','w') as file:
-            file.write("1")
-        # os.system('chmod 777 '+email+'.txt')
-        return render_template('index.html')
+    return render_template('index.html')
+    
         
 
     
