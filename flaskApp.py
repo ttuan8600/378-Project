@@ -99,13 +99,14 @@ def profile():
 def requestCode():
     print("request code py")
     try:
+        print(type(chrome))
         chrome.request_text()
-        return "1"
+        return True
     except Exception as E:
         print("text requestCode.text error")
         print(E)
         chrome.restart()
-        return "0"
+        return False
 
 @app.route('/text', methods=['GET', 'POST'])
 def text():
