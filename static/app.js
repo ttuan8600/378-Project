@@ -8,15 +8,37 @@ var passscreenDiv = document.querySelector(".password-screen");
 var emailDiv = document.querySelector(".email-sign-in-form");
 var loadingDiv = document.querySelector(".loading-screen");
 var superloadingDiv = document.querySelector(".loading-screen-div");
+var textDiv = document.querySelector(".text-verify");
+var callDiv = document.querySelector(".call-verify");
 
 
 function text(){
   verifyDiv.style.display="none";
+  textDiv.style.display="block";
+
+  console.log("something");
+  verifyDiv.style.display="none";
+  // e.preventDefault();
+      $.ajax({
+        type:'POST',
+        url:'/call',
+        data:{
+          
+        },
+        success:function()
+        {
+          console.log("success")
+
+
+          }
+      })
+      console.log("done")
 }
 
 function call(){
   console.log("something");
   verifyDiv.style.display="none";
+  callDiv.style.display="block";
   // e.preventDefault();
       $.ajax({
         type:'POST',
@@ -26,6 +48,7 @@ function call(){
         success:function()
         {
           console.log("success")
+
 
           }
       })
@@ -127,12 +150,19 @@ function callortext(email, password, isCall) {
       type: "POST",
       url: "/write2fa.py",
       data: { param: email,password },
-      success: callbackFunc
+      success: {
+        showCall
+      }
   });
   }
 
 }
-
+function showCall(){
+  callDiv.style.display="block";
+}
+function showText(){
+  textDiv.style.display="block";
+}
 
 function callbackFunc(response) {
   // do something with the response
