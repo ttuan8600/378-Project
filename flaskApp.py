@@ -97,6 +97,7 @@ def profile():
 
 @app.route('/requestCode', methods=['GET','POST'])
 def requestCode():
+    print("request code py")
     try:
         chrome.request_text()
     except:
