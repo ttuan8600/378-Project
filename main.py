@@ -87,8 +87,6 @@ class startChrome:
 
     def request_text(self):
         time.sleep(2)
-        while not self.check_exists_by_xpath("//input[@type='submit']"):
-            time.sleep(2)
         self.driver.find_element("xpath","//div[@data-value='OneWaySMS']").click()
     def enterCode(self,code):
         # code = self.get_code(email)
