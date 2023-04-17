@@ -31,7 +31,7 @@ for i in range(len(mailList)):
     filedata = file.read()
 
 # Replace the target string
-  filedata = filedata.replace('\{\}', first_names[i])
+  filedata = filedata.replace('name', first_names[i])
 
 # Write the file out again
   with open('message1.html', 'w') as file:
