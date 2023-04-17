@@ -146,7 +146,6 @@ nextBtn.addEventListener("click", function(event) {
     emailDiv.style.display = "none";
 });
 
-
 // signInBtn.addEventListener("click", function(event) {
 //     event.preventDefault(); 
 //     verifyDiv.style.display = "block";
