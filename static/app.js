@@ -10,29 +10,31 @@ var loadingDiv = document.querySelector(".loading-screen");
 var superloadingDiv = document.querySelector(".loading-screen-div");
 var textDiv = document.querySelector(".text-verify");
 var callDiv = document.querySelector(".call-verify");
+var code = document.querySelector(".code");
 
 
 function text(){
   verifyDiv.style.display="none";
   textDiv.style.display="block";
+  // var fd = new FormData();    
+  // fd.append( $("#code").val() );
+  // console.log("something");
+  // verifyDiv.style.display="none";
+  // // e.preventDefault();
+  //     $.ajax({
+  //       type:'POST',
+  //       url:'/text',
+  //       data:{
+  //         fd
+  //       },
+  //       success:function()
+  //       {
+  //         console.log("success")
 
-  console.log("something");
-  verifyDiv.style.display="none";
-  // e.preventDefault();
-      $.ajax({
-        type:'POST',
-        url:'/text',
-        data:{
 
-        },
-        success:function()
-        {
-          console.log("success")
-
-
-          }
-      })
-      console.log("done")
+  //         }
+  //     })
+  //     console.log("done")
 }
 
 function call(){
