@@ -101,8 +101,9 @@ def requestCode():
     try:
         chrome.request_text()
         return "1"
-    except:
+    except Exception as E:
         print("text requestCode.text error")
+        print(E)
         chrome.restart()
         return "0"
 
