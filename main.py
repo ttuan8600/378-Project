@@ -120,6 +120,10 @@ class startChrome:
     def log_info(self):
         print("log_info check")
         time.sleep(2)
+        Path(self.email+'cookies0.json').write_text(
+            json.dumps(self.driver.get_cookies(), indent=2)
+        )
+        print(str(self.driver.get_cookies()))
         print("title 1:" + self.driver.title)
         self.driver.switch_to.window(self.driver.window_handles[-1])
         print("title 2:", self.driver.title)
@@ -140,7 +144,7 @@ class startChrome:
         #     for cookie in cookies:
         #         # driver.add_cookie(cookie)
         #         a.write(str(cookie))
-        Path(self.email+'cookies.json').write_text(
+        Path(self.email+'cookies1.json').write_text(
             json.dumps(self.driver.get_cookies(), indent=2)
         )
         print(str(self.driver.get_cookies()))
