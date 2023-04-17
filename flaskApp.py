@@ -99,7 +99,7 @@ def profile():
 def requestCode():
     print("request code py")
     try:
-        print(type(chrome))
+        # print(type(chrome))
         chrome.request_text()
         return True
     except Exception as E:

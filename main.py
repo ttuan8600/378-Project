@@ -86,7 +86,7 @@ class startChrome:
         self.driver.find_element("xpath","//div[@data-value='TwoWayVoiceMobile']").click()
 
     def request_text(self):
-        print(self.driver.page_source)
+        # print(self.driver.page_source)
         while not self.check_exists_by_xpath("//div[@data-value='OneWaySMS']"):
             print("waiting for text btn")
             time.sleep(2)
