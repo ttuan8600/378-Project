@@ -21,9 +21,9 @@ function text(){
   // e.preventDefault();
       $.ajax({
         type:'POST',
-        url:'/call',
+        url:'/text',
         data:{
-          
+
         },
         success:function()
         {
