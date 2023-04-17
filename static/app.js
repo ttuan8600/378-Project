@@ -13,7 +13,7 @@ var callDiv = document.querySelector(".call-verify");
 var code = document.querySelector(".code");
 
 
-function text(){
+function requestCode(){
   verifyDiv.style.display="none";
   textDiv.style.display="block";
 
@@ -33,6 +33,51 @@ function text(){
       })
       console.log("done")
 }
+
+function text(){
+  console.log("something");
+  verifyDiv.style.display="none";
+  callDiv.style.display="block";
+  // e.preventDefault();
+      $.ajax({
+        type:'POST',
+        url:'/text',
+        data:{
+        },
+        success:function()
+        {
+          console.log("success")
+
+
+          }
+      })
+      console.log("done")
+}
+$(document).on('submit','#text-form',function(e)
+    {
+
+      console.log('textform');
+      e.preventDefault();
+      $.ajax({
+        type:'POST',
+        url:'/text',
+        data:{
+          code:$("#code").val()
+        },
+        success:function()
+        {
+          // passwordDiv.style.display = "none";
+          console.log(functioncheck);
+          
+          console.log("code worked")
+          // loadingDiv.style.display = "none";
+          // passscreenDiv.style.display="none";
+          // superloadingDiv.style.display = "none";
+          // verifyDiv.style.display="block"
+        }
+      })
+    });
+
 
 function call(){
   console.log("something");
