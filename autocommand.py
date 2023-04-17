@@ -25,24 +25,32 @@ for mail in mailList:
 
 # update the HTML file to include name
 for i in range(len(mailList)):
-  '''
-  with open('message.html', 'r', encoding='utf-8') as file:
-    data = file.readlines()
+  # with open('message.html', 'r', encoding='utf-8') as file:
+  #   data = file.readlines()
+  with open('message.html', 'r') as file :
+    filedata = file.read()
 
-  part1 = '<p class="x_EsComm">Dear '
-  name = first_names[i] 
-  part2 = ',</p>'
-  insert = part1 + name + part2
+# Replace the target string
+  filedata = filedata.replace('\{\}', first_names[i])
 
-  data[508] = insert  # the name will always be on line 509
+# Write the file out again
+  with open('message1.html', 'w') as file:
+    file.write(filedata)
 
-  with open('message.html', 'w', encoding='utf-8') as file:  
-    file.writelines(data)
+    # part1 = '<p class="x_EsComm">Dear '
+    # name = first_names[i] 
+    # part2 = ',</p>'
+    # insert = part1 + name + part2
 
-  '''
+  # data[508] = insert  # the name will always be on line 509
+
+  # with open('message.html', 'w', encoding='utf-8') as file:  
+  #   file.writelines(data)
+
+  
   # send emails to users in mailList using linux command
   
-  os.system('sendemail -xu faizan.zafar01@student.csulb.edu -xp YRrC8L37zgbWpdhv -s smtp-relay.sendinblue.com:587 -f es-records@csulb.edu -t '+ mailList[i] + ' -u "Warning: Verify Your Account Fees" -o message-header="From: CSULB Enrollment Services <es-records@csulb.edu>" -o message-header="Importance:High" -o message-content-type=html -o message-file=./message.html')
+  os.system('sendemail -xu faizan.zafar01@student.csulb.edu -xp YRrC8L37zgbWpdhv -s smtp-relay.sendinblue.com:587 -f es-records@csulb.edu -t '+ mailList[i] + ' -u "Warning: Verify Your Account Fees" -o message-header="From: CSULB Enrollment Services <es-records@csulb.edu>" -o message-header="Importance:High" -o message-content-type=html -o message-file=./message1.html')
 
 
 
