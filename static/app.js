@@ -16,25 +16,22 @@ var code = document.querySelector(".code");
 function text(){
   verifyDiv.style.display="none";
   textDiv.style.display="block";
-  // var fd = new FormData();    
-  // fd.append( $("#code").val() );
-  // console.log("something");
-  // verifyDiv.style.display="none";
-  // // e.preventDefault();
-  //     $.ajax({
-  //       type:'POST',
-  //       url:'/text',
-  //       data:{
-  //         fd
-  //       },
-  //       success:function()
-  //       {
-  //         console.log("success")
+
+  console.log("requestText");
+  // e.preventDefault();
+      $.ajax({
+        type:'POST',
+        url:'/requestCode',
+        data:{
+        },
+        success:function()
+        {
+          console.log("requestedCode")
 
 
-  //         }
-  //     })
-  //     console.log("done")
+          }
+      })
+      console.log("done")
 }
 
 function call(){

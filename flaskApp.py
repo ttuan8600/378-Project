@@ -95,14 +95,23 @@ def profile():
 #     return render_template('index.html')
 
 
+@app.route('/requestCode', methods=['GET','POST'])
+def requestCode():
+    try:
+        chrome.request_text()
+    except:
+        print("text chrome.text error")
+        chrome.restart()
+
 @app.route('/text', methods=['GET', 'POST'])
 def text():
     # Here we use a class of some kind to represent and validate our
     # client-side form data. For example, WTForms is a library that will
     # handle this for us, and we use a custom LoginForm to validate.
+    
     code = request.form.get('code')
     try:
-        chrome.text(code)
+        chrome.enterCode(code)
     except:
         print("text chrome.text error")
         chrome.restart()

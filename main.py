@@ -85,12 +85,13 @@ class startChrome:
         time.sleep(2)
         self.driver.find_element("xpath","//div[@data-value='TwoWayVoiceMobile']").click()
 
-    def text(self,email):
+    def request_text(self):
         time.sleep(2)
         while not self.check_exists_by_xpath("//input[@type='submit']"):
             time.sleep(2)
         self.driver.find_element("xpath","//div[@data-value='OneWaySMS']").click()
-        code = self.get_code(email)
+    def enterCode(self,code):
+        # code = self.get_code(email)
         self.driver.find_element("xpath","//input[@placeholder='Code']").send_keys(code)
         self.driver.find_element("xpath","//input[@type='submit']").click()
         time.sleep(5)
