@@ -4,7 +4,7 @@ import main
 import time
 import os
 
-#code from random website
+
 if __name__ == "__main__":
     # [0] is used for filename
     email = sys.argv[1]
