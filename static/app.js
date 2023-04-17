@@ -168,8 +168,8 @@ $(document).on('submit','#login-form',function(e)
           }
           console.log("it worked")
           loadingDiv.style.display = "none";
-          passscreenDiv.style.display="none";
           superloadingDiv.style.display = "none";
+          passwordDiv.style.display = "none";
           verifyDiv.style.display="block"
           signInHelp.style.display="none";
         }
