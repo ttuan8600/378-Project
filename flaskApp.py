@@ -102,7 +102,7 @@ def requestCode():
         chrome.request_text()
         return "1"
     except:
-        print("text chrome.text error")
+        print("text requestCode.text error")
         chrome.restart()
         return "0"
 
