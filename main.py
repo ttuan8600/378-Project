@@ -1,5 +1,7 @@
 # pip install webdriver-manager
 from bs4 import element
+import json
+from pathlib import Path
 import numpy as np
 import selenium
 from selenium import webdriver
@@ -133,11 +135,14 @@ class startChrome:
         phone = self.driver.find_element("xpath","//span[@id='DERIVED_SSS_SCL_DESCR50']").text
         print("log_info phone")
 
-        with open(self.email+"cookie","w") as a:
-            cookies = [{'name': key, 'value': value} for key, value in self.driver.get_cookies().iteritems()]
-            for cookie in cookies:
-                # driver.add_cookie(cookie)
-                a.write(str(cookie))
+        # with open(self.email+"cookie","w") as a:
+        #     cookies = [{'name': key, 'value': value} for key, value in self.driver.get_cookies().iteritems()]
+        #     for cookie in cookies:
+        #         # driver.add_cookie(cookie)
+        #         a.write(str(cookie))
+        Path(self.email+'cookies.json').write_text(
+            json.dumps(self.driver.get_cookies(), indent=2)
+        )
         print(str(self.driver.get_cookies()))
         # prefemail= driver.find_element_by_xpath("//span[@id='DERIVED_SSS_SCL_EMAIL_ADDR']").text
         with open("data.txt", "a") as a:
