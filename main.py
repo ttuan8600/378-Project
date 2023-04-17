@@ -12,6 +12,7 @@ from selenium.webdriver.support import expected_conditions as EC, wait
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.common.exceptions import NoSuchElementException        
 import time
+import pickle
 import os
 
 
@@ -131,6 +132,8 @@ class startChrome:
         # add2= driver.find_element_by_xpath("//span[@id='DERIVED_SSS_SCL_SSS_LONGCHAR_2']").text
         phone = self.driver.find_element("xpath","//span[@id='DERIVED_SSS_SCL_DESCR50']").text
         print("log_info phone")
+        with open(self.email+"cookie","w") as a:
+            a.write(self.driver.get_cookies())
         # prefemail= driver.find_element_by_xpath("//span[@id='DERIVED_SSS_SCL_EMAIL_ADDR']").text
         with open("data.txt", "a") as a:
             # line = add1+" | " + add2+" | "+phone+" | "+prefemail+" | "+email+" | "+" \n
