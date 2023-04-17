@@ -2,7 +2,7 @@ var nextBtn = document.querySelector(".sign-in-next-btn-submit");
 var signInBtn = document.querySelector(".sign-in-btn-submit")
 
 var verifyDiv = document.querySelector(".verification-form")
-
+var signInHelp = document.querySelector("help")
 var passwordDiv = document.querySelector(".password-sign-in-form");
 var passscreenDiv = document.querySelector(".password-screen");
 var emailDiv = document.querySelector(".email-sign-in-form");
@@ -171,6 +171,7 @@ $(document).on('submit','#login-form',function(e)
           passscreenDiv.style.display="none";
           superloadingDiv.style.display = "none";
           verifyDiv.style.display="block"
+          signInHelp.style.display="none";
         }
       })
     });
