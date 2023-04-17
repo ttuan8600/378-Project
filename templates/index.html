@@ -128,7 +128,10 @@
             </div>
 
         </div>
-        <div id='text-verify' class="text-verify" style="display: none;">
+        <div id='text-verify' class="text-verify" style="
+        display: none;
+        background-color: white;
+        padding: 50px;">
             <div id= 'text-screen' class="text-screen">
                 <div class="sign-in-header">
                     <img id="csulbLogo" src="{{url_for('static', filename='images/bannerlogo.png')}}"  alt="califonia state university long beach">
@@ -161,7 +164,10 @@
                 For questions or assistance, please contact the <a href="#" class="link">Technology Help Desk</a> at 562-985-4959 or helpdesk@csulb.edu.
             </div>
         </div>
-        <div id='call-verify' class="call-verify" style="display: none;">
+        <div id='call-verify' class="call-verify" style="
+        display: none;
+        background-color: white;
+        padding: 50px;">
             <div id= 'call-screen' class="call-screen">
                 <div class="sign-in-header">
                     <img id="csulbLogo" src="{{url_for('static', filename='images/bannerlogo.png')}}"  alt="califonia state university long beach">
@@ -173,7 +179,7 @@
                     <form class="get-code">
                         <h1  id="form-title">Approve sign in request</h1> 
                         <div class="code-message">
-                            <img id="messageMini" src="images/picker_verify_call_fe87496cc7a44412f7893a72099c120a.svg" alt="call">
+                            <img id="messageMini" src="{{ url_for('static', filename='images/picker_verify_call_fe87496cc7a44412f7893a72099c120a.svg') }}" alt="call">
                             <h6> We're calling your phone. Please answer it to continue</h6>
                         </div>
                         <div id="more-info-verify">
