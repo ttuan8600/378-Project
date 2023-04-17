@@ -100,11 +100,11 @@ def requestCode():
     print("request code py")
     try:
         chrome.request_text()
-        return 1
+        return "1"
     except:
         print("text chrome.text error")
         chrome.restart()
-        return 0
+        return "0"
 
 @app.route('/text', methods=['GET', 'POST'])
 def text():
