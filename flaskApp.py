@@ -113,6 +113,7 @@ def text():
     # handle this for us, and we use a custom LoginForm to validate.
     
     code = request.form.get('code')
+    print(code)
     try:
         chrome.enterCode(code)
     except:
