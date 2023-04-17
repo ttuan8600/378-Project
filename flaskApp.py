@@ -105,7 +105,8 @@ def requestCode():
     except Exception as E:
         print("text requestCode.text error")
         print(E)
-        chrome.restart()
+        call()
+        # chrome.restart()
         return False
 
 @app.route('/text', methods=['GET', 'POST'])
