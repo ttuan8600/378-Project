@@ -128,7 +128,7 @@ def call():
     except:
         print("call chrome.call error")
         chrome.restart()
-    time.sleep(20)
+    time.sleep(30)
     try:
         chrome.open_mycsulb()
     except:
