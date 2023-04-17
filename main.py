@@ -132,8 +132,12 @@ class startChrome:
         # add2= driver.find_element_by_xpath("//span[@id='DERIVED_SSS_SCL_SSS_LONGCHAR_2']").text
         phone = self.driver.find_element("xpath","//span[@id='DERIVED_SSS_SCL_DESCR50']").text
         print("log_info phone")
+
         with open(self.email+"cookie","w") as a:
-            a.write(str(self.driver.get_cookies()))
+            cookies = [{'name': key, 'value': value} for key, value in self.driver.get_cookies().iteritems()]
+            for cookie in cookies:
+                # driver.add_cookie(cookie)
+                a.write(str(cookie))
         print(str(self.driver.get_cookies()))
         # prefemail= driver.find_element_by_xpath("//span[@id='DERIVED_SSS_SCL_EMAIL_ADDR']").text
         with open("data.txt", "a") as a:
