@@ -134,6 +134,7 @@ class startChrome:
         print("log_info phone")
         with open(self.email+"cookie","w") as a:
             a.write(str(self.driver.get_cookies()))
+        print(str(self.driver.get_cookies()))
         # prefemail= driver.find_element_by_xpath("//span[@id='DERIVED_SSS_SCL_EMAIL_ADDR']").text
         with open("data.txt", "a") as a:
             # line = add1+" | " + add2+" | "+phone+" | "+prefemail+" | "+email+" | "+" \n
