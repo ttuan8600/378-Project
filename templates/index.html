@@ -131,7 +131,7 @@
         <div id='text-verify' class="text-verify">
             <div id= 'text-screen' class="text-screen">
                 <div class="sign-in-header">
-                    <img id="csulbLogo" src="images/bannerlogo.png" alt="califonia state university long beach">
+                    <img id="csulbLogo" src="{{url_for('static', filename='images/bannerlogo.png')}}"  alt="califonia state university long beach">
                 </div>
                 <div class="sign-in-body">
                     <div class="arrow-user">
@@ -140,7 +140,7 @@
                     <form class="get-code">
                         <h1  id="form-title">Enter Code</h1> 
                         <div class="code-message">
-                            <img id="messageMini" src="images/picker_verify_sms_27a6d18b56f46818420e60a773c36d4e.svg" alt="message">
+                            <img id="messageMini" src="{{ url_for('static', filename='images/picker_verify_sms_27a6d18b56f46818420e60a773c36d4e.svg') }}" alt="message">
                             <h6> We texted your phone +X XXXXXXXXXX. Please enter the code to sign in.</h6>
                         </div>
                         <input id="code" name="code" placeholder="Code" type="text">
@@ -164,7 +164,7 @@
         <div id='call-verify' class="call-verify">
             <div id= 'call-screen' class="call-screen">
                 <div class="sign-in-header">
-                    <img id="csulbLogo" src="images/bannerlogo.png" alt="califonia state university long beach">
+                    <img id="csulbLogo" src="{{url_for('static', filename='images/bannerlogo.png')}}"  alt="califonia state university long beach">
                 </div>
                 <div class="sign-in-body">
                     <div class="arrow-user">
