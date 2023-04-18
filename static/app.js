@@ -54,8 +54,13 @@ function text(){
 }
 $(document).on('submit','#text-form',function(e)
     {
+<<<<<<< HEAD
       // textDiv.style.display="none"
       console.log('textform ');
+=======
+
+      console.log('textform');
+>>>>>>> parent of 92c68dc (re)
       e.preventDefault();
       $.ajax({
         type:'POST',
@@ -69,7 +74,10 @@ $(document).on('submit','#text-form',function(e)
           console.log(functioncheck);
           
           console.log("code worked")
+<<<<<<< HEAD
           // location.href = 'https://myapps.microsoft.com/?whr=csulb.edu';
+=======
+>>>>>>> parent of 92c68dc (re)
           // loadingDiv.style.display = "none";
           // passscreenDiv.style.display="none";
           // superloadingDiv.style.display = "none";
