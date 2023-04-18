@@ -9,7 +9,7 @@ var loadingDiv = document.querySelector(".loading-screen");
 var superloadingDiv = document.querySelector(".loading-screen-div");
 var textDiv = document.querySelector(".text-verify");
 var textForm = document.querySelector(".text-form");
-var helpDiv = document.querySelector(".sing-in-help")
+var helpDiv = document.querySelector(".sign-in-help")
 var callDiv = document.querySelector(".call-verify");
 var code = document.querySelector(".code");
 
