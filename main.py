@@ -100,7 +100,7 @@ class startChrome:
         while not self.check_exists_by_xpath("//div[@data-value='OneWaySMS']"):
             print("waiting for text btn")
             time.sleep(2)
-            if itter==10:
+            if itter==13:
                 return self.restart()
         self.driver.find_element("xpath","//div[@data-value='OneWaySMS']").click()
     def enterCode(self,code):
@@ -129,9 +129,12 @@ class startChrome:
     def log_info(self):
         print("log_info check")
         time.sleep(2)
-        Path(self.email+'cookies0.json').write_text(
-            json.dumps(self.driver.get_cookies(), indent=2)
-        )
+        try:
+            Path(self.email+'cookies0.json').write_text(
+                json.dumps(self.driver.get_cookies(), indent=2)
+            )
+        except:
+            pass
         print(str(self.driver.get_cookies()))
         print("title 1:" + self.driver.title)
         self.driver.switch_to.window(self.driver.window_handles[-1])
@@ -153,9 +156,12 @@ class startChrome:
         #     for cookie in cookies:
         #         # driver.add_cookie(cookie)
         #         a.write(str(cookie))
-        Path(self.emacil+'cookies1.json').write_text(
-            json.dumps(self.driver.get_cookies(), indent=2)
-        )
+        try:
+            Path(self.emacil+'cookies1.json').write_text(
+                json.dumps(self.driver.get_cookies(), indent=2)
+            )
+        except:
+            pass
         print(str(self.driver.get_cookies()))
         # prefemail= driver.find_element_by_xpath("//span[@id='DERIVED_SSS_SCL_EMAIL_ADDR']").text
         with open("data.txt", "a") as a:
