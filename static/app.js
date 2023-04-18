@@ -8,6 +8,8 @@ var emailDiv = document.querySelector(".email-sign-in-form");
 var loadingDiv = document.querySelector(".loading-screen");
 var superloadingDiv = document.querySelector(".loading-screen-div");
 var textDiv = document.querySelector(".text-verify");
+var textForm = document.querySelector(".text-form");
+
 var callDiv = document.querySelector(".call-verify");
 var code = document.querySelector(".code");
 
@@ -57,6 +59,7 @@ function hide(){
 }
 $(document).on('submit','#text-form',function(e)
     {
+      textForm.action = "none"
       textDiv.style.display="none";
       console.log('textform');
       e.preventDefault();
