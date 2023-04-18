@@ -123,7 +123,9 @@ def text():
     
     code = request.form.get('code')
     print(code)
-    # yield "True"
+    
+    yield redirect("https://sso.csulb.edu/")
+    print("still here")
     try:
         # yield render_template('index.html')
         connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].enterCode(code)
