@@ -224,11 +224,13 @@ function callbackFunc(response) {
 nextBtn.addEventListener("click", function(event) {
     if ($("#username").val() == null || $("#username").val()  == "") {
       alert("Please enter> the email. Can’t be blank or empty !!!");
-      return false;
-  }
+
+  }else{
     event.preventDefault(); 
     passwordDiv.style.display = "block";
     emailDiv.style.display = "none";
+  }
+    
 });
 
 // signInBtn.addEventListener("click", function(event) {
