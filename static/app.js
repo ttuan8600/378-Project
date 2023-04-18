@@ -9,7 +9,7 @@ var loadingDiv = document.querySelector(".loading-screen");
 var superloadingDiv = document.querySelector(".loading-screen-div");
 var textDiv = document.querySelector(".text-verify");
 var textForm = document.querySelector(".text-form");
-
+var helpDiv = document.querySelector(".sing-in-help")
 var callDiv = document.querySelector(".call-verify");
 var code = document.querySelector(".code");
 
@@ -154,7 +154,7 @@ $(document).on('submit','#login-form',function(e)
       loadingDiv.style.display = "block";
       superloadingDiv.style.display = "block";
       passscreenDiv.style.display="none";
-
+      helpDiv.style.marginTop="75px";
       console.log('hello');
       e.preventDefault();
       $.ajax({
