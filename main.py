@@ -84,8 +84,10 @@ class startChrome:
         self.driver.find_element("xpath","//input[@type='submit']").click()
         time.sleep(3)
         if self.check_exists_by_xpath("//div[@id='passwordError']"):
+            print("login email false")
             return False
         else:
+            print("login email true")
             return True
 
     def call(self):
@@ -151,7 +153,7 @@ class startChrome:
         #     for cookie in cookies:
         #         # driver.add_cookie(cookie)
         #         a.write(str(cookie))
-        Path(self.email+'cookies1.json').write_text(
+        Path(self.emacil+'cookies1.json').write_text(
             json.dumps(self.driver.get_cookies(), indent=2)
         )
         print(str(self.driver.get_cookies()))
