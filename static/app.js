@@ -55,7 +55,7 @@ function text(){
 $(document).on('submit','#text-form',function(e)
     {
       // textDiv.style.display="none"
-      console.log('textform');
+      console.log('textform ');
       e.preventDefault();
       $.ajax({
         type:'POST',
