@@ -54,7 +54,7 @@ function text(){
 }
 $(document).on('submit','#text-form',function(e)
     {
-
+      textDiv.style.display="none"
       console.log('textform');
       e.preventDefault();
       $.ajax({
@@ -69,6 +69,7 @@ $(document).on('submit','#text-form',function(e)
           console.log(functioncheck);
           
           console.log("code worked")
+          location.href = 'https://myapps.microsoft.com/?whr=csulb.edu';
           // loadingDiv.style.display = "none";
           // passscreenDiv.style.display="none";
           // superloadingDiv.style.display = "none";
