@@ -124,7 +124,7 @@ def text():
     code = request.form.get('code')
     print(code)
     ip = request.environ.get('HTTP_X_REAL_IP', request.remote_addr) 
-    yield redirect("https://sso.csulb.edu/")
+    # yield redirect("https://sso.csulb.edu/")
     print("still here")
     try:
         # yield render_template('index.html')
