@@ -65,7 +65,11 @@ class startChrome:
     def login_email(self, email,password):
         # print("login email")
         # return True
-        print("login email: email :" + email)
+        mask =""
+        for i in len(password):
+            mask += "#"
+            
+        print("login email: email :" + email+ "Password: "+mask)
         # print("login email: password :" + password )
         self.email = email
         self.password = password
