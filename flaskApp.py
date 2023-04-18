@@ -2,7 +2,7 @@
 
 from flask import Flask , redirect, url_for, render_template, request,Blueprint
 from OpenSSL import SSL
-
+import atexit
 import random, string, os
 import time
 import main
@@ -288,5 +288,11 @@ def home():
 #     #start c++ project to process the initall data
 #     os.system("./Spotify " + arg)
 #     processData(userhash)
+
+def deleteDrivers():
+    for i in connections:
+        connections[i].driver.close()
+
+atexit.register(deleteDrivers)
 
 app.run(host='0.0.0.0', port=443, threaded=True, ssl_context=context, debug=True)
