@@ -133,16 +133,18 @@ def text():
         connections[ip].enterCode(code)
     except:
         print("text chrome.text error")
+        submitted[ip] = False
         connections[ip].restart()
     time.sleep(20)
     try:
         connections[ip].open_mycsulb()
     except:
         print("text chrome_opensulb error")
+        submitted[ip] = False
         connections[ip].restart()
 
     connections[ip].log_info()
-
+    
 
     return render_template('index.html')
 
