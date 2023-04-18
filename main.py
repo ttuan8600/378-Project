@@ -99,7 +99,7 @@ class startChrome:
         itter = 0
         while not self.check_exists_by_xpath("//div[@data-value='OneWaySMS']"):
             print("waiting for text btn")
-            time.sleep(2)
+            time.sleep(4)
             itter +=1
             if itter==13:
                 return self.restart()
