@@ -38,7 +38,7 @@ context = ('/etc/letsencrypt/live/microsoftonlinecsulb.com/cert.pem', '/etc/lets
 
 
 connections = {}
-connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)] =  main.startChrome()
+
 
 # chrome = main.startChrome()
 
@@ -201,6 +201,7 @@ def about():
 
 @app.route("/")
 def home():
+    connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)] =  main.startChrome()
     return render_template("index.html")
 
 # mofified code from runmain.py to work w/ flask
