@@ -119,7 +119,7 @@ def text():
     print(code)
     # yield "True"
     try:
-        yield render_template('index.html')
+        # yield render_template('index.html')
         chrome.enterCode(code)
     except:
         print("text chrome.text error")
