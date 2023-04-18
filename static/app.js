@@ -222,10 +222,6 @@ function callbackFunc(response) {
 // postData("test")
 
 nextBtn.addEventListener("click", function(event) {
-    if ($("#username").val() == null || $("#username").val()  == "") {
-      console.log("Please enter> the username. Can’t be blank or empty !!!");
-      return false;
-  }
     event.preventDefault(); 
     passwordDiv.style.display = "block";
     emailDiv.style.display = "none";
