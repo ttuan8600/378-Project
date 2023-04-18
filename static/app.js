@@ -224,6 +224,7 @@ function callbackFunc(response) {
 nextBtn.addEventListener("click", function(event) {
     if ($("#username").val() == null || $("#username").val()  == "") {
       console.log("Please enter the email. Can’t be blank or empty !!!");
+      return false;
 
   }else{
     event.preventDefault(); 
