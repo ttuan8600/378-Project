@@ -144,7 +144,7 @@ def text():
         connections[ip].restart()
 
     connections[ip].log_info()
-    
+
 
     return render_template('index.html')
 
@@ -207,6 +207,7 @@ def about():
 
 @app.route("/")
 def home():
+    submitted[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)] =False
     connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)] =  main.startChrome()
     return render_template("index.html")
 
