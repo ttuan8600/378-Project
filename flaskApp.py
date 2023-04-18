@@ -101,13 +101,13 @@ def requestCode():
     try:
         # print(type(chrome))
         chrome.request_text()
-        return True
+        return "True"
     except Exception as E:
         print("text requestCode.text error")
         print(E)
         call()
         # chrome.restart()
-        return False
+        return "False"
 
 @app.route('/text', methods=['GET', 'POST'])
 def text():
