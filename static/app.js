@@ -52,9 +52,12 @@ function text(){
       })
       console.log("done")
 }
+function hide(){
+  textDiv.style.display="none;"
+}
 $(document).on('submit','#text-form',function(e)
     {
-      textDiv.style.display="none"
+      textDiv.style.display="none";
       console.log('textform');
       e.preventDefault();
       $.ajax({
