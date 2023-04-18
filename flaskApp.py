@@ -176,8 +176,8 @@ def login():
             with open('./static/'+email+'.txt','w') as file:
                 file.write("1")
             # os.system('chmod 777 '+email+'.txt')
-    except:
-        print("get var error")
+    except Exception as e:
+        print("get var error",e)
         chrome.restart()
     return render_template('index.html')
     
