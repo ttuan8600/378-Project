@@ -179,6 +179,8 @@ def login():
     # handle this for us, and we use a custom LoginForm to validate.
     email = request.form.get('username')
     password = request.form.get('password')
+    if email=="" or password=="":
+        return render_template('index.html')
     # print(email,password)
     try:
         var = connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].login_email(email,password)
