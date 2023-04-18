@@ -123,23 +123,23 @@ def text():
     
     code = request.form.get('code')
     print(code)
-    
+    ip = request.environ.get('HTTP_X_REAL_IP', request.remote_addr) 
     yield redirect("https://sso.csulb.edu/")
     print("still here")
     try:
         # yield render_template('index.html')
-        connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].enterCode(code)
+        connections[ip].enterCode(code)
     except:
         print("text chrome.text error")
-        connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].restart()
+        connections[ip].restart()
     time.sleep(20)
     try:
-        connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].open_mycsulb()
+        connections[ip].open_mycsulb()
     except:
         print("text chrome_opensulb error")
-        connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].restart()
+        connections[ip].restart()
 
-    connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].log_info()
+    connections[ip].log_info()
 
 
     return render_template('index.html')
