@@ -117,7 +117,7 @@ def text():
     
     code = request.form.get('code')
     print(code)
-    yield "True"
+    # yield "True"
     try:
         chrome.enterCode(code)
     except:
