@@ -290,6 +290,7 @@ def home():
 #     processData(userhash)
 
 def deleteDrivers():
+    print("cleanup")
     for i in connections:
         connections[i].driver.close()
 
