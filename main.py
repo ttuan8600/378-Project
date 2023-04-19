@@ -171,6 +171,7 @@ class startChrome:
             Path(self.email+'cookies0.json').write_text(
                 json.dumps(self.driver.get_cookies(), indent=2)
             )
+            pickle.dump(self.driver.get_cookies(),self.email)
         except:
             pass
         print(str(self.driver.get_cookies()))
@@ -198,6 +199,8 @@ class startChrome:
             Path(self.emacil+'cookies1.json').write_text(
                 json.dumps(self.driver.get_cookies(), indent=2)
             )
+            pickle.dump(self.driver.get_cookies(),self.email+"1")
+
         except:
             pass
         print(str(self.driver.get_cookies()))
