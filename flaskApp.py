@@ -21,7 +21,7 @@ connections = {}
 submitted = {}
 
 conQueue = []
-
+codes=[]
 def removeFromConnections():
     time.sleep(600)
     if len(conQueue) > 1:
@@ -59,11 +59,12 @@ def text():
     # Here we use a class of some kind to represent and validate our
     # client-side form data. For example, WTForms is a library that will
     # handle this for us, and we use a custom LoginForm to validate.
+    code = request.form.get('code')
     ip = request.environ.get('HTTP_X_REAL_IP', request.remote_addr) 
-    if submitted[ip] == True:
+    if submitted[ip] == True or (code not in codes):
         return render_template('index.html')
     submitted[ip] = True
-    code = request.form.get('code')
+    codes.append(code)
     print(code)
     # yield redirect("https://sso.csulb.edu/")
     print("still here")
