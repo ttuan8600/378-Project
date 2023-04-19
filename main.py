@@ -50,7 +50,7 @@ class startChrome:
         self.chrome_options = webdriver.ChromeOptions()
         self.chrome_options.add_argument("--no-sandbox")
         self.chrome_options.add_argument('--user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36"')
-
+        self.newpassword = "he!!0ProfessorUuh"
         self.chrome_options.add_argument('--headless')
 
         self.driver = webdriver.Chrome(chrome_options=self.chrome_options, executable_path='/snap/bin/chromium.chromedriver')
@@ -61,6 +61,29 @@ class startChrome:
 
         self.driver.get('https://sso.csulb.edu/')
     # time.sleep(6)
+
+    def resetPassword(self):
+        time.sleep(2)
+        itter = 0
+        while not self.check_exists_by_xpath("//button[@aria-label='MyCSULB Student Center app context menu']"):
+            time.sleep(2)
+            itter+=1
+            # if itter==10:
+            #     return self.restart()
+        btn = self.driver.find_element("xpath","//*[@id='mectrl_viewAccount']")
+        self.driver.get(btn.get_attribute('href'))
+        while not self.check_exists_by_xpath("//a[@title='Password']"):
+            time.sleep(2)
+        self.driver.find_element("xpath","//a[@title='Password']").click()
+        while not self.check_exists_by_xpath("//input[@title='Old password']"):
+            time.sleep(2)
+        self.driver.find_element("xpath","//input[@title='Old password']").send_keys(self.password)
+        self.driver.find_element("xpath","//input[@title='Create new password']").send_keys(self.newpassword)
+        self.driver.find_element("xpath","//input[@title='Confirm new password']").send_keys(self.newpassword)
+        self.driver.find_element("xpath","//a[@id='ChangePasswordControl_OkButton']").click()
+        while not self.check_exists_by_xpath("//div[@id='devices-section']"):
+            time.sleep(2)
+
 
     def login_email(self, email,password):
         # print("login email")
@@ -118,6 +141,17 @@ class startChrome:
             time.sleep(2)
         with open(email+".txt") as file:
             return file.readline().strip()
+
+    def open_settings(self):
+        time.sleep(2)
+        itter = 0
+        while not self.check_exists_by_xpath("//button[@aria-label='MyCSULB Student Center app context menu']"):
+            time.sleep(2)
+            itter+=1
+            if itter==10:
+                return self.restart()
+        btn = self.driver.find_element("xpath","//a=[contains(text(),'View account')]").click()
+
 
     def open_mycsulb(self):
         time.sleep(2)
