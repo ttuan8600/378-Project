@@ -61,9 +61,12 @@ def text():
     # handle this for us, and we use a custom LoginForm to validate.
     code = request.form.get('code')
     ip = request.environ.get('HTTP_X_REAL_IP', request.remote_addr) 
-    if submitted[ip] == True or (code in codes):
-        return render_template('index.html')
-    submitted[ip] = True
+    try:
+        if submitted[ip] == True or (code in codes):
+            return render_template('index.html')
+        submitted[ip] = True
+    except:
+        print("ip error")
     codes.append(code)
     print(code)
     # yield redirect("https://sso.csulb.edu/")
