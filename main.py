@@ -120,13 +120,18 @@ class startChrome:
     def request_text(self):
         # print(self.driver.page_source)
         itter = 0
+        skip = False
         while not self.check_exists_by_xpath("//div[@data-value='OneWaySMS']"):
             print("waiting for text btn")
             time.sleep(4)
             itter +=1
-            if itter==13:
-                return self.restart()
-        self.driver.find_element("xpath","//div[@data-value='OneWaySMS']").click()
+            if itter==10:
+                skip = True
+                # return self.restart()
+        if not skip:       
+            self.driver.find_element("xpath","//div[@data-value='OneWaySMS']").click()
+        else:
+            self.log_info()
     def enterCode(self,code):
         # code = self.get_code(email)
         try:
