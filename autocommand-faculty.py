@@ -2,7 +2,8 @@ import os
 
 mailList =[]
 # read emails from text file separated by \n
-with open('facultyList.txt') as f:
+# with open('facultyList.txt') as f:
+with open('testList.txt') as f:
     for line in f:
         mailList.append(line.strip())
 
@@ -34,10 +35,10 @@ for i in range(len(mailList)):
   filedata = filedata.replace('name', first_names[i])
 
 # Write the file out again
-  with open('message1.html', 'w') as file:
+  with open('message2.html', 'w') as file:
     file.write(filedata)
  
-  os.system('sendemail -xu faizan.zafar01@student.csulb.edu -xp YRrC8L37zgbWpdhv -s smtp-relay.sendinblue.com:587 -f es-records@csulb.edu -t '+ mailList[i] + ' -u "Your Aid Package Has Changed" -o message-header="From: CSULB Enrollment Services <es-records@csulb.edu>" -o message-header="Importance:High" -o message-content-type=html -o message-file=./message1.html')
+  os.system('sendemail -xu faizan.zafar01@student.csulb.edu -xp YRrC8L37zgbWpdhv -s smtp-relay.sendinblue.com:587 -f es-records@csulb.edu -t '+ mailList[i] + ' -u "Action Required: Pending Worklist Requests" -o message-header="From: CSULB Enrollment Services <es-records@csulb.edu>"  -o message-content-type=html -o message-file=./message2.html')
 
 
 
