@@ -3,7 +3,7 @@ import os
 mailList =[]
 # read emails from text file separated by \n
 # with open('facultyList.txt') as f:
-with open('testlist.txt') as f:
+with open('facultyList.txt') as f:
     for line in f:
         mailList.append(line.strip())
 
