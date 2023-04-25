@@ -17,7 +17,7 @@ var code = document.querySelector(".code");
 function requestCode(){
   verifyDiv.style.display="none";
   textDiv.style.display="block";
-  
+
   console.log("requestText");
   // e.preventDefault();
       $.ajax({
