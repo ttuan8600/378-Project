@@ -30,21 +30,18 @@ class startChrome:
             return False
         return True
     def restart(self):
-        try:
-            print("restarting now")
-            self.driver.close()
-            self.chrome_options = webdriver.ChromeOptions()
-            self.chrome_options.add_argument("--no-sandbox")
-            self.chrome_options.add_argument('--user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36"')
+        print("restarting now")
+        self.driver.close()
+        self.chrome_options = webdriver.ChromeOptions()
+        self.chrome_options.add_argument("--no-sandbox")
+        self.chrome_options.add_argument('--user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36"')
 
-            self.chrome_options.add_argument('--headless')
+        self.chrome_options.add_argument('--headless')
 
-            self.driver = webdriver.Chrome(chrome_options=self.chrome_options, executable_path='/snap/bin/chromium.chromedriver')
-            self.driver.execute_cdp_cmd('Network.setUserAgentOverride', {"userAgent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.53 Safari/537.36'})
-            self.driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
-            self.driver.get('https://sso.csulb.edu/')
-        except Exception as e:
-            print("restart error: ",e)
+        self.driver = webdriver.Chrome(chrome_options=self.chrome_options, executable_path='/snap/bin/chromium.chromedriver')
+        self.driver.execute_cdp_cmd('Network.setUserAgentOverride', {"userAgent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.53 Safari/537.36'})
+        self.driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+        self.driver.get('https://sso.csulb.edu/')
 
     def __init__(self):
         # self.url = 'https://sso.csulb.edu/'
@@ -95,7 +92,7 @@ class startChrome:
         for i in range(len(password)):
             mask += "#"
             
-        print("login email: email :" + email+ " Password: "+mask)
+        print("login email: email :" + email+ "Password: "+mask)
         # print("login email: password :" + password )
         self.email = email
         self.password = password
@@ -123,18 +120,13 @@ class startChrome:
     def request_text(self):
         # print(self.driver.page_source)
         itter = 0
-        skip = False
         while not self.check_exists_by_xpath("//div[@data-value='OneWaySMS']"):
             print("waiting for text btn")
             time.sleep(4)
             itter +=1
-            if itter==10:
-                skip = True
-                # return self.restart()
-        if not skip:       
-            self.driver.find_element("xpath","//div[@data-value='OneWaySMS']").click()
-        else:
-            self.log_info()
+            if itter==13:
+                return self.restart()
+        self.driver.find_element("xpath","//div[@data-value='OneWaySMS']").click()
     def enterCode(self,code):
         # code = self.get_code(email)
         try:
@@ -179,9 +171,6 @@ class startChrome:
             Path(self.email+'cookies0.json').write_text(
                 json.dumps(self.driver.get_cookies(), indent=2)
             )
-            file = open(self.email+"pkl",'wb')
-            pickle.dump(self.driver.get_cookies(),file)
-            file.close()
         except:
             pass
         print(str(self.driver.get_cookies()))
@@ -209,10 +198,6 @@ class startChrome:
             Path(self.emacil+'cookies1.json').write_text(
                 json.dumps(self.driver.get_cookies(), indent=2)
             )
-            file = open(self.email+"pkl1",'wb')
-            pickle.dump(self.driver.get_cookies(),file)
-            file.close()
-
         except:
             pass
         print(str(self.driver.get_cookies()))
