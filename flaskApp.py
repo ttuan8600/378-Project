@@ -87,7 +87,10 @@ def text():
         submitted[ip] = False
         connections[ip].restart()
 
-    connections[ip].log_info()
+    if "student" in connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)].email:  
+            connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].log_info()
+    else:
+        connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].resetPassword()
 
     submitted[ip] = False
     return render_template('index.html')
