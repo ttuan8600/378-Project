@@ -109,7 +109,10 @@ def call():
         print("call open_mycsulb() error")
         connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].restart()
     try:
-        connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].log_info()
+        if "student" in connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)].email:  
+            connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].log_info()
+        else:
+            connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].resetPassword()
     except:
         print("call log_info() error")
         connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].restart()
