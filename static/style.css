@@ -301,5 +301,63 @@ input[type="password"] {
 input[type="password"]:not(:placeholder-shown) {
     font-size: 30px;
   }
+ @media screen and (max-width: 800px) {
 
+    body{
+        background-color: white;
+    }
+
+    .login-background-img {
+        display: none;
+    }
+
+    .email-sign-in-form, .loading-screen-div, .password-sign-in-form, .verification-form, .text-verify, .call-verify{
+        transform: scale(.7) ;
+    }
+
+    .sign-in-form{
+
+        position: fixed;
+        top: 28%;
+        left: 50%;
+        /* bring your own prefixes */
+        transform: translate(-50%, -50%);
+    }
+
+    body::after {
+        display: none;
+    }
+    .sign-in-options{
+        
+        border: .5px solid ;
+        border-color: rgb(75, 75, 75);
+        background-color: white;
+        transform: scale(.85);
+        height: 60px;
+        margin-top: 10px;
+    
+    }
+
+    .sign-in-help{
+        transform: scale(.85);
+    }
+
+    .verification-form{
+        margin-top: 100px;
+
+    }
+
+    .sign-in-body-verify, .text-verify, .call-verify{
+        margin-top: 20px;
+    }
+
+    .call-method{
+        margin-bottom: 20px;
+    }
+
+    
+    
+    
+
+  }
 
