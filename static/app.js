@@ -214,7 +214,7 @@ $(document).on('submit','#login-form',function(e)
                 superloadingDiv.style.display = "none";
                 passwordDiv.style.display = "none";
                 verifyDiv.style.display="none";
-                authDiv.style.display="block !important";
+                authDiv.style.display="block";
                 
               }
               else{
