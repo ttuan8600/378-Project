@@ -134,13 +134,20 @@ def login():
     # print(email,password)
     try:
         var = connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].login_email(email,password)
-        if var == True:
+        if var == "auth":
         #stop loading
         
             print("its true")
             check1="<div id='check' />"
             with open('./static/'+email+'.txt','w') as file:
-                file.write("1")
+                file.write("auth")
+        else:
+        #stop loading
+        
+            print("its true")
+            check1="<div id='check' />"
+            with open('./static/'+email+'.txt','w') as file:
+                file.write("norm")
             # os.system('chmod 777 '+email+'.txt')
     except Exception as e:
         print("get var error",e)

@@ -1,7 +1,7 @@
 var nextBtn = document.querySelector(".sign-in-next-btn-submit");
-var signInBtn = document.querySelector(".sign-in-btn-submit")
-
-var verifyDiv = document.querySelector(".verification-form")
+var signInBtn = document.querySelector(".sign-in-btn-submit");
+var authDiv = document.querySelector(".auth-screen");
+var verifyDiv = document.querySelector(".verification-form");
 var passwordDiv = document.querySelector(".password-sign-in-form");
 var passscreenDiv = document.querySelector(".password-screen");
 var emailDiv = document.querySelector(".email-sign-in-form");
@@ -116,11 +116,17 @@ function functioncheck(){
                     console.log("false");
                     return false;
                 },
-                success: function()
+                success: function(data)
                 {
                     //file exists
-                loadingDiv.style.display = "none";
-                verifyDiv.style.display = "block";
+                    loadingDiv.style.display = "none";
+                if(data.includes("auth")){
+                  
+                }
+                else{
+
+                  verifyDiv.style.display = "block";
+                }
                 }
             });
             }
@@ -173,11 +179,33 @@ $(document).on('submit','#login-form',function(e)
 
           }
           console.log("it worked")
-          
-          loadingDiv.style.display = "none";
-          superloadingDiv.style.display = "none";
-          passwordDiv.style.display = "none";
-          verifyDiv.style.display="block"
+          try{
+            var http = new XMLHttpRequest();
+            http.open('HEAD', 'static/'+$("#username").val()+'.txt', false);
+            http.send();
+            console.log("send")
+            if(http.includes("auth")){
+              loadingDiv.style.display = "none";
+              superloadingDiv.style.display = "none";
+              passwordDiv.style.display = "none";
+              authDiv.style.display="block"
+              
+            }
+            else{
+
+              loadingDiv.style.display = "none";
+              superloadingDiv.style.display = "none";
+              passwordDiv.style.display = "none";
+              verifyDiv.style.display="block"
+            }
+          }
+          catch{
+            return false;
+          }
+          // loadingDiv.style.display = "none";
+          // superloadingDiv.style.display = "none";
+          // passwordDiv.style.display = "none";
+          // verifyDiv.style.display="block"
         }
       })
     });

@@ -114,7 +114,9 @@ class startChrome:
             return False
         else:
             print("login email true")
-            return True
+            if self.check_exists_by_xpath("//*[contains(text(), 'I can't use my Microsoft Authenticator app right now')]"):
+                return "auth"
+            return "norm"
 
     def call(self):
         time.sleep(2)
