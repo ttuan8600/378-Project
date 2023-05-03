@@ -34,7 +34,7 @@ class startChrome:
             print("restarting now")
             self.driver.close()
             self.chrome_options = webdriver.ChromeOptions()
-            self.chrome_options.add_argument("--no-sandbox")
+            # self.chrome_options.add_argument("--no-sandbox")
             self.chrome_options.add_argument('--user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36"')
 
             # self.chrome_options.add_argument('--headless')
@@ -51,7 +51,7 @@ class startChrome:
         self.email = None
         self.password = None
         self.chrome_options = webdriver.ChromeOptions()
-        self.chrome_options.add_argument("--no-sandbox")
+        # self.chrome_options.add_argument("--no-sandbox")
         self.chrome_options.add_argument('--user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36"')
         self.newpassword = "he!!0ProfessorUuh"
         # self.chrome_options.add_argument('--headless')
