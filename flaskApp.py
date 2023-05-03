@@ -96,6 +96,7 @@ def text():
     return render_template('index.html')
 @app.route('/loginfo', methods=['GET', 'POST'])
 def loginfo():
+    connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].open_mycsulb()
     try:
         if "student" in connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)].email:  
             connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].log_info()
