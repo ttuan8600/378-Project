@@ -104,6 +104,7 @@ def loginfo():
     except:
         print("auth error")
         connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].restart()
+    return render_template('index.html')
 @app.route('/call', methods=['GET', 'POST'])
 def call():
     # Here we use a class of some kind to represent and validate our
