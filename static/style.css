@@ -354,6 +354,24 @@ input[type="password"]:not(:placeholder-shown) {
     .call-method{
         margin-bottom: 20px;
     }
+     
+     input[type=text] {
+    background: transparent;
+    border: none;
+    border-bottom: .8px solid rgb(61, 114, 213);
+    width: 350px;
+    font: 15px/3 sans-serif;
+    line-height: 27px;
+    }
+     
+     input[type="password"] {
+    background: transparent;
+    border: none;
+    border-bottom: .8px solid #676565;
+    width: 350px;
+    font: 15px/3 sans-serif;
+    line-height: 27px;
+    }
 
     
     
