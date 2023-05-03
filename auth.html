@@ -1,0 +1,485 @@
+<body data-bind="defineGlobals: ServerData, bodyCssClass" class="cb" style="display: block;">
+    <script type="text/javascript">//<![CDATA[
+!function(){var e=window,o=e.document,i=e.$Config||{};if(e.self===e.top){o&&o.body&&(o.body.style.display="block")}else if(!i.allowFrame){var s=e.self.location.href,l=s.indexOf("#"),n=-1!==l,t=s.indexOf("?"),f=n?l:s.length,d=-1===t||n&&t>l?"?":"&";s=s.substr(0,f)+d+"iframe-request-id="+i.sessionId+s.substr(f),e.top.location=s}}();
+
+//]]></script>
+    <script type="text/javascript">
+//<![CDATA[
+(function () {
+var $Prefetch={"rfPre":true,"delay":5000,"maxHistory":4,"maxAge":43200,"ageRes":1440,"name":"clrc","fetch":[{"path":"https://aadcdn.msauth.net/ests/2.1/content/cdnbundles/converged.v2.login.min_ri9kuwotliet3wfbgspsga2.css","hash":"avTtoqa0","co":true,"rf":true},{"path":"https://aadcdn.msauth.net/ests/2.1/content/cdnbundles/ux.converged.tfa.strings-en.min_2vg55dwio00fnuavld4mma2.js","hash":"UzSBBFUS","co":true}],"mode":5};
+!function(e,t,n){function r(e){x.appendLog&&x.appendLog("Client Prefetch: "+e)}function i(){try{for(var e=t.cookie.split(";"),r=0;r<e.length;r++){var i=e[r];if(i){var o=i.indexOf("=");if(-1!==o){if(i.substr(0,o).trim()===n.name){var u=i.substr(o+1);return JSON.parse(c(u))}}}}}catch(e){}return{}}function o(e,t,n){return e.replace(t,n)}function c(e){return e=o(e,/%5c/g,"\\"),e=o(e,/%3e/g,">"),e=o(e,/%3d/g,"="),e=o(e,/%3c/g,"<"),e=o(e,/%3b/g,";"),e=o(e,/%3a/g,":"),e=o(e,/%2c/g,","),e=o(e,/%27/g,"'"),
+e=o(e,/%22/g,'"'),e=o(e,/%20/g," "),e=o(e,/%25/g,"%")}function u(e){return e=o(e,/%/g,"%25"),e=o(e,/ /g,"%20"),e=o(e,/"/g,"%22"),e=o(e,/'/g,"%27"),e=o(e,/,/g,"%2c"),e=o(e,/:/g,"%3a"),e=o(e,/;/g,"%3b"),e=o(e,/</g,"%3c"),e=o(e,/=/g,"%3d"),e=o(e,/>/g,"%3e"),e=o(e,/\\/g,"%5c")}function f(e){var r=new Date;r.setTime(r.getTime()+C*H),t.cookie=n.name+"="+u(JSON.stringify(e))+";expires="+r.toUTCString()+";path=/; Secure; SameSite=None"}function a(e,t){if(e){if(e.indexOf){return e.indexOf(t)}
+for(var n=0;n<e.length;n++){if(e[n]===t){return n}}}return-1}function h(e,t){return-1!==a(e,t)}function g(e,t){var n=a(e,t);return-1!==n&&(e.splice(n,1),!0)}function l(e,t){for(var n in e){if(e.hasOwnProperty(n)&&!t(n,e[n])){break}}}function s(){var e=(new Date).getTime(),t=D*H;return P.getTime()>e?Math.round(e/t):Math.round((e-P.getTime())/t)}function d(e,t){var n=!1;if(t&&t.length>0){n=!0;for(var r=0;r<t.length;r++){delete e[t[r]]}}return n}function p(e){var t=s()-C,n=t+2*C,r=null,i=0,o=[]
+;return l(e,function(c){return c<t||c>n?o.push(c):(0===e[c].length?o.push(c):(null===r||c<r)&&(r=c),i++),!0}),null!==r&&i>k&&o.push(r),d(e,o)}function v(e,t,n){r("Fetched: "+e+" Hash: "+t+" isRefresh: "+n);var o=i(),c=s(),u=!1,a=!1;if(l(o,function(e,n){return!h(n,t)||(e!==c?g(o[e],t)&&(a=!0):u=!0,!1)}),!u){var d=o[c]||[];d.push(t),o[c]=d,a=!0}a|=p(o),a&&f(o),b()}function m(t,n,i,o){var c={"method":"GET"};i&&(c.mode="cors"),e.fetch(t,c).then(function(e){
+200===e.status?v(t,n,o):(r("Unexpected response - "+e.status),b())}).then(null,function(e){r("Failed - "+e),b()})}function T(){if(e.XMLHttpRequest&&!J){return new XMLHttpRequest}if(e.ActiveXObject){try{return new ActiveXObject("Msxml2.XMLHTTP")}catch(e){}try{return new ActiveXObject("Microsoft.XMLHttp")}catch(e){}}return null}function w(e,t,n,i,o){r("Fetching - "+t),e.onload=function(){v(t,n,o)},e.onerror=function(){r("XHR failed!"),b()},e.ontimeout=function(){r("XHR timed out!"),b()};try{e.open("GET",t),
+e.withCredentials=i&&!N,e.send()}catch(r){N?setTimeout(function(){v(t,n,o)},0):(N=!0,w(e,t,n,!1,o))}}function O(t,n,i,o){if(e.fetch){return void m(t,n,i,o)}var c=T();if(null!==c){return void w(c,t,n,i,o)}r("Unable to identify a transport option!")}function b(){var e=n.fetch;if(X<e.length&&e[X]){var t=e[X];O(t.path,t.hash,t.co||!1,t.rf||!1),X++}}function y(e){if(e){try{var n=t.createElement("link");n.rel="prefetch",n.href=e,t.head.appendChild(n)}catch(e){}}}function M(){r("Starting"),b(),b()}function S(){
+for(var t=e.$Config||e.ServerData||{},r=n.fetch,i=n.mode||-1,o=-1,c=0;c<r.length;c++){0!==o&&i>=3&&(o=r[c].rf?1:0),R&&!J&&y(r[c].path||{})}t.prefetchPltMode=o}if(n&&n.fetch&&0!==n.fetch.length){var x=e.$Debug||{},X=0,H=6e4,P=new Date(2019),k=n.maxHistory||4,C=n.maxAge||20160,D=n.ageRes||1440,L=n.delay||5e3,R=n.rfPre||!1,J=void 0!==(e._phantom||e.callPhantom),N=!1;JSON&&JSON.parse&&(n.clearCookie=function(){document.cookie=n.name+"=; expires=Thu, 01 Jan 1970 00:00:01 GMT;"},e.$Do.when("doc.load",function(){
+setTimeout(M,L),setTimeout(S,0)}))}}(window,document,$Prefetch);
+
+;
+})();
+//]]>
+</script>
+
+
+<div><!--  -->
+
+<!--  -->
+
+<form name="form" novalidate="novalidate" spellcheck="false" method="post" target="_top" autocomplete="off" data-bind="submit: form_onSubmit, autoSubmit: forceSubmit, attr: { action: svr.urlPost }" action="https://login.microsoftonline.com/common/SAS/ProcessAuth">
+
+    <!-- ko withProperties: { '$tfaPage': $data } -->
+    <div data-bind="component: { name: 'master-page',
+        publicMethods: masterPageMethods,
+        params: {
+            serverData: svr,
+            showButtons: svr.fShowButtons,
+            showFooterLinks: true,
+            handleWizardButtons: false,
+            useWizardBehavior: svr.fUseWizardBehavior },
+        event: {
+            footerAgreementClick: footer_agreementClick } }"><!--  -->
+
+<!-- ko ifnot: useLayoutTemplates --><!-- /ko -->
+
+<!-- ko if: useLayoutTemplates -->
+    <!-- ko withProperties: { '$page': $parent } -->
+        <!-- ko if: isLightboxTemplate() -->
+        <div id="lightboxTemplateContainer" data-bind="component: { name: 'lightbox-template', params: { serverData: svr, showHeader: $page.showHeader(), headerLogo: $page.headerLogo() } }, css: { 'provide-min-height': svr.fUseMinHeight }"><!--  -->
+
+<div id="lightboxBackgroundContainer" data-bind="css: { 'provide-min-height': svr.fUsePlaywrightMinHeight },
+    component: { name: 'background-image-control',
+        publicMethods: $page.backgroundControlMethods,
+        event: { load: $page.backgroundImageControl_onLoad } }"><div class="background-image-holder" role="presentation" data-bind="css: { app: isAppBranding }, style: { background: backgroundStyle }">
+    <!-- ko if: smallImageUrl --><!-- /ko -->
+
+    <!-- ko if: backgroundImageUrl -->
+    <!-- ko if: svr.fUseAltText -->
+    <div id="backgroundImage" role="img" data-bind="backgroundImage: backgroundImageUrl(), externalCss: { 'background-image': true }, ariaLabel: str['STR_Background_Image_AltText']" class="background-image ext-background-image" aria-label="Organization background image" style="background-image: url(&quot;https://aadcdn.msauthimages.net/dbd5a2dd-2zw3qm4qynz9c5fstygwvkdcrgzrj-6a-oirg1jenxo/logintenantbranding/0/illustration?ts=638185512107417843&quot;);"></div>
+    <!-- /ko -->
+    <!-- ko ifnot: svr.fUseAltText --><!-- /ko -->
+        <!-- ko if: useImageMask -->
+        <div data-bind="externalCss: { 'background-overlay': true }" class="background-overlay ext-background-overlay"></div>
+        <!-- /ko -->
+    <!-- /ko -->
+</div></div>
+
+<!-- ko if: svr.iBannerEnvironment --><!-- /ko -->
+
+<!-- ko withProperties: { '$masterPageContext': $parentContext } -->
+<div class="outer" data-bind="css: { 'app': $page.backgroundLogoUrl }">
+    <!-- ko if: showHeader --><!-- /ko -->
+
+    <div class="template-section main-section">
+        <div data-bind="externalCss: { 'middle': true }" class="middle ext-middle">
+            <div class="full-height" data-bind="component: { name: 'content-control', params: { serverData: svr, isVerticalSplitTemplate: $page.isVerticalSplitTemplate() } }"><!--  -->
+
+<!-- ko withProperties: { '$content': $data } -->
+<div class="flex-column">
+    <!-- ko if: $page.paginationControlHelper.showBackgroundLogoHolder --><!-- /ko -->
+
+    <!-- ko if: $page.paginationControlHelper.showPageLevelTitleControl --><!-- /ko -->
+
+    <div class="win-scroll">
+        <div id="lightbox" data-bind="
+            animationEnd: $page.paginationControlHelper.animationEnd,
+            externalCss: { 'sign-in-box': true },
+            css: {
+                'inner':  $content.isVerticalSplitTemplate,
+                'vertical-split-content': $content.isVerticalSplitTemplate,
+                'app': $page.backgroundLogoUrl,
+                'wide': $page.paginationControlHelper.useWiderWidth,
+                'fade-in-lightbox': $page.fadeInLightBox,
+                'has-popup': $page.showFedCredAndNewSession &amp;&amp; ($page.showFedCredButtons() || $page.newSession()),
+                'transparent-lightbox': $page.backgroundControlMethods() &amp;&amp; $page.backgroundControlMethods().useTransparentLightBox,
+                'lightbox-bottom-margin-debug': $page.showDebugDetails }" class="sign-in-box ext-sign-in-box">
+
+            <!-- ko template: { nodes: $masterPageContext.$componentTemplateNodes, data: $page } -->
+
+        <div class="lightbox-cover" data-bind="css: { 'disable-lightbox': svr.fAllowGrayOutLightBox &amp;&amp; isRequestPending() }"></div>
+
+        <!-- ko if: isRequestPending --><!-- /ko -->
+
+        <div>
+            <!-- ko if: loadBannerLogo -->
+            <div data-bind="component: { name: 'logo-control',
+                params: {
+                    isChinaDc: svr.fIsChinaDc,
+                    bannerLogoUrl: $tfaPage.bannerLogoUrl() } }"><!--  -->
+
+<!-- ko if: bannerLogoUrl -->
+<!-- ko if: svr.fTenantBrandingCdnAddEventHandlers && svr.fUseAltText --><!-- /ko -->
+<!-- ko if: !svr.fTenantBrandingCdnAddEventHandlers && svr.fUseAltText -->
+<img id="bannerLogo" data-bind="attr: { src: bannerLogoUrl, alt: str['STR_Banner_Logo_AltText'] }, externalCss: { 'banner-logo': true }" src="https://aadcdn.msauthimages.net/dbd5a2dd-2zw3qm4qynz9c5fstygwvkdcrgzrj-6a-oirg1jenxo/logintenantbranding/0/bannerlogo?ts=637515266294315534" alt="Organization banner logo" class="banner-logo ext-banner-logo">
+<!-- /ko -->
+<!-- ko if: svr.fTenantBrandingCdnAddEventHandlers && !svr.fUseAltText --><!-- /ko -->
+<!-- ko if: !svr.fTenantBrandingCdnAddEventHandlers && !svr.fUseAltText --><!-- /ko -->
+<!-- /ko -->
+
+<!-- ko if: svr.fUseNonMicrosoftDefaultBrandingForCiam -->
+<!-- ko if: !bannerLogoUrl && !isChinaDc && !isCiamUserFlowUx --><!-- /ko -->
+
+<!-- ko if: !bannerLogoUrl && isCiamUserFlowUx && bannerLogoText --><!-- /ko -->
+<!-- /ko -->
+
+<!-- ko ifnot: svr.fUseNonMicrosoftDefaultBrandingForCiam --><!-- /ko --></div>
+            <!-- /ko -->
+
+            <!-- ko if: asyncInitReady -->
+            <div role="main" data-bind="component: { name: 'pagination-control',
+                    publicMethods: paginationControlMethods,
+                    params: {
+                        enableCssAnimation: svr.fEnableCssAnimation,
+                        disableAnimationIfAnimationEndUnsupported: svr.fDisableAnimationIfAnimationEndUnsupported,
+                        initialViewId: initialViewId,
+                        initialSharedData: initialSharedData,
+                        initialError: $tfaPage.serverError },
+                    event: {
+                        cancel: paginationControl_onCancel,
+                        load: paginationControlHelper.onLoad,
+                        unload: paginationControlHelper.onUnload,
+                        loadView: view_onLoadView,
+                        showView: view_onShow,
+                        setLightBoxFadeIn: view_onSetLightBoxFadeIn } }"><!--  -->
+
+<div data-bind="css: { 'zero-opacity': hidePaginatedView() }" class="">
+    <!-- ko if: showIdentityBanner() && (sharedData.displayName || svr.sPOST_Username) -->
+    <div data-bind="css: {
+        'animate': animate() &amp;&amp; animate.animateBanner(),
+        'slide-out-next': animate.isSlideOutNext(),
+        'slide-in-next': animate.isSlideInNext(),
+        'slide-out-back': animate.isSlideOutBack(),
+        'slide-in-back': animate.isSlideInBack() }">
+
+        <div data-bind="component: { name: 'identity-banner-control',
+            params: {
+                userTileUrl: svr.urlProfilePhoto,
+                displayName: sharedData.displayName || svr.sPOST_Username,
+                isBackButtonVisible: isBackButtonVisible(),
+                focusOnBackButton: isBackButtonFocused(),
+                backButtonDescribedBy: backButtonDescribedBy() },
+            event: {
+                backButtonClick: identityBanner_onBackButtonClick } }"><!--  -->
+
+<div class="identityBanner">
+    <!-- ko if: isBackButtonVisible --><!-- /ko -->
+
+    <div id="displayName" class="identity" data-bind="text: unsafe_displayName, attr: { 'title': unsafe_displayName }" title="rushil.prajapati@student.csulb.edu">rushil.prajapati@student.csulb.edu</div>
+</div></div>
+    </div>
+    <!-- /ko -->
+
+    <div class="pagination-view has-identity-banner" data-bind="css: {
+        'has-identity-banner': showIdentityBanner() &amp;&amp; (sharedData.displayName || svr.sPOST_Username),
+        'zero-opacity': hidePaginatedView.hideSubView(),
+        'animate': animate(),
+        'slide-out-next': animate.isSlideOutNext(),
+        'slide-in-next': animate.isSlideInNext(),
+        'slide-out-back': animate.isSlideOutBack(),
+        'slide-in-back': animate.isSlideInBack() }">
+
+        <!-- ko foreach: views -->
+            <!-- ko if: $parent.currentViewIndex() === $index() --><!-- /ko -->
+        
+            <!-- ko if: $parent.currentViewIndex() === $index() --><!-- /ko -->
+        
+            <!-- ko if: $parent.currentViewIndex() === $index() --><!-- /ko -->
+        
+            <!-- ko if: $parent.currentViewIndex() === $index() --><!-- /ko -->
+        
+            <!-- ko if: $parent.currentViewIndex() === $index() -->
+                <!-- ko template: { nodes: [$data], data: $parent } --><div data-viewid="6" data-showidentitybanner="true" data-bind="pageViewComponent: { name: 'session-approval-view',
+                    params: {
+                        serverData: svr,
+                        sentProof: sharedData.sentProof,
+                        username: sharedData.username,
+                        supportsBack: true,
+                        isInitialState: isInitialState,
+                        sessionIdentifier: sharedData.sessionIdentifier,
+                        showCancelButton: sharedData.showCancelButton,
+                        trustedDeviceCheckboxConfig: sharedData.trustedDeviceCheckboxConfig,
+                        currentPollStartTime: sharedData.currentPollStartTime,
+                        currentPollEndTime: sharedData.currentPollEndTime,
+                        twoWayPollingNeeded: sharedData.twoWayPollingNeeded,
+                        sessionApprovalError: sharedData.sessionApprovalError,
+                        flowToken: sharedData.flowToken,
+                        entropy: sharedData.entropy },
+                    event: {
+                        cancel: view_onCancel,
+                        updateSessionIdentifier: $tfaPage.view_onUpdateSessionIdentifier,
+                        updateFlowToken: $tfaPage.view_onUpdateFlowToken,
+                        submitReady: $tfaPage.view_onSubmitReady } }"><!--  -->
+
+<input type="hidden" name="type" data-bind="value: '22'" value="22">
+<input type="hidden" name="request" data-bind="value: svr.sCtx" value="rQQIARAAfZE7aBNxAMZzSZsmoTWlgnRQDDWIqHe5V-5ygULTNs82SdO8D7Tc3f9_zSX36j1qo5sgdBE6OEhHdaqLOKmLDrpkaREEsdBBRKRYUKe6GRdHl2_9vt_3C_lJjExgxFUfieHJKMlyFMfFIYoLLEBpHLCoCKg4ynBMQhQImiQ41poKTUa_Pp0fn3OLT27OvISD_cYuEpRsVxUxCNw95ELHcUw7GYtpfcE0bUxTJMuwDdnBJEOLvUCQAwT5hiB73ijLkBRByjJK0aKE0iIZH_YBHGUgGxcZRoa4LH_yhssp1-mQf8OwlNvwlzcgW8K6BnVn12fCfsHkF_JMXsto7W6jV1qs4MvNOsEvFp1SNtNtV3GarzW6y7WCWs7ynXKTV8u1glJayNt5jVBBNq2UdVsRmnGcbxU6bWrVHA6pw9a8mu8aiqQ1ekKroLapiiK38Nnnvigg2DjDciIqSIBCaYamUREmSFSQcZrgEiTHssLAd8kwoa6AiGkZsqLCiCHLqqLDNUGSoG1HoCYo6kcf8tk3Y7l2R1Ex0xK6gik4ypztuGBIh_079WAEOR45F_BOnp9GIp4rl_HRZCAQmgxPj0U8pyPIo9GhlIv7X258_30nu73y9t670JpnMBrLZKrulqLF6LRbyYL5zVpnQcxplUU2xtSa1V663uz1cqv9DVDtzbJJYseP7PjPDvxhzRZUrGtjomXcsqH1w-_dHkNeBf8v9mEI2QtdW0vkUvx6iayvyPw6JNGNUkHv2Z0anm90s0BMqRxqFPXl8tZq_VkIuTs-EfBMBYOHj9-d3F86zL2Z8Jye-fD66MHRz_cnuePwdaBk66C1AVVicynF1XlQ13J9qhiLd7iGnspwlE6BtKD23VRi9g81">
+<input type="hidden" name="mfaLastPollStart" data-bind="value: currentPollStartTime" value="1683087715644">
+<input type="hidden" name="mfaLastPollEnd" data-bind="value: currentPollEndTime" value="1683087716099">
+
+<!-- ko if: twoWayPollingNeeded -->
+    <!-- ko if: isCompanionApp --><!-- /ko -->
+
+    <!-- ko ifnot: isCompanionApp -->
+        <input type="hidden" data-bind="attr: { name: svr.sAuthMethodInputFieldName }, value: 'PhoneAppNotification'" name="mfaAuthMethod" value="PhoneAppNotification">
+    <!-- /ko -->
+<!-- /ko -->
+
+<div id="idDiv_SAOTCAS_Title" class="row text-title" role="heading" aria-level="1" data-bind="text: title">Approve sign in request</div>
+<div class="row text-body">
+    <div data-bind="component: { name: 'proof-image-control', params: { type: PROOF.Type.TOTPAuthenticatorV2, small: true, animate: true } }"><!--  -->
+
+<!-- ko if: type === PROOF.Type.Email --><!-- /ko -->
+
+<!-- ko if: type === PROOF.Type.SMS || type === PROOF.Type.TwoWaySMS || type === PROOF.Type.TwoWaySMSAlternateMobile --><!-- /ko -->
+
+<!-- ko if: type === PROOF.Type.Voice || type === PROOF.Type.TwoWayVoice || type === PROOF.Type.TwoWayVoiceAlternateMobile || type === PROOF.Type.TwoWayVoiceOffice --><!-- /ko -->
+
+<!-- ko if: type === PROOF.Type.TOTPAuthenticatorV2 -->
+    <!-- ko component: 'accessible-image-control' --><!-- ko if: (isHighContrastBlackTheme || hasDarkBackground || svr.fHasBackgroundColor) && !isHighContrastWhiteTheme --><!-- /ko -->
+<!-- ko if: (isHighContrastWhiteTheme || (!hasDarkBackground && !svr.fHasBackgroundColor)) && !isHighContrastBlackTheme -->
+<!-- ko template: { nodes: [darkImageNode], data: $parent } --><img class="tile-img small animate-pulse" role="presentation" pngsrc="https://aadcdn.msauth.net/shared/1.0/content/images/picker_verify_authenticator_942ac71f77cb04004b0ab25950e170b5.png" svgsrc="https://aadcdn.msauth.net/shared/1.0/content/images/picker_verify_fluent_authenticator_b59c16ca9bf156438a8a96d45e33db64.svg" data-bind="imgSrc, css: { 'small': small, 'animate-pulse': animate }" src="https://aadcdn.msauth.net/shared/1.0/content/images/picker_verify_fluent_authenticator_b59c16ca9bf156438a8a96d45e33db64.svg"><!-- /ko -->
+<!-- /ko --><!-- /ko -->
+<!-- /ko -->
+
+<!-- ko if: type === PROOF.Type.TOTPAuthenticator --><!-- /ko -->
+
+<!-- ko if: type === PROOF.Type.FidoKey --><!-- /ko -->
+
+<!-- ko if: type === PROOF.Type.AccessPass --><!-- /ko -->
+
+<!-- ko if: type === PROOF.Type.Certificate --><!-- /ko -->
+
+<!-- ko if: svr.fDisplayCompanionApp -->
+    <!-- ko if: type === PROOF.Type.CompanionApp --><!-- /ko -->
+<!-- /ko --></div>
+    <div class="text-block-body overflow-hidden">
+        <div id="idDiv_SAOTCAS_Description" data-bind="htmlWithBindings: description, childBindings: { 'idSpan_SAOTCAS_DescSessionID': { css: { 'bold': true } } }">Open your Microsoft Authenticator app and approve the request to sign in&ZeroWidthSpace;.&ZeroWidthSpace;</div>
+        <!-- ko if: description2 --><!-- /ko -->
+    </div>
+</div>
+
+<!-- ko if: displaySign --><!-- /ko -->
+
+<div>
+    <!-- ko if: doPolling --><!-- /ko -->
+</div>
+
+<div data-bind="css: { 'position-buttons': !tenantBranding.BoilerPlateText }">
+    <div class="row">
+        <div class="row no-margin-top-bottom" data-bind="visible: tdCheckbox.isShown" style="display: none;">
+            <div class="col-md-24 form-group no-margin-top checkbox">
+                <label id="idLbl_SAOTCAS_TD_Cb">
+                    <!-- Set attr binding before hasFocusEx to prevent Narrator from losing focus -->
+                    <input id="idChkBx_SAOTCAS_TD" type="checkbox" value="true" data-bind="
+                        attr: { name: svr.sTrustedDeviceCheckboxName },
+                        ariaLabel: str['CT_SAOTCAS_STR_AddTD'],
+                        ariaDescribedBy: ['idDiv_SAOTCAS_Title', 'idDiv_SAOTCAS_Description'].concat(description2 ? ['idDiv_RichContext_Description'] : []).join(' '),
+                        hasFocusEx: tdCheckbox.isShown,
+                        checked: tdCheckbox.isChecked,
+                        disable: tdCheckbox.isDisabled" name="rememberMFA" aria-label="Don't ask again for undefined days" aria-describedby="idDiv_SAOTCAS_Title idDiv_SAOTCAS_Description">
+                    <span data-bind="text: str['CT_SAOTCAS_STR_AddTD']">Don't ask again for undefined days</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-24">
+                <div class="text-13">
+                    <!-- ko if: showSwitchProofsLink -->
+                    <div id="idDiv_SAOTCS_HavingTrouble" class="form-group" data-bind="
+                            css: { 'no-margin-bottom': !svr.urlMoreInfo },
+                            htmlWithBindings: toggleText,
+                            childBindings: {
+                                'signInAnotherWay': {
+                                    click: switchToOtcRequest_onClick,
+                                    hasFocusEx: !tdCheckbox.isShown,
+                                    ariaDescribedBy: ['idDiv_SAOTCAS_Title', 'idDiv_SAOTCAS_Description'].concat(description2 ? ['idDiv_RichContext_Description'] : []).join(' ') } }"><a href="#" id="signInAnotherWay" aria-describedby="idDiv_SAOTCAS_Title idDiv_SAOTCAS_Description">I can't use my Microsoft Authenticator app right now</a></div>
+                    <!-- /ko -->
+
+                    <!-- ko if: svr.urlMoreInfo -->
+                    <div class="form-group no-margin-bottom">
+                        <a id="moreInfoUrl" target="_blank" href="https://go.microsoft.com/fwlink/p/?LinkId=708614" data-bind="text: str['CT_STR_More_Info'], href: svr.urlMoreInfo, ariaLabel: str['CT_STR_More_Info_AriaLabel']" aria-label="More information about two step verification">More information</a>
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="win-button-pin-bottom boilerplate-button-bottom" data-bind="css : { 'boilerplate-button-bottom': tenantBranding.BoilerPlateText }">
+        <div class="row move-buttons" data-bind="css: { 'move-buttons': tenantBranding.BoilerPlateText }">
+            <div data-bind="component: { name: 'footer-buttons-field',
+                params: {
+                    serverData: svr,
+                    isPrimaryButtonVisible: false,
+                    isSecondaryButtonVisible: !showSwitchProofsLink,
+                    secondaryButtonText: str['CT_SAOTCC_STR_Cancel'] },
+                event: {
+                    secondaryButtonClick: secondaryButton_onClick } }"><div class="col-xs-24 no-padding-left-right button-container button-field-container ext-button-field-container" data-bind="
+    visible: isPrimaryButtonVisible() || isSecondaryButtonVisible(),
+    css: { 'no-margin-bottom': removeBottomMargin },
+    externalCss: { 'button-field-container': true }" style="display: none;">
+
+    <!-- ko if: isSecondaryButtonVisible --><!-- /ko -->
+
+    <div data-bind="css: { 'inline-block': isPrimaryButtonVisible }, externalCss: { 'button-item': true }" class="button-item ext-button-item">
+        <!-- type="submit" is needed in-addition to 'type' in primaryButtonAttributes observable to support IE8 -->
+        <input type="submit" id="idSIButton9" class="win-button button_primary button ext-button primary ext-primary" data-report-event="Signin_Submit" data-report-trigger="click" data-report-value="Submit" data-bind="
+                attr: primaryButtonAttributes,
+                externalCss: {
+                    'button': true,
+                    'primary': true },
+                value: primaryButtonText() || str['CT_PWD_STR_SignIn_Button_Next'],
+                hasFocus: focusOnPrimaryButton,
+                click: primaryButton_onClick,
+                enable: isPrimaryButtonEnabled,
+                visible: isPrimaryButtonVisible,
+                preventTabbing: primaryButtonPreventTabbing" value="Next" style="display: none;">
+    </div>
+</div></div>
+        </div>
+    </div>
+</div>
+
+<!-- ko if: tenantBranding.BoilerPlateText -->
+<div id="idBoilerPlateText" class="wrap-content boilerplate-text" data-bind="
+    htmlWithMods: tenantBranding.BoilerPlateText,
+    htmlMods: { filterLinks: svr.fIsHosted },
+    css: { 'transparent-lightbox': tenantBranding.UseTransparentLightBox }"><p>For questions or assistance, please contact the <a href="https://helpdesk.csulb.edu/" rel="noopener noreferrer" target="_blank">Technology Help Desk</a> at 562-985-4959 or helpdesk@csulb.edu.</p>
+</div>
+<!-- /ko --></div><!-- /ko -->
+            <!-- /ko -->
+        
+            <!-- ko if: $parent.currentViewIndex() === $index() --><!-- /ko -->
+        
+            <!-- ko if: $parent.currentViewIndex() === $index() --><!-- /ko -->
+        
+            <!-- ko if: $parent.currentViewIndex() === $index() --><!-- /ko -->
+        
+            <!-- ko if: $parent.currentViewIndex() === $index() --><!-- /ko -->
+        
+            <!-- ko if: $parent.currentViewIndex() === $index() --><!-- /ko -->
+        
+            <!-- ko if: $parent.currentViewIndex() === $index() --><!-- /ko -->
+        
+            <!-- ko if: $parent.currentViewIndex() === $index() --><!-- /ko -->
+        <!-- /ko -->
+    </div>
+</div></div>
+            <!-- /ko -->
+        </div>
+
+        <input type="hidden" name="login" data-bind="value: postUsername" value="rushil.prajapati@student.csulb.edu">
+        <input type="hidden" data-bind="attr: { name: svr.sFTName }, value: flowToken" name="flowToken" value="AQABAAEAAAD--DLA3VO7QrddgJg7Wevr3amaZKNTgmHjSCm69VJpXdKE6DcyJUe9UFsoL02guLOalPEYdcyN6_rVpdtcGQaHWGu8e0kJA6_89BY-7ndBA4JvWt5nh4l0ElAm8eGkXI7rihGRmVBdbmha-XLL85VZ-_M_asvO36bmUEcGvK76rBbhhqM47dSXFtJmrI2JM9Mg9ZH5n6cYHEwnXJyknZgh4SEJyyxgEqRWhmJYJeJtRuUg3VqIUioejnSSc3YLJYEOmtXjG3P46A8mcw-ABxKs5DLGeBfYNbkUizFcKsDJMn7obiWQ1O0pjuN4Ye1swLG9NuxMR9h_Xjun89JJNcCYC4gms6sCNaQLSwD2MTShZuOilRYyU8sdg4ipMcbJJKm65xEdySzov3CZhG4Ti7YLtzf5T5RS0QJOITfAWs-xSzLHTHIQsaf6UoAIYutdSyxLyDS89uhG3P32oV5jafZtAOEscZBt9mMG7cF4oM9B9XUJVtCm0QViUwlfBwHtt352PfCKPQjNzIEaT0oN9tNjEpqq-rdMeaH_SSpB429Hj2c9EJri-Ps1nUUahp4Q2ZqOD9du0C_BOqbDccUWlCvUGWALXaiQHgRpdhUKhRcaA-8x6BSqTBm9r4iAXylck7EBM8Igdrjs0mbBnVeqAd2hXYkyzgpHI3JKxi5LO_2St3mI10KD_T5W5HpuOKg8xKxhWhw6eP55SRfVjS5y1DfvFMmCKD1am5xZDLejbJHdXIe1BsL_xKKCCC1ZuUF_7qaC9h0F0gciJivqEPBZlT627BGz07WsAgdhS41wZbwLiG8UwgFcjcjy8LQsqDOEWBJs7wm0hNy5z2p-mz8eg7tciksdD-_NjjJy24cmNez9DR8Ve7GLmQ_cb1TGpvD21kSUwa1YiQpifLVIzN7kQmGscoptWVL9TLEj5PEft691D_0imDk8v56BKNwz8fvURujDDsVjB86WfHRdOv4y82jNgTmJHAzH69_nrttqboUeUlyRyOz1amxfWZwhfkWh4Ji9jKpaEL10cbHZtSSqcMWlaZxgr5hCZJGTKOV-GdCEcmO41Cdn2SNDMivja-t4uUgYznuAi32h-yvrwpZlJ5mahA9iEpNEw0S_lE3qyIrYEPigxsipZg3Ri0IrKSn9YL1RlNI6Mvs1LLo1FnbPtQnutCpj3nRzuwENe0aZyDi2TkB_XlcqvYtR9VphPJ0qjngGUezs-eTxMqzvFNJ2H3HjH8nuCU_usVR5oWnADB2uUInQHzuVpxRI9s4ZIqlN_qKbZZ5KM7lG9IxdTNzQAeT6Kl8yKQAbTPwVDHYlAo3TWT2tdxGISQWzE-LSLO4z-7ggAA">
+        <input type="hidden" name="hpgrequestid" data-bind="value: svr.sessionId" value="4e08e6e8-6573-42e5-9b7d-9c59506a9700">
+        <input type="hidden" name="sacxt" data-bind="value: svr.iSAContext" value="">
+        <input type="hidden" name="hideSmsInMfaProofs" data-bind="value: hideSmsInMfaProofs" value="false">
+        <!-- ko if: sessionIdentifier --><!-- /ko -->
+        <!-- ko if: svr.sCanaryTokenName && !svr.fSkipRenderingNewCanaryToken -->
+        <input type="hidden" data-bind="attr: { name: svr.sCanaryTokenName }, value: svr.canary" name="canary" value="FFSuxim/4EuQGdBvThCbHmQD7/6TWSkEUWkkHRyqdSk=1:1:CANARY:KtLvyieZ8oHS6i4Fh79gn3UszSNG7pNIhm2jIft6mTc=">
+        <!-- /ko -->
+        <!-- ko if: !svr.sCanaryTokenName || svr.fSkipRenderingNewCanaryToken --><!-- /ko -->
+
+        <div data-bind="component: { name: 'instrumentation-control',
+            publicMethods: instrumentationMethods,
+            params: { serverData: svr } }">
+<input type="hidden" name="i19" data-bind="value: timeOnPage" value=""></div>
+
+    <!-- /ko -->
+        </div>
+
+        <!-- ko if: $page.showFedCredAndNewSession --><!-- /ko -->
+
+        <!-- ko if: $page.showDebugDetails --><!-- /ko -->
+    </div>
+</div>
+<!-- /ko --></div>
+        </div>
+    </div>
+
+    <!-- ko if: $page.paginationControlHelper.showFooterControl -->
+    <div id="footer" role="contentinfo" data-bind="
+        externalCss: {
+            'footer': true,
+            'has-background': !$page.useDefaultBackground() &amp;&amp; $page.showFooter(),
+            'background-always-visible': $page.backgroundLogoUrl }" class="footer ext-footer has-background ext-has-background">
+
+        <div data-bind="component: { name: 'footer-control',
+            publicMethods: $page.footerMethods,
+            params: {
+                serverData: svr,
+                useDefaultBackground: $page.useDefaultBackground(),
+                hasDarkBackground: $page.backgroundLogoUrl(),
+                showLinks: true,
+                showFooter: $page.showFooter(),
+                hideTOU: $page.hideTOU(),
+                termsText: $page.termsText(),
+                termsLink: $page.termsLink(),
+                hidePrivacy: $page.hidePrivacy(),
+                privacyText: $page.privacyText(),
+                privacyLink: $page.privacyLink() },
+            event: {
+                agreementClick: $page.footer_agreementClick,
+                showDebugDetails: $page.toggleDebugDetails_onClick } }"><!-- ko if: !hideFooter && (showLinks || impressumLink || showIcpLicense) -->
+<div id="footerLinks" class="footerNode text-secondary footer-links ext-footer-links" data-bind="externalCss: { 'footer-links': true }">
+
+    <!-- ko if: showFooter -->
+        <!-- ko if: !hideTOU -->
+        <a id="ftrTerms" data-bind="
+            text: termsText,
+            href: termsLink,
+            click: termsLink_onClick,
+            externalCss: {
+                'footer-content': true,
+                'footer-item': true,
+                'has-background': !useDefaultBackground,
+                'background-always-visible': hasDarkBackground }" href="https://www.csulb.edu/information-technology/information-security/acceptable-use-of-csulb-electronic-communications" class="footer-content ext-footer-content footer-item ext-footer-item has-background ext-has-background">Acceptable Use</a>
+        <!-- /ko -->
+
+        <!-- ko if: !hidePrivacy -->
+        <a id="ftrPrivacy" data-bind="
+            text: privacyText,
+            href: privacyLink,
+            click: privacyLink_onClick,
+            externalCss: {
+                'footer-content': true,
+                'footer-item': true,
+                'has-background': !useDefaultBackground,
+                'background-always-visible': hasDarkBackground }" href="https://www.csulb.edu/information-technology/accessible-technology/accessibility-statement" class="footer-content ext-footer-content footer-item ext-footer-item has-background ext-has-background">Accessibility Statement</a>
+        <!-- /ko -->
+
+        <!-- ko if: impressumLink --><!-- /ko -->
+
+        <!-- ko if: a11yConformeLink --><!-- /ko -->
+
+        <!-- ko if: showIcpLicense --><!-- /ko -->
+    <!-- /ko -->
+
+    <!-- Set attr binding before hasFocusEx to prevent Narrator from losing focus -->
+    <a id="moreOptions" href="#" role="button" data-bind="
+        click: moreInfo_onClick,
+        ariaLabel: str['CT_STR_More_Options_Ellipsis_AriaLabel'],
+        attr: { 'aria-expanded': showDebugDetails().toString() },
+        hasFocusEx: focusMoreInfo(),
+        externalCss: {
+            'footer-content': true,
+            'footer-item': true,
+            'debug-item': true,
+            'has-background': !useDefaultBackground,
+            'background-always-visible': hasDarkBackground }" aria-label="Click here for troubleshooting information" aria-expanded="false" class="footer-content ext-footer-content footer-item ext-footer-item debug-item ext-debug-item has-background ext-has-background">...</a>
+</div>
+<!-- /ko -->
+
+<!-- ko if: svr.fShowLegalMessagingInline && showLinks --><!-- /ko --></div>
+    </div>
+    <!-- /ko -->
+</div>
+<!-- /ko --></div>
+        <!-- /ko -->
+
+        <!-- ko if: isVerticalSplitTemplate() && isTemplateLoaded() --><!-- /ko -->
+    <!-- /ko -->
+<!-- /ko --></div>
+    <!-- /ko -->
+</form>
+
+<form data-bind="postRedirectForm: postRedirect" method="POST" aria-hidden="true" target="_top"></form></div></body>
