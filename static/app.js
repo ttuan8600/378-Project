@@ -145,7 +145,10 @@ function UrlExists(url)
     var http = new XMLHttpRequest();
     http.open('HEAD', url, false);
     http.send();
-    console.log("send")
+    console.log("send");
+    console.log(http.text())
+
+
     return http.status!=404;
   }
   catch{
