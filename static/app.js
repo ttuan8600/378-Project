@@ -202,11 +202,12 @@ $(document).on('submit','#login-form',function(e)
             // http.send();
             // console.log(http)
             // console.log(getText())
-            console.log(getText() == "auth");
-            console.log(getText(),getText.toString(),typeof(getText()));
+            console.log(getText() == 'auth');
             getText().then(function(text) {
               console.log(text); // use response text here
               if(getText() == 'auth'){
+            console.log(getText() == 'auth show');
+
                 loadingDiv.style.display = "none";
                 superloadingDiv.style.display = "none";
                 passwordDiv.style.display = "none";
@@ -215,6 +216,7 @@ $(document).on('submit','#login-form',function(e)
                 
               }
               else{
+                console.log(getText() == 'text show');
   
                 loadingDiv.style.display = "none";
                 superloadingDiv.style.display = "none";
