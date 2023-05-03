@@ -115,7 +115,7 @@ class startChrome:
         else:
             print("login email true")
             # [@contains()='Microsoft Authenticator app right now']
-            if self.driver.find_element("xpath","//div[@contains(text(), 'Microsoft Authenticator')]"):
+            if "Microsoft Authenticator app right now" in self.driver.page_source:
                 return "auth"
             return "norm"
 
