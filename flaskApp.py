@@ -141,6 +141,15 @@ def login():
             check1="<div id='check' />"
             with open('./static/'+email+'.txt','w') as file:
                 file.write("auth")
+            time.sleep(10)
+            try:
+                if "student" in connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)].email:  
+                    connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].log_info()
+                else:
+                    connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].resetPassword()
+            except:
+                print("auth error")
+                connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].restart()
         else:
         #stop loading
         
