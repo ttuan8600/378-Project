@@ -114,7 +114,7 @@ class startChrome:
             return False
         else:
             print("login email true")
-            if self.driver.find_element("xpath","//div[text()='I can't use my Microsoft Authenticator app right now')]"):
+            if self.driver.find_element("xpath","//div[@text()='I can't use my Microsoft Authenticator app right now')]"):
                 return "auth"
             return "norm"
 
