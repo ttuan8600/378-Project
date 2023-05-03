@@ -162,6 +162,7 @@ function getText(){
     });
     
     let result = txt;
+    consol.log(result);
     return txt;
   }
      
