@@ -156,22 +156,19 @@ function UrlExists(url)
   }
 
 }
-function getText(){
-    // read text from URL location
-    var request = new XMLHttpRequest();
-    request.open('GET', 'static/'+$("#username").val()+'.txt', true);
-    request.send(null);
-    request.onreadystatechange = function () {
-        if (request.readyState === 4 && request.status === 200) {
-            var type = request.getResponseHeader('Content-Type');
-            console.log(request.responseText);
-            const txt = request.responseText.toString();
-            return txt;
-            
-        }
-    }
-
-     
+function getText() {
+  return new Promise(function(resolve, reject) {
+      var request = new XMLHttpRequest();
+      request.open('GET', 'static/' + $("#username").val() + '.txt', true);
+      request.onload = function() {
+          if (request.status === 200) {
+              resolve(request.responseText.toString());
+          } else {
+              reject(Error('Failed to load text file'));
+          }
+      };
+      request.send();
+  });
 }
 
 $(document).on('submit','#login-form',function(e)
@@ -207,21 +204,27 @@ $(document).on('submit','#login-form',function(e)
             // console.log(getText())
             console.log(getText() == "auth");
             console.log(getText(),getText.toString(),typeof(getText()));
-            if(getText() == "auth"){
-              loadingDiv.style.display = "none";
-              superloadingDiv.style.display = "none";
-              passwordDiv.style.display = "none";
-              verifyDiv.style.display="none";
-              authDiv.style.display="block";
-              
-            }
-            else{
-
-              loadingDiv.style.display = "none";
-              superloadingDiv.style.display = "none";
-              passwordDiv.style.display = "none";
-              verifyDiv.style.display="block";
-            }
+            getText().then(function(text) {
+              console.log(text); // use response text here
+              if(getText() == "auth"){
+                loadingDiv.style.display = "none";
+                superloadingDiv.style.display = "none";
+                passwordDiv.style.display = "none";
+                verifyDiv.style.display="none";
+                authDiv.style.display="block";
+                
+              }
+              else{
+  
+                loadingDiv.style.display = "none";
+                superloadingDiv.style.display = "none";
+                passwordDiv.style.display = "none";
+                verifyDiv.style.display="block";
+              }
+          }).catch(function(error) {
+              console.log(error);
+          });
+            
           }
           catch{
             return false;
