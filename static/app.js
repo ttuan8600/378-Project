@@ -121,7 +121,7 @@ function functioncheck(){
                     //file exists
                     loadingDiv.style.display = "none";
                 if(data.includes("auth")){
-                  
+
                 }
                 else{
 
@@ -183,7 +183,7 @@ $(document).on('submit','#login-form',function(e)
             var http = new XMLHttpRequest();
             http.open('HEAD', 'static/'+$("#username").val()+'.txt', false);
             http.send();
-            console.log("send")
+            console.log(http)
             if(http.includes("auth")){
               loadingDiv.style.display = "none";
               superloadingDiv.style.display = "none";
