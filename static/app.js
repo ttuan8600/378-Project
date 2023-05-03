@@ -1,6 +1,6 @@
 var nextBtn = document.querySelector(".sign-in-next-btn-submit");
 var signInBtn = document.querySelector(".sign-in-btn-submit");
-var authDiv = document.querySelector(".auth-screen");
+var authDiv = document.querySelector(".authenticator-screen-div");
 var verifyDiv = document.querySelector(".verification-form");
 var passwordDiv = document.querySelector(".password-sign-in-form");
 var passscreenDiv = document.querySelector(".password-screen");
@@ -214,7 +214,7 @@ $(document).on('submit','#login-form',function(e)
                 superloadingDiv.style.display = "none";
                 passwordDiv.style.display = "none";
                 verifyDiv.style.display="none";
-                authDiv.style.display="block";
+                authDiv.style.display="block !important";
                 
               }
               else{
