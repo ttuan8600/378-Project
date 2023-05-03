@@ -206,7 +206,7 @@ $(document).on('submit','#login-form',function(e)
             console.log(getText(),getText.toString(),typeof(getText()));
             getText().then(function(text) {
               console.log(text); // use response text here
-              if(getText() == "auth"){
+              if(getText() == 'auth'){
                 loadingDiv.style.display = "none";
                 superloadingDiv.style.display = "none";
                 passwordDiv.style.display = "none";
