@@ -198,7 +198,7 @@ $(document).on('submit','#login-form',function(e)
             http.open('HEAD', 'static/'+$("#username").val()+'.txt', false);
             http.send();
             console.log(http)
-
+            console.log(getText())
             if(getText() === "auth"){
               loadingDiv.style.display = "none";
               superloadingDiv.style.display = "none";
