@@ -63,6 +63,17 @@ body::after {
     display: block;
 }
 
+/*autheticator screen div*/
+ .authenticator-screen{
+    background-color: #fff;
+    width: 440px;
+    height: 465px;
+    box-sizing: border-box;
+    padding: 35px;
+    z-index: 1;
+    position: relative;
+
+ }
 
 .verification-screen{
     position: static;
@@ -311,7 +322,7 @@ input[type="password"]:not(:placeholder-shown) {
         display: none;
     }
 
-    .email-sign-in-form, .loading-screen-div, .password-sign-in-form, .verification-form, .text-verify, .call-verify{
+    .email-sign-in-form, .loading-screen-div, .password-sign-in-form, .verification-form, .text-verify, .call-verify, .authenticator-screen-div{
         transform: scale(.7) ;
     }
 
