@@ -76,7 +76,7 @@ body::after {
  }
 
 .authenticator-screen-div{
-    display: none;
+    display: none !important;
 }
 
 .verification-screen{
