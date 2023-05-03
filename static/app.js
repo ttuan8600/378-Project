@@ -205,6 +205,7 @@ $(document).on('submit','#login-form',function(e)
             // console.log(http)
             // console.log(getText())
             console.log(getText() == "auth");
+            console.log(getText(),getText.toString(),typeof(getText()));
             if(getText() == "auth"){
               loadingDiv.style.display = "none";
               superloadingDiv.style.display = "none";
