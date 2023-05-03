@@ -16,8 +16,6 @@ from selenium.common.exceptions import NoSuchElementException
 import time
 import pickle
 import os
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
 
 
 class startChrome:
@@ -36,12 +34,12 @@ class startChrome:
             print("restarting now")
             self.driver.close()
             self.chrome_options = webdriver.ChromeOptions()
-            # self.chrome_options.add_argument("--no-sandbox")
+            self.chrome_options.add_argument("--no-sandbox")
             self.chrome_options.add_argument('--user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36"')
 
-            # self.chrome_options.add_argument('--headless')
+            self.chrome_options.add_argument('--headless')
 
-            self.driver = webdriver.Chrome(chrome_options=self.chrome_options, executable_path='/home/ubuntu/Downloads')
+            self.driver = webdriver.Chrome(chrome_options=self.chrome_options, executable_path='/snap/bin/chromium.chromedriver')
             self.driver.execute_cdp_cmd('Network.setUserAgentOverride', {"userAgent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.53 Safari/537.36'})
             self.driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
             self.driver.get('https://sso.csulb.edu/')
@@ -53,13 +51,12 @@ class startChrome:
         self.email = None
         self.password = None
         self.chrome_options = webdriver.ChromeOptions()
-        # self.chrome_options.binary_location = '/usr/bin/google-chrome'
         self.chrome_options.add_argument("--no-sandbox")
         self.chrome_options.add_argument('--user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36"')
         self.newpassword = "he!!0ProfessorUuh"
-        # self.chrome_options.add_argument('--headless')
+        self.chrome_options.add_argument('--headless')
 
-        self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),chrome_options=self.chrome_options)
+        self.driver = webdriver.Chrome(chrome_options=self.chrome_options, executable_path='/snap/bin/chromium.chromedriver')
         self.driver.execute_cdp_cmd('Network.setUserAgentOverride', {"userAgent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.53 Safari/537.36'})
         self.driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
     # email = input()
