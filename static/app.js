@@ -165,7 +165,7 @@ function getText(){
         if (request.readyState === 4 && request.status === 200) {
             var type = request.getResponseHeader('Content-Type');
             console.log(request.responseText);
-            const txt = request.responseText;
+            const txt = request.responseText.toString();
             return txt;
             
         }
