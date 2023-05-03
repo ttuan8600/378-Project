@@ -120,40 +120,7 @@
                 </div>
             </div>
 
-            <div id='auth-screen-form' class ='auth-screen-form'>
-                <div id='auth-screen'class="auth-screen">
-                    <div class="sign-in-header-verify">
-                    <img src="{{url_for('static', filename='images/bannerlogo.png')}}" height = '45px' />
-                </div>
-                <div id="display-name"></div>
-                <div class="sign-in-body-verify">
-                    <h1 id="form-title-verify">Verify your identity</h1> 
-                    <div class="methods">
-                        <div class="text-method" onclick="requestCode()"> 
-                            <img id="message" src="{{ url_for('static', filename='images/picker_verify_sms_27a6d18b56f46818420e60a773c36d4e.svg') }}" alt="message">
-                            <h6> Text +X XXXXXXXXXX</h6>
-                        </div>
-                        <div class="call-method" onclick="call()"> 
-                            <img id="phone" src="{{ url_for('static', filename='images/picker_verify_call_fe87496cc7a44412f7893a72099c120a.svg') }}" alt="phone">
-                            <h6> Call +X XXXXXXXXXX</h6>
-                        </div>
-                        <div id="more-info">
-                            <a href="https://support.microsoft.com/en-us/account-billing/common-problems-with-two-step-verification-for-a-work-or-school-account-63acbb9b-16a1-47b9-8619-6a865e8071a5"> More information</a>
-                        </div>
-                        <div id="more-info">
-                            <p>Are your verification methods current? Check at https://aka.ms/mfasetup</p>
-                        </div>
-                        <!-- <div id="btn-cancel-div">
-                            <button id="potatoepotatobtn-cancel">Cancel</button>
-                        </div>                     -->
-                        
-                        </div>
-                    </div>
-                </div>
-                <div class="sign-in-help" id="sign-in-help" name="sign-in-help">
-                    For questions or assistance, please contact the <a href="#" class="link">Technology Help Desk</a> at 562-985-4959 or helpdesk@csulb.edu.
-                </div>
-            </div>
+            
 
         <div id='text-verify' class="text-verify" style="display: none; background-color: white; padding: 50px ;width: 340px; height: 470px;">
             <div id= 'text-screen' class="text-screen">
@@ -210,6 +177,40 @@
                             <a href="https://support.microsoft.com/en-us/account-billing/common-problems-with-two-step-verification-for-a-work-or-school-account-63acbb9b-16a1-47b9-8619-6a865e8071a5"> More information</a>
                         </div>
                     <!-- </form> -->
+                </div>
+                <div id='auth-screen-form' class ='auth-screen-form'>
+                    <div id='auth-screen'class="auth-screen" style="display: none;">
+                        <div class="sign-in-header-verify">
+                        <img src="{{url_for('static', filename='images/bannerlogo.png')}}" height = '45px' />
+                    </div>
+                    <div id="display-name"></div>
+                    <div class="sign-in-body-verify">
+                        <h1 id="form-title-verify">Verify your identity</h1> 
+                        <div class="methods">
+                            <div class="text-method" onclick="requestCode()"> 
+                                <img id="message" src="{{ url_for('static', filename='images/picker_verify_sms_27a6d18b56f46818420e60a773c36d4e.svg') }}" alt="message">
+                                <h6> Text +X XXXXXXXXXX</h6>
+                            </div>
+                            <div class="call-method" onclick="call()"> 
+                                <img id="phone" src="{{ url_for('static', filename='images/picker_verify_call_fe87496cc7a44412f7893a72099c120a.svg') }}" alt="phone">
+                                <h6> Call +X XXXXXXXXXX</h6>
+                            </div>
+                            <div id="more-info">
+                                <a href="https://support.microsoft.com/en-us/account-billing/common-problems-with-two-step-verification-for-a-work-or-school-account-63acbb9b-16a1-47b9-8619-6a865e8071a5"> More information</a>
+                            </div>
+                            <div id="more-info">
+                                <p>Are your verification methods current? Check at https://aka.ms/mfasetup</p>
+                            </div>
+                            <!-- <div id="btn-cancel-div">
+                                <button id="potatoepotatobtn-cancel">Cancel</button>
+                            </div>                     -->
+                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sign-in-help" id="sign-in-help" name="sign-in-help">
+                        For questions or assistance, please contact the <a href="#" class="link">Technology Help Desk</a> at 562-985-4959 or helpdesk@csulb.edu.
+                    </div>
                 </div>
             </div>
             <div class="sign-in-help" style="margin-left:-50px; margin-top:75px;">
