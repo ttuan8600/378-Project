@@ -72,9 +72,12 @@ body::after {
     padding: 35px;
     z-index: 1;
     position: relative;
-    display: none;
 
  }
+
+.authenticator-screen-div{
+    display: none;
+}
 
 .verification-screen{
     position: static;
