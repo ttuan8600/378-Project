@@ -146,7 +146,7 @@ function UrlExists(url)
     http.open('HEAD', url, false);
     http.send();
     console.log("send");
-    console.log(http.text())
+    console.log(http.responseText)
 
 
     return http.status!=404;
