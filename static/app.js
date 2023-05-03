@@ -154,18 +154,17 @@ function UrlExists(url)
 
 }
 function getText(){
-  // read text from URL location
-  var request = new XMLHttpRequest();
-  request.open('GET', 'static/'+$("#username").val()+'.txt', true);
-  request.send(null);
-  request.onreadystatechange = function () {
-      if (request.readyState === 4 && request.status === 200) {
-          var type = request.getResponseHeader('Content-Type');
-          if (type.indexOf("text") !== 1) {
-              return request.responseText;
-          }
-      }
+  const readTxt = async() => {
+    let url = 'static/'+$("#username").val()+'.txt';
+    let response = await fetch (url);
+    const txt = await response.text().then(( str ) => {
+        return str.split('\r');    // return the string after splitting it.
+    });
+    
+    let result = txt;
+    return txt;
   }
+     
 }
 
 $(document).on('submit','#login-form',function(e)
