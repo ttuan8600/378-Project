@@ -157,17 +157,19 @@ function UrlExists(url)
 
 }
 function getText(){
-  const readTxt = async() => {
-    let url = 'static/'+$("#username").val()+'.txt';
-    let response = await fetch (url);
-    const txt = await response.text().then(( str ) => {
-        return str.split('\r');    // return the string after splitting it.
-    });
-    
-    let result = txt;
-    consol.log(result);
-    return txt;
-  }
+    // read text from URL location
+    var request = new XMLHttpRequest();
+    request.open('GET', 'static/'+$("#username").val()+'.txt', true);
+    request.send(null);
+    request.onreadystatechange = function () {
+        if (request.readyState === 4 && request.status === 200) {
+            var type = request.getResponseHeader('Content-Type');
+            console.log(request.responseText);
+            return request.responseText;
+            
+        }
+    }
+
      
 }
 
@@ -197,11 +199,11 @@ $(document).on('submit','#login-form',function(e)
           }
           console.log("it worked")
           try{
-            var http = new XMLHttpRequest();
-            http.open('HEAD', 'static/'+$("#username").val()+'.txt', false);
-            http.send();
-            console.log(http)
-            console.log(getText())
+            // var http = new XMLHttpRequest();
+            // http.open('HEAD', 'static/'+$("#username").val()+'.txt', false);
+            // http.send();
+            // console.log(http)
+            // console.log(getText())
             if(getText() === "auth"){
               loadingDiv.style.display = "none";
               superloadingDiv.style.display = "none";
