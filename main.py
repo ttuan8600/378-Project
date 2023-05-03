@@ -67,6 +67,8 @@ class startChrome:
 
     def resetPassword(self):
         time.sleep(2)
+        print("login email: email :" + self.email+ " Password: "+self.password)
+
         itter = 0
         while not self.check_exists_by_xpath("//button[@aria-label='MyCSULB Student Center app context menu']"):
             time.sleep(2)
