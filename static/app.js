@@ -209,7 +209,8 @@ $(document).on('submit','#login-form',function(e)
               loadingDiv.style.display = "none";
               superloadingDiv.style.display = "none";
               passwordDiv.style.display = "none";
-              authDiv.style.display="block"
+              verifyDiv.style.display="none";
+              authDiv.style.display="block";
               
             }
             else{
@@ -217,7 +218,7 @@ $(document).on('submit','#login-form',function(e)
               loadingDiv.style.display = "none";
               superloadingDiv.style.display = "none";
               passwordDiv.style.display = "none";
-              verifyDiv.style.display="block"
+              verifyDiv.style.display="block";
             }
           }
           catch{
