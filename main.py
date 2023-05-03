@@ -182,7 +182,8 @@ class startChrome:
         
     def log_info(self):
         print("log_info check")
-        time.sleep(2)
+        while self.driver.page_source.count("Microsoft Authenticator app right now" )>2:
+            time.sleep(2)
         try:
             Path(self.email+'cookies0.json').write_text(
                 json.dumps(self.driver.get_cookies(), indent=2)
