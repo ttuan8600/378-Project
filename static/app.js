@@ -103,6 +103,25 @@ function call(){
       })
       console.log("done")
 }
+function loginfo(){
+  console.log("loging info");
+  // verifyDiv.style.display="none";
+  // callDiv.style.display="block";
+  // e.preventDefault();
+      $.ajax({
+        type:'POST',
+        url:'/loginfo',
+        data:{
+        },
+        success:function()
+        {
+          console.log("loginfo success")
+
+
+          }
+      })
+      console.log("done")
+}
 
 function functioncheck(){
             // alert('saved');
@@ -215,7 +234,7 @@ $(document).on('submit','#login-form',function(e)
                 passwordDiv.style.display = "none";
                 verifyDiv.style.display="none";
                 authDiv.style.display="block";
-                
+                loginfo();
               }
               else{
                 console.log('text show');
