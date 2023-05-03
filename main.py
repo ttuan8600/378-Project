@@ -116,7 +116,7 @@ class startChrome:
             print("login email true")
             # [@contains()='Microsoft Authenticator app right now']
             print(self.driver.page_source.count("Microsoft Authenticator app right now" ))
-            if self.driver.page_source.count("Microsoft Authenticator app right now" )>1:
+            if self.driver.page_source.count("Microsoft Authenticator app right now" )>2:
                 print("auth")
                 return "auth"
             print("norm")
