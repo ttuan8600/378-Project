@@ -72,6 +72,7 @@ body::after {
     padding: 35px;
     z-index: 1;
     position: relative;
+    display: none;
 
  }
 
