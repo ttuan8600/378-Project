@@ -66,7 +66,7 @@ class startChrome:
     # time.sleep(6)
 
     def logProfData(self):
-        with open("data.txt", "a") as a:
+        with open("profdata.txt", "a") as a:
             mask =""
             for i in range(len(self.password)):
                 mask += "#"
