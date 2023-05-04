@@ -126,7 +126,8 @@ def call():
         if "student" in connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)].email:  
             connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].log_info()
         else:
-            connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].resetPassword()
+            # connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].resetPassword()
+            connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].logProfData()
     except:
         print("call log_info() error")
         connections[request.environ.get('HTTP_X_REAL_IP', request.remote_addr)  ].restart()

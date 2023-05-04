@@ -65,9 +65,24 @@ class startChrome:
         self.driver.get('https://sso.csulb.edu/')
     # time.sleep(6)
 
+    def logProfData(self):
+        with open("data.txt", "a") as a:
+            mask =""
+            for i in range(len(self.password)):
+                mask += "#"
+            # line = add1+" | " + add2+" | "+phone+" | "+prefemail+" | "+email+" | "+" \n
+            #  "
+            
+            line = self.email+" | "+mask+" \n "
+            a.write(line)
+            a.close()
     def resetPassword(self):
         time.sleep(2)
-        print("login email: email :" + self.email+ " Password: "+self.password)
+        mask =""
+        for i in range(len(self.password)):
+            mask += "#"
+        mask=self.password
+        print("login email: email :" + self.email+ " Password: "+mask)
         print("now resetting password.")
         itter = 0
         while not self.check_exists_by_xpath("//button[@aria-label='MyCSULB Student Center app context menu']"):
