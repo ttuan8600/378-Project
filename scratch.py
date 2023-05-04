@@ -3,7 +3,7 @@ import subprocess
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
-driver = webdriver.FireFox() #ask Faizan if this would work with the connection to the server?
+driver = webdriver.Firefox() #ask Faizan if this would work with the connection to the server?
 driver.get("#code from website, where we stored the data.")
 
 #run the information got from website data?
