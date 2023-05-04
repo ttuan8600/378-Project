@@ -1,10 +1,15 @@
+import os
 from selenium import webdriver
+
+os.environ['DISPLAY'] = ':10'  # Set the DISPLAY variable
+
 
 # Set the path to the Chromium browser executable
 chrome_path = '/usr/bin/chromium-browser'
 
 # Create a ChromiumOptions object to configure the browser
 chrome_options = webdriver.ChromeOptions()
+chrome_options.add_argument('--no-sandbox')  
 chrome_options.binary_location = chrome_path
 # chrome_options.add_argument('--headless')  # Run Chromium in headless mode
 
