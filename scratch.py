@@ -1,20 +1,21 @@
-import time
-import subprocess
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 
-driver = webdriver.chromium() #ask Faizan if this would work with the connection to the server?
-driver.get("google.com")
+# Set the path to the Chromium browser executable
+chrome_path = '/usr/bin/chromium-browser'
+
+# Create a ChromiumOptions object to configure the browser
+chrome_options = webdriver.ChromeOptions()
+chrome_options.binary_location = chrome_path
+# chrome_options.add_argument('--headless')  # Run Chromium in headless mode
+
+# Create a new instance of the Chrome driver
+driver = webdriver.Chrome(chrome_options=chrome_options)
+
+# Navigate to a web page
+driver.get('https://www.google.com')
 input()
-#run the information got from website data?
-# email_field = driver.find_element_by_name('email')
-# password_field = driver.find_element_by_name('password')
-# email_field.send_keys('# the email')
-# password_field.send_keys('the password')
-# password_field.send_keys(Keys.RETURN)
+# Get the page title
+print(driver.title)
 
-time.sleep(5)
-
-# subprocess.run(['python3', 'runmain.py', '-emailuser@example.com', '-passwordpassword'])
-
+# Close the browser
 driver.quit()
