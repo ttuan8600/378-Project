@@ -1,7 +1,7 @@
 import os
 from selenium import webdriver
 
-os.environ['DISPLAY'] = ':22'  # Set the DISPLAY variable
+os.environ['DISPLAY'] = ':99'  # Set the DISPLAY variable
 
 
 # Set the path to the Chromium browser executable
