@@ -5,7 +5,7 @@ os.environ['DISPLAY'] = ':10'  # Set the DISPLAY variable
 
 
 # Set the path to the Chromium browser executable
-chrome_path = '/usr/bin/chromium-browser'
+chrome_path = '/usr/bin/google-chrome'
 
 # Create a ChromiumOptions object to configure the browser
 chrome_options = webdriver.ChromeOptions()
