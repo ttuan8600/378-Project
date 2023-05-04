@@ -10,7 +10,7 @@ os.environ['DISPLAY'] = ':10'  # Set the DISPLAY variable
 # Create a ChromiumOptions object to configure the browser
 chrome_options = webdriver.ChromeOptions()
 chrome_options.add_argument('--no-sandbox')  
-chrome_options.add_argument('--headless')  
+# chrome_options.add_argument('--headless')  
 
 # chrome_options.binary_location = chrome_path
 # chrome_options.add_argument('--headless')  # Run Chromium in headless mode
