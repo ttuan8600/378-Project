@@ -3,7 +3,7 @@ import subprocess
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
-driver = webdriver.Firefox() #ask Faizan if this would work with the connection to the server?
+driver = webdriver.Chromium() #ask Faizan if this would work with the connection to the server?
 driver.get("google.com")
 input()
 #run the information got from website data?
