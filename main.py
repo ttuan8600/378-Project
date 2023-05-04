@@ -138,6 +138,7 @@ class startChrome:
             itter +=1
             if itter==10:
                 skip = True
+                break
                 # return self.restart()
         if not skip:       
             self.driver.find_element("xpath","//div[@data-value='OneWaySMS']").click()
